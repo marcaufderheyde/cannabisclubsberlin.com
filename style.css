@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: bold; /* Example for making headings bold */
@@ -19,7 +25,6 @@ a {
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    padding: 20px;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -36,6 +41,22 @@ header {
     list-style: none;
     padding: 0;
     padding-left: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Your existing navbar styles */
+}
+
+.nav-links li :hover{
+    padding: 10px;
+    background-color: #229b28;
 }
 
 .nav-links li {
@@ -63,6 +84,10 @@ header {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+    .body, html {
+        padding: 0;
+    }
+
     .nav-links {
         display: none;
         width: 100%;
@@ -79,7 +104,6 @@ header {
         position: absolute;
         top: 20px;
         right: 20px;
-        padding: 10px;
     }
 
     .nav-links.active {
@@ -168,21 +192,34 @@ section {
         display: flex;
         position: absolute;
         right: 20px;
-        top: 15px;
-        padding: 12px;
+        top: 10px;
     }
+
+    .logo-desktop img {
+        margin-left: 10px;
+        border-radius: 50%; /* This creates the circular shape */
+    }
+
 }
 
 @media (max-width: 768px) {
     .logo-mobile {
         flex-direction: row;
+        display: flex;
+    }
+
+    .logo-mobile img{
+        margin-top: -20px;
+        max-width: 70px;
+        padding: 10px;
+        border-radius: 50%; /* This creates the circular shape */
     }
 }
 
 /* Responsive adjustments for the site name in mobile view */
 @media (max-width: 768px) {
     .logo-mobile span {
-        display: none; /* Optionally hide the text on very small screens to save space */
+        margin-top: -20px;
     }
 }
 
@@ -218,4 +255,79 @@ section {
         width: 100%;
         margin: 10px 0;
     }
+}
+
+#home-banner {
+    background: url('banner.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-content {
+    max-width: 960px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text readability */
+}
+
+#home-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#home-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #0779e4;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
+footer {
+    background-color: #2bc332;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: none;
 }

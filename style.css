@@ -351,3 +351,9 @@ footer {
 .aboutbtn:hover {
     background: #0056b3;
 }
+
+.nav-links a.active {
+    font-weight: bold; /* Make it bold */
+    border-bottom: 2px solid #4CAF50; /* Add a bottom border */
+    color: #fff;
+}

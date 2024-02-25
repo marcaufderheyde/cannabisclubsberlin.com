@@ -331,3 +331,23 @@ footer {
 .footer-nav a:hover {
     text-decoration: none;
 }
+
+.aboutbtn {
+    display: inline-block;
+    background: #0779e4;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.right-button-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.aboutbtn:hover {
+    background: #0056b3;
+}

@@ -5,35 +5,32 @@ import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
 
 export default function TermsOfUse() {
-  useEffect(() => {
-    // Assuming you're using Next.js for SPA and React for UI, 
-    // check for "index.html" in URL might not be directly applicable.
-    // Adjust the logic based on your routing setup if needed.
-    if (typeof window !== 'undefined' && window.location.pathname === '/') {
-      // Handles smooth scrolling for '.nav-links a' and '.btn'
-      const handleSmoothScroll = (selector: string) => {
-        const links = document.querySelectorAll(selector);
-        links.forEach(link => {
-          link.addEventListener('click', function (this: HTMLAnchorElement, e: MouseEvent) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            if (href && href.startsWith('#')) {
-              const targetSection = document.querySelector(href);
-              if (targetSection) {
-                targetSection.scrollIntoView({
-                  behavior: 'smooth',
-                });
-              }
-            }
-          });
-        });
-      };
-
-      // Initialize smooth scroll for both sets of links
-      handleSmoothScroll('.nav-links a');
-      handleSmoothScroll('.btn');
-    }
-  }, []);
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.location.pathname === '/') {
+          const handleSmoothScroll = (selector: string) => {
+            const links = document.querySelectorAll(selector);
+            links.forEach(link => {
+              link.addEventListener('click', function(e: Event) {
+                e.preventDefault();
+                const clickedElement = e.currentTarget as HTMLAnchorElement; // Safe cast since we know the context
+                const href = clickedElement.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                  const targetSection = document.querySelector(href) as HTMLElement; // Type assertion
+                  if (targetSection) {
+                    targetSection.scrollIntoView({
+                      behavior: 'smooth',
+                    });
+                  }
+                }
+              });
+            });
+          };
+      
+          // Example usage
+          handleSmoothScroll('.nav-links a');
+          handleSmoothScroll('.btn');
+        }
+      }, []); // Assuming no dependencies
 
   return (
     <div>

@@ -3,25 +3,21 @@ import Image from "next/image";
 import React, { useEffect } from 'react';
 import HeadComponent from "./components/HeadComponent";
 import FooterComponent from "./components/FooterComponent";
-import HeaderComponent from "./components/HeaderComponent";
 import HeaderHomeComponent from "./components/HeaderHomeComponent";
 import Link from "next/link";
 
 export default function Home() {
   useEffect(() => {
-    // Assuming you're using Next.js for SPA and React for UI, 
-    // check for "index.html" in URL might not be directly applicable.
-    // Adjust the logic based on your routing setup if needed.
     if (typeof window !== 'undefined' && window.location.pathname === '/') {
-      // Handles smooth scrolling for '.nav-links a' and '.btn'
       const handleSmoothScroll = (selector: string) => {
         const links = document.querySelectorAll(selector);
         links.forEach(link => {
-          link.addEventListener('click', function (this: HTMLAnchorElement, e: MouseEvent) {
+          link.addEventListener('click', function(e: Event) {
             e.preventDefault();
-            const href = this.getAttribute('href');
+            const clickedElement = e.currentTarget as HTMLAnchorElement; // Safe cast since we know the context
+            const href = clickedElement.getAttribute('href');
             if (href && href.startsWith('#')) {
-              const targetSection = document.querySelector(href);
+              const targetSection = document.querySelector(href) as HTMLElement; // Type assertion
               if (targetSection) {
                 targetSection.scrollIntoView({
                   behavior: 'smooth',
@@ -31,12 +27,12 @@ export default function Home() {
           });
         });
       };
-
-      // Initialize smooth scroll for both sets of links
+  
+      // Example usage
       handleSmoothScroll('.nav-links a');
       handleSmoothScroll('.btn');
     }
-  }, []);
+  }, []); // Assuming no dependencies
 
   return (
     <div>

@@ -1,7 +1,10 @@
 {
-  "/page": "app/page.js",
+  "/_not-found": "app/_not-found.js",
+  "/about/page": "app/about/page.js",
   "/clubs/page": "app/clubs/page.js",
   "/contact/page": "app/contact/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/imprint/page": "app/imprint/page.js",
+  "/page": "app/page.js",
   "/termsofuse/page": "app/termsofuse/page.js"
 }

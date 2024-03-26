@@ -1,9 +1,12 @@
-import React from 'react';
+import Background from './ui/Home/background';
+import Navbar from './ui/Navigation/navbar';
 
 export default function Home() {
-  return (
-    <div>
-      <h1 className="text-3xl">Nothing to see here...Yet 👀</h1>
-    </div>
-  );
+    return (
+        <div className='flex justify-center background h-full'>
+            <main className='flex flex-col w-10/12'>
+                <Navbar />
+            </main>
+        </div>
+    );
 }

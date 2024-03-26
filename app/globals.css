@@ -15,4 +15,10 @@ html, body {
   margin: 0;
 }
 
+.background {
+  background: url(/home-background.svg);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
 

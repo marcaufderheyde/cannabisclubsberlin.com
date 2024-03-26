@@ -41,7 +41,7 @@ export default function Home() {
       <main>
           <section id="home-banner">
               <div className="banner-content">
-                  <h1>Welcome to Cannabis Clubs Berlin</h1>
+                  <h1>Welcome to CCB (Cannabis Clubs Berlin)</h1>
                   <p>Discover the vibrant cannabis culture of Berlin.</p>
                   <Link href="#about" className="btn">Learn More</Link>
               </div>

@@ -5,7 +5,7 @@ import TranslationSwitch from './translation-switch';
 export default function Navbar() {
     return (
         <div className='text-white relative z-10 flex flex-row items-center justify-between my-10'>
-            <div className='flex flex-row items-start gap-16 items-center'>
+            <div className='flex flex-row items-start gap-20 items-center'>
                 <Logo />
                 <Links />
             </div>

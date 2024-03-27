@@ -13,7 +13,7 @@ export default function Links() {
                     <Link
                         key={link.name}
                         href={link.href}
-                        className='font-normal text-2xl'
+                        className='font-normal text-xl'
                     >
                         {link.name}
                     </Link>

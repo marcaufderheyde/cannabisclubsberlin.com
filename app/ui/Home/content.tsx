@@ -4,9 +4,9 @@ import ActionButton from '@/app/ui/Home/actionbutton';
 
 export default function Content() {
     return (
-        <div className='flex flex-col gap-12'>
+        <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16'>
             <Headline />
-            <p className='text-[1.5rem] text-[#2E2E2E] max-w-[500px]'>
+            <p className='md:text-[1.5rem] text-[#2E2E2E] md:max-w-[500px]'>
                 Thousands of people from all backgrounds are now discovering
                 Berlin’s newest culture. Let’s uncover it together.
             </p>

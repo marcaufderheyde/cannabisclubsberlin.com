@@ -11,7 +11,7 @@ export default function ActionButton({
         <Link
             href={href}
             className={
-                'py-3 px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
+                'py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
             }
             style={{ color: textColor, backgroundColor: backgroundColor }}
         >

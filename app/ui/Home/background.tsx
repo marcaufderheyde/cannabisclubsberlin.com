@@ -6,14 +6,21 @@ import React, { useRef, useEffect } from 'react';
 export default function Background() {
     const windowSize = useWindowSize();
     const canvasRef = useRef<HTMLCanvasElement>(null!);
+    const defaultSize = { width: 2560, height: 600 };
+    const aspect_ratio = (current_width: any) =>
+        (current_width / defaultSize.width) * defaultSize.height;
 
     useEffect(() => {
+        const current_width = windowSize.width;
+        const current_height = aspect_ratio(current_width);
+        const bottomLeftArcPoint = { x: 0, y: current_height };
+        const topRightArcPoint = { x: 4420, y: -100 };
         const canvas = canvasRef.current;
         const ctx: any = canvas.getContext('2d');
         const gradient = ctx.createRadialGradient(
             0,
             0,
-            600,
+            900,
             canvas.width - 100,
             100,
             600
@@ -22,17 +29,10 @@ export default function Background() {
         gradient.addColorStop(1, '#B6CF54');
 
         ctx.beginPath();
-        ctx.moveTo(0, 600);
-        ctx.bezierCurveTo(
-            500,
-            500,
-            canvas.width - 300,
-            300,
-            canvas.width * 1.1,
-            -1
-        );
-        ctx.lineTo(0, -1);
-        ctx.lineTo(0, 600);
+        ctx.moveTo(bottomLeftArcPoint.x, bottomLeftArcPoint.y);
+        ctx.bezierCurveTo(2000, 400, canvas.width - 500, 50, 4220, -100);
+        ctx.lineTo(topRightArcPoint.x, topRightArcPoint.y);
+        ctx.lineTo(bottomLeftArcPoint.x, -100);
         ctx.closePath();
         ctx.fillStyle = gradient;
         ctx.fill();
@@ -43,12 +43,11 @@ export default function Background() {
     }, [windowSize]);
 
     return (
-        <div className='absolute w-full'>
+        <div className='relative w-[inherit] block h-full'>
             <canvas
                 ref={canvasRef}
                 width={windowSize.width}
                 height={600}
-                className=''
             ></canvas>
         </div>
     );

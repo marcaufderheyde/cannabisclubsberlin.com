@@ -21,9 +21,10 @@ export default function useWindowSize() {
         // Handler to call on window resize
         function handleResize() {
             // Set window width/height to state
+            console.log(window.outerWidth);
             setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
+                width: window.outerWidth,
+                height: window.outerWidth,
             });
         }
 

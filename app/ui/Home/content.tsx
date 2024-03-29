@@ -1,5 +1,6 @@
 import Headline from '@/app/ui/Home/headline';
 import Link from 'next/link';
+import ActionButton from '@/app/ui/Home/actionbutton';
 
 export default function Content() {
     return (
@@ -9,9 +10,21 @@ export default function Content() {
                 Thousands of people from all backgrounds are now discovering
                 Berlin’s newest culture. Let’s uncover it together.
             </p>
-            <div className='flex flex-row'>
-                <Link href='/clubs'>Discover</Link>
-                <Link href='/law'>Local Laws</Link>
+            <div className='flex flex-row text-lg font-semibold gap-2'>
+                <ActionButton
+                    backgroundColor={'#B6CF54'}
+                    textColor={'#FFFFFF'}
+                    href='/clubs'
+                >
+                    Discover
+                </ActionButton>
+                <ActionButton
+                    backgroundColor={'#ffffff'}
+                    textColor={'#8E8A8A'}
+                    href='/laws'
+                >
+                    Local Laws
+                </ActionButton>
             </div>
         </div>
     );

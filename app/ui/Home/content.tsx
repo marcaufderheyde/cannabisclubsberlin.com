@@ -1,10 +1,11 @@
 import Headline from '@/app/ui/Home/headline';
 import Link from 'next/link';
 import ActionButton from '@/app/ui/Home/actionbutton';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Content() {
     const t = useTranslations('HomePage');
+    const localActive = useLocale();
     return (
         <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16'>
             <Headline />
@@ -15,14 +16,14 @@ export default function Content() {
                 <ActionButton
                     backgroundColor={'#B6CF54'}
                     textColor={'#FFFFFF'}
-                    href='/clubs'
+                    href={`/${localActive}/clubs`}
                 >
                     {t("discover_button")}
                 </ActionButton>
                 <ActionButton
                     backgroundColor={'#ffffff'}
                     textColor={'#8E8A8A'}
-                    href='/laws'
+                    href={`/${localActive}/law`}
                 >
                     {t("local_laws_button")}
                 </ActionButton>

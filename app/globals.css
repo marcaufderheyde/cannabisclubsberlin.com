@@ -14,10 +14,24 @@ html, body {
   margin: 0;
 }
 
-.background {
-  background: url(/home-background.svg);
-  background-size:contain;
-  background-repeat: no-repeat;
-}
+/* #section_footer {
+  width: 100%;
+  background: #B6CF54;
+
+  a, span {
+    color: #fff;
+    font-size: .75em;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    color: #fff;
+    font-size: .5em;
+  }
+} */
 
 

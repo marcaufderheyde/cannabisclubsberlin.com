@@ -1,12 +1,16 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Links() {
     const t = useTranslations('Navbar');
+    const localActive = useLocale();
+
     const links = [
-        { name: t('clubs_title'), href: '/clubs' },
-        { name: t('law_title'), href: '/law' },
-        { name: t('contact_title'), href: '/contact' },
+        { name: t('clubs_title'), href: `/${localActive}/clubs` },
+        { name: t('law_title'), href: `/${localActive}/law` },
+        { name: t('contact_title'), href: `/${localActive}/contact` },
+        { name: t('about_title'), href: `/${localActive}/about` },
     ];
     return (
         <div className='flex flex-row justify-evenly gap-16'>

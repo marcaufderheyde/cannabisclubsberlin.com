@@ -1,14 +1,32 @@
 'use client';
-import Image from 'next/image';
-import Caret from '@/app/ui/Navigation/caret';
 
-export default function TranslationSwitch() {
-    const selected_langauge = 'EN'; // Here we would put a loader for global context
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import { ChangeEvent, useTransition } from 'react';
 
+export default function LocalSwitcher() {
+    const [isPending, startTransition] = useTransition();
+    const router = useRouter();
+    const localActive = useLocale();
+  
+    const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
+      const nextLocale = e.target.value;
+      startTransition(() => {
+        router.replace(`/${nextLocale}`);
+      });
+    };
     return (
-        <div className='bg-white text-[#B0B0B0] min-h-9 min-w-20 rounded-full flex justify-center items-center gap-2 cursor-pointer'>
-            <p>{selected_langauge}</p>
-            <Caret color='#B0B0B0'></Caret>
-        </div>
+      <label className='border-2 rounded'>
+        <p className='sr-only'>change language</p>
+        <select
+          defaultValue={localActive}
+          className='bg-transparent py-2'
+          onChange={onSelectChange}
+          disabled={isPending}
+        >
+          <option value='en'>English</option>
+          <option value='de'>German</option>
+        </select>
+      </label>
     );
-}
+  }

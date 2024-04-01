@@ -11,14 +11,13 @@ type Props = {
 };
 
 export default function IndexPage({ params: { locale } }: Props) {
-
     unstable_setRequestLocale(locale);
 
     // const t = useTranslations('IndexPage');
 
     return (
         <div className='flex justify-center min-w-full min-h-full'>
-            <HeadComponent/>
+            <HeadComponent />
             <Background />
             <div className='absolute z-[1] flex flex-col justify-start w-full max-w-[1080px] px-6 h-full'>
                 <Navbar />
@@ -26,7 +25,7 @@ export default function IndexPage({ params: { locale } }: Props) {
                     <Content />
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

@@ -61,7 +61,7 @@
     "ContactPage": {
         "headline": "Kontakt",
         "headline_description": "Bitte zögern Sie nicht, uns über die unten aufgeführten Kanäle zu kontaktieren.",
-        "headline_subdescription" : "TODO"
+        "headline_subdescription" : "cannabisclubsberlin@protonmail.me"
     }, 
     "ImprintPage": {
         "headline": "Impressum",
@@ -70,8 +70,12 @@
         "operator_one" : "CannabisClubsBerlin.com",
         "operator_two" : "Eisenacher Str. 77",
         "operator_three" : "10823, Berlin, Germany",
-        "contact_title" : "Contact",        
-        "responsibility" : "Marc Auf der Heyde\nEisenacher Str. 77\n10823, Berlin, Germany",
+        "contact_title" : "Contact",  
+        "contact_one" : "Email: cannabisclubsberlin@proton.me",
+        "contact_two" : "Phone: +4917681414156",      
+        "responsibility_one" : "Marc Auf der Heyde",
+        "responsibility_two" : "Eisenacher Str. 77", 
+        "responsibility_three" : "10823, Berlin, Germany",        
         "disclaimer" : "The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors."
     }, 
     "Navbar": {

@@ -22,6 +22,13 @@ export default function ImprintContent() {
             <h2 className='font-bold text-1xl'>{t("contact_title")}: </h2>
             <p>{t("contact_one")}</p>
             <p>{t("contact_two")}</p>
+            <br/>
+            <h2 className='font-bold text-1xl'>{t("responsibility_title")}: </h2>
+            <p>{t("responsibility_one")}</p>
+            <p>{t("responsibility_two")}</p>
+            <p>{t("responsibility_three")}</p>
+            <br/>
+            <p>{t("disclaimer")}</p>
             </div>
         </div>
     );

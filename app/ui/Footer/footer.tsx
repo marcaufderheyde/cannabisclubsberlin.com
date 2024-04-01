@@ -12,7 +12,7 @@ const footerStyle: React.CSSProperties = {
   padding: '1px 0',
   display: 'inline',
   zIndex: 3,
-  marginTop: 'auto',
+  marginTop: 'auto'
 };
 
 const Footer: React.FC = () => {

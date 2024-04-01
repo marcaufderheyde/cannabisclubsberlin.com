@@ -3,6 +3,7 @@ import Links from '@/app/ui/Navigation/links';
 import TranslationSwitch from './translation-switch';
 import { useLocale, useTranslations } from 'next-intl';
 import LinkInfo from '@/app/ui/Navigation/linkinfo';
+import MobileNav from '@/app/ui/Navigation/mobilenav';
 
 export default function Navbar() {
     const t = useTranslations('Navbar');
@@ -21,6 +22,9 @@ export default function Navbar() {
             <div className='hidden md:flex md:flex-row items-center w-full justify-between'>
                 <Links links={links} />
                 <TranslationSwitch />
+            </div>
+            <div className='flex flex-row items-center w-full justify-end md:hidden'>
+                <MobileNav links={links} />
             </div>
         </div>
     );

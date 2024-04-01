@@ -21,7 +21,7 @@ export default function Content() {
                 <ActionButton
                     backgroundColor={'#ffffff'}
                     textColor={'#8E8A8A'}
-                    href='/laws'
+                    href='/law'
                 >
                     Local Laws
                 </ActionButton>

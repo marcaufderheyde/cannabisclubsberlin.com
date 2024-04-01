@@ -14,6 +14,7 @@ export default function About() {
                     <div className='w-2/3'></div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

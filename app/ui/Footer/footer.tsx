@@ -8,8 +8,9 @@ const footerStyle: React.CSSProperties = {
   bottom: 0,
   backgroundColor: '#B6CF54',
   textAlign: 'center',
-  padding: '10px 0',
+  padding: '1px 0',
   display: 'inline',
+  zIndex: 3,
 };
 
 const Footer: React.FC = () => {

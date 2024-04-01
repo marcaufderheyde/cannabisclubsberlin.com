@@ -1,9 +1,6 @@
-import React from 'react';
+import {redirect} from 'next/navigation';
 
-export default function Home() {
-  return (
-    <div>
-      <h1 className="text-3xl">Nothing to see here...Yet 👀</h1>
-    </div>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
 }

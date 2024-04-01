@@ -9,9 +9,9 @@ export default function AboutContent() {
     const localActive = useLocale();
     return (
         <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16'>
-            <p className='md:text-[1.5rem] text-[#2E2E2E] md:max-w-[500px]'>
+            <h1 className='font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight'>
                 {t("headline")}
-            </p>
+            </h1>
             <p>
             {t("headline_description")}
             </p>

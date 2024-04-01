@@ -1,0 +1,17 @@
+{
+    "IndexPage": {
+        "title": "Hello world!"
+    },
+    "HomePage": {
+        "headline": "Discover Berlin From New Heights.",
+        "headline_description": "Thousands of people from all backgrounds are now discovering Berlin’s newest culture. Let’s uncover it together.",
+        "discover_button": "Discover",
+        "local_laws_button": "Local Laws"
+    },
+    "Navbar": {
+        "clubs_title": "Clubs",
+        "law_title": "Law",
+        "contact_title": "Contact"
+    }
+
+}

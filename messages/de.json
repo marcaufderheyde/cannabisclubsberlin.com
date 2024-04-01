@@ -1,0 +1,16 @@
+{
+    "IndexPage": {
+        "title": "Halo Welt!"
+    },
+    "HomePage": {
+        "headline": "Entdecken Sie Berlin Aus Neuen Höhen.",
+        "headline_description": "Tausende Menschen mit unterschiedlichem Hintergrund entdecken es jetzt Berlins neueste Kultur. Lassen Sie es uns gemeinsam aufdecken.",
+        "discover_button": "Entdecken",
+        "local_laws_button": "Lokale Gesetze"
+    },
+    "Navbar": {
+        "clubs_title": "Vereine",
+        "law_title": "Gesetz",
+        "contact_title": "Kontakt"
+    }
+}

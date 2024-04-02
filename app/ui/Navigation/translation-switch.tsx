@@ -15,11 +15,11 @@ export default function LocalSwitcher() {
         return path.replace(/^\/[^\/]+/, '');
     };
 
-    const createPageURL = (local: string) => {
+    const createPageURL = (locale: string) => {
         const params = new URLSearchParams(searchParams);
         const pathnameWithoutCurrentLocal =
             removeFirstDirectoryFromPathname(pathname);
-        return `/${local}${pathnameWithoutCurrentLocal}?${params.toString()}`;
+        return `/${locale}${pathnameWithoutCurrentLocal}?${params.toString()}`;
     };
 
     const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {

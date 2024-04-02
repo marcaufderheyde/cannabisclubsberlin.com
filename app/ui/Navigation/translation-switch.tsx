@@ -7,7 +7,7 @@ import { ChangeEvent, useEffect, useTransition } from 'react';
 export default function LocalSwitcher() {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
-    const localActive = useLocale();
+    const localeActive = useLocale();
     const searchParams = useSearchParams();
     const pathname = usePathname();
 
@@ -17,9 +17,9 @@ export default function LocalSwitcher() {
 
     const createPageURL = (locale: string) => {
         const params = new URLSearchParams(searchParams);
-        const pathnameWithoutCurrentLocal =
+        const pathnameWithoutCurrentLocale =
             removeFirstDirectoryFromPathname(pathname);
-        return `/${locale}${pathnameWithoutCurrentLocal}?${params.toString()}`;
+        return `/${locale}${pathnameWithoutCurrentLocale}?${params.toString()}`;
     };
 
     const onSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -33,7 +33,7 @@ export default function LocalSwitcher() {
         <label className='border-2 rounded'>
             <p className='sr-only'>change language</p>
             <select
-                defaultValue={localActive}
+                defaultValue={localeActive}
                 className='bg-transparent py-2'
                 onChange={onSelectChange}
                 disabled={isPending}

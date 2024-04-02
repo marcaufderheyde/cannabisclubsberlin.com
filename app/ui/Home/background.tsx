@@ -43,7 +43,7 @@ export default function Background() {
     }, [windowSize]);
 
     return (
-        <div className='relative w-full block h-full'>
+        <div className='relative w-full block h-full overflow-hidden'>
             <canvas
                 ref={canvasRef}
                 width={windowSize.width}

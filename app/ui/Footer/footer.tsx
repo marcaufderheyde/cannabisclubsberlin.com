@@ -1,4 +1,5 @@
 // components/Footer.tsx
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 
@@ -21,9 +22,9 @@ const Footer: React.FC = () => {
     return (
         <div style={footerStyle}>
             <div className='text-center py-4'>
-                <Link href='/imprint'>Imprint</Link>
+                <Link href={`/${localActive}/imprint`}>Imprint</Link>
                 <span> | </span>
-                <Link href='/terms-of-use'>Terms of Use</Link>
+                <Link href={`/${localActive}/termsofuse`}>Terms of Use</Link>
                 <p>
                     © {currentYear} CannabisClubsBerlin.com. All rights
                     reserved.

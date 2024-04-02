@@ -13,6 +13,13 @@ html, body {
   margin: 0;
 }
 
+:root {
+  --layout-width: 1080px;
+  --layout-x-padding: 1rem;
+  --footer-height: 150px;
+  --navbar-height: 120px;
+}
+
 /* #section_footer {
   width: 100%;
   background: #B6CF54;

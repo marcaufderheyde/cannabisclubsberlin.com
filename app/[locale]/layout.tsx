@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 import Footer from '../ui/Footer/footer';
+import Background from '../ui/Home/background';
+import Navbar from '../ui/Navigation/navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,15 +21,15 @@ export default function LocaleLayout({
     params: { locale: string };
 }>) {
     return (
-        <html lang={locale}>
-            <body className={inter.className}>
-                <div className='w-full'>
-                    <div className='bg-white min-h-[100vh] w-full mb-[150px] relative shadow-xl'>
-                        {children}
-                    </div>
-                    <Footer />
+        <div>
+            <Navbar />
+            <div className='bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg '>
+                <Background />
+                <div className='z-[2] px-[var(--layout-x-padding)] h-full  max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] md:py-0 pb-10 '>
+                    {children}
                 </div>
-            </body>
-        </html>
+            </div>
+            <Footer />
+        </div>
     );
 }

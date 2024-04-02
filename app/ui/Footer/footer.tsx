@@ -3,13 +3,17 @@ import Link from 'next/link';
 import React from 'react';
 
 const footerStyle: React.CSSProperties = {
-    width: '100%',
-    position: 'absolute',
+    position: 'fixed',
     bottom: 0,
-    backgroundColor: '#B6CF54',
+    backgroundImage: 'linear-gradient(180deg, #E3E71F 0%, #B6CF54 100%)',
     textAlign: 'center',
-    padding: '1px 0',
+    paddingTop: '100vh',
+    paddingBottom: '1.5em',
     display: 'inline',
+    marginTop: '100vh',
+    color: 'white',
+    width: '100%',
+    zIndex: -1,
 };
 
 const Footer: React.FC = () => {

@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import styles from './ClubCard.module.css';
-import Logo from '@/public/logo';
+import Logo from '@/app/ui/Navigation/logo';
 import Image from 'next/image';
 
 const clubs = [

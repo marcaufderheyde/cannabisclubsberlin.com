@@ -1,4 +1,4 @@
-import Logo from '@/public/logo';
+import Logo from '@/app/ui/Navigation/logo';
 import Links from '@/app/ui/Navigation/links';
 import TranslationSwitch from './translation-switch';
 

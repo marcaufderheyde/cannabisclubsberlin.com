@@ -19,6 +19,8 @@ const footerStyle: React.CSSProperties = {
 
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
+    const localActive = useLocale();
+
     return (
         <div style={footerStyle}>
             <div className='text-center py-4'>

@@ -7,8 +7,6 @@ import Footer from '../ui/Footer/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const t = useTranslations('Metadata');
-
 
 export const metadata: Metadata = {
     title: 'Cannabis Clubs Berlin',

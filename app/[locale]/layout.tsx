@@ -26,8 +26,10 @@ export async function generateStaticParams() {
 
 export default function LocaleLayout({
     children,
+    params : {locale}
 }: Readonly<{
     children: React.ReactNode;
+    params: {locale : string}
 }>) {
     unstable_setRequestLocale(locale);
     const messages = useMessages();

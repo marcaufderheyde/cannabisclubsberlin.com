@@ -14,7 +14,7 @@ export default function ContactContent() {
             <p>
             {t("headline_description")}
             </p>
-            <p>{t("headline_subdescription")}</p>
+            <p><a href={`mailto:${t("headline_subdescription")}`}>{t("headline_subdescription")}</a></p>
         </div>
     );
 }

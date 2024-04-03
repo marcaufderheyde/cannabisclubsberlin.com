@@ -1,4 +1,4 @@
-import ActionButton from '@/app/ui/Home/actionbutton';
+"use client"
 import { useLocale, useTranslations } from 'next-intl';
 
 

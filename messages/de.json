@@ -1,4 +1,9 @@
 {
+    "Metadata" : {
+        "subject" : "cannabis clubs berlin",
+        "topic" : "cannabis",
+        "description" : "CannabisClubsBerlin.com ist Ihre erstklassige Quelle für Einblicke in Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um die Berliner Bevölkerung durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unsere Mission ist es, Nutzer über die lebhafte Cannabis-Kultur in Berlin aufzuklären und sie durch die lokalen Vorschriften bezüglich des Cannabisgebrauchs und der Clubmitgliedschaften zu navigieren. Ihr erster Anlaufpunkt für alle cannabisbezogenen Informationen in Berlin, Deutschland!"
+    },
     "IndexPage": {
         "title": "Willkomen bei CCB (Cannabis Clubs Berlin)!"
     },
@@ -114,12 +119,31 @@
         "operator_three" : "10823, Berlin, Germany",
         "contact_title" : "Contact",  
         "contact_one" : "Email: cannabisclubsberlin@proton.me",
-        "contact_two" : "Phone: +4917681414156",      
+        "contact_two" : "Phone: +4917681414156",
+        "responsibility_title" : "Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV:",
         "responsibility_one" : "Marc Auf der Heyde",
         "responsibility_two" : "Eisenacher Str. 77", 
         "responsibility_three" : "10823, Berlin, Germany",        
-        "disclaimer" : "The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors."
+        "disclaimer" : "Die auf CannabisClubsBerlin.com bereitgestellten Informationen sollen die direkte Beziehung zwischen Besuchern und Cannabisclubs oder Rechtsberatern unterstützen, jedoch nicht ersetzen."
     }, 
+    "TermsOfUsePage": {
+        "headline": "Nutzungsbedingungen",
+        "headline_description": "Willkommen bei CannabisClubsBerlin.com. Durch den Zugriff auf und die Nutzung dieser Website stimmen Sie den folgenden Bedingungen zu:",
+        "term_one_title": "Akzeptanz der Bedingungen:",
+        "term_one": "Die von CannabisClubsBerlin.com bereitgestellten Dienste unterliegen den folgenden Nutzungsbedingungen. Wir behalten uns das Recht vor, die Bedingungen jederzeit ohne Vorankündigung zu ändern. Ihre fortgesetzte Nutzung der Website nach solchen Änderungen gilt als Ihre Anerkennung und Zustimmung zu den geänderten Bedingungen.",
+        "term_two_title": "Nutzung von Website-Informationen:",
+        "term_two": "Diese Website bietet Informationen über Cannabis-Clubs in Berlin, einschließlich Bewertungen und regulatorischer Informationen. Diese Informationen werden nur zu allgemeinen Informationszwecken bereitgestellt und sollten nicht als Rechtsberatung angesehen werden. Nutzer werden ermutigt, sich für spezifische Ratschläge bezüglich der Cannabis-Regulierungen in Berlin an professionelle Rechtsberater zu wenden.",
+        "term_three_title": "Inhaltsbesitz und Urheberrecht:",
+        "term_three": "Alle Inhalte auf dieser Website, einschließlich Text, Grafiken, Logos und Bilder, sind Eigentum von CannabisClubsBerlin.com oder seinen Inhaltsanbietern und sind durch internationale Urheberrechtsgesetze geschützt.",
+        "term_four_title": "Haftungsbeschränkung:",
+        "term_four": "CannabisClubsBerlin.com haftet nicht für Schäden, die aus der Nutzung dieser Website oder aus Informationen, Inhalten, Materialien oder Produkten, die auf dieser Site enthalten sind, entstehen.",
+        "term_five_title": "Links zu Websites Dritter:",
+        "term_five": "CannabisClubsBerlin.com kann Links zu externen Websites enthalten. Diese Links werden Ihnen zur Verfügung gestellt, um weitere Informationen zu bieten. Sie bedeuten nicht, dass wir die Website(s) befürworten. Wir übernehmen keine Verantwortung für den Inhalt der verlinkten Website(s).",
+        "term_six_title": "Anwendbares Recht:",
+        "term_six": "Diese Nutzungsbedingungen unterliegen den Gesetzen von Deutschland. Streitigkeiten im Zusammenhang mit diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte Deutschlands.",
+        "disclaimer": "Durch die Nutzung von CannabisClubsBerlin.com erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie mit einem dieser Bedingungen nicht einverstanden sind, ist Ihnen die Nutzung oder der Zugriff auf diese Website untersagt."
+    },
+    
     "Navbar": {
         "clubs_title": "Vereine",
         "law_title": "Gesetz",

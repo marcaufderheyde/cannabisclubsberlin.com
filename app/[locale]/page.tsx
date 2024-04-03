@@ -1,3 +1,5 @@
+"use client"
+import CookieBanner from '../Components/CookieBanner';
 import Content from '../ui/Home/content';
 
 export default function IndexPage() {

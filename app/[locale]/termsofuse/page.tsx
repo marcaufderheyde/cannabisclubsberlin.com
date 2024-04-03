@@ -1,8 +1,4 @@
-import Background from '@/app/ui/Home/background';
 import ImprintContent from './terms-of-use-content';
-import Navbar from '@/app/ui/Navigation/navbar';
-import Footer from '../../ui/Footer/footer';
-import HeadComponent from '@/app/Components/HeadComponent';
 
 export default function TermsOfUseContent() {
     return (

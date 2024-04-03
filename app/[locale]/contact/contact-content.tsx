@@ -1,4 +1,4 @@
-import ActionButton from '@/app/ui/Home/actionbutton';
+"use client"
 import { useLocale, useTranslations } from 'next-intl';
 
 
@@ -13,7 +13,7 @@ export default function ContactContent() {
             <p>
             {t("headline_description")}
             </p>
-            <p>{t("headline_subdescription")}</p>
+            <p><a href={`mailto:${t("headline_subdescription")}`}>{t("headline_subdescription")}</a></p>
         </div>
     );
 }

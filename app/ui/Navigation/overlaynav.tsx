@@ -5,8 +5,9 @@ import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import Logo from '@/app/ui/Navigation/logo';
 import Close from '@/app/ui/Navigation/close';
 import LocalSwitcher from './translation-switch';
-import { useEffect } from 'react';
+import { useEffect, useState, useRef, MutableRefObject } from 'react';
 import { usePathname } from 'next/navigation';
+import usePrevious from '@/app/helpers/usePrevious';
 
 export default function OverlayNav({
     handleClick,
@@ -15,13 +16,16 @@ export default function OverlayNav({
     handleClick: Function;
     links: Array<LinkInfo>;
 }) {
-    const pathName = usePathname();
+    const pathname = usePathname();
+    const prevPathnameRef = usePrevious(pathname);
 
     useEffect(() => {
-        () => {
+        const prevPathname = prevPathnameRef.current as string;
+        if (!prevPathname.match(pathname)) {
             handleClick();
-        };
-    }, [pathName]);
+            prevPathnameRef.current = pathname;
+        }
+    }, [pathname]);
 
     return (
         <div
@@ -47,7 +51,7 @@ export default function OverlayNav({
                         return (
                             <Link
                                 onClick={
-                                    (pathName as string).includes(
+                                    (pathname as string).includes(
                                         link.href as string
                                     )
                                         ? () => {

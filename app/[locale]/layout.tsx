@@ -6,6 +6,7 @@ import '../globals.css';
 import Footer from '../ui/Footer/footer';
 import Background from '../ui/Home/background';
 import Navbar from '../ui/Navigation/navbar';
+import CookieBanner from '../Components/CookieBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,6 +43,7 @@ export default function LocaleLayout({
                       {children}
                   </div>
               </div>
+              <CookieBanner/>
               <Footer />
           </NextIntlClientProvider>
         </div>

@@ -11,8 +11,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club1.png',
+        clubPageUrl: 'https://csc-highground.de/',
     },
     {
         key: 'club2',
@@ -20,8 +20,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club2.webp',
+        clubPageUrl: 'https://www.green-social-club.de/',
     },
     {
         key: 'club3',
@@ -29,8 +29,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club3.svg',
+        clubPageUrl: 'https://www.aerocannabisberlin.com/',
     },
     {
         key: 'club4',
@@ -38,8 +38,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club4.png',
+        clubPageUrl: 'https://greenleafsociety.de/',
     },
     {
         key: 'club5',
@@ -47,8 +47,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club5.jpeg',
+        clubPageUrl: 'https://twitter.com/420_club_berlin',
     },
     {
         key: 'club6',
@@ -56,8 +56,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club6.png',
+        clubPageUrl: 'https://www.bastardo-berlin.de/',
     },
     {
         key: 'club7',
@@ -65,8 +65,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club7.png',
+        clubPageUrl: 'https://csc.berlin/',
     },
     {
         key: 'club8',
@@ -74,8 +74,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club8.jpeg',
+        clubPageUrl: 'https://www.1000berlin15.de/',
     },
     {
         key: 'club9',
@@ -83,8 +83,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club9.webp',
+        clubPageUrl: 'https://www.csckoepenick.de/',
     },
     {
         key: 'club10',
@@ -92,8 +92,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club10.png',
+        clubPageUrl: 'https://highonearth.de/',
     },
     {
         key: 'club11',
@@ -137,8 +137,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club15.svg',
+        clubPageUrl: 'https://cannamo.de/',
     },
     {
         key: 'club16',
@@ -191,8 +191,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club21.webp',
+        clubPageUrl: 'https://club-lammbock.de/',
     },
 ];
 
@@ -208,13 +208,13 @@ export default function ClubsList() {
             {clubs.map((club, index) => (
                 <div className={styles.card} key={index}>
                     <div className={styles.cardNumber}>#{index + 1}</div>
-                    <Image
+                    <a href={club.clubPageUrl} target="blank"><Image
                         src={club.imageUrl}
                         alt={club.name + ' Club Picture'}
                         width={300}
                         height={300}
                         className={styles.cardImage}
-                    />
+                    /></a>
                     <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>{club.name}</h3>
                         <p className={styles.cardDescription}>

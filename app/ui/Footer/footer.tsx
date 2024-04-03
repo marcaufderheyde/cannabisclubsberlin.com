@@ -1,7 +1,5 @@
 "use client"
-// components/Footer.tsx
 import { useLocale } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import React from 'react';
 

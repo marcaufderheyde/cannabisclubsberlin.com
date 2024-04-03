@@ -5,7 +5,6 @@ import { Inter } from 'next/font/google';
 import '../globals.css';
 import Footer from '../ui/Footer/footer';
 import Background from '../ui/Home/background';
-import HeadComponent from '@/app/Components/HeadComponent';
 import Navbar from '../ui/Navigation/navbar';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -39,7 +38,6 @@ export default function LocaleLayout({
             <Navbar />
               <div className='bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg '>
                   <Background />
-                  <HeadComponent />
                   <div className='z-[2] px-[var(--layout-x-padding)] h-full  max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] md:py-0 pb-10 '>
                       {children}
                   </div>

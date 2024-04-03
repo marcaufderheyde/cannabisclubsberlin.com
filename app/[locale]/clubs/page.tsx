@@ -1,7 +1,5 @@
 import Background from '@/app/ui/Home/background';
 import ClubsContent from './clubs-content';
-import Navbar from '@/app/ui/Navigation/navbar';
-import Footer from '../../ui/Footer/footer';
 import ClubsList from './club-list';
 import { unstable_setRequestLocale } from 'next-intl/server';
 

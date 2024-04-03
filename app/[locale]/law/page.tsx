@@ -3,8 +3,10 @@ import LawContent from './law-content';
 import Navbar from '@/app/ui/Navigation/navbar';
 import Footer from '../../ui/Footer/footer';
 import HeadComponent from '@/app/Components/HeadComponent';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function About() {
+export default function About({ params: { locale } }: { params: { locale: string } }) {
+    unstable_setRequestLocale(locale);
     return (
         <div className='flex justify-center min-w-full min-h-full'>
             <Background />

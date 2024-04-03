@@ -9,6 +9,9 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     output: 'export',
     images: { unoptimized: true },
+    experimental: {
+      missingSuspenseWithCSRBailout: false,
+    },
   }
    
-  export default withNextIntl(nextConfig);
+export default withNextIntl(nextConfig);

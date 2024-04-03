@@ -1,5 +1,7 @@
+"use client"
 // components/Footer.tsx
 import { useLocale } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import React from 'react';
 
@@ -17,7 +19,7 @@ const footerStyle: React.CSSProperties = {
     zIndex: -1,
 };
 
-const Footer: React.FC = () => {
+const Footer = () => {
     const currentYear = new Date().getFullYear();
     const localActive = useLocale();
 

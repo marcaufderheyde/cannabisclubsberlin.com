@@ -1,3 +1,4 @@
+"use client"
 import { useTranslations } from 'next-intl';
 import styles from './ClubCard.module.css';
 import Logo from '@/app/ui/Navigation/logo';

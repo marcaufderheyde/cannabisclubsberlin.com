@@ -1,3 +1,4 @@
+"use client"
 import Logo from '@/app/ui/Navigation/logo';
 import Links from '@/app/ui/Navigation/links';
 import TranslationSwitch from './translation-switch';

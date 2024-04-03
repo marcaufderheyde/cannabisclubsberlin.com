@@ -1,4 +1,4 @@
-import Headline from '@/app/ui/Home/headline';
+"use client"
 import Link from 'next/link';
 import ActionButton from '@/app/ui/Home/actionbutton';
 import { useLocale, useTranslations } from 'next-intl';

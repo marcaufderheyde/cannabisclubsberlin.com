@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { unstable_setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Inter } from 'next/font/google';
 import '../globals.css';
 import Footer from '../ui/Footer/footer';
@@ -12,6 +14,11 @@ export const metadata: Metadata = {
     
     };
 
+//function to generate the routes for all the locales
+export async function generateStaticParams() {
+    return ['en', 'de'].map((locale) => ({ locale }))
+}
+
 export default function LocaleLayout({
     children,
     params: { locale },
@@ -19,15 +26,19 @@ export default function LocaleLayout({
     children: React.ReactNode;
     params: { locale: string };
 }>) {
+    unstable_setRequestLocale(locale);
+    const messages = useMessages();
     return (
         <html lang={locale}>
             <body className={inter.className}>
-                <div className='w-full'>
-                    <div className='bg-white min-h-[100vh] w-full mb-[150px] relative shadow-xl'>
-                        {children}
+                <NextIntlClientProvider messages={messages}>
+                    <div className='w-full'>
+                        <div className='bg-white min-h-[100vh] w-full mb-[150px] relative shadow-xl'>
+                            {children}
+                        </div>
+                        <Footer />
                     </div>
-                    <Footer />
-                </div>
+                </NextIntlClientProvider>
             </body>
         </html>
     );

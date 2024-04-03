@@ -8,7 +8,7 @@ export default function Content() {
     const t = useTranslations('HomePage');
     const localActive = useLocale();
     return (
-        <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16'>
+        <div className='flex flex-col gap-8 md:gap-12'>
             <Headline />
             <p className='md:text-[1.5rem] text-[#2E2E2E] md:max-w-[500px]'>
                 {t('headline_description')}

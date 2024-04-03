@@ -1,9 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import Logo from '@/app/ui/Navigation/logo';
 import Close from '@/app/ui/Navigation/close';
 import LocalSwitcher from './translation-switch';
-import { EventHandler } from 'react';
+import { useEffect, useState, useRef, MutableRefObject } from 'react';
+import { usePathname } from 'next/navigation';
+import usePrevious from '@/app/helpers/usePrevious';
 
 export default function OverlayNav({
     handleClick,
@@ -12,6 +16,17 @@ export default function OverlayNav({
     handleClick: Function;
     links: Array<LinkInfo>;
 }) {
+    const pathname = usePathname();
+    const prevPathnameRef = usePrevious(pathname);
+
+    useEffect(() => {
+        const prevPathname = prevPathnameRef.current as string;
+        if (!prevPathname.match(pathname)) {
+            handleClick();
+            prevPathnameRef.current = pathname;
+        }
+    }, [pathname]);
+
     return (
         <div
             onClick={(e) => {
@@ -35,6 +50,15 @@ export default function OverlayNav({
                     {links.map((link: LinkInfo) => {
                         return (
                             <Link
+                                onClick={
+                                    (pathname as string).includes(
+                                        link.href as string
+                                    )
+                                        ? () => {
+                                              handleClick();
+                                          }
+                                        : () => {}
+                                }
                                 className='min-w-full py-2'
                                 key={link.name}
                                 href={link.href}

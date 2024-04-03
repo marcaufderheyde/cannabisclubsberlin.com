@@ -18,14 +18,16 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='text-white relative z-10 flex flex-row items-center justify-start my-4 gap-20'>
-            <Logo />
-            <div className='hidden md:flex md:flex-row items-center w-full justify-between'>
-                <Links links={links} />
-                <TranslationSwitch />
-            </div>
-            <div className='flex flex-row items-center w-full justify-end md:hidden'>
-                <MobileNav links={links} />
+        <div className='text-white absolute top-0 left-0 z-10 w-full h-[var(--navbar-height)]'>
+            <div className='flex flex-row items-center justify-center py-4 gap-20 relative max-w-[var(--layout-width)] px-[var(--layout-x-padding)] mx-auto'>
+                <Logo />
+                <div className='hidden md:flex md:flex-row items-center w-full justify-between'>
+                    <Links links={links} />
+                    <TranslationSwitch />
+                </div>
+                <div className='flex flex-row items-center w-full justify-end md:hidden'>
+                    <MobileNav links={links} />
+                </div>
             </div>
         </div>
     );

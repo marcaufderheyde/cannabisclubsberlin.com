@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import { unstable_setRequestLocale } from "next-intl/server";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider, useMessages, useTranslations } from "next-intl";
 import { Inter } from 'next/font/google';
 import '../globals.css';
 import Footer from '../ui/Footer/footer';
 
 const inter = Inter({ subsets: ['latin'] });
+
+const t = useTranslations('Metadata');
+
 
 export const metadata: Metadata = {
     title: 'Cannabis Clubs Berlin',

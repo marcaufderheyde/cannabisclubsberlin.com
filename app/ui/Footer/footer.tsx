@@ -1,5 +1,5 @@
 "use client"
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 
@@ -20,12 +20,14 @@ const footerStyle: React.CSSProperties = {
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     const localActive = useLocale();
+    const t = useTranslations('Footer');
+
     return (
         <div style={footerStyle}>
             <div className='text-center py-4'>
-                <Link href={`/${localActive}/imprint`}>Imprint</Link>
+                <Link href={`/${localActive}/imprint`}>{t("imprint")}</Link>
                 <span> | </span>
-                <Link href={`/${localActive}/termsofuse`}>Terms of Use</Link>
+                <Link href={`/${localActive}/termsofuse`}>{t("terms_of_use")}</Link>
                 <p>
                     © {currentYear} CannabisClubsBerlin.com. All rights
                     reserved.

@@ -1,5 +1,5 @@
 "use client"
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import styles from './ClubCard.module.css';
 import Image from 'next/image';
 
@@ -12,6 +12,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club1.png',
         clubPageUrl: 'https://csc-highground.de/',
+        slug: "",
     },
     {
         key: 'club2',
@@ -21,6 +22,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club2.webp',
         clubPageUrl: 'https://www.green-social-club.de/',
+        slug: "",
     },
     {
         key: 'club3',
@@ -30,6 +32,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club3.svg',
         clubPageUrl: 'https://www.aerocannabisberlin.com/',
+        slug: "",
     },
     {
         key: 'club4',
@@ -39,6 +42,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club4.png',
         clubPageUrl: 'https://greenleafsociety.de/',
+        slug: "",
     },
     {
         key: 'club5',
@@ -48,6 +52,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club5.jpeg',
         clubPageUrl: 'https://twitter.com/420_club_berlin',
+        slug: "",
     },
     {
         key: 'club6',
@@ -57,6 +62,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club6.png',
         clubPageUrl: 'https://www.bastardo-berlin.de/',
+        slug: "",
     },
     {
         key: 'club7',
@@ -66,6 +72,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club7.png',
         clubPageUrl: 'https://csc.berlin/',
+        slug: "",
     },
     {
         key: 'club8',
@@ -75,6 +82,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club8.jpeg',
         clubPageUrl: 'https://www.1000berlin15.de/',
+        slug: "",
     },
     {
         key: 'club9',
@@ -84,6 +92,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club9.webp',
         clubPageUrl: 'https://www.csckoepenick.de/',
+        slug: "",
     },
     {
         key: 'club10',
@@ -93,6 +102,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club10.png',
         clubPageUrl: 'https://highonearth.de/',
+        slug: "",
     },
     {
         key: 'club11',
@@ -102,6 +112,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club12',
@@ -111,6 +122,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club13',
@@ -120,6 +132,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club14',
@@ -129,6 +142,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club15',
@@ -138,6 +152,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club15.svg',
         clubPageUrl: 'https://cannamo.de/',
+        slug: "",
     },
     {
         key: 'club16',
@@ -147,6 +162,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club17',
@@ -156,6 +172,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club18',
@@ -165,6 +182,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club19',
@@ -174,6 +192,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club20',
@@ -183,6 +202,7 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
+        slug: "",
     },
     {
         key: 'club21',
@@ -192,22 +212,44 @@ const clubs = [
         harm_reduction: '',
         imageUrl: '/club21.webp',
         clubPageUrl: 'https://club-lammbock.de/',
+        slug: "",
     },
 ];
 
+// Function to generate slugs
+// Probably can just make the key the slug...?
+export function generateSlug(name: string): string {
+    // Replace commas and periods, then lower and replace spaces
+    let slug: string = name.replace(/,/g, '').replace(/\./g, '').toLowerCase().replace(/ /g, '-');
+    // Replace German Umlauts and "ß"
+    slug = slug.replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+    // Remove all other non-alphanumeric characters except hyphens
+    slug = slug.replace(/[^a-z0-9-]/g, '');
+    return slug;
+  }
+  
+  
+// Add slugs to the clubs
+clubs.forEach(club => {
+    club.slug = generateSlug(club.name);
+    console.log(club.slug);
+});
+  
+
 export default function ClubsList() {
     const t = useTranslations('ClubsPage');
+    const localActive = useLocale();
     clubs.forEach((club) => {
-        club.description = t(`${club.key}.description`);
-        club.offerings = t(`${club.key}.offerings`);
-        club.harm_reduction = t(`${club.key}.harm_reduction`);
+        club.description = t(`${club.slug}.description`);
+        club.offerings = t(`${club.slug}.offerings`);
+        club.harm_reduction = t(`${club.slug}.harm_reduction`);
     });
     return (
         <div className={styles.container}>
             {clubs.map((club, index) => (
                 <div className={styles.card} key={index}>
                     <div className={styles.cardNumber}>#{index + 1}</div>
-                    <a href={club.clubPageUrl} target="blank"><Image
+                    <a href={`/${localActive}/clubs/${club.slug}`}><Image
                         src={club.imageUrl}
                         alt={club.name + ' Club Picture'}
                         width={300}

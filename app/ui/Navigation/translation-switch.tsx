@@ -55,8 +55,9 @@ export default function LocalSwitcher() {
         <DropdownContent handleClickAndChangeLanguage={(nextLocale: string) => {
             setShowDropdownContent(false);
             changeLocale(nextLocale);
+            }
         }
-        } />
+        />
     );
     return (
         <div className="top-0 relative">

@@ -6,8 +6,10 @@ export default function ActionButton({
     textColor,
     backgroundColor,
     children,
+    externalLink=false
 }) {
     return (
+        !externalLink ? 
         <Link
             href={href}
             className={
@@ -17,6 +19,17 @@ export default function ActionButton({
         >
             {children}
             <Triangle color={textColor} />
-        </Link>
+        </Link> 
+        :
+        <a href={href} 
+            target="_blank" 
+            className={
+                    'py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
+                }
+                style={{ color: textColor, backgroundColor: backgroundColor }}
+                >
+                {children}
+                <Triangle color={textColor} />
+        </a>
     );
 }

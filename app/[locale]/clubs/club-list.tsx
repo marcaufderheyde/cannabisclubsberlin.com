@@ -30,7 +30,7 @@ export default function ClubsList() {
                     <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>{club.name}</h3>
                         <p className={styles.cardDescription}>
-                            {club.description}
+                            {club.offerings}
                         </p>
                     </div>
                 </div>

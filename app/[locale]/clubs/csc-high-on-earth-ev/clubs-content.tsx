@@ -2,6 +2,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation'
 import { pullClubsListContent } from '../clubsListContent';
+import Image from 'next/image';
 
 export default function ClubContent() {
     const pathname = usePathname().split("/")[3];
@@ -9,6 +10,8 @@ export default function ClubContent() {
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
     if(club) {
+        club.prices = t(`${club.slug}.prices`);
+        club.location = t(`${club.slug}.location`);
         club.description = t(`${club.slug}.description`);
         club.offerings = t(`${club.slug}.offerings`);
         club.harm_reduction = t(`${club.slug}.harm_reduction`);
@@ -18,6 +21,18 @@ export default function ClubContent() {
                 <h1 className='font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight'>
                     {club.name}
                 </h1>
+                <div>
+                <Image src={club.imageUrl} alt={club.name + ' Club Picture'} width={300} height={300}/>
+
+                </div>                        
+                <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("price_title")}</h2>
+                <p>
+                {club.prices}
+                </p>
+                <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("location_title")}</h2>
+                <p>
+                {club.location}
+                </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("description_title")}</h2>
                 <p>
                 {club.description}
@@ -30,7 +45,7 @@ export default function ClubContent() {
                 <p>
                 {club.harm_reduction}
                 </p>
-
+                <br/>
             </div>
         );
     }

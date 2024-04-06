@@ -2,6 +2,8 @@ const clubs = [
     {
         key: 'club1',
         name: 'CSC High Ground Berlin e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -12,6 +14,8 @@ const clubs = [
     {
         key: 'club2',
         name: 'Green Social Club e.V., im Norden von Berlin',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -22,6 +26,8 @@ const clubs = [
     {
         key: 'club3',
         name: 'Aero Cannabis Club e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -32,6 +38,8 @@ const clubs = [
     {
         key: 'club4',
         name: 'Green Leaf Society e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -42,6 +50,8 @@ const clubs = [
     {
         key: 'club5',
         name: '420 Club Berlin',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -52,6 +62,8 @@ const clubs = [
     {
         key: 'club6',
         name: 'Bastardo CSC Berlin',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -62,6 +74,8 @@ const clubs = [
     {
         key: 'club7',
         name: 'CSC Berlin e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -72,6 +86,8 @@ const clubs = [
     {
         key: 'club8',
         name: '1000 Berlin 15 e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -82,6 +98,8 @@ const clubs = [
     {
         key: 'club9',
         name: 'Cannabis Social Club Köpenick',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -92,6 +110,8 @@ const clubs = [
     {
         key: 'club10',
         name: 'CSC High on Earth e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -102,6 +122,8 @@ const clubs = [
     {
         key: 'club11',
         name: 'CSC Home of Hemp Berlin e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -112,6 +134,8 @@ const clubs = [
     {
         key: 'club12',
         name: 'Cannabis Social Club Prenzlauer Berg Berlin e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -122,6 +146,8 @@ const clubs = [
     {
         key: 'club13',
         name: 'Cannabis Social Club meridiem Brandenburgo et Berolina e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -132,6 +158,8 @@ const clubs = [
     {
         key: 'club14',
         name: 'Cannabis-Club Lammbock e. V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -142,6 +170,8 @@ const clubs = [
     {
         key: 'club15',
         name: 'Cannamo Cannabis Club e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -152,6 +182,8 @@ const clubs = [
     {
         key: 'club16',
         name: 'High Society Cannabis Club e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -162,6 +194,8 @@ const clubs = [
     {
         key: 'club17',
         name: 'Hype and Dope, Cannabis Club Berlin e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -172,6 +206,8 @@ const clubs = [
     {
         key: 'club18',
         name: 'Koala Cannabis Social Club Berlin e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -182,6 +218,8 @@ const clubs = [
     {
         key: 'club19',
         name: 'We Love Weed (WLW) – Cannabis Social Club Berlin Kreuzberg e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -192,6 +230,8 @@ const clubs = [
     {
         key: 'club20',
         name: 'Anbaufreunde Berlin Social Club e. V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',
@@ -202,6 +242,8 @@ const clubs = [
     {
         key: 'club21',
         name: 'Cannabis Club Lammbock e.V.',
+        prices : '',
+        location : '',
         description: '',
         offerings: '',
         harm_reduction: '',

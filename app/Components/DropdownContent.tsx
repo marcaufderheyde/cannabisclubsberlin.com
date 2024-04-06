@@ -6,7 +6,7 @@ export default function DropdownContent({ handleClickAndChangeLanguage }) {
     const localActive = useLocale(); 
     return (
         <div id="dropdown-states" 
-        className="flex-shrink-0 absolute bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
+        className="flex-shrink-0 z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700">
             <div className="text-sm rounded-lg text-gray-700 dark:text-gray-200" aria-labelledby="states-button">
                 <button type="button"
                         // inside of onClick hide the element

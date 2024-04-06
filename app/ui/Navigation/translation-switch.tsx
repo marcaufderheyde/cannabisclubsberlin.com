@@ -1,11 +1,10 @@
 'use client';
 
 import DropdownContent from '@/app/Components/DropdownContent';
-import DropdownMenu from '@/app/Components/DropdownMenu';
 import DropdownTrigger from '@/app/Components/DropdownTrigger';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { ChangeEvent, useEffect, useState, useTransition } from 'react';
+import { ChangeEvent, useState, useTransition } from 'react';
 
 export default function LocalSwitcher() {
     const [isPending, startTransition] = useTransition();
@@ -25,24 +24,20 @@ export default function LocalSwitcher() {
         return `/${locale}${pathnameWithoutCurrentLocale}?${params.toString()}`;
     };
 
-    const changeLocale = (nextLocale: string) => {
+    const changeLocaleDesktop = (nextLocale: string) => {
         startTransition(() => {
             const url = createPageURL(nextLocale);
             router.replace(url);
         });
     };
-    // <label className='border-2 rounded'>
-    //     <p className='sr-only'>change language</p>
-    //     <select
-    //         defaultValue={localeActive}
-    //         className='bg-transparent py-2'
-    //         onChange={onSelectChange}
-    //         disabled={isPending}
-    //     >
-    //         <option value='en'>English</option>
-    //         <option value='de'>German</option>
-    //     </select>
-    // </label>
+
+    const changeLocaleMobile = (e: ChangeEvent<HTMLSelectElement>) => {
+        const nextLocale = e.target.value;
+        startTransition(() => {
+            const url = createPageURL(nextLocale);
+            router.replace(url);
+        });
+    };
 
     const [showDropdownContent, setShowDropdownContent] = useState(false);
 
@@ -54,15 +49,33 @@ export default function LocalSwitcher() {
     const dropdownContent = (
         <DropdownContent handleClickAndChangeLanguage={(nextLocale: string) => {
             setShowDropdownContent(false);
-            changeLocale(nextLocale);
-            }
+            changeLocaleDesktop(nextLocale);
+        }
         }
         />
     );
     return (
-        <div className="top-0 relative">
-            {dropdownTrigger}
-            {showDropdownContent && (dropdownContent)}
+        <div>
+            {/* Desktop */}
+            <div className="sm:visible invisible relative top-0">
+                {dropdownTrigger}
+                {showDropdownContent && (dropdownContent)}
+            </div>
+            {/* Mobile: can replace invisible with hidden and flex*/}
+            <div className="sm:invisible visible relative">
+                <label className='border-2 rounded'>
+                    <p className='sr-only'>change language</p>
+                    <select
+                        defaultValue={localeActive}
+                        className='py-2'
+                        onChange={changeLocaleMobile}
+                        disabled={isPending}
+                    >
+                        <option value='en'>English (🇺🇸)</option>
+                        <option value='de'>Deutsch (🇩🇪)</option>
+                    </select>
+                </label>
+            </div>
         </div>
 
     );

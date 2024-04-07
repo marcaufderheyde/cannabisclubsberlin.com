@@ -38,9 +38,9 @@ export default function ClubContent() {
                     {club.description}
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("offerings_title")}</h2>
-                <p>
-                    {club.offerings}
-                </p>
+                {club.offerings.split(",").map((offering, index) => (
+                    <li key={index}>{offering.trim()}</li>
+                ))}
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("harm_reduction_title")}</h2>
                 <p>
                     {club.harm_reduction}

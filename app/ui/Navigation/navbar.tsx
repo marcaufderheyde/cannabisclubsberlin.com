@@ -23,7 +23,7 @@ export default function Navbar() {
 
     return (
         <div className='text-white absolute top-0 left-0 z-10 w-full h-[var(--navbar-height)]'>
-            <div className='flex flex-row items-center justify-center py-4 gap-20 relative max-w-[var(--layout-width)] px-[var(--layout-x-padding)] mx-auto'>
+            <div className='flex flex-row items-center justify-center py-4 relative max-w-[var(--layout-width)] px-[var(--layout-x-padding)] mx-auto'>
                 <Logo />
                 <div className='hidden lg:flex lg:flex-row items-center w-full justify-between gap-6'>
                     <Links links={links} />

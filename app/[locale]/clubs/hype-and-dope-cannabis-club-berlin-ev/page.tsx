@@ -1,4 +1,4 @@
-import ClubContent from './clubs-content';
+import ClubContent from '../club-content'; 
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 export default function Clubs({ params: { locale } }: { params: { locale: string } }) {

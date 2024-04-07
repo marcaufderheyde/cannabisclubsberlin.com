@@ -1,7 +1,7 @@
 "use client"
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation'
-import { pullClubsListContent } from '../clubsListContent';
+import { pullClubsListContent } from './clubsListContent';
 import Image from 'next/image';
 
 export default function ClubContent() {

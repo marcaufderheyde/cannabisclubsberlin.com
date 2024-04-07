@@ -27,23 +27,27 @@ export default function ClubContent() {
                 </div>                        
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("price_title")}</h2>
                 <p>
-                {club.prices}
+                    {club.prices}
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("location_title")}</h2>
                 <p>
-                {club.location}
+                    {club.location}
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("description_title")}</h2>
                 <p>
-                {club.description}
+                    {club.description}
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("offerings_title")}</h2>
                 <p>
-                {club.offerings}
+                    {club.offerings}
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("harm_reduction_title")}</h2>
                 <p>
-                {club.harm_reduction}
+                    {club.harm_reduction}
+                </p>
+                <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>URL</h2>
+                <p>
+                    <a href={club.clubPageUrl}>{club.clubPageUrl}</a>
                 </p>
                 <br/>
             </div>

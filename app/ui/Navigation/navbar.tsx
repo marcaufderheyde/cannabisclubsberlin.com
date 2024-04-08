@@ -19,7 +19,6 @@ export default function Navbar() {
         { name: t('law_title'), href: `/${localActive}/law` },
         { name: t('contact_title'), href: `/${localActive}/contact` },
         { name: t('about_title'), href: `/${localActive}/about` },
-        { name: t('harm_reduction_title'), href: `/${localActive}/harmreduction` },
     ];
 
     return (

@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useLocale, useTranslations } from 'next-intl';
 import styles from './ClubCard.module.css';
 import Image from 'next/image';
@@ -17,23 +17,23 @@ export default function ClubsList() {
     return (
         <div className={styles.container}>
             {clubs.map((club, index) => (
-                <a href={`/${localActive}/clubs/${club.slug}`}>
-                <div className={styles.card} key={index}>
-                    <div className={styles.cardNumber}>#{index + 1}</div>
-                    <Image
-                        src={club.imageUrl}
-                        alt={club.name + ' Club Picture'}
-                        width={300}
-                        height={300}
-                        className={styles.cardImage}
-                    />
-                    <div className={styles.cardContent}>
-                        <h3 className={styles.cardTitle}>{club.name}</h3>
-                        <p className={styles.cardDescription}>
-                            {club.offerings}
-                        </p>
+                <a href={`/${localActive}/clubs/${club.slug}`} key={club.slug}>
+                    <div className={styles.card} key={index}>
+                        <div className={styles.cardNumber}>#{index + 1}</div>
+                        <Image
+                            src={club.imageUrl}
+                            alt={club.name + ' Club Picture'}
+                            width={300}
+                            height={300}
+                            className={styles.cardImage}
+                        />
+                        <div className={styles.cardContent}>
+                            <h3 className={styles.cardTitle}>{club.name}</h3>
+                            <p className={styles.cardDescription}>
+                                {club.offerings}
+                            </p>
+                        </div>
                     </div>
-                </div>
                 </a>
             ))}
         </div>

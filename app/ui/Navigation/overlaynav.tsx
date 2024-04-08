@@ -60,7 +60,7 @@ export default function OverlayNav({
                                         : () => {}
                                 }
                                 className='min-w-full py-2'
-                                key={link.name}
+                                key={'mobile_' + link.name}
                                 href={link.href}
                             >
                                 {link.name as String}

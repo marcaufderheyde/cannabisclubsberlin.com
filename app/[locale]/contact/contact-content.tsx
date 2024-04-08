@@ -1,5 +1,6 @@
 "use client"
 import { useLocale, useTranslations } from 'next-intl';
+import ContactForm from './ContactForm';
 
 
 export default function ContactContent() {
@@ -14,6 +15,7 @@ export default function ContactContent() {
             {t("headline_description")}
             </p>
             <p><a href={`mailto:${t("headline_subdescription")}`}>{t("headline_subdescription")}</a></p>
+            <ContactForm/>
         </div>
     );
 }

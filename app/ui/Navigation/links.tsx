@@ -3,7 +3,7 @@ import LinkInfo from '@/app/ui/Navigation/linkinfo';
 
 export default function Links({ links }: { links: Array<LinkInfo> }) {
     return (
-        <div className='flex flex-row justify-evenly gap-16'>
+        <div className='flex flex-row justify-evenly flex-grow'>
             {links.map((link: LinkInfo) => {
                 return (
                     <Link

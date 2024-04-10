@@ -47,7 +47,7 @@ export default function ClubContent() {
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("visit_website_title")}</h2>
                 <p>
-                    <a href={club.clubPageUrl}>{club.clubPageUrl}</a>
+                    <a href={club.clubPageUrl} target="_blank" >{club.clubPageUrl}</a>
                 </p>
                 <br/>
             </div>

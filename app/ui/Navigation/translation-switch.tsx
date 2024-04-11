@@ -90,8 +90,8 @@ export default function LocalSwitcher() {
                         onChange={changeLocaleMobile}
                         disabled={isPending}
                     >
-                        <option value='en'>English (🇺🇸)</option>
-                        <option value='de'>Deutsch (🇩🇪)</option>
+                        <option value='en'>🇺🇸 English</option>
+                        <option value='de'>🇩🇪 Deutsch</option>
                     </select>
                 </label>
             </div>

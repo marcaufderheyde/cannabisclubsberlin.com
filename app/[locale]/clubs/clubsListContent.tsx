@@ -49,7 +49,7 @@ const clubs = [
         imageUrl: '/club4.png',
         clubPageUrl: 'https://greenleafsociety.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.525280, 13.521300],
     },
     {
         key: 'club5',
@@ -75,7 +75,7 @@ const clubs = [
         imageUrl: '/club6.png',
         clubPageUrl: 'https://www.bastardo-berlin.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.470160, 13.426750],
     },
     {
         key: 'club7',
@@ -88,7 +88,7 @@ const clubs = [
         imageUrl: '/club7.png',
         clubPageUrl: 'https://csc.berlin/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.437320, 13.500430],
     },
     {
         key: 'club8',
@@ -114,7 +114,7 @@ const clubs = [
         imageUrl: '/club9.webp',
         clubPageUrl: 'https://www.csckoepenick.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.448490, 13.598610],
     },
     {
         key: 'club10',
@@ -127,7 +127,7 @@ const clubs = [
         imageUrl: '/club10.png',
         clubPageUrl: 'https://highonearth.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.448100, 13.375150],
     },
     {
         key: 'club11',
@@ -138,9 +138,9 @@ const clubs = [
         offerings: '',
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        clubPageUrl: 'https://csc-homeofhemp.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.526034, 13.398731],
     },
     {
         key: 'club12',
@@ -151,9 +151,9 @@ const clubs = [
         offerings: '',
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        clubPageUrl: 'https://map.420cloud.io/clubs/c73e91d8-207b-4806-a165-36486d45415f',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.517037, 13.38886],
     },
     {
         key: 'club13',
@@ -192,7 +192,7 @@ const clubs = [
         imageUrl: '/club15.svg',
         clubPageUrl: 'https://cannamo.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.513421, 13.455344],
     },
     {
         key: 'club16',

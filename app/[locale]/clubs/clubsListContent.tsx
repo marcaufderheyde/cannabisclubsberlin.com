@@ -10,6 +10,7 @@ const clubs = [
         imageUrl: '/club1.png',
         clubPageUrl: 'https://csc-highground.de/',
         slug: "",
+        geoLocation: [52.516640, 13.408280],
     },
     {
         key: 'club2',
@@ -22,6 +23,7 @@ const clubs = [
         imageUrl: '/club2.webp',
         clubPageUrl: 'https://www.green-social-club.de/',
         slug: "",
+        geoLocation: [52.461281, 13.364280],
     },
     {
         key: 'club3',
@@ -34,6 +36,7 @@ const clubs = [
         imageUrl: '/club3.svg',
         clubPageUrl: 'https://www.aerocannabisberlin.com/',
         slug: "",
+        geoLocation: [52.502200, 13.319330],
     },
     {
         key: 'club4',
@@ -46,6 +49,7 @@ const clubs = [
         imageUrl: '/club4.png',
         clubPageUrl: 'https://greenleafsociety.de/',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club5',
@@ -58,6 +62,7 @@ const clubs = [
         imageUrl: '/club5.jpeg',
         clubPageUrl: 'https://twitter.com/420_club_berlin',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club6',
@@ -70,6 +75,7 @@ const clubs = [
         imageUrl: '/club6.png',
         clubPageUrl: 'https://www.bastardo-berlin.de/',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club7',
@@ -82,6 +88,7 @@ const clubs = [
         imageUrl: '/club7.png',
         clubPageUrl: 'https://csc.berlin/',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club8',
@@ -94,6 +101,7 @@ const clubs = [
         imageUrl: '/club8.jpeg',
         clubPageUrl: 'https://www.1000berlin15.de/',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club9',
@@ -106,6 +114,7 @@ const clubs = [
         imageUrl: '/club9.webp',
         clubPageUrl: 'https://www.csckoepenick.de/',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club10',
@@ -118,6 +127,7 @@ const clubs = [
         imageUrl: '/club10.png',
         clubPageUrl: 'https://highonearth.de/',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club11',
@@ -130,6 +140,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club12',
@@ -142,6 +153,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club13',
@@ -154,6 +166,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club14',
@@ -166,6 +179,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club15',
@@ -178,6 +192,7 @@ const clubs = [
         imageUrl: '/club15.svg',
         clubPageUrl: 'https://cannamo.de/',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club16',
@@ -190,6 +205,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club17',
@@ -202,6 +218,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club18',
@@ -214,6 +231,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club19',
@@ -226,6 +244,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club20',
@@ -238,6 +257,7 @@ const clubs = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
+        geoLocation: [0, 0],
     },
     {
         key: 'club21',
@@ -250,6 +270,7 @@ const clubs = [
         imageUrl: '/club21.webp',
         clubPageUrl: 'https://club-lammbock.de/',
         slug: "",
+        geoLocation: [0, 0],
     },
 ];
 

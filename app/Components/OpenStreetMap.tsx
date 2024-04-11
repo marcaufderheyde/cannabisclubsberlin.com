@@ -2,7 +2,10 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import L, { icon } from 'leaflet'
+import L, { icon, popup } from 'leaflet'
+import { pullClubsListContent } from '../[locale]/clubs/clubsListContent';
+
+const clubs = pullClubsListContent();
 
 const customIcon = L.icon({
   iconUrl: '/leaf-green.png',
@@ -16,11 +19,7 @@ const customIcon = L.icon({
 });
 
 const OpenStreetMap = () => {
-  const locations = [
-    { lat: 52.516640, lng: 13.408280, popup: "csc-high-ground-berlin-ev" },
-    { lat: 52.461281, lng: 13.364280, popup: "green-social-club-ev-im-norden-von-berlin" },
-    { lat: 52.502200, lng: 13.319330, popup: "aero-cannabis-club-ev" },
-  ];
+  const locations = clubs.map((club) => {return {lat: club.geoLocation[0], lng: club.geoLocation[1], popup: club.name}});
   
   const center = {
     lat: 52.516640,

@@ -23,7 +23,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
                                 : defaultLinkStyling
                         }
                     >
-                        {link.name as String}
+                        {link.name}
                     </Link>
                 );
             })}

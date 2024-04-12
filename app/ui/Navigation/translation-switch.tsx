@@ -103,18 +103,16 @@ export default function LocalSwitcher() {
             </div>
             {/* Mobile: can replace invisible with hidden and flex*/}
             <div className='sm:invisible visible relative'>
-                <label className='border-2 rounded'>
-                    <p className='sr-only'>change language</p>
-                    <select
-                        defaultValue={localeActive}
-                        className='py-2'
-                        onChange={changeLocaleMobile}
-                        disabled={isPending}
-                    >
-                        <option value='en'>🇺🇸 English</option>
-                        <option value='de'>🇩🇪 Deutsch</option>
-                    </select>
-                </label>
+                <p className='sr-only'>change language</p>
+                <select
+                    defaultValue={localeActive}
+                    className='py-2 rounded-lg'
+                    onChange={changeLocaleMobile}
+                    disabled={isPending}
+                >
+                    <option value='en'>🇬🇧 English</option>
+                    <option value='de'>🇩🇪 Deutsch</option>
+                </select>
             </div>
         </div>
     );

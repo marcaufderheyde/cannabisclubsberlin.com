@@ -106,7 +106,7 @@ export default function LocalSwitcher() {
                 <p className='sr-only'>change language</p>
                 <select
                     defaultValue={localeActive}
-                    className='py-2'
+                    className='py-2 rounded-lg'
                     onChange={changeLocaleMobile}
                     disabled={isPending}
                 >

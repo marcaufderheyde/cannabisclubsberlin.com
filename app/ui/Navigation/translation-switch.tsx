@@ -47,13 +47,16 @@ export default function LocalSwitcher() {
     };
 
     const [showDropdownContent, setShowDropdownContent] = useState(false);
+
     const dropdownTriggerRef = useRef<HTMLDivElement>(null);
     const dropdownContentRef = useRef<HTMLDivElement>(null);
+  
     let handleCaretToggle = () => {};
 
     useEffect(() => {
         // only add the event listener when the dropdown is opened
         if (!showDropdownContent) return;
+      
         function handleClick(event : any) {
             if (
                 dropdownTriggerRef.current &&

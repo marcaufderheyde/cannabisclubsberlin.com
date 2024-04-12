@@ -25,6 +25,11 @@ const customIcon = L.icon({
 const OpenStreetMap = () => {
   const t = useTranslations('ClubsPage');
   const localActive = useLocale();
+  clubs.forEach((club) => {
+      club.description = t(`${club.slug}.description`);
+      club.offerings = t(`${club.slug}.offerings`);
+      club.harm_reduction = t(`${club.slug}.harm_reduction`);
+  });
   const locations = clubs.map((club) => {return {lat: club.geoLocation[0], lng: club.geoLocation[1], club: club}});
   
   const center = {
@@ -44,28 +49,28 @@ const OpenStreetMap = () => {
         <Marker key={index} position={[location.lat, location.lng] } icon={customIcon}
         >
           <Popup>
-          <a href={`/${localActive}/clubs/${location.club.slug}`} key={location.club.slug}>
-            <div className="flex justify-center items-center">
-                    <div className={styles.mapCard} key={index}>
-                        <div className={styles.cardNumber}>#{index + 1}</div>
-                        <div className="flex justify-center items-center">
-                            <Image
-                                src={location.club.imageUrl}
-                                alt={location.club.name + ' Club Picture'}
-                                width={300}
-                                height={300}
-                                className={styles.mapCardImage}
-                            />
-                        </div>
-                        <div className={styles.mapCardContent}>
-                            <h3 className={styles.mapCardTitle}>{location.club.name}</h3>
-                            <p className={styles.mapCardDescription}>
-                                {location.club.offerings}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-          </a>
+            <a href={`/${localActive}/clubs/${location.club.slug}`} key={location.club.slug}>
+              <div className="flex justify-center items-center">
+                      <div className={styles.mapCard} key={index}>
+                          <div className={styles.cardNumber}>#{index + 1}</div>
+                          <div className="flex justify-center items-center">
+                              <Image
+                                  src={location.club.imageUrl}
+                                  alt={location.club.name + ' Club Picture'}
+                                  width={300}
+                                  height={300}
+                                  className={styles.mapCardImage}
+                              />
+                          </div>
+                          <div className={styles.mapCardContent}>
+                              <h3 className={styles.mapCardTitle}>{location.club.name}</h3>
+                              <p className={styles.mapCardDescription}>
+                                  {location.club.offerings}
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+            </a>
           </Popup>
         </Marker>
       ))}

@@ -33,11 +33,6 @@ export default function ClubContent() {
                 <p>
                     {club.prices}
                 </p>
-                <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("location_title")}</h2>
-                <p>
-                    {club.location}
-                </p>
-                <ClubOpenStreetMap club={club}/>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("description_title")}</h2>
                 <p>
                     {club.description}
@@ -54,6 +49,11 @@ export default function ClubContent() {
                 <p>
                     <a href={club.clubPageUrl} target="_blank" >{club.clubPageUrl}</a>
                 </p>
+                <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("location_title")}</h2>
+                <p>
+                    {club.location}
+                </p>
+                <ClubOpenStreetMap club={club}/>
                 <br/>
             </div>
         );

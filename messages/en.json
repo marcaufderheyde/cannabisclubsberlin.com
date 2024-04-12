@@ -47,6 +47,7 @@
         "offerings_title" : "Offerings",
         "harm_reduction_title" : "Harm Reduction Services",
         "visit_website_title" : "Visit Their Website",
+        "clubs_menu" : "Back to Map",
         "map_disclaimer" : "Please note the locations listed on the map below are taken from the imprint of the clubs found so far, and might not reflect the actual location of the club in the future.",
         "csc-high-ground-berlin-ev": {
                     "prices" : "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -54,7 +55,7 @@
                     "description" : "The Cannabis Social Club High Ground in Berlin is a registered association aiming to supply its members with cannabis through collective cultivation after legalization. It acts as a bridge between members and political or media contacts, emphasizing democracy, education, and administration in the context of cannabis legalization. The club focuses on quality assurance, youth protection, and harm reduction, promoting safer consumption methods over smoking and ensuring high-quality, clean products. It operates on member contributions and donations, preparing for cultivation once permitted.",
                     "offerings" : "Community cultivation, Quality assurance, scientific studies, safe consumption.",
                     "harm_reduction" : "This club aims to promote safer consumption methods of consuming cannabis than smoking."},        
-        "green-social-club-ev-im-norden-von-berlin": {
+        "green-social-club-ev": {
                     "prices": "10 EUR monthly membership fee.",
                     "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
                     "description" : "The Green Social Club Berlin is organized to support its members with cannabis, offering collective cultivation for clean, high-quality cannabis at cost, and advocating for responsible use. It emphasizes medical cannabis support, addiction prevention, and legal advice. The club also provides equipment sharing, educational evenings, and assists with legal issues related to cannabis use. It aims for the well-being of both medical patients and recreational users within the legal framework.",

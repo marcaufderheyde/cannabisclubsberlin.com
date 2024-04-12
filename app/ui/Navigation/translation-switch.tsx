@@ -54,7 +54,7 @@ export default function LocalSwitcher() {
     useEffect(() => {
         // only add the event listener when the dropdown is opened
         if (!showDropdownContent) return;
-        function handleClick(event) {
+        function handleClick(event : any) {
             if (
                 dropdownTriggerRef.current &&
                 !dropdownTriggerRef.current.contains(event.target) &&

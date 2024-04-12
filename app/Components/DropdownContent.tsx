@@ -2,7 +2,12 @@ import { useLocale } from "next-intl";
 import EnglishFlag from "./EnglishFlag";
 import GermanFlag from "./GermanFlag";
 
-export default function DropdownContent({ handleClickAndChangeLanguage, dropdownRef }) {
+type Props = {
+    handleClickAndChangeLanguage : any,
+    dropdownRef: any,
+}
+
+export default function DropdownContent({ handleClickAndChangeLanguage, dropdownRef }: Props) {
     const localActive = useLocale(); 
     return (
         <div id="dropdown-states" ref={dropdownRef}

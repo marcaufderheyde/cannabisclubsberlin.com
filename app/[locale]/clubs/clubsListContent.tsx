@@ -76,7 +76,7 @@ const clubs : Club[] = [
         imageUrl: '/club5.jpeg',
         clubPageUrl: 'https://twitter.com/420_club_berlin',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.5170365, 13.3888599],
     },
     {
         key: 'club6',
@@ -115,7 +115,7 @@ const clubs : Club[] = [
         imageUrl: '/club8.jpeg',
         clubPageUrl: 'https://www.1000berlin15.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.5170365, 13.3888599],
     },
     {
         key: 'club9',
@@ -180,7 +180,7 @@ const clubs : Club[] = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.5170365, 13.3888599],
     },
     {
         key: 'club14',
@@ -193,7 +193,7 @@ const clubs : Club[] = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.5170365, 13.3888599],
     },
     {
         key: 'club15',
@@ -219,7 +219,7 @@ const clubs : Club[] = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: 'https://www.high-society-cannabis-club.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.5170365, 13.3888599],
     },
     {
         key: 'club17',
@@ -232,7 +232,7 @@ const clubs : Club[] = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.5170365, 13.3888599],
     },
     {
         key: 'club18',
@@ -271,7 +271,7 @@ const clubs : Club[] = [
         imageUrl: '/berlinBud1.webp',
         clubPageUrl: '',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.5170365, 13.3888599],
     },
     {
         key: 'club21',

@@ -2,8 +2,7 @@ import { useLocale } from "next-intl";
 import EnglishFlag from "./EnglishFlag";
 import GermanFlag from "./GermanFlag";
 import LanguageCaret from "../ui/Navigation/LanguageCaret"
-import { useCallback, useEffect, useImperativeHandle, useState } from "react";
-import EnglishFlagRevisited from "./EnglishFlagRevisited";
+import { useCallback, useEffect, useState } from "react";
 
 export default function DropdownTrigger({ handleClick, dropdownRef, toggleCaret }) {
     const localActive = useLocale();
@@ -27,7 +26,7 @@ export default function DropdownTrigger({ handleClick, dropdownRef, toggleCaret 
                     toggleRotateCaret(!rotateCaret);
                 }}
                 type="button">
-                {localActive === "en" ? <EnglishFlagRevisited /> : <GermanFlag />}
+                {localActive === "en" ? <EnglishFlag /> : <GermanFlag />}
                 {localActive === "en" ? "ENG" : "DEU"}
                 {<LanguageCaret rotateToggle={rotateCaret}/>}
             </button>

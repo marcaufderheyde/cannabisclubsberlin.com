@@ -1,7 +1,6 @@
 import { useLocale } from "next-intl";
 import EnglishFlag from "./EnglishFlag";
 import GermanFlag from "./GermanFlag";
-import EnglishFlagRevisited from "./EnglishFlagRevisited";
 
 export default function DropdownContent({ handleClickAndChangeLanguage, dropdownRef }) {
     const localActive = useLocale(); 
@@ -17,7 +16,7 @@ export default function DropdownContent({ handleClickAndChangeLanguage, dropdown
                         }}
                         className="inline-flex w-full py-1 px-2 text-sm text-gray-700 hover:rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">
                     <div className="inline-flex items-center">
-                        {localActive === "en" ? <GermanFlag/> : <EnglishFlagRevisited/>}
+                        {localActive === "en" ? <GermanFlag/> : <EnglishFlag/>}
                         {localActive === "en" ? "DEU" : "ENG"}
                     </div>
                     <div className="inline-flex px-2.5">

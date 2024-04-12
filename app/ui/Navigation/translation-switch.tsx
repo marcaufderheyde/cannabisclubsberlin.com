@@ -68,8 +68,10 @@ export default function LocalSwitcher() {
         />;
 
     const dropDownContent = <DropdownContent dropdownRef={dropdownContentRef} handleClickAndChangeLanguage={(nextLocale: string) => {
-            setShowDropdownContent(false);
-            changeLocaleDesktop(nextLocale);
+            if (!isPending) {
+                setShowDropdownContent(false);
+                changeLocaleDesktop(nextLocale);
+            }
             }
         }/>;
 

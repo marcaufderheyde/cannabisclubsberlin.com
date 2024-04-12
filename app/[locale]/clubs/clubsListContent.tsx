@@ -137,7 +137,7 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
+        imageUrl: '/club11.png',
         clubPageUrl: 'https://csc-homeofhemp.de/',
         slug: "",
         geoLocation: [52.526034, 13.398731],
@@ -150,8 +150,8 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: 'https://map.420cloud.io/clubs/c73e91d8-207b-4806-a165-36486d45415f',
+        imageUrl: '/club12.jpeg',
+        clubPageUrl: '',
         slug: "",
         geoLocation: [52.517037, 13.38886],
     },
@@ -203,7 +203,7 @@ const clubs = [
         offerings: '',
         harm_reduction: '',
         imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        clubPageUrl: 'https://www.high-society-cannabis-club.de/',
         slug: "",
         geoLocation: [0, 0],
     },
@@ -228,10 +228,10 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club18.jpeg',
+        clubPageUrl: 'https://www.instagram.com/koala_csc_berlin/?utm_source=qr',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.52437, 13.41053],
     },
     {
         key: 'club19',
@@ -241,10 +241,10 @@ const clubs = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
-        clubPageUrl: '',
+        imageUrl: '/club19.webp',
+        clubPageUrl: 'https://www.weloveweed.org/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.49529, 13.419286],
     },
     {
         key: 'club20',
@@ -270,7 +270,7 @@ const clubs = [
         imageUrl: '/club21.webp',
         clubPageUrl: 'https://club-lammbock.de/',
         slug: "",
-        geoLocation: [0, 0],
+        geoLocation: [52.447605, 13.570429],
     },
 ];
 
@@ -290,6 +290,7 @@ export function generateSlug(name: string): string {
 // Add slugs to the clubs
 clubs.forEach(club => {
     club.slug = generateSlug(club.name);
+    console.log(club.slug);
 });
 
 export function pullClubsListContent() {

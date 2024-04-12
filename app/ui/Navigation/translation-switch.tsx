@@ -47,8 +47,8 @@ export default function LocalSwitcher() {
     };
 
     const [showDropdownContent, setShowDropdownContent] = useState(false);
-    const dropdownTriggerRef = useRef(null);
-    const dropdownContentRef = useRef(null);
+    const dropdownTriggerRef = useRef<HTMLDivElement>(null);
+    const dropdownContentRef = useRef<HTMLDivElement>(null);
     let handleCaretToggle = () => {};
 
     useEffect(() => {

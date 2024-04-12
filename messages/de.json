@@ -173,7 +173,67 @@
                     "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
                     "description" : "Der Club bietet Ratschläge für einen sicheren und verantwortungsbewussten Cannabiskonsum und will damit fundierte Entscheidungen unterstützen. Die Preise für Cannabis und verwandte Produkte werden nicht angegeben, liegen aber unter dem Straßenpreis bei garantierter Qualität. Der Club organisiert Veranstaltungen, um die Gemeinschaft zu stärken und Informationen auszutauschen. Derzeit wird ein geeigneter Standort im Südosten Berlins gesucht. Die Mitgliedschaft kostet einmalig 30 € und monatlich 2 €. Für weitere Informationen können interessierte Personen den Club über seine Website kontaktieren oder ihm auf Instagram folgen, um über Neuigkeiten und Aktivitäten informiert zu werden.",
                     "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-                    "harm_reduction" : "Der Club bietet Ratschläge für einen sicheren und verantwortungsvollen Cannabiskonsum und möchte seine Mitglieder durch direkte Beratung bei ihren Entscheidungen unterstützen."}
+                    "harm_reduction" : "Der Club bietet Ratschläge für einen sicheren und verantwortungsvollen Cannabiskonsum und möchte seine Mitglieder durch direkte Beratung bei ihren Entscheidungen unterstützen."},
+        "high-circle": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "csc-berlinhigh-ev": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "just-plants-ev": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "berliner-cannabis-hilfe-ev": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "spliffers-berlin-ig": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "helmuts-social-club": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "captain-weedy-csc-berlin-ev": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "csc-visionre-berlin": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "csc-kreuzkoelln": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."},
+        "cannabis-social-club-weeden-030-berlin-ev": {
+            "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
+            "location" : "Informationen über den Standort und die Öffnungszeiten dieses Cannabisclubs werden hier angezeigt, sobald sie verfügbar sind.",
+            "description" : "Eine Beschreibung dieses Cannabisclubs wird hier erscheinen, sobald sie verfügbar ist.",
+            "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
+            "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensbegrenzung aufgelistet."}
     },
     "ContactPage": {
         "headline": "Kontakt",

@@ -3,8 +3,12 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation'
 import { pullClubsListContent } from './clubsListContent';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
 export default function ClubContent() {
+    const ClubOpenStreetMap = dynamic(() => import('@/app/Components/ClubOpenStreetMap'), {
+        ssr: false,
+    })
     const pathname = usePathname().split("/")[3];
     const club = pullClubsListContent().find((club) => club.slug === pathname);
     const t = useTranslations('ClubsPage');
@@ -33,6 +37,7 @@ export default function ClubContent() {
                 <p>
                     {club.location}
                 </p>
+                <ClubOpenStreetMap club={club}/>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("description_title")}</h2>
                 <p>
                     {club.description}

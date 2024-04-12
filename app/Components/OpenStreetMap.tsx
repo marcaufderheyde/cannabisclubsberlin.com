@@ -1,9 +1,13 @@
+"use client"
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import L, { icon, popup } from 'leaflet'
 import { pullClubsListContent } from '../[locale]/clubs/clubsListContent';
+import { useLocale, useTranslations } from 'next-intl';
+import styles from '@/app/[locale]/clubs/ClubCard.module.css';
+import Image from 'next/image';
 
 const clubs = pullClubsListContent();
 
@@ -19,7 +23,9 @@ const customIcon = L.icon({
 });
 
 const OpenStreetMap = () => {
-  const locations = clubs.map((club) => {return {lat: club.geoLocation[0], lng: club.geoLocation[1], popup: club.name}});
+  const t = useTranslations('ClubsPage');
+  const localActive = useLocale();
+  const locations = clubs.map((club) => {return {lat: club.geoLocation[0], lng: club.geoLocation[1], club: club}});
   
   const center = {
     lat: 52.516640,
@@ -37,7 +43,30 @@ const OpenStreetMap = () => {
       {locations.map((location, index) => (
         <Marker key={index} position={[location.lat, location.lng] } icon={customIcon}
         >
-          <Popup>{location.popup}</Popup>
+          <Popup>
+          <a href={`/${localActive}/clubs/${location.club.slug}`} key={location.club.slug}>
+            <div className="flex justify-center items-center">
+                    <div className={styles.mapCard} key={index}>
+                        <div className={styles.cardNumber}>#{index + 1}</div>
+                        <div className="flex justify-center items-center">
+                            <Image
+                                src={location.club.imageUrl}
+                                alt={location.club.name + ' Club Picture'}
+                                width={300}
+                                height={300}
+                                className={styles.mapCardImage}
+                            />
+                        </div>
+                        <div className={styles.mapCardContent}>
+                            <h3 className={styles.mapCardTitle}>{location.club.name}</h3>
+                            <p className={styles.mapCardDescription}>
+                                {location.club.offerings}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+          </a>
+          </Popup>
         </Marker>
       ))}
     </MapContainer>

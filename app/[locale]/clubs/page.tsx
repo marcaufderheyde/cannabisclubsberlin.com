@@ -12,7 +12,7 @@ export default function Clubs({ params: { locale } }: { params: { locale: string
     const OpenStreetMap = dynamic(() => import('@/app/Components/OpenStreetMap'), {
         ssr: false,
       })
-    const [showMap, setShowMap] = useState(false);
+    const [showMap, setShowMap] = useState(true);
 
     return (
         <div className='flex flex-col md:flex-col w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 md:pl-[YourNavbarWidth]'>

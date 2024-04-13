@@ -55,7 +55,7 @@
                     "description" : "The Cannabis Social Club High Ground in Berlin is a registered association aiming to supply its members with cannabis through collective cultivation after legalization. It acts as a bridge between members and political or media contacts, emphasizing democracy, education, and administration in the context of cannabis legalization. The club focuses on quality assurance, youth protection, and harm reduction, promoting safer consumption methods over smoking and ensuring high-quality, clean products. It operates on member contributions and donations, preparing for cultivation once permitted.",
                     "offerings" : "Community cultivation, Quality assurance, scientific studies, safe consumption.",
                     "harm_reduction" : "This club aims to promote safer consumption methods of consuming cannabis than smoking."},        
-        "green-social-club-ev-im-norden-von-berlin": {
+        "green-social-club-ev": {
                     "prices": "10 EUR monthly membership fee.",
                     "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
                     "description" : "The Green Social Club Berlin is organized to support its members with cannabis, offering collective cultivation for clean, high-quality cannabis at cost, and advocating for responsible use. It emphasizes medical cannabis support, addiction prevention, and legal advice. The club also provides equipment sharing, educational evenings, and assists with legal issues related to cannabis use. It aims for the well-being of both medical patients and recreational users within the legal framework.",
@@ -174,8 +174,116 @@
                     "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
                     "description" : "The club offers advice on safe and responsible cannabis use, aiming to support informed decisions. Prices for cannabis and related products are not specified but will be below street value with guaranteed quality. The club organizes events to build community and share information. Currently seeking suitable locations in South-East Berlin, membership involves a one-time fee of €30 and a monthly fee of €2. For more details, interested individuals can contact the club through their website or follow them on Instagram for updates and activities.",
                     "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
-                    "harm_reduction" : "The club offers advice on safe and responsible cannabis use, aiming to support informed decisions through direct consultation for it members."}
-    },     
+                    "harm_reduction" : "The club offers advice on safe and responsible cannabis use, aiming to support informed decisions through direct consultation for it members."},
+        "high-circle": {
+                    "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+                    "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+                    "description" : "A description of this cannabis club will be shown here once it is available.",
+                    "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+                    "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "csc-berlinhigh-ev": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "just-plants-ev": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "berliner-cannabis-hilfe-ev": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "spliffers-berlin-ig": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "helmuts-social-club": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "captain-weedy-csc-berlin-ev": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "csc-visionre-berlin": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "csc-kreuzkoelln": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "cannabis-social-club-weeden-030-berlin-ev": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "white-lake-weed": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "csc-doobies-berlin": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "cannabis-social-club-spandau": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "hanf-im-glueck-csc-berlin": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "cscd--dachverband-deutscher-cannabis-social-clubs": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "elevated-society-csc-berlin": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "cannabliss-csc": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+        "monkeyz-berlin-ev": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description" : "A description of this cannabis club will be shown here once it is available.",
+            "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction" : "This club has currently not listed any specific harm reduction services."}
+        },     
     "ContactPage": {
         "headline": "Contact",
         "headline_description": "Please feel free to contact us through the channels listed below.",

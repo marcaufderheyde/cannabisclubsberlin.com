@@ -47,14 +47,17 @@ export default function LocalSwitcher() {
     };
 
     const [showDropdownContent, setShowDropdownContent] = useState(false);
-    const dropdownTriggerRef = useRef(null);
-    const dropdownContentRef = useRef(null);
+
+    const dropdownTriggerRef = useRef<HTMLDivElement>(null);
+    const dropdownContentRef = useRef<HTMLDivElement>(null);
+  
     let handleCaretToggle = () => {};
 
     useEffect(() => {
         // only add the event listener when the dropdown is opened
         if (!showDropdownContent) return;
-        function handleClick(event) {
+      
+        function handleClick(event : any) {
             if (
                 dropdownTriggerRef.current &&
                 !dropdownTriggerRef.current.contains(event.target) &&
@@ -100,18 +103,16 @@ export default function LocalSwitcher() {
             </div>
             {/* Mobile: can replace invisible with hidden and flex*/}
             <div className='sm:invisible visible relative'>
-                <label className='border-2 rounded'>
-                    <p className='sr-only'>change language</p>
-                    <select
-                        defaultValue={localeActive}
-                        className='py-2'
-                        onChange={changeLocaleMobile}
-                        disabled={isPending}
-                    >
-                        <option value='en'>🇺🇸 English</option>
-                        <option value='de'>🇩🇪 Deutsch</option>
-                    </select>
-                </label>
+                <p className='sr-only'>change language</p>
+                <select
+                    defaultValue={localeActive}
+                    className='py-2 rounded-lg'
+                    onChange={changeLocaleMobile}
+                    disabled={isPending}
+                >
+                    <option value='en'>🇬🇧 English</option>
+                    <option value='de'>🇩🇪 Deutsch</option>
+                </select>
             </div>
         </div>
     );

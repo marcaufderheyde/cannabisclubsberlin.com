@@ -4,7 +4,13 @@ import GermanFlag from "./GermanFlag";
 import LanguageCaret from "../ui/Navigation/LanguageCaret"
 import { useCallback, useEffect, useState } from "react";
 
-export default function DropdownTrigger({ handleClick, dropdownRef, toggleCaret }) {
+type Props = {
+    handleClick : any,
+    dropdownRef: any,
+    toggleCaret: any,
+}
+
+export default function DropdownTrigger({ handleClick, dropdownRef, toggleCaret } : Props) {
     const localActive = useLocale();
     const [rotateCaret, toggleRotateCaret] = useState(true);
 

@@ -52,7 +52,6 @@ const OpenStreetMap = () => {
             <a href={`/${localActive}/clubs/${location.club.slug}`} key={location.club.slug}>
               <div className="flex justify-center items-center">
                       <div className={styles.mapCard} key={index}>
-                          <div className={styles.cardNumber}>#{index + 1}</div>
                           <div className="flex justify-center items-center">
                               <Image
                                   src={location.club.imageUrl}

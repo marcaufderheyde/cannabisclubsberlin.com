@@ -18,6 +18,7 @@
   }
 
   .mapCard {
+    /* commented out the card border until a method to override the whole popup component has been found */
     width: 100px;
     height: 225px;
     /* border: 1px solid #ccc;

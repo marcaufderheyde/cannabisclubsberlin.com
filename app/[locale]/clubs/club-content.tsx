@@ -3,8 +3,13 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation'
 import { pullClubsListContent } from './clubsListContent';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import ActionButton from '@/app/ui/Home/actionbutton';
 
 export default function ClubContent() {
+    const ClubOpenStreetMap = dynamic(() => import('@/app/Components/ClubOpenStreetMap'), {
+        ssr: false,
+    })
     const pathname = usePathname().split("/")[3];
     const club = pullClubsListContent().find((club) => club.slug === pathname);
     const t = useTranslations('ClubsPage');
@@ -21,6 +26,16 @@ export default function ClubContent() {
                 <h1 className='font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight'>
                     {club.name}
                 </h1>
+                <div className='flex flex-row text-lg font-semibold gap-2'>
+                    <ActionButton
+                        backgroundColor={'#B6CF54'}
+                        textColor={'#FFFFFF'}
+                        href={`/${localActive}/clubs`}
+                        backLink={true}
+                    >
+                        {t('clubs_menu')}
+                    </ActionButton>
+                </div>
                 <div>
                 <Image src={club.imageUrl} alt={club.name + ' Club Picture'} width={300} height={300}/>
 
@@ -28,10 +43,6 @@ export default function ClubContent() {
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("price_title")}</h2>
                 <p>
                     {club.prices}
-                </p>
-                <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("location_title")}</h2>
-                <p>
-                    {club.location}
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("description_title")}</h2>
                 <p>
@@ -47,8 +58,13 @@ export default function ClubContent() {
                 </p>
                 <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("visit_website_title")}</h2>
                 <p>
-                    <a href={club.clubPageUrl}>{club.clubPageUrl}</a>
+                    <a href={club.clubPageUrl} target="_blank" >{club.clubPageUrl}</a>
                 </p>
+                <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>{t("location_title")}</h2>
+                <p>
+                    {club.location}
+                </p>
+                <ClubOpenStreetMap club={club}/>
                 <br/>
             </div>
         );

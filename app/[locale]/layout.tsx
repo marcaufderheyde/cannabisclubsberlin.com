@@ -11,6 +11,8 @@ import Footer from '../ui/Footer/footer';
 import Background from '../ui/Home/background';
 import Navbar from '../ui/Navigation/navbar';
 import CookieBanner from '../Components/CookieBanner';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 
 const inter = Inter({ subsets: ['latin'] });
 

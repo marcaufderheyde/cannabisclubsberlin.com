@@ -2,7 +2,7 @@
     "Metadata" : {
         "subject" : "cannabis clubs berlin",
         "topic" : "cannabis",
-        "description" : "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships.Your number one spot for all cannabis related information in Berlin, Germany!"
+        "description" : "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships. Your number one spot for all cannabis related information in Berlin, Germany!"
     },
     "IndexPage": {
         "title": "Welcome to CCB (Cannabis Clubs Berlin)!"
@@ -15,13 +15,13 @@
     },
     "AboutPage": {
         "headline": "About us",
-        "headline_description": "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships. On this page you will find information about cannabis in Berlin, how it all works, where you can buy it, and how you can get started! The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors.",
+        "headline_description": "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships. On this page, you will find information about cannabis in Berlin, how it all works, where you can buy it, and how you can get started! The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors.",
         "headline_subdescription" : "Want to find out more? Let's get you started on the laws on Cannabis in Berlin, and in Germany!",
         "local_laws_button": "Laws (CanG)"
     },
     "LawPage": {
         "headline": "Laws (CanG)",
-        "headline_description": "The below information is a summary of the CanG Law, which came into effect on the 1st of April, 2024. Please read through the complete FAQ by the Bundesgesundheitsministerium: ",
+        "headline_description": "The information below is a summary of the CanG Law, which came into effect on the 1st of April, 2024. Please read through the complete FAQ by the Bundesgesundheitsministerium: ",
         "term_one_title" : "Allowed Possession: ",
         "term_one" : "Individuals who are 18 years of age or older are allowed to possess up to 25 grams of cannabis in the form of buds, adjacent leaves, or other plant material for personal use. At their place of residence or usual abode, they are permitted to possess up to 50 grams of cannabis and cultivate up to three live cannabis plants.",
         "term_two_title" : "Private Cultivation:",
@@ -34,12 +34,12 @@
         "term_five" : "Advertising and any form of sponsorship for cannabis and cultivation associations are prohibited.",
         "term_six_title" : "Protection Measures in Private Spaces:",
         "term_six" : "Cannabis and cannabis seeds must be protected from access by third parties, especially children and adolescents, at the residence and usual abode",
-        "term_seven_title" : "Criminal and Administrative Offenses: ",
-        "term_seven" : "The law introduces specific criminal and administrative offense provisions, including the unauthorized possession, trade, and consumption of cannabis."
+        "term_seven_title" : "Criminal and Administrative Offences: ",
+        "term_seven" : "The law introduces specific criminal and administrative offence provisions, including the unauthorized possession, trade, and consumption of cannabis."
     },
     "ClubsPage": {
         "headline": "Cannabis Clubs in Berlin",
-        "headline_description": "Here you will find an up to date list of all the cannabis clubs available in Berlin. Each club will include further information about each club, as well as some pictures of their locations and their products.",
+        "headline_description": "Here you will find an up-to-date list of all the cannabis clubs available in Berlin. Each club will include further information about each club, as well as some pictures of their locations and their products.",
         "headline_subdescription" : "Know a club we haven't listed here? Please contact us now so that we can add it to our listings!",
         "price_title" : "Prices",
         "location_title" : "Location & opening times",
@@ -47,6 +47,8 @@
         "offerings_title" : "Offerings",
         "harm_reduction_title" : "Harm Reduction Services",
         "visit_website_title" : "Visit Their Website",
+        "clubs_menu" : "Back to Map",
+        "map_disclaimer" : "Please note the locations listed on the map below are taken from the imprint of the clubs found so far, and might not reflect the actual location of the club in the future.",
         "csc-high-ground-berlin-ev": {
                     "prices" : "Information on membership fees as well as cannabis prices will be shown here once it is available.",
                     "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
@@ -181,7 +183,7 @@
     }, 
     "HarmReductionPage" : {
         "headline": "Harm Reduction",
-        "headline_description": "Harm reduction related to cannabis usage recognizes the substance's potential benefits while also addressing the risks associated with its use. Cannabis has been celebrated for its therapeutic effects, including pain relief, reduction in anxiety, and its ability to mitigate symptoms of various medical conditions. However, harm reduction emphasizes the importance of understanding and mitigating the risks linked to cannabis consumption, such as potential dependency, impaired cognitive and motor functions, and the impact on mental health, particularly in young users. Strategies include promoting education on safe consumption practices, encouraging moderation, and supporting research into both the positive and adverse effects of cannabis use. This balanced approach aims to protect public health while acknowledging the substance's benefits.",
+        "headline_description": "Harm reduction related to cannabis usage recognises the substance's potential benefits while also addressing the risks associated with its use. Cannabis has been celebrated for its therapeutic effects, including pain relief, reduction in anxiety, and its ability to mitigate symptoms of various medical conditions. However, harm reduction emphasises the importance of understanding and mitigating the risks linked to cannabis consumption, such as potential dependency, impaired cognitive and motor functions, and the impact on mental health, particularly in young users. Strategies include promoting education on safe consumption practices, encouraging moderation, and supporting research into both the positive and adverse effects of cannabis use. This balanced approach aims to protect public health while acknowledging the substance's benefits.",
         "headline_subdescription" : "Please find a detailed guide to the use of cannabis at the following link, with a list of references used for the guide.",
         "drugs_and_me_button": "Full guide on Drugsand.me",
         "drug_checking_berlin" : "The service offered at drugchecking.berlin provides anonymous, free, and confidential advice and testing for psychoactive substances. Their aim is to prevent health damage by conducting chemical analyses of mind-altering substances and offering professional advice alongside the test results. They also publish warnings about substance samples that pose significant risks beyond the usual level of consumption. This initiative is part of a broader harm reduction and safe usage information campaign in Berlin.",

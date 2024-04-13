@@ -31,6 +31,7 @@ export default function ClubContent() {
                         backgroundColor={'#B6CF54'}
                         textColor={'#FFFFFF'}
                         href={`/${localActive}/clubs`}
+                        backLink={true}
                     >
                         {t('clubs_menu')}
                     </ActionButton>

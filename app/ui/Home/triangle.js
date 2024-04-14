@@ -1,8 +1,9 @@
 import React from 'react';
 
-export default function Triangle({ color }) {
+export default function Triangle({ color, toggleRotate }) {
     return (
         <svg
+            className={toggleRotate ? 'rotate-180' : ''}
             width='12'
             height='14'
             viewBox='0 0 12 14'

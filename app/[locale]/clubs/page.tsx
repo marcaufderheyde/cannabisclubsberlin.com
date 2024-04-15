@@ -24,6 +24,7 @@ export default function Clubs({ params: { locale } }: { params: { locale: string
                 style={{ color: '#FFFFFF', backgroundColor: '#B6CF54' }}
                 >
                 {showMap ? t("clubs_menu_show_list") : t("clubs_menu_show_map")}
+
             </button>
             <br/>
             {showMap ? <p>{t("map_disclaimer")}</p> : null}

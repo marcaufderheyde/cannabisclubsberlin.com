@@ -18,9 +18,14 @@ export default function Clubs({ params: { locale } }: { params: { locale: string
         <div className='flex flex-col md:flex-col w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 md:pl-[YourNavbarWidth]'>
             <ClubsContent />
             <br/>
-            <button onClick={() => setShowMap(!showMap)} className='mb-4 p-2 bg-green-500 text-white rounded'>
+            <button onClick={() => setShowMap(!showMap)} className={
+                    'py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
+                }
+                style={{ color: '#FFFFFF', backgroundColor: '#B6CF54' }}
+                >
                 {showMap ? 'Show Clubs List' : 'Show Map'}
             </button>
+            <br/>
             {showMap ? <p>{t("map_disclaimer")}</p> : null}
             <br/>
             {showMap ? <OpenStreetMap /> : <ClubsList />}

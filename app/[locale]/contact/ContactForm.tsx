@@ -120,8 +120,10 @@ const ContactForm: React.FC = () => {
                         border: '1px solid #ccc',
                         borderRadius: '28px',
                         resize: 'none',
+                        transition: 'height 0.3s',
+                        overflowY: 'hidden',
                     }}
-                ></textarea>
+                />
             </div>
             {error && (
                 <div style={{ marginBottom: '20px', color: '#ff6b6b' }}>

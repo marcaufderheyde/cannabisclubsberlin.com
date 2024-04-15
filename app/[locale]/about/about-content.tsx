@@ -15,9 +15,9 @@ export default function AboutContent() {
             <ActionButton
                 backgroundColor={'#B6CF54'}
                 textColor={'#ffffff'}
-                href={`/${localActive}/law`}
+                href={`/${localActive}/clubs`}
             >
-                {t('local_laws_button')}
+                {t('discover_button')}
             </ActionButton>
         </div>
     );

@@ -2,11 +2,13 @@ import React from 'react';
 
 export default function GradientText({
     children,
+    className,
 }: {
     readonly children: React.ReactNode;
+    readonly className?: string;
 }) {
     return (
-        <div>
+        <div className={className}>
             {React.Children.map(children, (child, index) => {
                 return (
                     <div className='relative'>

@@ -20,7 +20,6 @@ export default function ClubsList() {
                 <a href={`/${localActive}/clubs/${club.slug}`} key={club.slug}>
                     <div className="flex justify-center items-center">
                         <div className={styles.card} key={index}>
-                            <div className={styles.cardNumber}>#{index + 1}</div>
                             <div className="flex justify-center items-center">
                                 <Image
                                     src={club.imageUrl}

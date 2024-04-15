@@ -47,7 +47,9 @@
         "offerings_title" : "Offerings",
         "harm_reduction_title" : "Harm Reduction Services",
         "visit_website_title" : "Visit Their Website",
-        "clubs_menu" : "Back to Map",
+        "clubs_menu_show_map" : "Show Map",
+        "clubs_menu_show_list" : "Show Club List",
+        "clubs_menu_back_button" : "Back to Map",
         "map_disclaimer" : "Not all clubs are shown on the map currently, given the information available. Please use the club list to see all available clubs! Please note the locations listed on the map below are taken from the imprint of the clubs found so far, and might not reflect the actual location of the club in the future.",
         "csc-high-ground-berlin-ev": {
                     "prices" : "Information on membership fees as well as cannabis prices will be shown here once it is available.",

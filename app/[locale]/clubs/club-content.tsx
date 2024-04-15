@@ -33,7 +33,7 @@ export default function ClubContent() {
                         href={`/${localActive}/clubs`}
                         backLink={true}
                     >
-                        {t('clubs_menu')}
+                        {t('clubs_menu_back_button')}
                     </ActionButton>
                 </div>
                 <div>

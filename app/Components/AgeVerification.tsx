@@ -4,7 +4,7 @@ import styles from './AgeVerification.module.css';
 import { useTranslations } from 'next-intl';
 
 const AgeVerification = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const t = useTranslations('AgeVerification');
 
   const handleConfirm = () => {

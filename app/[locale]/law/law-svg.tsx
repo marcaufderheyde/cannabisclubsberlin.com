@@ -1,9 +1,11 @@
 export default function LawSVG({
     color,
     className,
+    style,
 }: {
     readonly color: string;
     readonly className?: string;
+    readonly style?: any;
 }) {
     return (
         <svg
@@ -14,6 +16,7 @@ export default function LawSVG({
             id='Capa_1'
             viewBox='0 0 225.25 225.25'
             className={className}
+            style={style}
         >
             <g>
                 <path

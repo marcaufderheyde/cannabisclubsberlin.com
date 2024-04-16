@@ -2,6 +2,7 @@
 import { useTranslations } from 'next-intl';
 import LawSVG from './law-svg';
 import LawContainer from './law-container';
+import AutoScaler from '@/app/Components/AutoScaler';
 
 export default function AboutContent() {
     const pictureGridStyle = {
@@ -12,13 +13,13 @@ export default function AboutContent() {
 
     const t = useTranslations('LawPage');
     return (
-        <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16'>
-            <div className='relative flex flex-row justify-between items-start'>
-                <div className='relative flex flex-col gap-10 w-1/2'>
-                    <h1 className='text-black font-bold text-xl md:text-[4rem]'>
+        <div className='flex flex-col gap-8 md:gap-12 mt-28 md:mt-30 lg:mt-16'>
+            <div className='relative flex flex-col md:flex-row justify-between items-start'>
+                <div className='relative flex flex-col gap-2 md:gap-10 md:w-[30rem] lg:w-[33rem] md:order-1'>
+                    <h1 className='text-black font-bold text-[2rem] md:text-[3rem] lg:text-[4rem]'>
                         {t('headline')}
                     </h1>
-                    <div className='flex flex-row gap-3 text-lg md:text-[2.25rem] text-[#575757]'>
+                    <div className='flex flex-row gap-3 text-[1.75rem] md:text-[2.25rem] text-[#575757]'>
                         <h2 className='font-bold'>Berlin</h2>
                         <h2 className='font-extralight'>Germany</h2>
                     </div>
@@ -29,22 +30,29 @@ export default function AboutContent() {
                         </a>
                     </p>
                 </div>
+
                 <div
                     style={pictureGridStyle}
-                    className='relative right-[-2em] top-[-3em] '
+                    className='relative self-center xl:right-[-2em] my-12 md:my-0 xl:top-[-3em] md:order-2'
                 >
-                    <LawSVG
-                        className='w-[80px] h-[80px] row-start-1 row-end-2 col-start-2 col-end-3 rotate-[-35deg]'
-                        color='rgba(227,231,31,0.56)'
-                    />
-                    <LawSVG
-                        className='w-[170px] h-[170px] mt-4 row-start-1 row-end-3 col-start-3 col-end-4 rotate-[11deg] '
-                        color='rgba(182,207,84,1.0)'
-                    />
-                    <LawSVG
-                        className='w-[270px] h-[270px] row-start-2 row-end-4 col-start-1 col-end-3  rotate-[-18deg]'
-                        color='rgba(227,231,31,0.56)'
-                    />
+                    <AutoScaler refScreenWidthInPixels='1920px'>
+                        <LawSVG
+                            className='w-[150px] h-[150px] md:w-[80px] md:h-[80px] row-start-1 row-end-2 col-start-2 col-end-3 rotate-[-35deg]'
+                            color='rgba(227,231,31,0.56)'
+                        />
+                    </AutoScaler>
+                    <AutoScaler refScreenWidthInPixels='1920px'>
+                        <LawSVG
+                            className='w-[240px] h-[240px] md:w-[170px] md:h-[170px] mt-4 row-start-1 row-end-3 col-start-3 col-end-4 rotate-[11deg] '
+                            color='rgba(182,207,84,1.0)'
+                        />
+                    </AutoScaler>
+                    <AutoScaler refScreenWidthInPixels='1920px'>
+                        <LawSVG
+                            className='w-[360px] h-[360px] md:w-[270px] md:h-[270px] row-start-2 row-end-4 col-start-1 col-end-3  rotate-[-18deg]'
+                            color='rgba(227,231,31,0.56)'
+                        />
+                    </AutoScaler>
                 </div>
             </div>
 

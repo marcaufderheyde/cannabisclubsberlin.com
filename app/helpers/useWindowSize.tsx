@@ -11,8 +11,8 @@ export default function useWindowSize() {
     // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
 
     const initWindow: Window = {
-        width: undefined,
-        height: undefined,
+        width: window.outerWidth,
+        height: window.outerHeight,
     };
     const [windowSize, setWindowSize] = useState(initWindow);
 

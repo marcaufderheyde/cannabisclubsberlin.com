@@ -347,6 +347,9 @@
         "header" : "Age Verification",
         "description": "You must be 18 years or older to enter this site.",
         "button_text": "I am 18 years or older"
+    },
+    "CookieBanner" : {
+        "accept_button" : "Accept",
+        "description" : "We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies."
     }
-
 }

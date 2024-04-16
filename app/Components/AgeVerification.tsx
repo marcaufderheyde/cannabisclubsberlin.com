@@ -7,15 +7,16 @@ const AgeVerification = () => {
   const [isVisible, setIsVisible] = useState(false);
   const t = useTranslations('AgeVerification');
 
+  useEffect(() => {
+    const isAccepted = localStorage.getItem('ageVerified');
+    setIsVisible(!isAccepted);
+  }, []);
+  
   const handleConfirm = () => {
     setIsVisible(false);
     localStorage.setItem('ageVerified', 'true');
   };
 
-  useEffect(() => {
-    const isAccepted = localStorage.getItem('ageVerified');
-    setIsVisible(!isAccepted);
-}, []);
 
   if (!isVisible) {
     return null;

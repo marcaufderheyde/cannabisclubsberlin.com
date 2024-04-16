@@ -347,5 +347,9 @@
         "header" : "Altersüberprüfung",
         "description": "Du musst 18 Jahre oder älter sein, um diese Seite zu betreten.",
         "button_text": "Ich bin 18 Jahre oder älter"
+    },
+    "CookieBanner" : {
+        "accept_button" : "Akzeptieren",
+        "description" : "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Indem Sie unsere Seite weiter nutzen, akzeptieren Sie unsere Verwendung von Cookies."
     }
 }

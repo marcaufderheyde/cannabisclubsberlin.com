@@ -16,7 +16,7 @@ export default function AboutContent() {
     return (
         <div className='flex flex-col gap-8 md:gap-12 mt-0 md:mt-30 lg:mt-16'>
             <div className='relative flex flex-col md:flex-row justify-between items-start'>
-                <div className='relative flex flex-col gap-2 md:gap-10 md:w-[30rem] lg:w-[33rem] md:order-1 order-2'>
+                <div className='relative flex flex-col gap-2 md:gap-6 md:w-[30rem] lg:w-[33rem] md:order-1 order-2'>
                     <h1 className='text-black font-bold text-[2rem] md:text-[3rem] lg:text-[4rem]'>
                         {t('headline')}
                     </h1>
@@ -42,7 +42,7 @@ export default function AboutContent() {
                     />
 
                     <LawSVG
-                        className='max-w-[100%] max-h-[90px] md:max-w-[100%] md:h-[170px] mt-4 row-start-1 row-end-3 col-start-3 col-end-4 rotate-[11deg] '
+                        className='max-w-[100%] h-[90px] md:max-w-[100%] md:h-[240px] row-start-1 row-end-3 col-start-3 col-end-4 rotate-[11deg] self-center'
                         color='rgba(182,207,84,1.0)'
                     />
 

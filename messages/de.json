@@ -16,8 +16,8 @@
     "AboutPage": {
         "headline": "Über uns",
         "headline_description": "CannabisClubsBerlin.com ist deine erste Anlaufstelle für Einblicke in die Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unser Ziel ist es, dich über die lebendige Cannabis-Kultur in Berlin aufzuklären und bei der Navigation durch die lokalen Vorschriften bezüglich des Cannabis-Konsums und der Clubmitgliedschaften zu unterstützen. Auf dieser Seite findest du Informationen über Cannabis in Berlin, wie alles funktioniert, wo du es kaufen kannst und wie du anfangen kannst! Die auf CannabisClubsBerlin.com bereitgestellten Informationen sollen die direkte Beziehung zwischen Besuchern und Cannabis-Clubs oder Rechtsberatern unterstützen, jedoch nicht ersetzen.",
-        "headline_subdescription": "Möchtest du mehr erfahren? Lass uns beginnen mit den Gesetzen zu Cannabis in Berlin und in Deutschland!",
-        "local_laws_button": "Gesetze (CanG)"
+        "headline_subdescription": "Möchtest du mehr erfahren? Lassen uns beginnen, indem wir dir die verschiedenen Cannabis-Clubs zeigen, die es in Berlin jetzt schon gibt!",
+        "discover_button": "Entdecken"
     },
     "LawPage": {
         "headline": "Gesetze (CanG)",
@@ -47,7 +47,9 @@
         "offerings_title" : "Angebote",
         "harm_reduction_title" : "Schadensminderung Angebote",
         "visit_website_title" : "Besuche ihre Website",
-        "clubs_menu" : "Zurück zur Karte",
+        "clubs_menu_show_map" : "Karte Anzeigen",
+        "clubs_menu_show_list" : "Vereinsliste Anzeigen",
+        "clubs_menu_back_button" : "Zurück zur Karte",
         "map_disclaimer" : "In Anbetracht der verfügbaren Informationen werden derzeit nicht alle Vereine auf der Karte angezeigt. Bitte benutzen Sie die Vereinsliste, um alle verfügbaren Vereine zu sehen! Bitte beachte, dass die auf der Karte unten aufgeführten Orte aus dem Impressum der bisher gefundenen Clubs stammen und möglicherweise nicht den tatsächlichen Standort des Clubs in der Zukunft widerspiegeln.",
         "csc-high-ground-berlin-ev": {
                     "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",

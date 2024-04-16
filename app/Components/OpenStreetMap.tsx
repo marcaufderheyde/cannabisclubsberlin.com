@@ -12,10 +12,9 @@ import Image from 'next/image';
 const clubs = pullClubsListContent();
 
 const customIcon = L.icon({
-  iconUrl: '/leaf-green.png',
-  shadowUrl: '/leaf-shadow.png',
+  iconUrl: '/leaf-weed.png',
 
-  iconSize:     [38, 95], // size of the icon
+  iconSize:     [38, 38], // size of the icon
   shadowSize:   [50, 64], // size of the shadow
   iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
   shadowAnchor: [4, 62],  // the same for the shadow

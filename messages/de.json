@@ -342,5 +342,10 @@
     "Footer": {
         "imprint": "Impressum",
         "terms_of_use": "Nutzungsbedingungen"
+    },
+    "AgeVerification" : {
+        "header" : "Altersüberprüfung",
+        "description": "Du musst 18 Jahre oder älter sein, um diese Seite zu betreten.",
+        "button_text": "Ich bin 18 Jahre oder älter"
     }
 }

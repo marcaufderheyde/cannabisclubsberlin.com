@@ -13,6 +13,7 @@ import Navbar from '../ui/Navigation/navbar';
 import CookieBanner from '../Components/CookieBanner';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
+import AgeVerification from '../Components/AgeVerification';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -48,6 +49,7 @@ export default function LocaleLayout({
                         {children}
                     </div>
                 </div>
+                <AgeVerification />
                 <CookieBanner />
                 <Footer />
             </NextIntlClientProvider>

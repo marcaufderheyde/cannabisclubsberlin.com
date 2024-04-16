@@ -342,6 +342,11 @@
     "Footer" : {
         "imprint" : "Imprint",
         "terms_of_use" : "Terms of Use"
+    },
+    "AgeVerification" : {
+        "header" : "Age Verification",
+        "description": "You must be 18 years or older to enter this site.",
+        "button_text": "I am 18 years or older"
     }
 
 }

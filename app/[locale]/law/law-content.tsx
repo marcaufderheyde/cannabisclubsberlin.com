@@ -15,7 +15,7 @@ export default function AboutContent() {
     const t = useTranslations('LawPage');
     return (
         <div className='flex flex-col gap-8 md:gap-12 mt-0 md:mt-30 lg:mt-16'>
-            <div className='relative flex flex-col md:flex-row justify-between items-start'>
+            <div className='relative flex flex-col md:flex-row justify-between items-start mb-5 md:mb-0'>
                 <div className='relative flex flex-col gap-2 md:gap-6 md:w-[30rem] lg:w-[33rem] md:order-1 order-2'>
                     <h1 className='text-black font-bold text-[2rem] md:text-[3rem] lg:text-[4rem]'>
                         {t('headline')}
@@ -42,7 +42,7 @@ export default function AboutContent() {
                     />
 
                     <LawSVG
-                        className='max-w-[100%] h-[90px] md:max-w-[100%] md:h-[240px] row-start-1 row-end-3 col-start-3 col-end-4 rotate-[11deg] self-center'
+                        className='max-w-[100%] h-[90px] md:max-w-[100%] md:h-[180px] row-start-1 row-end-3 col-start-3 col-end-4 rotate-[11deg] self-center'
                         color='rgba(182,207,84,1.0)'
                     />
 

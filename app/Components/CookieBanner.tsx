@@ -1,8 +1,10 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 
 const CookieBanner: React.FC = () => {
     const [showBanner, setShowBanner] = useState<boolean>(false);
+    const t = useTranslations('CookieBanner');
 
     useEffect(() => {
         const isAccepted = localStorage.getItem('cookiesAccepted');
@@ -19,10 +21,9 @@ const CookieBanner: React.FC = () => {
     return (
         <div className='cookie-banner'>
             <p>
-                We use cookies to improve your experience on our site. By
-                continuing to use our site, you accept our use of cookies.
+                {t('description')}
             </p>
-            <button onClick={acceptCookies}>Accept</button>
+            <button onClick={acceptCookies}>{t('accept_button')}</button>
         </div>
     );
 };

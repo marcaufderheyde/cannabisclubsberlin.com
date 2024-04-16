@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './AgeVerification.module.css';
 import { useTranslations } from 'next-intl';
 
@@ -11,6 +11,11 @@ const AgeVerification = () => {
     setIsVisible(false);
     localStorage.setItem('ageVerified', 'true');
   };
+
+  useEffect(() => {
+    const isAccepted = localStorage.getItem('ageVerified');
+    setIsVisible(!isAccepted);
+}, []);
 
   if (!isVisible) {
     return null;

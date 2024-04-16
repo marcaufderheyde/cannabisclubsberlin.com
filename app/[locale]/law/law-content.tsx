@@ -1,8 +1,14 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import LawSVG from './law-svg';
+import LawSVG from '../../Components/svg/law-svg';
+
 import LawContainer from './law-container';
-import AutoScaler from '@/app/Components/AutoScaler';
+import UserWeedSVG from '@/app/Components/svg/user-weed-svg';
+import PlantWeedSVG from '@/app/Components/svg/plant-weed-svg';
+import PeopleSVG from '@/app/Components/svg/people-svg';
+import NoWeedSVG from '@/app/Components/svg/no-weed-svg';
+import WeedAdSVG from '@/app/Components/svg/weed-ad-svg';
+import SafeWeedSVG from '@/app/Components/svg/safe-weed-svg';
 
 export default function AboutContent() {
     const pictureGridStyle = {
@@ -56,37 +62,37 @@ export default function AboutContent() {
             <LawContainer
                 title={'1. ' + t('term_one_title')}
                 text={t('term_one')}
-                SvgImage={LawSVG}
+                SvgImage={UserWeedSVG}
             />
 
             <LawContainer
                 title={'2. ' + t('term_two_title')}
                 text={t('term_two')}
-                SvgImage={LawSVG}
+                SvgImage={PlantWeedSVG}
             />
 
             <LawContainer
                 title={'3. ' + t('term_three_title')}
                 text={t('term_three')}
-                SvgImage={LawSVG}
+                SvgImage={PeopleSVG}
             />
 
             <LawContainer
                 title={'4. ' + t('term_four_title')}
                 text={t('term_four')}
-                SvgImage={LawSVG}
+                SvgImage={NoWeedSVG}
             />
 
             <LawContainer
                 title={'5. ' + t('term_five_title')}
                 text={t('term_five')}
-                SvgImage={LawSVG}
+                SvgImage={WeedAdSVG}
             />
 
             <LawContainer
                 title={'6. ' + t('term_six_title')}
                 text={t('term_six')}
-                SvgImage={LawSVG}
+                SvgImage={SafeWeedSVG}
             />
 
             <LawContainer

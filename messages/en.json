@@ -100,11 +100,11 @@
                     "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
                     "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
         "cannabis-social-club-koepenick": {
-                    "prices": "20 EUR signup fee, 15 EUR monthly membership fee.",
+                    "prices": "20 EUR signup fee. Two monthly tiers: Normal Membership, which is €5 per month and Membership Plus which is €15 per month, and includes a variety of workshops on self-cultivation and other events.",
                     "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
-                    "description" : "The Cannabis Social Club Köpenick aims to represent cannabis consumers and medical users in Berlin-Köpenick and beyond. It focuses on establishing a community for collective, private cannabis cultivation by members for members, expected to start on April 1, 2024. The club prioritizes responsible cannabis use, fun, and community cohesion, offering events for member interaction. It also emphasizes youth protection and addiction prevention, ensuring cannabis is not distributed to minors and providing information on responsible usage, all while adhering to legal regulations for operation.",
-                    "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
-                    "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+                    "description" : "The Cannabis Social Club Köpenick is the first club in Berlin to have its own venue that hosts many events and workshops and aims to represent cannabis consumers and medical users in Berlin-Köpenick and beyond. It focuses on establishing a community for collective, private cannabis cultivation by members for members, expected to start on April 1, 2024. The club prioritizes responsible cannabis use, fun, and community cohesion, offering events for member interaction. It also emphasizes youth protection and addiction prevention, ensuring cannabis is not distributed to minors and providing information on responsible usage, all while adhering to legal regulations for operation.",
+                    "offerings" : "Workshops and Events on self-cultivation and the production and dispensing of 'Living Soil', Community cultivation, Distribution of cannabis for members, Socialising",
+                    "harm_reduction" : "Addiction Prevention Training: A member of their board is pre-registered for a training program in addiction prevention at the 'Fachstelle für Suchtprävention im Land Berlin'. The training is expected to start around the beginning of May, pending guidelines from the Federal Ministry of Health."},
         "csc-high-on-earth-ev": {
                     "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
                     "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
@@ -240,9 +240,9 @@
         "white-lake-weed": {
             "prices": "10EUR per month (no cannabis given at this tier), 15EUR per month (7EUR per gram).",
             "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description" : "White Lake Weed is a Cannabis Social Club in Berlin Weißensee that combines scientific expertise and passion to ensure consistent, high-quality cannabis for its members. The club utilizes advanced techniques such as reverse osmosis water, crop steering, and LED lighting to enhance plant growth and integrated pest management to maintain quality. Initially offering a limited number of cannabis strains, the club plans to expand its selection based on member preferences. Membership is intentionally kept small initially to ensure reliable supply but may expand as the club grows.",
+            "description" : "White Lake Weed is a Cannabis Social Club in Berlin Weißensee that combines scientific expertise and passion to ensure consistent, high-quality cannabis for its members. The uniqueness of the club lies in the use of advanced techniques such as crop steering and special LED lamps based on the latest research. The club is also characterised by the biological background of the management, which comes from the laboratory sector and sets high standards in terms of quality and cleanliness. The club utilizes advanced techniques such as reverse osmosis water, crop steering, and LED lighting to enhance plant growth and integrated pest management to maintain quality. Initially offering a limited number of cannabis strains, the club plans to expand its selection based on member preferences. Membership is intentionally kept small initially to ensure reliable supply but may expand as the club grows.",
             "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction" : "The harm reduction services offered by White Lake Weed in Berlin focus on educating the community about the effects of cannabis use through addiction and prevention counseling. Key services include educating the public on both short-term effects like euphoria and long-term risks such as dependency and cognitive impairments; early detection and intervention to identify and support at-risk individuals; efforts to reduce consumption via behavioral changes and awareness campaigns; and health promotion to enhance overall well-being by offering alternatives to cannabis use. The program also emphasizes protecting minors with school-based early prevention, engaging parents, and promoting healthy alternatives. Legal aspects are addressed by clarifying the legality of cannabis cultivation for personal use by adults while prohibiting sale, trade, and use by minors. These comprehensive services aim to mitigate the adverse effects associated with cannabis use while prioritizing community health and legal awareness."},
+            "harm_reduction" : "The harm reduction services offered by White Lake Weed in Berlin focus on educating the community about the effects of cannabis use through addiction and prevention counseling. Key services include educating the public on both short-term effects like euphoria and long-term risks such as dependency and cognitive impairments; early detection and intervention to identify and support at-risk individuals; efforts to reduce consumption via behavioral changes and awareness campaigns; and health promotion to enhance overall well-being by offering alternatives to cannabis use. The program also emphasizes protecting minors with school-based early prevention, engaging parents, and promoting healthy alternatives. Legal aspects are addressed by clarifying the legality of cannabis cultivation for personal use by adults while prohibiting sale, trade, and use by minors. These comprehensive services aim to mitigate the adverse effects associated with cannabis use while prioritizing community health and legal awareness. Once the licence has been obtained, a youth protection concept is introduced to make members over the age of 21 aware of the importance of their role model function towards younger people. The aim is to raise awareness of appropriate behaviour in public as well as in the private and family environment."},
         "csc-doobies-berlin": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
             "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
@@ -342,6 +342,14 @@
     "Footer" : {
         "imprint" : "Imprint",
         "terms_of_use" : "Terms of Use"
+    },
+    "AgeVerification" : {
+        "header" : "Age Verification",
+        "description": "You must be 18 years or older to enter this site.",
+        "button_text": "I am 18 years or older"
+    },
+    "CookieBanner" : {
+        "accept_button" : "Accept",
+        "description" : "We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies."
     }
-
 }

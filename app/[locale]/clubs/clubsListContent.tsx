@@ -506,7 +506,7 @@ const clubs: Club[] = [
         imageUrl: '/club38.png',
         clubPageUrl: 'https://cannabliss.farm/',
         slug: '',
-        geoLocation: [52.417893, 13.600185],
+        geoLocation: [52.488419, 13.461284],
     },
     {
         key: 'club39',

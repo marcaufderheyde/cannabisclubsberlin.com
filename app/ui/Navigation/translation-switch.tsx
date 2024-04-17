@@ -25,16 +25,21 @@ export default function LocalSwitcher() {
     };
 
     const createPageURL = (locale: string) => {
-        const params = new URLSearchParams(searchParams);
-        const pathnameWithoutCurrentLocale =
-            removeFirstDirectoryFromPathname(pathname);
-        return `/${locale}${pathnameWithoutCurrentLocale}?${params.toString()}`;
+        if (searchParams !== null && pathname !== null) {
+            const params = new URLSearchParams(searchParams);
+            const pathnameWithoutCurrentLocale =
+                removeFirstDirectoryFromPathname(pathname);
+            return `/${locale}${pathnameWithoutCurrentLocale}?${params.toString()}`;
+        }
+        return '';
     };
 
     const changeLocaleDesktop = (nextLocale: string) => {
         startTransition(() => {
             const url = createPageURL(nextLocale);
-            router.replace(url);
+            if (url !== '') {
+                router.replace(url);
+            }
         });
     };
 
@@ -42,7 +47,9 @@ export default function LocalSwitcher() {
         const nextLocale = e.target.value;
         startTransition(() => {
             const url = createPageURL(nextLocale);
-            router.replace(url);
+            if (url !== '') {
+                router.replace(url);
+            }
         });
     };
 
@@ -50,14 +57,14 @@ export default function LocalSwitcher() {
 
     const dropdownTriggerRef = useRef<HTMLDivElement>(null);
     const dropdownContentRef = useRef<HTMLDivElement>(null);
-  
+
     let handleCaretToggle = () => {};
 
     useEffect(() => {
         // only add the event listener when the dropdown is opened
         if (!showDropdownContent) return;
-      
-        function handleClick(event : any) {
+
+        function handleClick(event: any) {
             if (
                 dropdownTriggerRef.current &&
                 !dropdownTriggerRef.current.contains(event.target) &&
@@ -87,31 +94,36 @@ export default function LocalSwitcher() {
         />
     );
 
-    const dropDownContent = <DropdownContent dropdownRef={dropdownContentRef} handleClickAndChangeLanguage={(nextLocale: string) => {
-            if (!isPending) {
-                setShowDropdownContent(false);
-                changeLocaleDesktop(nextLocale);
+    const dropDownContent = (
+        <DropdownContent
+            dropdownRef={dropdownContentRef}
+            handleClickAndChangeLanguage={(nextLocale: string) => {
+                if (!isPending) {
+                    setShowDropdownContent(false);
+                    changeLocaleDesktop(nextLocale);
+                }
             }}
-        }/>;
+        />
+    );
 
     return (
-        <div className='flex'>
+        <div className="flex">
             {/* Desktop */}
-            <div className='sm:visible invisible relative top-0'>
+            <div className="sm:visible invisible relative top-0">
                 {dropdownTrigger}
                 {showDropdownContent && dropDownContent}
             </div>
             {/* Mobile: can replace invisible with hidden and flex*/}
-            <div className='sm:invisible visible relative'>
-                <p className='sr-only'>change language</p>
+            <div className="sm:invisible visible relative">
+                <p className="sr-only">change language</p>
                 <select
                     defaultValue={localeActive}
-                    className='py-2 rounded-lg'
+                    className="py-2 rounded-lg"
                     onChange={changeLocaleMobile}
                     disabled={isPending}
                 >
-                    <option value='en'>🇬🇧 English</option>
-                    <option value='de'>🇩🇪 Deutsch</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="de">🇩🇪 Deutsch</option>
                 </select>
             </div>
         </div>

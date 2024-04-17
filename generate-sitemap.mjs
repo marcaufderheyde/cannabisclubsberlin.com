@@ -36,6 +36,10 @@ async function generate() {
                rel="alternate"
                hreflang="${otherLanguage}"
                href="${alternativeSiteUrl}"/>
+               <xhtml:link
+               rel="alternate"
+               hreflang="${lang}"
+               href="${siteUrl}"/>
                         <lastmod>${new Date().toISOString()}</lastmod>
                     </url>
                 `;
@@ -51,6 +55,10 @@ async function generate() {
                rel="alternate"
                hreflang="${otherLanguage}"
                href="${alternativeSiteUrl}${route}"/>
+               <xhtml:link
+               rel="alternate"
+               hreflang="${lang}"
+               href="${siteUrl}${route}"/>
                         <lastmod>${new Date().toISOString()}</lastmod>                  
                     </url>
                     `;

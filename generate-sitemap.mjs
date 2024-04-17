@@ -67,7 +67,7 @@ async function generate() {
             parser: 'html',
         });
 
-        writeFileSync(path.join('', `sitemap-${lang}.xml`), formatted); // Use path.join to construct file path
+        writeFileSync(path.join('out', `sitemap-${lang}.xml`), formatted); // Use path.join to construct file path
     }
 
     // generate sitemap index file here
@@ -91,7 +91,7 @@ async function generate() {
         parser: 'html',
     });
 
-    writeFileSync(path.join('', `sitemap.xml`), formatted);
+    writeFileSync(path.join('out', `sitemap.xml`), formatted);
 
 }
 

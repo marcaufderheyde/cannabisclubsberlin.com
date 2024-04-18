@@ -1,6 +1,6 @@
 import React from 'react';
 import ClubsContent from './clubs-content';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 export const generateMetadata = async () => {
     const t = await getTranslations('Metadata');
@@ -16,7 +16,7 @@ export default function Clubs({
 }: {
     params: { locale: string };
 }) {
-
+    unstable_setRequestLocale(locale);
     return (
         <div className="flex flex-col md:flex-col w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 md:pl-[YourNavbarWidth]">
             <ClubsContent />

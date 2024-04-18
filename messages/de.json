@@ -2,7 +2,23 @@
     "Metadata": {
         "subject": "cannabis clubs berlin",
         "topic": "cannabis",
-        "description": "CannabisClubsBerlin.com ist deine erstklassige Quelle für Einblicke in Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unsere Mission ist es, dich über die lebhafte Cannabis-Kultur in Berlin aufzuklären und dich durch die lokalen Vorschriften bezüglich des Cannabisgebrauchs und der Clubmitgliedschaften zu navigieren. Dein erster Anlaufpunkt für alle cannabisbezogenen Informationen in Berlin, Deutschland!"
+        "description": "Entdecken Sie Berlins Cannabis-Clubs mit Bewertungen und Informationen über die lokale Kultur und die Vorschriften auf CannabisClubsBerlin.com.",
+        "about_title": "Über uns",
+        "about_description": "CannabisClubsBerlin.com bietet Einblicke und Bewertungen zu Berlins Cannabisclubs, Kultur, Vorschriften und Kaufoptionen.",
+        "contact_title": "Kontakt",
+        "contact_description": "Bitte zögere nicht, uns über die unten aufgeführten Kanäle zu kontaktieren. cannabisclubsberlin@protonmail.me",
+        "contact_keywords": "Kontakt Cannabis Clubs Berlin, Cannabis Club Support Berlin, E-Mail Cannabis Clubs Berlin, Cannabis Clubs Berlin Kontaktinfo, Cannabis Clubs Berlin E-Mail, Kontaktinformationen Cannabis Clubs Berlin, Kontaktaufnahme Cannabis Clubs Berlin, Cannabis Club Anfragen Berlin, Cannabis Clubs Berlin Kommunikation, Cannabis Club Hilfe Berlin, Kundenservice Cannabis Clubs Berlin, Cannabis Clubs Berlin Hilfe, Cannabis Club Kontaktdetails Berlin, Cannabis Clubs Berlin Kundenbetreuung",
+        "law_title": "Gesetze (CanG)",
+        "law_description": "Zusammenfassung des CanG-Gesetzes, das am 1. April 2024 in Kraft tritt, mit detaillierten Vorschriften für den Besitz, den Anbau und den Konsum von Cannabis.",
+        "law_keywords": "CanG Gesetz 2024, Cannabisbesitzgesetz, Cannabisanbauregeln, privater Cannabisanbau, Cannabisanbauverbände, Cannabiskonsumverbot, Cannabiswerbebeschränkungen, Cannabissponsoringverbot, Cannabissicherheitsmaßnahmen, Cannabis Legalitätsalter, Cannabisstraftaten, Cannabis Ordnungswidrigkeiten, Bundesgesundheitsministerium Cannabis FAQ, Cannabisbesitzgrenzen, kommunaler Cannabisanbau",
+        "clubs_title": "Clubs",
+        "clubs_description": "Here you will find an up to date list of all the cannabis clubs available in Berlin. Each club will include further information about each club, as well as some pictures of their locations and their products.",
+        "clubs_keywords": "Cannabis Clubs Liste Berlin, Berlin Cannabis Clubs Verzeichnis, Cannabis Club Details Berlin, Cannabis Clubs Fotos Berlin, Cannabis Produkte Berlin, Cannabis Club Standorte Berlin, Cannabis Clubs entdecken Berlin, Beste Cannabis Clubs Berlin, Cannabis Club Führer Berlin, Cannabis Club Beschreibungen Berlin, Cannabis Clubs Übersicht Berlin, Cannabis Szene in Berlin, Cannabis Club Updates Berlin, Berlin Cannabis Club Profile, Cannabis Club Bewertungen Berlin",
+        "harm_reduction_title": "Schadensminderung",
+        "harm_reduction_description": "Die Schadensminimierung bei Cannabis hält Nutzen und Risiken in einem ausgewogenen Verhältnis, betont den sicheren Konsum und unterstützt die öffentliche Gesundheit.",
+        "harm_reduction_keywords": "Cannabis-Schadensminderung, therapeutische Wirkungen von Cannabis, Cannabis-Schmerzlinderung, Cannabis gegen Angst, Minderung von Cannabis-Risiken, Cannabis-Abhängigkeitsrisiken, kognitive Wirkungen von Cannabis, Cannabis und psychische Gesundheit, Aufklärung über Cannabis-Konsum, Mäßigung beim Cannabis-Konsum, Unterstützung der Cannabis-Forschung, öffentliche Gesundheit und Cannabis, Cannabis-Vorteile, Cannabis-Ratgeber, ausführlicher Cannabis-Ratgeber, Cannabis-Sicherheitspraktiken, Drug-Checking Berlin, anonyme Drogentests, kostenlose Substanztests Berlin, Beratung zu psychoaktiven Substanzen Berlin, Schadensminderungskampagnen Berlin, sicherer Cannabis-Konsum Berlin, Drogensicherheit Berlin",
+        "terms_of_use_title": "Nutzungsbedingungen",
+        "imprint_title": "Impressum"
     },
     "IndexPage": {
         "title": "Willkommen bei CCB (Cannabis Clubs Berlin)!"
@@ -37,12 +53,78 @@
         "term_seven_title": "Straf- und Bußgeldvorschriften:",
         "term_seven": "Das Gesetz führt spezifische Straf- und Bußgeldvorschriften ein, die unter anderem den unerlaubten Besitz, Handel und Konsum von Cannabis betreffen."
     },
+    "ContactPage": {
+        "headline": "Kontakt",
+        "headline_description": "Bitte zögere nicht, uns über die unten aufgeführten Kanäle zu kontaktieren.",
+        "headline_subdescription": "cannabisclubsberlin@protonmail.me"
+    },
+    "HarmReductionPage": {
+        "headline": "Schadensminderung",
+        "headline_description": "Die Schadensminderung im Zusammenhang mit dem Konsum von Cannabis erkennt die potenziellen Vorteile der Substanz an und spricht gleichzeitig die Risiken an, die mit ihrem Gebrauch verbunden sind. Cannabis wird für seine therapeutischen Effekte geschätzt, einschließlich Schmerzlinderung, Verringerung von Angstzuständen und seiner Fähigkeit, Symptome verschiedener medizinischer Zustände zu mildern. Die Schadensminderung betont jedoch die Bedeutung des Verständnisses und der Minderung der Risiken, die mit dem Konsum von Cannabis verbunden sind, wie etwa potenzielle Abhängigkeit, beeinträchtigte kognitive und motorische Funktionen und die Auswirkungen auf die psychische Gesundheit, insbesondere bei jungen Nutzern. Strategien beinhalten die Förderung von Bildung über sichere Konsumpraktiken, die Ermutigung zur Mäßigung und die Unterstützung von Forschung zu den positiven und negativen Effekten des Cannabiskonsums. Dieser ausgewogene Ansatz zielt darauf ab, die öffentliche Gesundheit zu schützen und gleichzeitig die Vorteile der Substanz anzuerkennen.",
+        "headline_subdescription": "Bitte finde einen detaillierten Leitfaden zum Gebrauch von Cannabis unter dem folgenden Link, mit einer Auflistung der für den Leitfaden verwendeten Referenzen.",
+        "drugs_and_me_button": "Vollständiger Leitfaden auf drugsand.me",
+        "drug_checking_berlin": "Der Service auf drugchecking.berlin bietet anonyme, kostenlose und vertrauliche Beratung sowie Tests für psychoaktive Substanzen. Ihr Ziel ist es, Gesundheitsschäden zu verhindern, indem sie chemische Analysen von bewusstseinsverändernden Substanzen durchführen und professionelle Beratung zusammen mit den Testergebnissen anbieten. Sie veröffentlichen auch Warnungen über Substanzproben, die ein signifikantes Risiko über das übliche Konsumniveau hinaus darstellen. Diese Initiative ist Teil einer breiteren Kampagne zur Schadensminderung und zur Information über sicheren Gebrauch in Berlin.",
+        "drug_checking_button": "Weitere Informationen zu sicherem Gebrauch und Drogenprüfung in Berlin"
+    },
+    "ImprintPage": {
+        "headline": "Impressum",
+        "headline_description": "CannabisClubsBerlin.com ist deine erste Anlaufstelle für Einblicke in die Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unser Ziel ist es, Nutzer über die lebendige Cannabis-Kultur in Berlin aufzuklären und bei der Navigation durch die lokalen Voraussetzungen bezüglich des Cannabis-Konsums und der Clubmitgliedschaften zu unterstützen.",
+        "operator_title": "Betreiber",
+        "operator_one": "CannabisClubsBerlin.com",
+        "operator_two": "Eisenacher Str. 77",
+        "operator_three": "10823, Berlin, Germany",
+        "contact_title": "Kontakt",
+        "contact_one": "Email: cannabisclubsberlin@proton.me",
+        "contact_two": "Phone: +4917681414156",
+        "responsibility_title": "Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV:",
+        "responsibility_one": "Marc Auf der Heyde",
+        "responsibility_two": "Eisenacher Str. 77",
+        "responsibility_three": "10823, Berlin, Germany",
+        "disclaimer": "Die auf CannabisClubsBerlin.com bereitgestellten Informationen sollen die direkte Beziehung zwischen Besuchern und Cannabisclubs oder Rechtsberatern unterstützen, jedoch nicht ersetzen."
+    },
+    "TermsOfUsePage": {
+        "headline": "Nutzungsbedingungen",
+        "headline_description": "Willkommen bei CannabisClubsBerlin.com. Durch den Zugriff auf und die Nutzung dieser Website stimmst du den folgenden Bedingungen zu:",
+        "term_one_title": "Akzeptanz der Bedingungen:",
+        "term_one": "Die von CannabisClubsBerlin.com bereitgestellten Dienste unterliegen den folgenden Nutzungsbedingungen. Wir behalten uns das Recht vor, die Bedingungen jederzeit ohne Vorankündigung zu ändern. Deine fortgesetzte Nutzung der Website nach solchen Änderungen gilt als deine Anerkennung und Zustimmung zu den geänderten Bedingungen.",
+        "term_two_title": "Nutzung von Website-Informationen:",
+        "term_two": "Diese Website bietet Informationen über Cannabis-Clubs in Berlin, einschließlich Bewertungen und regulatorischer Informationen. Diese Informationen werden nur zu allgemeinen Informationszwecken bereitgestellt und sollten nicht als Rechtsberatung angesehen werden. Nutzer werden ermutigt, sich für spezifische Ratschläge bezüglich der Cannabis-Regulierungen in Berlin an professionelle Rechtsberater zu wenden.",
+        "term_three_title": "Inhaltsbesitz und Urheberrecht:",
+        "term_three": "Alle Inhalte auf dieser Website, einschließlich Text, Grafiken, Logos und Bilder, sind Eigentum von CannabisClubsBerlin.com oder seinen Inhaltsanbietern und sind durch internationale Urheberrechtsgesetze geschützt.",
+        "term_four_title": "Haftungsbeschränkung:",
+        "term_four": "CannabisClubsBerlin.com haftet nicht für Schäden, die aus der Nutzung dieser Website oder aus Informationen, Inhalten, Materialien oder Produkten, die auf dieser Site enthalten sind, entstehen.",
+        "term_five_title": "Links zu Websites Dritter:",
+        "term_five": "CannabisClubsBerlin.com kann Links zu externen Websites enthalten. Diese Links werden dir zur Verfügung gestellt, um weitere Informationen zu bieten. Sie bedeuten nicht, dass wir die Website(s) befürworten. Wir übernehmen keine Verantwortung für den Inhalt der verlinkten Website(s).",
+        "term_six_title": "Anwendbares Recht:",
+        "term_six": "Diese Nutzungsbedingungen unterliegen den Gesetzen von Deutschland. Streitigkeiten im Zusammenhang mit diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte Deutschlands.",
+        "disclaimer": "Durch die Nutzung von CannabisClubsBerlin.com erklärst du dich mit diesen Nutzungsbedingungen einverstanden. Wenn du mit einem dieser Bedingungen nicht einverstanden bist, ist dir die Nutzung oder der Zugriff auf diese Website untersagt."
+    },
+    "Navbar": {
+        "clubs_title": "Vereine",
+        "law_title": "Gesetz",
+        "contact_title": "Kontakt",
+        "about_title": "Über uns",
+        "harm_reduction_title": "Schadensminderung"
+    },
+    "Footer": {
+        "imprint": "Impressum",
+        "terms_of_use": "Nutzungsbedingungen"
+    },
+    "AgeVerification" : {
+        "header" : "Altersüberprüfung",
+        "description": "Du musst 18 Jahre oder älter sein, um diese Seite zu betreten.",
+        "button_text": "Ich bin 18 Jahre oder älter"
+    },
+    "CookieBanner" : {
+        "accept_button" : "Akzeptieren",
+        "description" : "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Indem Sie unsere Seite weiter nutzen, akzeptieren Sie unsere Verwendung von Cookies."
+    },
     "ClubsPage": {
         "headline": "Cannabis Clubs in Berlin",
         "headline_description": "Hier findest du eine aktuelle Liste aller in Berlin verfügbaren Cannabis-Clubs. Zu jedem Club gibt es weitere Informationen, sowie einige Bilder ihrer Standorte und ihrer Produkte.",
         "headline_subdescription": "Kennst du einen Club, den wir hier nicht aufgeführt haben? Bitte kontaktiere uns jetzt, damit wir ihn zu unseren Einträgen hinzufügen können!",
         "price_title" : "Preise",
-        "location_title" : "Location & opening times",
+        "location_title" : "Standort & Öffnungszeiten",
         "description_title" : "Beschreibung",
         "offerings_title" : "Angebote",
         "harm_reduction_title" : "Schadensminderung Angebote",
@@ -285,71 +367,5 @@
             "description" : "Monkeyz ist ein Cannabis Social Club in Berlin, der für seine exklusiven, hochwertigen Cali-Weed-Sorten bekannt ist. Mit der Legalisierung von Cannabis in Deutschland bietet der Club eine neue Ära des Zugangs zu hochwertigem Cannabis, wobei die Privatsphäre und der Datenschutz für seine Mitglieder gewährleistet sind. Die Auswahl des Clubs umfasst eine breite Palette von Blüten, die auf die unterschiedlichsten Vorlieben zugeschnitten sind. Die Mitglieder können die feinsten Sorten in einem privaten und exklusiven Rahmen genießen.",
             "offerings" : "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
             "harm_reduction" : "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."}
-    },
-    "ContactPage": {
-        "headline": "Kontakt",
-        "headline_description": "Bitte zögere nicht, uns über die unten aufgeführten Kanäle zu kontaktieren.",
-        "headline_subdescription": "cannabisclubsberlin@protonmail.me"
-    },
-    "HarmReductionPage": {
-        "headline": "Schadensminderung",
-        "headline_description": "Die Schadensminderung im Zusammenhang mit dem Konsum von Cannabis erkennt die potenziellen Vorteile der Substanz an und spricht gleichzeitig die Risiken an, die mit ihrem Gebrauch verbunden sind. Cannabis wird für seine therapeutischen Effekte geschätzt, einschließlich Schmerzlinderung, Verringerung von Angstzuständen und seiner Fähigkeit, Symptome verschiedener medizinischer Zustände zu mildern. Die Schadensminderung betont jedoch die Bedeutung des Verständnisses und der Minderung der Risiken, die mit dem Konsum von Cannabis verbunden sind, wie etwa potenzielle Abhängigkeit, beeinträchtigte kognitive und motorische Funktionen und die Auswirkungen auf die psychische Gesundheit, insbesondere bei jungen Nutzern. Strategien beinhalten die Förderung von Bildung über sichere Konsumpraktiken, die Ermutigung zur Mäßigung und die Unterstützung von Forschung zu den positiven und negativen Effekten des Cannabiskonsums. Dieser ausgewogene Ansatz zielt darauf ab, die öffentliche Gesundheit zu schützen und gleichzeitig die Vorteile der Substanz anzuerkennen.",
-        "headline_subdescription": "Bitte finde einen detaillierten Leitfaden zum Gebrauch von Cannabis unter dem folgenden Link, mit einer Auflistung der für den Leitfaden verwendeten Referenzen.",
-        "drugs_and_me_button": "Vollständiger Leitfaden auf drugsand.me",
-        "drug_checking_berlin": "Der Service auf drugchecking.berlin bietet anonyme, kostenlose und vertrauliche Beratung sowie Tests für psychoaktive Substanzen. Ihr Ziel ist es, Gesundheitsschäden zu verhindern, indem sie chemische Analysen von bewusstseinsverändernden Substanzen durchführen und professionelle Beratung zusammen mit den Testergebnissen anbieten. Sie veröffentlichen auch Warnungen über Substanzproben, die ein signifikantes Risiko über das übliche Konsumniveau hinaus darstellen. Diese Initiative ist Teil einer breiteren Kampagne zur Schadensminderung und zur Information über sicheren Gebrauch in Berlin.",
-        "drug_checking_button": "Weitere Informationen zu sicherem Gebrauch und Drogenprüfung in Berlin"
-    },
-    "ImprintPage": {
-        "headline": "Impressum",
-        "headline_description": "CannabisClubsBerlin.com ist deine erste Anlaufstelle für Einblicke in die Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unser Ziel ist es, Nutzer über die lebendige Cannabis-Kultur in Berlin aufzuklären und bei der Navigation durch die lokalen Voraussetzungen bezüglich des Cannabis-Konsums und der Clubmitgliedschaften zu unterstützen.",
-        "operator_title": "Betreiber",
-        "operator_one": "CannabisClubsBerlin.com",
-        "operator_two": "Eisenacher Str. 77",
-        "operator_three": "10823, Berlin, Germany",
-        "contact_title": "Kontakt",
-        "contact_one": "Email: cannabisclubsberlin@proton.me",
-        "contact_two": "Phone: +4917681414156",
-        "responsibility_title": "Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV:",
-        "responsibility_one": "Marc Auf der Heyde",
-        "responsibility_two": "Eisenacher Str. 77",
-        "responsibility_three": "10823, Berlin, Germany",
-        "disclaimer": "Die auf CannabisClubsBerlin.com bereitgestellten Informationen sollen die direkte Beziehung zwischen Besuchern und Cannabisclubs oder Rechtsberatern unterstützen, jedoch nicht ersetzen."
-    },
-    "TermsOfUsePage": {
-        "headline": "Nutzungsbedingungen",
-        "headline_description": "Willkommen bei CannabisClubsBerlin.com. Durch den Zugriff auf und die Nutzung dieser Website stimmst du den folgenden Bedingungen zu:",
-        "term_one_title": "Akzeptanz der Bedingungen:",
-        "term_one": "Die von CannabisClubsBerlin.com bereitgestellten Dienste unterliegen den folgenden Nutzungsbedingungen. Wir behalten uns das Recht vor, die Bedingungen jederzeit ohne Vorankündigung zu ändern. Deine fortgesetzte Nutzung der Website nach solchen Änderungen gilt als deine Anerkennung und Zustimmung zu den geänderten Bedingungen.",
-        "term_two_title": "Nutzung von Website-Informationen:",
-        "term_two": "Diese Website bietet Informationen über Cannabis-Clubs in Berlin, einschließlich Bewertungen und regulatorischer Informationen. Diese Informationen werden nur zu allgemeinen Informationszwecken bereitgestellt und sollten nicht als Rechtsberatung angesehen werden. Nutzer werden ermutigt, sich für spezifische Ratschläge bezüglich der Cannabis-Regulierungen in Berlin an professionelle Rechtsberater zu wenden.",
-        "term_three_title": "Inhaltsbesitz und Urheberrecht:",
-        "term_three": "Alle Inhalte auf dieser Website, einschließlich Text, Grafiken, Logos und Bilder, sind Eigentum von CannabisClubsBerlin.com oder seinen Inhaltsanbietern und sind durch internationale Urheberrechtsgesetze geschützt.",
-        "term_four_title": "Haftungsbeschränkung:",
-        "term_four": "CannabisClubsBerlin.com haftet nicht für Schäden, die aus der Nutzung dieser Website oder aus Informationen, Inhalten, Materialien oder Produkten, die auf dieser Site enthalten sind, entstehen.",
-        "term_five_title": "Links zu Websites Dritter:",
-        "term_five": "CannabisClubsBerlin.com kann Links zu externen Websites enthalten. Diese Links werden dir zur Verfügung gestellt, um weitere Informationen zu bieten. Sie bedeuten nicht, dass wir die Website(s) befürworten. Wir übernehmen keine Verantwortung für den Inhalt der verlinkten Website(s).",
-        "term_six_title": "Anwendbares Recht:",
-        "term_six": "Diese Nutzungsbedingungen unterliegen den Gesetzen von Deutschland. Streitigkeiten im Zusammenhang mit diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte Deutschlands.",
-        "disclaimer": "Durch die Nutzung von CannabisClubsBerlin.com erklärst du dich mit diesen Nutzungsbedingungen einverstanden. Wenn du mit einem dieser Bedingungen nicht einverstanden bist, ist dir die Nutzung oder der Zugriff auf diese Website untersagt."
-    },
-    "Navbar": {
-        "clubs_title": "Vereine",
-        "law_title": "Gesetz",
-        "contact_title": "Kontakt",
-        "about_title": "Über uns",
-        "harm_reduction_title": "Schadensminderung"
-    },
-    "Footer": {
-        "imprint": "Impressum",
-        "terms_of_use": "Nutzungsbedingungen"
-    },
-    "AgeVerification" : {
-        "header" : "Altersüberprüfung",
-        "description": "Du musst 18 Jahre oder älter sein, um diese Seite zu betreten.",
-        "button_text": "Ich bin 18 Jahre oder älter"
-    },
-    "CookieBanner" : {
-        "accept_button" : "Akzeptieren",
-        "description" : "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Indem Sie unsere Seite weiter nutzen, akzeptieren Sie unsere Verwendung von Cookies."
     }
 }

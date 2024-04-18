@@ -19,7 +19,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: {
-        template: '%s | CCB',
+        template: '%s | Cannabis Clubs Berlin',
         default: 'Cannabis Clubs Berlin',
     },
     description:

@@ -18,7 +18,10 @@ import AgeVerification from '../Components/AgeVerification';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Cannabis Clubs Berlin',
+    title: {
+        template: '%s | Cannabis Clubs Berlin',
+        default: 'Cannabis Clubs Berlin',
+    },
     description:
         'CannabisClubsBerlin.com ist deine erste Quelle für Einblicke in Cannabisclubs in Berlin und bietet umfassende Bewertungen und Informationen, um die Berliner Bevölkerung durch die unzähligen Cannabisoptionen in der Stadt zu führen. Unsere Mission ist es, dich über die lebendige Cannabis-Kultur in Berlin aufzuklären und zu informieren und dich durch die lokalen Vorschriften in Bezug auf Cannabis-Konsum und Club-Mitgliedschaften zu navigieren - deine erste Anlaufstelle für alle Cannabis-bezogenen Informationen in Berlin, Deutschland!',
     keywords:
@@ -43,9 +46,9 @@ export default function LocaleLayout({
         <div>
             <NextIntlClientProvider messages={messages}>
                 <Navbar />
-                <div className='bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg '>
+                <div className="bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg ">
                     <Background />
-                    <div className='z-[2] px-[var(--layout-x-padding)] h-full  max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] pb-10 '>
+                    <div className="z-[2] px-[var(--layout-x-padding)] h-full  max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] pb-10 ">
                         {children}
                     </div>
                 </div>

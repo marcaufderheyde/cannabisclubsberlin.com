@@ -2,7 +2,14 @@
     "Metadata": {
         "subject": "cannabis clubs berlin",
         "topic": "cannabis",
-        "description": "CannabisClubsBerlin.com ist deine erstklassige Quelle für Einblicke in Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unsere Mission ist es, dich über die lebhafte Cannabis-Kultur in Berlin aufzuklären und dich durch die lokalen Vorschriften bezüglich des Cannabisgebrauchs und der Clubmitgliedschaften zu navigieren. Dein erster Anlaufpunkt für alle cannabisbezogenen Informationen in Berlin, Deutschland!"
+        "description": "CannabisClubsBerlin.com ist deine erstklassige Quelle für Einblicke in Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unsere Mission ist es, dich über die lebhafte Cannabis-Kultur in Berlin aufzuklären und dich durch die lokalen Vorschriften bezüglich des Cannabisgebrauchs und der Clubmitgliedschaften zu navigieren. Dein erster Anlaufpunkt für alle cannabisbezogenen Informationen in Berlin, Deutschland!",
+        "about_title": "Über uns",
+        "contact_title": "Kontakt",
+        "law_title": "Gesetze (CanG)",
+        "clubs_title": "Vereine",
+        "harm_reduction_title": "Schadensminderung",
+        "terms_of_use_title": "Nutzungsbedingungen",
+        "imprint_title": "Impressum"
     },
     "IndexPage": {
         "title": "Willkommen bei CCB (Cannabis Clubs Berlin)!"
@@ -42,7 +49,7 @@
         "headline_description": "Hier findest du eine aktuelle Liste aller in Berlin verfügbaren Cannabis-Clubs. Zu jedem Club gibt es weitere Informationen, sowie einige Bilder ihrer Standorte und ihrer Produkte.",
         "headline_subdescription": "Kennst du einen Club, den wir hier nicht aufgeführt haben? Bitte kontaktiere uns jetzt, damit wir ihn zu unseren Einträgen hinzufügen können!",
         "price_title" : "Preise",
-        "location_title" : "Location & opening times",
+        "location_title" : "Standort & Öffnungszeiten",
         "description_title" : "Beschreibung",
         "offerings_title" : "Angebote",
         "harm_reduction_title" : "Schadensminderung Angebote",

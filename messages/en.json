@@ -2,7 +2,14 @@
     "Metadata" : {
         "subject" : "cannabis clubs berlin",
         "topic" : "cannabis",
-        "description" : "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships.Your number one spot for all cannabis related information in Berlin, Germany!"
+        "description" : "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships.Your number one spot for all cannabis related information in Berlin, Germany!",
+        "about_title": "About",
+        "contact_title": "Contact",
+        "law_title": "Law",
+        "clubs_title": "Clubs",
+        "harm_reduction_title": "Harm Reduction",
+        "terms_of_use_title": "Terms of Use",
+        "imprint_title": "Imprint"
     },
     "IndexPage": {
         "title": "Welcome to CCB (Cannabis Clubs Berlin)!"

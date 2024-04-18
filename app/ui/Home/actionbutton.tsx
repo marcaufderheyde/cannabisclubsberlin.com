@@ -24,7 +24,11 @@ export default function ActionButton({
                 className +
                 ' py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
             }
-            style={{ color: textColor, backgroundColor: backgroundColor }}
+            style={{
+                color: textColor,
+                backgroundColor: backgroundColor,
+                backgroundImage: backgroundColor,
+            }}
         >
             {children}
             <Triangle color={textColor} />
@@ -37,7 +41,11 @@ export default function ActionButton({
                 className +
                 ' py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
             }
-            style={{ color: textColor, backgroundColor: backgroundColor }}
+            style={{
+                color: textColor,
+                backgroundColor: backgroundColor,
+                backgroundImage: backgroundColor,
+            }}
         >
             {children}
             <Triangle color={textColor} />

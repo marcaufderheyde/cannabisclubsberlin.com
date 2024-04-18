@@ -26,15 +26,20 @@ export default function HarmReductionContent() {
         <div className='md:gap-12 md:mt-30 lg:mt-16 mb-36  relative'>
             <div style={containerGridStyle}>
                 <div className='grid col-start-1 col-end-4 row-start-1 row-end-3 bg-[rgba(182,207,84,0.17)] p-[2.8em] grid-cols-subgrid '>
-                    <h1 className='font-bold text-4xl md:text-[3.6rem] text-balance leading-tight mb-6 row-start-1 row-end-1 col-start-1 col-end-3'>
+                    <h1 className='font-bold text-4xl md:text-[3.6rem] text-balance leading-tight row-start-1 row-end-1 col-start-1 col-end-3 self-center'>
                         {t('headline')}
                     </h1>
                     <p className='text-[1.25rem] font-normal row-start-2 row-end-2 col-start-1 col-end-3 mr-[4em] self-start'>
                         {t('headline_description_short')}
                     </p>
                 </div>
-                <div className='bg-[grey] col-start-3 col-end-5 row-start-2 row-end-5 z-[0] '>
-                    Background
+                <div className='bg-[grey] col-start-3 col-end-5 row-start-2 row-end-5 z-[0] relative '>
+                    <Image
+                        alt='Man Seeking Advice'
+                        src='/hr-image-1.jpg'
+                        fill
+                        style={{ objectFit: 'cover' }}
+                    ></Image>
                 </div>
                 <HarmReductionCard
                     title='Drugsand.me'
@@ -42,9 +47,17 @@ export default function HarmReductionContent() {
                     href={`https://www.drugsand.me/drugs/cannabis/`}
                     actionButtonText={t('drugs_and_me_button')}
                     className='bg-[#5B6575] col-start-1 col-end-4 row-start-4 row-end-6 z-[0] text-white left-[-8em] relative'
+                    buttonBackgroundColor='linear-gradient(to right, rgb(84,126,207), rgb(113,113,113))'
                 />
 
-                <div className='bg-[grey] col-start-1 col-end-3 row-start-6 row-end-9 z-[-1] relative left-[-2em] top-[-1em]'></div>
+                <div className='bg-[grey] col-start-1 col-end-3 row-start-6 row-end-9 z-[-1] relative left-[-2em] top-[-1em]'>
+                    <Image
+                        alt='Man Seeking Advice'
+                        src='/hr-image-2.jpg'
+                        fill
+                        style={{ objectFit: 'cover' }}
+                    ></Image>
+                </div>
 
                 <HarmReductionCard
                     title='Drug Checking Berlin'
@@ -52,6 +65,8 @@ export default function HarmReductionContent() {
                     href={`https://drugchecking.berlin/`}
                     actionButtonText={t('drug_checking_button')}
                     className='bg-[#E2F39F] text-black col-start-2 col-end-5 row-start-7 row-end-10 right-[-4em] relative'
+                    buttonBackgroundColor='linear-gradient(to right, rgb(237,255,213), rgb(215,255,164))'
+                    buttonTextColor='black'
                 />
             </div>
         </div>

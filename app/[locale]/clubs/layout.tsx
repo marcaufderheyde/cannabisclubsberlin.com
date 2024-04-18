@@ -5,6 +5,8 @@ export const generateMetadata = async () => {
     const t = await getTranslations('Metadata');
     return {
         title: t('clubs_title'),
+        description: t('clubs_description'),
+        keywords: t('clubs_keywords'),
     };
 };
 

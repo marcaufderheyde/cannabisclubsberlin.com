@@ -2,12 +2,22 @@
     "Metadata" : {
         "subject" : "cannabis clubs berlin",
         "topic" : "cannabis",
-        "description" : "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships.Your number one spot for all cannabis related information in Berlin, Germany!",
+        "description" : "Explore Berlin's cannabis clubs with reviews and info on local culture and regulations at CannabisClubsBerlin.com.",
         "about_title": "About",
+        "about_description": "CannabisClubsBerlin.com offers insights and reviews on Berlin's cannabis clubs, culture, regulations, and purchase options.",
+        "about_keywords": "Cannabis clubs Berlin, Berlin cannabis culture, Cannabis club reviews Berlin, Berlin cannabis regulations, Where to buy cannabis in Berlin, Cannabis membership Berlin, Cannabis user guide Berlin, Legal cannabis Berlin, Cannabis community Berlin, Join cannabis clubs Berlin, Cannabis laws in Berlin, Berlin cannabis clubs guide, Cannabis clubs information Berlin, Educate on cannabis Berlin, Cannabis clubs access Berlin",
         "contact_title": "Contact",
-        "law_title": "Law",
+        "contact_description": "Please feel free to contact us through the channels listed below. cannabisclubsberlin@protonmail.me",
+        "contact_keywords": "Contact Cannabis Clubs Berlin, Cannabis club support Berlin, Email Cannabis Clubs Berlin, Reach out to Cannabis Clubs Berlin, Cannabis Clubs Berlin contact info, Cannabis Clubs Berlin email, Contact information Cannabis Clubs Berlin, Get in touch Cannabis Clubs Berlin, Cannabis club inquiries Berlin, Cannabis Clubs Berlin communication, Cannabis club help Berlin, Customer service Cannabis Clubs Berlin, Cannabis Clubs Berlin assistance, Cannabis club contact details Berlin, Cannabis Clubs Berlin customer support",
+        "law_title": "Law (CanG)",
+        "law_description": "Summary of CanG Law effective April 1, 2024, detailing cannabis possession, cultivation, and consumption rules.",
+        "law_keywords": "CanG Law 2024, cannabis possession law, cannabis cultivation rules, private cannabis cultivation, cannabis cultivation associations, cannabis consumption ban, cannabis advertising restrictions, cannabis sponsorship prohibition, cannabis safety measures, cannabis legal age, cannabis criminal offenses, cannabis administrative offenses, Bundesgesundheitsministerium cannabis FAQ, cannabis possession limits, communal cannabis cultivation",
         "clubs_title": "Clubs",
+        "clubs_description": "Here you will find an up to date list of all the cannabis clubs available in Berlin. Each club will include further information about each club, as well as some pictures of their locations and their products.",
+        "clubs_keywords": "Cannabis clubs list Berlin, Berlin cannabis clubs directory, Cannabis club details Berlin, Cannabis clubs photos Berlin, Cannabis products Berlin, Cannabis club locations Berlin, Explore cannabis clubs Berlin, Best cannabis clubs Berlin, Cannabis clubs guide Berlin, Cannabis club descriptions Berlin, Cannabis clubs overview Berlin, Cannabis scene in Berlin, Cannabis club updates Berlin, Berlin cannabis club profiles, Cannabis club reviews Berlin",
         "harm_reduction_title": "Harm Reduction",
+        "harm_reduction_description": "Harm reduction for cannabis balances benefits and risks, emphasizing safe use and supporting public health.",
+        "harm_reduction_keywords": "cannabis harm reduction, therapeutic effects of cannabis, cannabis pain relief, cannabis for anxiety, mitigating cannabis risks, cannabis dependency risks, cannabis cognitive effects, cannabis and mental health, cannabis consumption education, moderation in cannabis use, cannabis research support, public health and cannabis, cannabis benefits, cannabis guide, detailed cannabis guide, cannabis safety practices, drug checking Berlin, anonymous drug testing, free substance testing Berlin, psychoactive substance advice Berlin, harm reduction campaigns Berlin, safe cannabis use Berlin, drug safety Berlin",
         "terms_of_use_title": "Terms of Use",
         "imprint_title": "Imprint"
     },
@@ -43,6 +53,72 @@
         "term_six" : "Cannabis and cannabis seeds must be protected from access by third parties, especially children and adolescents, at the residence and usual abode",
         "term_seven_title" : "Criminal and Administrative Offenses: ",
         "term_seven" : "The law introduces specific criminal and administrative offense provisions, including the unauthorized possession, trade, and consumption of cannabis."
+    },     
+    "ContactPage": {
+        "headline": "Contact",
+        "headline_description": "Please feel free to contact us through the channels listed below.",
+        "headline_subdescription" : "cannabisclubsberlin@protonmail.me"
+    }, 
+    "HarmReductionPage" : {
+        "headline": "Harm Reduction",
+        "headline_description": "Harm reduction related to cannabis usage recognizes the substance's potential benefits while also addressing the risks associated with its use. Cannabis has been celebrated for its therapeutic effects, including pain relief, reduction in anxiety, and its ability to mitigate symptoms of various medical conditions. However, harm reduction emphasizes the importance of understanding and mitigating the risks linked to cannabis consumption, such as potential dependency, impaired cognitive and motor functions, and the impact on mental health, particularly in young users. Strategies include promoting education on safe consumption practices, encouraging moderation, and supporting research into both the positive and adverse effects of cannabis use. This balanced approach aims to protect public health while acknowledging the substance's benefits.",
+        "headline_subdescription" : "Please find a detailed guide to the use of cannabis at the following link, with a list of references used for the guide.",
+        "drugs_and_me_button": "Full guide on Drugsand.me",
+        "drug_checking_berlin" : "The service offered at drugchecking.berlin provides anonymous, free, and confidential advice and testing for psychoactive substances. Their aim is to prevent health damage by conducting chemical analyses of mind-altering substances and offering professional advice alongside the test results. They also publish warnings about substance samples that pose significant risks beyond the usual level of consumption. This initiative is part of a broader harm reduction and safe usage information campaign in Berlin.",
+        "drug_checking_button": "More information on safe usage and drug checking in Berlin"        
+    },
+    "ImprintPage": {
+        "headline": "Imprint",
+        "headline_description": "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships.",
+        "operator_title" : "Operator",
+        "operator_one" : "CannabisClubsBerlin.com",
+        "operator_two" : "Eisenacher Str. 77",
+        "operator_three" : "10823, Berlin, Germany",
+        "contact_title" : "Contact",
+        "contact_one" : "Email: cannabisclubsberlin@proton.me",
+        "contact_two" : "Phone: +4917681414156",
+        "responsibility_title" : "Responsible for Content According to § 55 Abs. 2 RStV:",
+        "responsibility_one" : "Marc Auf der Heyde",
+        "responsibility_two" : "Eisenacher Str. 77", 
+        "responsibility_three" : "10823, Berlin, Germany",
+        "disclaimer" : "The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors."
+    }, 
+    "TermsOfUsePage": {
+        "headline": "Terms of Use",
+        "headline_description": "Welcome to CannabisClubsBerlin.com. By accessing and using this website, you agree to the following terms and conditions:",
+        "term_one_title" : "Acceptance of Terms:",
+        "term_one" : "The services provided by CannabisClubsBerlin.com are subject to the following terms of use. We reserve the right to update the terms at any time without notice. Your continued use of the website after such modifications will constitute your acknowledgment and agreement to the modified terms and conditions.",
+        "term_two_title" : "Use of Website Information:",
+        "term_two" : "This website offers information about cannabis clubs in Berlin, including reviews and regulatory information. This information is provided for general informational purposes only and should not be considered as legal advice. Users are encouraged to consult with professional legal advisors for specific advice regarding cannabis regulations in Berlin.",
+        "term_three_title" : "Content Ownership and Copyright:",
+        "term_three" : "All content on this website, including text, graphics, logos, and images, is the property of CannabisClubsBerlin.com or its content suppliers and is protected by international copyright laws.",
+        "term_four_title" : "Limitation of Liability:",
+        "term_four" : "CannabisClubsBerlin.com will not be liable for any damages arising from the use of this website or from any information, content, materials, or products included on this site.",
+        "term_five_title" : "Links to Third-Party Websites:",
+        "term_five" : "CannabisClubsBerlin.com may include links to external websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).",
+        "term_six_title" : "Governing Law:",
+        "term_six" : "These terms of use are governed by the laws of Germany. Any disputes related to these terms will be subject to the exclusive jurisdiction of the courts of Germany.",
+        "disclaimer" : "By using CannabisClubsBerlin.com, you agree to comply with these Terms of Use. If you do not agree with any of these terms, you are prohibited from using or accessing this site."
+    },  
+    "Navbar": {
+        "clubs_title": "Clubs",
+        "law_title": "Law",
+        "contact_title": "Contact",
+        "about_title": "About",
+        "harm_reduction_title": "Harm Reduction"    
+    },
+    "Footer" : {
+        "imprint" : "Imprint",
+        "terms_of_use" : "Terms of Use"
+    },
+    "AgeVerification" : {
+        "header" : "Age Verification",
+        "description": "You must be 18 years or older to enter this site.",
+        "button_text": "I am 18 years or older"
+    },
+    "CookieBanner" : {
+        "accept_button" : "Accept",
+        "description" : "We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies."
     },
     "ClubsPage": {
         "headline": "Cannabis Clubs in Berlin",
@@ -292,71 +368,5 @@
             "description" : "Monkeyz is a Cannabis Social Club in Berlin known for its exclusive, premium Cali-weed strains. With the legalization of cannabis in Germany, the club offers a new era of access to high-quality cannabis, ensuring privacy and data protection for its members. The club's selection includes a wide range of flowers tailored to diverse preferences. Members can enjoy the finest strains in a private and exclusive setting.",
             "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
             "harm_reduction" : "This club has currently not listed any specific harm reduction services."}
-        },     
-    "ContactPage": {
-        "headline": "Contact",
-        "headline_description": "Please feel free to contact us through the channels listed below.",
-        "headline_subdescription" : "cannabisclubsberlin@protonmail.me"
-    }, 
-    "HarmReductionPage" : {
-        "headline": "Harm Reduction",
-        "headline_description": "Harm reduction related to cannabis usage recognizes the substance's potential benefits while also addressing the risks associated with its use. Cannabis has been celebrated for its therapeutic effects, including pain relief, reduction in anxiety, and its ability to mitigate symptoms of various medical conditions. However, harm reduction emphasizes the importance of understanding and mitigating the risks linked to cannabis consumption, such as potential dependency, impaired cognitive and motor functions, and the impact on mental health, particularly in young users. Strategies include promoting education on safe consumption practices, encouraging moderation, and supporting research into both the positive and adverse effects of cannabis use. This balanced approach aims to protect public health while acknowledging the substance's benefits.",
-        "headline_subdescription" : "Please find a detailed guide to the use of cannabis at the following link, with a list of references used for the guide.",
-        "drugs_and_me_button": "Full guide on Drugsand.me",
-        "drug_checking_berlin" : "The service offered at drugchecking.berlin provides anonymous, free, and confidential advice and testing for psychoactive substances. Their aim is to prevent health damage by conducting chemical analyses of mind-altering substances and offering professional advice alongside the test results. They also publish warnings about substance samples that pose significant risks beyond the usual level of consumption. This initiative is part of a broader harm reduction and safe usage information campaign in Berlin.",
-        "drug_checking_button": "More information on safe usage and drug checking in Berlin"        
-    },
-    "ImprintPage": {
-        "headline": "Imprint",
-        "headline_description": "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships.",
-        "operator_title" : "Operator",
-        "operator_one" : "CannabisClubsBerlin.com",
-        "operator_two" : "Eisenacher Str. 77",
-        "operator_three" : "10823, Berlin, Germany",
-        "contact_title" : "Contact",
-        "contact_one" : "Email: cannabisclubsberlin@proton.me",
-        "contact_two" : "Phone: +4917681414156",
-        "responsibility_title" : "Responsible for Content According to § 55 Abs. 2 RStV:",
-        "responsibility_one" : "Marc Auf der Heyde",
-        "responsibility_two" : "Eisenacher Str. 77", 
-        "responsibility_three" : "10823, Berlin, Germany",
-        "disclaimer" : "The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors."
-    }, 
-    "TermsOfUsePage": {
-        "headline": "Terms of Use",
-        "headline_description": "Welcome to CannabisClubsBerlin.com. By accessing and using this website, you agree to the following terms and conditions:",
-        "term_one_title" : "Acceptance of Terms:",
-        "term_one" : "The services provided by CannabisClubsBerlin.com are subject to the following terms of use. We reserve the right to update the terms at any time without notice. Your continued use of the website after such modifications will constitute your acknowledgment and agreement to the modified terms and conditions.",
-        "term_two_title" : "Use of Website Information:",
-        "term_two" : "This website offers information about cannabis clubs in Berlin, including reviews and regulatory information. This information is provided for general informational purposes only and should not be considered as legal advice. Users are encouraged to consult with professional legal advisors for specific advice regarding cannabis regulations in Berlin.",
-        "term_three_title" : "Content Ownership and Copyright:",
-        "term_three" : "All content on this website, including text, graphics, logos, and images, is the property of CannabisClubsBerlin.com or its content suppliers and is protected by international copyright laws.",
-        "term_four_title" : "Limitation of Liability:",
-        "term_four" : "CannabisClubsBerlin.com will not be liable for any damages arising from the use of this website or from any information, content, materials, or products included on this site.",
-        "term_five_title" : "Links to Third-Party Websites:",
-        "term_five" : "CannabisClubsBerlin.com may include links to external websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).",
-        "term_six_title" : "Governing Law:",
-        "term_six" : "These terms of use are governed by the laws of Germany. Any disputes related to these terms will be subject to the exclusive jurisdiction of the courts of Germany.",
-        "disclaimer" : "By using CannabisClubsBerlin.com, you agree to comply with these Terms of Use. If you do not agree with any of these terms, you are prohibited from using or accessing this site."
-    },  
-    "Navbar": {
-        "clubs_title": "Clubs",
-        "law_title": "Law",
-        "contact_title": "Contact",
-        "about_title": "About",
-        "harm_reduction_title": "Harm Reduction"    
-    },
-    "Footer" : {
-        "imprint" : "Imprint",
-        "terms_of_use" : "Terms of Use"
-    },
-    "AgeVerification" : {
-        "header" : "Age Verification",
-        "description": "You must be 18 years or older to enter this site.",
-        "button_text": "I am 18 years or older"
-    },
-    "CookieBanner" : {
-        "accept_button" : "Accept",
-        "description" : "We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies."
-    }
+        }
 }

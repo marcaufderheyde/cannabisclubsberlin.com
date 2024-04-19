@@ -19,7 +19,7 @@ export default function HarmReductionContent() {
         <div className='md:gap-12 md:mt-30 lg:mt-16 mb-36 xl:relative'>
             <div style={containerGridStyle}>
                 <div className='grid col-start-1 col-end-5  md:col-end-4 row-start-1 row-end-3 bg-[rgba(182,207,84,0.17)] p-[2.8em] grid-cols-subgrid '>
-                    <h1 className='font-bold text-4xl lg:text-[3.6rem] text-balance leading-tight row-start-1 row-end-1 col-start-1 col-end-3 self-center mb-8 md:mb-0'>
+                    <h1 className='font-bold text-[6vw] md:text-4xl lg:text-[3.6rem] text-balance leading-tight row-start-1 row-end-1 col-start-1 col-end-5 md:col-end-3 self-center mb-8 md:mb-0'>
                         {t('headline')}
                     </h1>
                     <p className='md:[1rem] lg:text-[1.25rem] font-normal row-start-2 row-end-2 col-start-1 col-end-5 md:col-end-3 mr-[4em] self-start'>

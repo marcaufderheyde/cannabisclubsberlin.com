@@ -43,9 +43,7 @@ export default function OverlayNav({
                 className='bg-white rounded-[2rem] flex flex-col z-20 w-[90%] my-3 py-8 px-8 shadow-md'
             >
                 <div className='flex flex-row justify-between items-center text-[#B6CF54]'>
-                    <div>
-                        <Logo />
-                    </div>
+                    <Logo onClick={() => handleClick()} />
                     <div onClick={() => handleClick()} className='px-4'>
                         <Close color={'#828282'} />
                     </div>

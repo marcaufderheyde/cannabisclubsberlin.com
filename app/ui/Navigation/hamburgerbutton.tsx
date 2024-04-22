@@ -1,9 +1,13 @@
 import Burger from '@/app/ui/Navigation/burger';
 
-export default function HamburgerButton({ handleClick }) {
+export default function HamburgerButton({
+    showOverlay,
+}: {
+    showOverlay: Function;
+}) {
     return (
         <div
-            onClick={() => handleClick()}
+            onClick={() => showOverlay()}
             className='py-3 px-3 backdrop-blur-xl background-white rounded-[2rem] bg-[rgba(255,255,255,0.11)]'
         >
             <Burger color={'white'} />

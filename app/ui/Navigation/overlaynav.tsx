@@ -5,9 +5,10 @@ import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import Logo from '@/app/ui/Navigation/logo';
 import Close from '@/app/ui/Navigation/close';
 import LocalSwitcher from './translation-switch';
-import { useEffect, useState, useRef, MutableRefObject } from 'react';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import usePrevious from '@/app/helpers/usePrevious';
+import usePreventScrolling from '@/app/helpers/usePreventScrolling';
 
 export default function OverlayNav({
     closeOverlay,
@@ -18,6 +19,7 @@ export default function OverlayNav({
 }) {
     const pathname = usePathname();
     const prevPathnameRef = usePrevious(pathname);
+    const preventScroll = usePreventScrolling();
 
     useEffect(() => {
         const prevPathname = prevPathnameRef.current as string;

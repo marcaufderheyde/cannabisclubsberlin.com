@@ -8,10 +8,10 @@ import { useState } from 'react';
 export default function MobileNav({ links }: { links: Array<LinkInfo> }) {
     const [showOverlay, setShowOverlay] = useState(false);
     const hamburgerButton = (
-        <HamburgerButton handleClick={() => setShowOverlay(true)} />
+        <HamburgerButton showOverlay={() => setShowOverlay(true)} />
     );
     const overlayNav = (
-        <OverlayNav handleClick={() => setShowOverlay(false)} links={links} />
+        <OverlayNav closeOverlay={() => setShowOverlay(false)} links={links} />
     );
 
     return <div>{showOverlay ? overlayNav : hamburgerButton}</div>;

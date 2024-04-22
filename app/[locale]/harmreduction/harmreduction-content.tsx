@@ -28,8 +28,8 @@ export default function HarmReductionContent() {
                 </div>
                 <div className='bg-[grey] hidden md:block col-start-3 col-end-5 row-start-2 row-end-5 z-[0] md:relative '>
                     <Image
-                        alt='Man Seeking Advice'
-                        src='/hr-image-1.jpg'
+                        alt='A White apartment with a cannabis plant growing in the middle of it.'
+                        src='/hr-clean-room.jpeg'
                         fill
                         style={{ objectFit: 'cover' }}
                     ></Image>
@@ -45,8 +45,8 @@ export default function HarmReductionContent() {
 
                 <div className='bg-[grey] hidden md:block col-start-1 col-end-3 row-start-6 row-end-9 z-[-1] relative xl:left-[-2em] top-[-1em]'>
                     <Image
-                        alt='Man Seeking Advice'
-                        src='/hr-image-2.jpg'
+                        alt='A Modern White and Beige Club with cannabis plants growing inside of it.'
+                        src='/hr-modern-club.jpeg'
                         fill
                         style={{ objectFit: 'cover' }}
                         priority

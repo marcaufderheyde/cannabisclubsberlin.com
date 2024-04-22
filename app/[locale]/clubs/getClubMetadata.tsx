@@ -10,8 +10,8 @@ export const getClubMetadata = async (clubSlug: string) => {
 
         return {
             title: club.name,
-            description: club.description,
-            keywords: club.offerings + ', ' + club.name,
+            description: t(`${club.slug}.meta_description`),
+            keywords: t(`${club.slug}.meta_keywords`) + ', ' + club.name,
         };
     }
 };

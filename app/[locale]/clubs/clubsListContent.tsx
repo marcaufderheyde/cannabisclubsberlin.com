@@ -216,7 +216,7 @@ const clubs: Club[] = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/berlinBud1.webp',
+        imageUrl: '/club16.png',
         clubPageUrl: 'https://www.high-society-cannabis-club.de/',
         slug: '',
         geoLocation: [52.5170365, 13.3888599],

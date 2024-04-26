@@ -4,28 +4,27 @@ import prettier from 'prettier';
 import path from 'path'; // Import path module to construct paths
 
 async function generate() {
-    const siteRootURL = 'https://cannabisclubsberlin.com'
+    const siteRootURL = 'https://cannabisclubsberlin.com';
     const languages = ['de', 'en']; // Define languages
     for (const lang of languages) {
         const pages = await globby([
             // Adjusted paths to match the directory structure
             `.next/server/app/${lang}/**/*.html`,
+            // `.next/server/app/${lang}/clubs/*.html`, // Include club pages
             `!.next/server/app/${lang}/_not-found.html`, // Exclude specific files
+            `!.next/server/app/${lang}/**/imprint.html`, // Exclude imprint, termsofuse, and contact
+            `!.next/server/app/${lang}/**/termsofuse.html`,
+            `!.next/server/app/${lang}/**/contact.html`,
             `!.next/server/app/${lang}/index.html`,
-            `.next/server/app/${lang}/clubs/*.html`, // Include club pages
         ]);
 
         const siteUrl =
-            lang === 'de'
-                ? `${siteRootURL}/de`
-                : `${siteRootURL}/en`;
+            lang === 'de' ? `${siteRootURL}/de` : `${siteRootURL}/en`;
 
         // use otherLanguage to create alternates, with hreflang rel
-        const otherLanguage = lang =='de' ? 'en' : 'de';
+        const otherLanguage = lang == 'de' ? 'en' : 'de';
         const alternativeSiteUrl =
-        otherLanguage === 'de'
-                ? `${siteRootURL}/de`
-                : `${siteRootURL}/en`;
+            otherLanguage === 'de' ? `${siteRootURL}/de` : `${siteRootURL}/en`;
 
         let sitemap = `
                 <?xml version="1.0" encoding="UTF-8"?>
@@ -44,7 +43,9 @@ async function generate() {
                     </url>
                 `;
 
+        let numPages = 0;
         for (const page of pages) {
+            numPages += 1;
             const route = page
                 .replace(`.next/server/app/${lang}`, '')
                 .replace('.html', '');
@@ -69,7 +70,8 @@ async function generate() {
         sitemap += `</urlset>`;
 
         // console.log('Generated Localised Sitemap:', sitemap); // Debugging statement
-        console.log(`Generated Localised Sitemap ${lang}`);
+        console.log(`Generated Localised Sitemap ${lang}.`);
+        console.log(`Generated ${numPages} pages.`);
 
         const formatted = await prettier.format(sitemap, {
             parser: 'html',
@@ -100,7 +102,6 @@ async function generate() {
     });
 
     writeFileSync(path.join('out', `sitemap.xml`), formatted);
-
 }
 
 generate();

@@ -2,6 +2,13 @@
 User-agent: *
 Allow: /
 
+Disallow: /de/termsofuse
+Disallow: /de/contact
+Disallow: /de/imprint
+Disallow: /en/termsofuse
+Disallow: /en/contact
+Disallow: /en/imprint
+
 # Host
 Host: https://cannabisclubsberlin.com
 

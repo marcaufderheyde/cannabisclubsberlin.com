@@ -154,7 +154,7 @@ const clubs: Club[] = [
         imageUrl: '/club11.png',
         clubPageUrl: 'https://csc-homeofhemp.de/',
         slug: '',
-        geoLocation: [52.526034, 13.398731],
+        geoLocation: [52.525391, 13.398906],
     },
     {
         key: 'club12',

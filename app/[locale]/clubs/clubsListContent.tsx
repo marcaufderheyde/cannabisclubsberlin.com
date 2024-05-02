@@ -138,7 +138,7 @@ const clubs: Club[] = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/club10.png',
+        imageUrl: '/club10.jpeg',
         clubPageUrl: 'https://highonearth.de/',
         slug: '',
         geoLocation: [52.4481, 13.37515],

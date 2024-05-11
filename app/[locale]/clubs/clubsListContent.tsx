@@ -80,7 +80,7 @@ const clubs: Club[] = [
     },
     {
         key: 'club6',
-        name: 'Bastardo CSC Berlin',
+        name: 'Bastardo e.V.',
         prices: '',
         location: '',
         description: '',
@@ -203,7 +203,7 @@ const clubs: Club[] = [
         description: '',
         offerings: '',
         harm_reduction: '',
-        imageUrl: '/club15.svg',
+        imageUrl: '/club15.jpeg',
         clubPageUrl: 'https://cannamo.de/',
         slug: '',
         geoLocation: [52.513421, 13.455344],

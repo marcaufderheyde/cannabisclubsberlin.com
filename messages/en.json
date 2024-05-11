@@ -180,8 +180,8 @@
             "description" : "The Cannabis Social Club Bastardo promotes an open, responsible community passionate about cannabis culture and its responsible use. They aim to create a safe, supportive environment where members can share and enjoy cannabis legally. The club welcomes diversity, offers a wide variety of cannabis strains to meet different preferences and financial capabilities, and emphasizes quality and innovation in cultivation. Bastardo e.V. also focuses on education, legal compliance, and community building to foster a positive societal change regarding cannabis use.",
             "meta_description" : "Bastardo CSC promotes an open, responsible community focused on legal, diverse, and high-quality cannabis enjoyment.",
             "meta_keywords" : "Bastardo Cannabis Social Club, responsible cannabis community, cannabis culture, legal cannabis sharing, cannabis diversity, variety of cannabis strains, cannabis cultivation quality, cannabis innovation, cannabis education, community building, societal change cannabis",
-            "offerings" : "Community cultivation",
-            "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
+            "offerings" : "Community cultivation and transfer of propagation material (seeds and cuttings)",
+            "harm_reduction" : "Passing on Storz & Bickel vaporisers to members at a preferential price."},
         "csc-berlin-ev": {
             "prices": "12 EUR yearly membership fee, 10 EUR monthly membership fee, estimated 4-8 EUR per gram. ",
             "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
@@ -191,7 +191,7 @@
             "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
             "harm_reduction" : "The Cannabis Social Club Berlin prioritizes responsible cannabis consumption and up-to-date, scientifically grounded youth and consumer protection, free from ideology. Access for individuals under 18 is restricted, requiring guardian consent and collaboration with youth and addiction support services. The club actively engages in prevention and education, collaborating with addiction prevention specialists and youth services. In 2023, they appointed a dedicated prevention officer to develop a tailored prevention concept. For inquiries on addiction and prevention, they offer a contact point."},
         "1000-berlin-15-ev": {
-            "prices": "100 EUR signup fee, 50 EUR monthly membership fee.",
+            "prices": "50 EUR signup fee, 30 EUR monthly membership fee.",
             "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
             "description" : "The 1000 Berlin 15 Cannabis Social Club e.V. aims to support rather than judge cannabis users, focusing on youth protection, addiction prevention, and health safety. They promote safe cannabis use and offer a community approach to cannabis cultivation starting July 1, 2024, where members decide on the strains grown. The club plans to use both soil and hydroponic methods, with genetics sourced from specialists worldwide. It also serves as a support center for addiction-related family issues, emphasizing a once-in-a-lifetime opportunity to enjoy freedom together.",
             "meta_description" : "1000 Berlin 15 CSC supports cannabis users focusing on youth protection, addiction prevention, and safe consumption.",
@@ -209,8 +209,7 @@
         "csc-high-on-earth-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
             "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description" : "A description of this cannabis club will be shown here once it is available.",
-            "meta_description" : "CSC High on Earth e.V. Cannabis Social Club Berlin",
+            "description" : "We are a community of growers, cannabis enthusiasts, biologists and activists. Our goal is to provide our members with a variety of clean and flavourful products, create a community, encourage exchange and protect minors.",            "meta_description" : "CSC High on Earth e.V. Cannabis Social Club Berlin",
             "meta_keywords" : "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
             "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
@@ -247,9 +246,9 @@
             "offerings" : "Community cultivation, Distribution of cannabis for members, Socialising",
             "harm_reduction" : "This club has currently not listed any specific harm reduction services."},
         "cannamo-cannabis-club-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "prices": "The annual membership fee is €1.20, there is no admission fee.",
             "location" : "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description" : "Description Information coming soon...",
+            "description" : "The Cannamo Cannabis Club e.V. focuses on providing its members with high-quality cannabis, utilising the team's pharmaceutical, scientific and medical background from approved research projects. The club aims to reduce health and social risks associated with cannabis from the black market by providing its members with clean, high-quality cannabis products.",
             "meta_description" : "Cannamo Cannabis Club e.V. supplies high-quality cannabis, focusing on health and reducing black market risks.",
             "meta_keywords" : "Cannamo Cannabis Club, high-quality cannabis, pharmaceutical cannabis research, medical cannabis expertise, nonprofit cannabis club, reduce black market risks, clean cannabis products, membership benefits, community cultivation, cannabis distribution",
             "offerings" : "Offerings Information coming soon...",

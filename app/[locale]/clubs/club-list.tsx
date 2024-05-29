@@ -18,20 +18,23 @@ export default function ClubsList() {
         <div className={styles.container}>
             {clubs.map((club, index) => (
                 <a href={`/${localActive}/clubs/${club.slug}`} key={club.slug}>
-                    <div className={styles.card} key={index}>
-                        <div className={styles.cardNumber}>#{index + 1}</div>
-                        <Image
-                            src={club.imageUrl}
-                            alt={club.name + ' Club Picture'}
-                            width={300}
-                            height={300}
-                            className={styles.cardImage}
-                        />
-                        <div className={styles.cardContent}>
-                            <h3 className={styles.cardTitle}>{club.name}</h3>
-                            <p className={styles.cardDescription}>
-                                {club.offerings}
-                            </p>
+                    <div className="flex justify-center items-center">
+                        <div className={styles.card} key={index}>
+                            <div className="flex justify-center items-center">
+                                <Image
+                                    src={club.imageUrl}
+                                    alt={club.name + ' Club Picture'}
+                                    width={300}
+                                    height={300}
+                                    className={styles.cardImage}
+                                />
+                            </div>
+                            <div className={styles.cardContent}>
+                                <h3 className={styles.cardTitle}>{club.name}</h3>
+                                <p className={styles.cardDescription}>
+                                    {club.offerings}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </a>

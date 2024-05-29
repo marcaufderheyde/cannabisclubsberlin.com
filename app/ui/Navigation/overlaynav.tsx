@@ -5,32 +5,36 @@ import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import Logo from '@/app/ui/Navigation/logo';
 import Close from '@/app/ui/Navigation/close';
 import LocalSwitcher from './translation-switch';
-import { useEffect, useState, useRef, MutableRefObject } from 'react';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import usePrevious from '@/app/helpers/usePrevious';
+import usePreventScrolling from '@/app/helpers/usePreventScrolling';
 
 export default function OverlayNav({
-    handleClick,
+    closeOverlay,
     links,
 }: {
-    handleClick: Function;
+    closeOverlay: Function;
     links: Array<LinkInfo>;
 }) {
     const pathname = usePathname();
     const prevPathnameRef = usePrevious(pathname);
+    const preventScroll = usePreventScrolling();
 
     useEffect(() => {
         const prevPathname = prevPathnameRef.current as string;
-        if (!prevPathname.match(pathname)) {
-            handleClick();
-            prevPathnameRef.current = pathname;
+        if (prevPathname !== null && pathname !== null) {
+            if (prevPathname !== pathname) {
+                closeOverlay();
+                prevPathnameRef.current = pathname;
+            }
         }
     }, [pathname]);
 
     return (
         <div
             onClick={(e) => {
-                handleClick();
+                closeOverlay();
             }}
             className='fixed bg-[rgba(255,255,255,0.30)] z-10 min-w-full min-h-full backdrop-blur-md top-0 left-0 flex flex-col justify-start items-center'
         >
@@ -41,8 +45,8 @@ export default function OverlayNav({
                 className='bg-white rounded-[2rem] flex flex-col z-20 w-[90%] my-3 py-8 px-8 shadow-md'
             >
                 <div className='flex flex-row justify-between items-center text-[#B6CF54]'>
-                    <Logo />
-                    <div onClick={() => handleClick()} className='px-4'>
+                    <Logo onClick={() => closeOverlay()} />
+                    <div onClick={() => closeOverlay()} className='px-4'>
                         <Close color={'#828282'} />
                     </div>
                 </div>
@@ -55,7 +59,7 @@ export default function OverlayNav({
                                         link.href as string
                                     )
                                         ? () => {
-                                              handleClick();
+                                              closeOverlay();
                                           }
                                         : () => {}
                                 }

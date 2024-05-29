@@ -10,11 +10,17 @@ import '../globals.css';
 import Footer from '../ui/Footer/footer';
 import Navbar from '../ui/Navigation/navbar';
 import CookieBanner from '../Components/CookieBanner';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
+import AgeVerification from '../Components/AgeVerification';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Cannabis Clubs Berlin',
+    title: {
+        template: '%s | Cannabis Clubs Berlin',
+        default: 'Cannabis Clubs Berlin',
+    },
     description:
         'CannabisClubsBerlin.com ist deine erste Quelle für Einblicke in Cannabisclubs in Berlin und bietet umfassende Bewertungen und Informationen, um die Berliner Bevölkerung durch die unzähligen Cannabisoptionen in der Stadt zu führen. Unsere Mission ist es, dich über die lebendige Cannabis-Kultur in Berlin aufzuklären und zu informieren und dich durch die lokalen Vorschriften in Bezug auf Cannabis-Konsum und Club-Mitgliedschaften zu navigieren - deine erste Anlaufstelle für alle Cannabis-bezogenen Informationen in Berlin, Deutschland!',
     keywords:
@@ -44,6 +50,7 @@ export default function LocaleLayout({
                         {children}
                     </div>
                 </div>
+                <AgeVerification />
                 <CookieBanner />
                 <Footer />
             </NextIntlClientProvider>

@@ -2,7 +2,22 @@ import AboutContent from './about-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import ClubsTile from '@/public/clubs-tile.png';
+import { getTranslations } from 'next-intl/server';
 
+export const generateMetadata = async () => {
+    const t = await getTranslations('Metadata');
+    return {
+        title: t('about_title'),
+        description: t('about_description'),
+        keywords: t('about_keywords'),
+    };
+};
+
+export default function About({
+    params: { locale },
+}: {
+    params: { locale: string };
+}) {
 export default function About({
     params: { locale },
 }: {

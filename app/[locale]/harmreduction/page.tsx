@@ -1,5 +1,15 @@
+import { getTranslations } from 'next-intl/server';
 import HarmReductionContent from './harmreduction-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
+
+export const generateMetadata = async () => {
+    const t = await getTranslations('Metadata');
+    return {
+        title: t('harm_reduction_title'),
+        description: t('harm_reduction_description'),
+        keywords: t('harm_reduction_keywords'),
+    };
+};
 
 export default function About({
     params: { locale },

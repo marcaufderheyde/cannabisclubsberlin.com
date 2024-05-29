@@ -5,8 +5,10 @@ import isPathNameHome from '@/app/helpers/isPathnameHome';
 
 export default function Links({ links }: { links: Array<LinkInfo> }) {
     const pathname = usePathname();
-    const currentPageStyling = 'text-[#E3E71F] font-bold text-xl';
-    const defaultLinkStyling = 'font-normal text-xl';
+    const currentPageStyling =
+        'text-[#E3E71F] font-bold text-xl group transition duration-300';
+    const defaultLinkStyling =
+        'font-normal text-xl group transition duration-300';
     const isHomePage = isPathNameHome(pathname);
 
     return (
@@ -24,6 +26,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
                         }
                     >
                         {link.name}
+                        <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-600'></span>
                     </Link>
                 );
             })}

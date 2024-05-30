@@ -31,9 +31,11 @@
         "local_laws_button": "Laws (CanG)"
     },
     "AboutPage": {
-        "headline": "About us",
+        "headline": "About Us.",
         "headline_description": "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships. On this page you will find information about cannabis in Berlin, how it all works, where you can buy it, and how you can get started! The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors.",
-        "headline_subdescription" : "Want to find out more? Let's get you started by showing you the difference cannabis clubs available in Berlin right now!",
+        "headline_description_short": "This is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city.",
+        "headline_subdescription" : "Want to find out more? Let's get you started on the laws on Cannabis in Berlin, and in Germany!",
+        "local_laws_button": "Laws (CanG)",
         "discover_button": "Discover"
     },
     "LawPage": {
@@ -62,10 +64,11 @@
     "HarmReductionPage" : {
         "headline": "Harm Reduction",
         "headline_description": "Harm reduction related to cannabis usage recognizes the substance's potential benefits while also addressing the risks associated with its use. Cannabis has been celebrated for its therapeutic effects, including pain relief, reduction in anxiety, and its ability to mitigate symptoms of various medical conditions. However, harm reduction emphasizes the importance of understanding and mitigating the risks linked to cannabis consumption, such as potential dependency, impaired cognitive and motor functions, and the impact on mental health, particularly in young users. Strategies include promoting education on safe consumption practices, encouraging moderation, and supporting research into both the positive and adverse effects of cannabis use. This balanced approach aims to protect public health while acknowledging the substance's benefits.",
+        "headline_description_short": "Harm reduction related to cannabis usage recognizes the substance's potential benefits while also addressing the risks associated with its use.",
         "headline_subdescription" : "Please find a detailed guide to the use of cannabis at the following link, with a list of references used for the guide.",
-        "drugs_and_me_button": "Full guide on Drugsand.me",
+        "drugs_and_me_button": "Find out more",
         "drug_checking_berlin" : "The service offered at drugchecking.berlin provides anonymous, free, and confidential advice and testing for psychoactive substances. Their aim is to prevent health damage by conducting chemical analyses of mind-altering substances and offering professional advice alongside the test results. They also publish warnings about substance samples that pose significant risks beyond the usual level of consumption. This initiative is part of a broader harm reduction and safe usage information campaign in Berlin.",
-        "drug_checking_button": "More information on safe usage and drug checking in Berlin"        
+        "drug_checking_button": "Find out more"        
     },
     "ImprintPage": {
         "headline": "Imprint",

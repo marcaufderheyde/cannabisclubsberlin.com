@@ -41,7 +41,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({ club, onClose, nextClub, club
             </div>
             <div className={styles.mapCardContent}>
               <h3 className={styles.mapCardTitle}>{club.name}</h3>
-              <p className={styles.mapCardDescription}>
+              <p className={styles.mapCardOfferings}>
                 {club.description}
               </p>
               <br/>

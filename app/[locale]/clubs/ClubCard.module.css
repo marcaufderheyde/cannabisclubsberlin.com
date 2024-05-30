@@ -74,6 +74,16 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
+
+  .nextButton {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
   
   .mapCardLink {
     text-decoration: none;
@@ -88,8 +98,9 @@
   }
   
   .mapCardImage {
-    max-width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: contain;
+    padding: 5px;
     border-radius: 8px;
   }
   
@@ -125,7 +136,7 @@
     overflow: hidden; /* Ensures overflow is hidden */
     text-overflow: ellipsis; /* Adds ellipses at the end of the text */
     display: -webkit-box;
-    -webkit-line-clamp: 10; /* Number of lines to show */
+    -webkit-line-clamp: 5; /* Number of lines to show */
     -webkit-box-orient: vertical;
   }
 
@@ -140,7 +151,7 @@
       overflow: hidden; /* Ensures overflow is hidden */
       text-overflow: ellipsis; /* Adds ellipses at the end of the text */
       display: -webkit-box;
-      -webkit-line-clamp: 7; /* Number of lines to show */
+      -webkit-line-clamp: 5; /* Number of lines to show */
       -webkit-box-orient: vertical;
     }
   }
@@ -155,7 +166,7 @@
       overflow: hidden; /* Ensures overflow is hidden */
       text-overflow: ellipsis; /* Adds ellipses at the end of the text */
       display: -webkit-box;
-      -webkit-line-clamp: 5; /* Number of lines to show */
+      -webkit-line-clamp: 3; /* Number of lines to show */
       -webkit-box-orient: vertical;
     }
   }

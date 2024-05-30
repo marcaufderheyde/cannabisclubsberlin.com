@@ -548,6 +548,6 @@ clubs.forEach((club) => {
     club.slug = generateSlug(club.name);
 });
 
-export function pullClubsListContent() {
+export function pullClubsListContent() : Club[] {
     return clubs;
 }

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
@@ -13,7 +13,7 @@ interface Club {
   name: string;
   slug: string;
   imageUrl: string;
-  geoLocation: [number, number];
+  geoLocation: number[];
   description?: string;
   offerings?: string;
   harm_reduction?: string;
@@ -43,16 +43,32 @@ const OpenStreetMap: React.FC = () => {
     return { lat: club.geoLocation[0], lng: club.geoLocation[1], club: club };
   });
 
-  const center = {
+  let center = {
     lat: 52.516640,
     lng: 13.408280,
   };
 
   const zoom = 13;
+  
+  let clubIndex: number | undefined = undefined;
+
+  if(selectedClub !== null && selectedClub) {
+    clubIndex = clubs.findIndex((club) => club.slug === selectedClub.slug);
+    console.log(clubIndex);
+  }
+
+  useEffect(() => {
+    console.log(center);
+    center = {
+      lat: selectedClub?.geoLocation[0] as number,
+      lng: selectedClub?.geoLocation[1] as number,
+    };
+    console.log(center);
+  }, [selectedClub]);
 
   return (
     <div className={styles.mapContainer}>
-      <MapContainer center={center} zoom={zoom} style={{ height: '100%', width: '100%' }}>
+      <MapContainer key={clubIndex ? clubIndex : 0} center={center} zoom={zoom} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -70,7 +86,7 @@ const OpenStreetMap: React.FC = () => {
           />
         ))}
       </MapContainer>
-      {selectedClub && <CustomPopup club={selectedClub} onClose={() => setSelectedClub(null)} />}
+      {selectedClub && <CustomPopup clubIndex={clubIndex as unknown as string + "/" + clubs.length as string} club={selectedClub} onClose={() => setSelectedClub(null)} nextClub={() => ((clubIndex as number) + 1) > (clubs.length - 1) ? setSelectedClub(clubs[0]) : setSelectedClub(clubs[(clubIndex as number) + 1])}/>}
     </div>
   );
 };

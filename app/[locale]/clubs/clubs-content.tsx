@@ -27,6 +27,7 @@ export default function ClubsContent() {
             <p>
             {t("headline_description")}
             </p>
+            <br />
             <p>
             {t("headline_subdescription")}
             </p>

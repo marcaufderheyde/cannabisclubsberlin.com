@@ -7,16 +7,20 @@ interface Club {
   name: string;
   slug: string;
   imageUrl: string;
-  description: string;
-  offerings: string;
+  geoLocation: number[];
+  description?: string;
+  offerings?: string;
+  harm_reduction?: string;
 }
 
 interface CustomPopupProps {
   club: Club;
+  clubIndex: string;
   onClose: () => void;
+  nextClub: () => void;
 }
 
-const CustomPopup: React.FC<CustomPopupProps> = ({ club, onClose }) => {
+const CustomPopup: React.FC<CustomPopupProps> = ({ club, onClose, nextClub, clubIndex }) => {
   const localActive = useLocale();
 
   return (
@@ -47,6 +51,9 @@ const CustomPopup: React.FC<CustomPopupProps> = ({ club, onClose }) => {
             </div>
           </div>
         </a>
+        <button className={
+                    'py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
+                } onClick={nextClub}>→ {clubIndex} →</button>
       </div>
     </div>
   );

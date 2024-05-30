@@ -32,6 +32,7 @@
     "AboutPage": {
         "headline": "Über uns",
         "headline_description": "CannabisClubsBerlin.com ist deine erste Anlaufstelle für Einblicke in die Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unser Ziel ist es, dich über die lebendige Cannabis-Kultur in Berlin aufzuklären und bei der Navigation durch die lokalen Vorschriften bezüglich des Cannabis-Konsums und der Clubmitgliedschaften zu unterstützen. Auf dieser Seite findest du Informationen über Cannabis in Berlin, wie alles funktioniert, wo du es kaufen kannst und wie du anfangen kannst! Die auf CannabisClubsBerlin.com bereitgestellten Informationen sollen die direkte Beziehung zwischen Besuchern und Cannabis-Clubs oder Rechtsberatern unterstützen, jedoch nicht ersetzen.",
+        "headline_description_short": "Dies ist deine erste Anlaufstelle für Einblicke in Cannabis-Clubs in Berlin. Hier findest du umfassende Bewertungen und Infos, die dir helfen, dich durch die vielen Cannabis-Optionen in der Stadt zu navigieren.",
         "headline_subdescription": "Möchtest du mehr erfahren? Lassen uns beginnen, indem wir dir die verschiedenen Cannabis-Clubs zeigen, die es in Berlin jetzt schon gibt!",
         "discover_button": "Entdecken"
     },
@@ -61,10 +62,11 @@
     "HarmReductionPage": {
         "headline": "Schadensminderung",
         "headline_description": "Die Schadensminderung im Zusammenhang mit dem Konsum von Cannabis erkennt die potenziellen Vorteile der Substanz an und spricht gleichzeitig die Risiken an, die mit ihrem Gebrauch verbunden sind. Cannabis wird für seine therapeutischen Effekte geschätzt, einschließlich Schmerzlinderung, Verringerung von Angstzuständen und seiner Fähigkeit, Symptome verschiedener medizinischer Zustände zu mildern. Die Schadensminderung betont jedoch die Bedeutung des Verständnisses und der Minderung der Risiken, die mit dem Konsum von Cannabis verbunden sind, wie etwa potenzielle Abhängigkeit, beeinträchtigte kognitive und motorische Funktionen und die Auswirkungen auf die psychische Gesundheit, insbesondere bei jungen Nutzern. Strategien beinhalten die Förderung von Bildung über sichere Konsumpraktiken, die Ermutigung zur Mäßigung und die Unterstützung von Forschung zu den positiven und negativen Effekten des Cannabiskonsums. Dieser ausgewogene Ansatz zielt darauf ab, die öffentliche Gesundheit zu schützen und gleichzeitig die Vorteile der Substanz anzuerkennen.",
+        "headline_description_short": "Die Schadensminderung im Zusammenhang mit dem Konsum von Cannabis erkennt die potenziellen Vorteile der Substanz an und spricht gleichzeitig die Risiken an, die mit ihrem Gebrauch verbunden sind.",
         "headline_subdescription": "Bitte finde einen detaillierten Leitfaden zum Gebrauch von Cannabis unter dem folgenden Link, mit einer Auflistung der für den Leitfaden verwendeten Referenzen.",
-        "drugs_and_me_button": "Vollständiger Leitfaden auf drugsand.me",
+        "drugs_and_me_button": "Finde mehr heraus",
         "drug_checking_berlin": "Der Service auf drugchecking.berlin bietet anonyme, kostenlose und vertrauliche Beratung sowie Tests für psychoaktive Substanzen. Ihr Ziel ist es, Gesundheitsschäden zu verhindern, indem sie chemische Analysen von bewusstseinsverändernden Substanzen durchführen und professionelle Beratung zusammen mit den Testergebnissen anbieten. Sie veröffentlichen auch Warnungen über Substanzproben, die ein signifikantes Risiko über das übliche Konsumniveau hinaus darstellen. Diese Initiative ist Teil einer breiteren Kampagne zur Schadensminderung und zur Information über sicheren Gebrauch in Berlin.",
-        "drug_checking_button": "Weitere Informationen zu sicherem Gebrauch und Drogenprüfung in Berlin"
+        "drug_checking_button": "Finde mehr heraus"
     },
     "ImprintPage": {
         "headline": "Impressum",

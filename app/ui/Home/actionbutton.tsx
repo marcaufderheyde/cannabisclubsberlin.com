@@ -31,7 +31,7 @@ export default function ActionButton({
             }}
         >
             {children}
-            <Triangle color={textColor} />
+            <Triangle color={textColor} toggleRotate={false} />
         </Link>
     ) : (
         <a
@@ -48,7 +48,7 @@ export default function ActionButton({
             }}
         >
             {children}
-            <Triangle color={textColor} />
+            <Triangle color={textColor} toggleRotate={false} />
         </a>
     );
 }

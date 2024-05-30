@@ -17,10 +17,13 @@ export default function ClubsContent() {
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
     return (
-        <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16'>
+        <div>
             <h1 className='font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight'>
                 {t("headline")}
             </h1>
+            {showMap ? <OpenStreetMap /> : <ClubsList />}
+            <br />
+            {showMap ? <p>{t('map_disclaimer')}</p> : null}
             <p>
             {t("headline_description")}
             </p>
@@ -38,11 +41,6 @@ export default function ClubsContent() {
             >
                 {showMap ? t('clubs_menu_show_list') : t('clubs_menu_show_map')}
             </button>
-            <br />
-            {showMap ? <p>{t('map_disclaimer')}</p> : null}
-            <br />
-            {showMap ? <OpenStreetMap /> : <ClubsList />}
-
         </div>
     );
 }

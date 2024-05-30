@@ -30,6 +30,10 @@ const OpenStreetMap: React.FC = () => {
   const t = useTranslations('ClubsPage');
   const localActive = useLocale();
   const [selectedClub, setSelectedClub] = useState<Club | null>(null);
+  const [centerCoords, setCenterCoords] = useState<{lat: number, lng: number}>({
+    lat: 52.516640,
+    lng: 13.408280,
+  });
 
   const clubs: Club[] = pullClubsListContent();
 
@@ -43,32 +47,27 @@ const OpenStreetMap: React.FC = () => {
     return { lat: club.geoLocation[0], lng: club.geoLocation[1], club: club };
   });
 
-  let center = {
-    lat: 52.516640,
-    lng: 13.408280,
-  };
-
   const zoom = 13;
   
   let clubIndex: number | undefined = undefined;
 
   if(selectedClub !== null && selectedClub) {
     clubIndex = clubs.findIndex((club) => club.slug === selectedClub.slug);
-    console.log(clubIndex);
   }
 
   useEffect(() => {
-    console.log(center);
-    center = {
+    if(selectedClub) {
+      setCenterCoords({
       lat: selectedClub?.geoLocation[0] as number,
       lng: selectedClub?.geoLocation[1] as number,
-    };
-    console.log(center);
+    });
+  };
   }, [selectedClub]);
 
+  console.log(centerCoords);
   return (
     <div className={styles.mapContainer}>
-      <MapContainer key={clubIndex ? clubIndex : 0} center={center} zoom={zoom} style={{ height: '100%', width: '100%' }}>
+      <MapContainer key={clubIndex ? clubIndex : 0} center={centerCoords} zoom={zoom} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

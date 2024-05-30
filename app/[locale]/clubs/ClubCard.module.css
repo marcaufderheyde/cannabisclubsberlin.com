@@ -20,8 +20,8 @@
   .mapContainer {
     position: relative;
     height: 90vh;
-    width: 90vw;
     left: 0; /* Ensure it starts from the very left */
+    right: 0;
     top: 0; /* Ensure it starts from the very top */
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */

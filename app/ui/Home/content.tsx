@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Headline from '@/app/ui/Home/headline';
 import ActionButton from '@/app/ui/Home/actionbutton';
 import { useLocale, useTranslations } from 'next-intl';

@@ -18,12 +18,10 @@ export default function ClubsContent() {
     const localActive = useLocale();
     return (
         <div>
-            <h1 className='font-bold text-4xl md:text-[4rem] opacity-[0.3] text-center leading-tight overflow-auto'>
-                {t("headline")}
-            </h1>
             {showMap ? <OpenStreetMap /> : <ClubsList />}
             <br />
             {showMap ? <p>{t('map_disclaimer')}</p> : null}
+            <div className='max-w-[var(--layout-width)] w-full '>
             <p>
             {t("headline_description")}
             </p>
@@ -31,6 +29,7 @@ export default function ClubsContent() {
             <p>
             {t("headline_subdescription")}
             </p>
+            </div>
 
             <br />
             <button

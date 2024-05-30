@@ -52,7 +52,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({ club, onClose, nextClub, club
           </div>
         </a>
         <button className={
-                    'py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
+                    'absolute inset-x-0 bottom-0 h-16'
                 } onClick={nextClub}>→ {clubIndex} →</button>
       </div>
     </div>

@@ -18,11 +18,6 @@ export default function About({
 }: {
     params: { locale: string };
 }) {
-export default function About({
-    params: { locale },
-}: {
-    params: { locale: string };
-}) {
     unstable_setRequestLocale(locale);
     return (
         <div className="flex flex-col md:flex-row w-full justify-center md:justify-between items-center h-full">

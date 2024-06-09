@@ -2,6 +2,7 @@ import { Club } from '@/app/[locale]/clubs/clubsListContent';
 import offsetMapCenter from '@/app/helpers/offsetMapCenter';
 
 /*
+
 This function and offsetMapCenter.tsx were created using a combination of:
     1) https://github.com/Leaflet/Leaflet/issues/859
         - Github user mourner's second suggestion is the basis for this implementation
@@ -16,6 +17,7 @@ This function and offsetMapCenter.tsx were created using a combination of:
     to toggle between, was constantly checking the if conditional for clubIndex, and the use of their being a 'key' attribute on map that
     was variable and set to clubIndex, meaning any change to clubIndex meant a new unique map was being rendered. I am far from an expert 
     but this is my guessed solution.
+
 */
 
 export default function jumpToMarker(

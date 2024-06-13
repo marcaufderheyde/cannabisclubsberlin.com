@@ -52,16 +52,16 @@ const OpenStreetMap: React.FC = () => {
 
     const zoom = 13;
 
-    function getNextClub(clubIndex: any, clubs: Club[]): Club {
-        return (clubIndex as number) + 1 > clubs.length - 1
+    function getNextClub(clubIndex: number, clubs: Club[]): Club {
+        return (clubIndex) + 1 > clubs.length - 1
                 ? clubs[0]
-                : clubs[(clubIndex as number) + 1];
+                : clubs[(clubIndex) + 1];
     }
 
-    function getPreviousClub(clubIndex: any, clubs: Club[]): Club {
-        return (clubIndex as number) - 1 < 0
+    function getPreviousClub(clubIndex: number, clubs: Club[]): Club {
+        return (clubIndex) - 1 < 0
                 ? clubs[clubs.length - 1]
-                : clubs[(clubIndex as number) - 1];
+                : clubs[(clubIndex) - 1];
     }
 
     return (
@@ -106,7 +106,7 @@ const OpenStreetMap: React.FC = () => {
                     club={selectedClub}
                     onClose={() => setSelectedClub(null)}
                     switchNextClub={() => {
-                        const nextClub: Club = getNextClub(clubIndex, clubs);
+                        const nextClub: Club = getNextClub(clubIndex!, clubs);
                         jumpToMarker(
                             map,
                             mainMapRef,
@@ -119,7 +119,7 @@ const OpenStreetMap: React.FC = () => {
                     }}
                     switchPreviousClub={() => {
                         const previousClub: Club = getPreviousClub(
-                            clubIndex,
+                            clubIndex!,
                             clubs
                         );
                         jumpToMarker(

@@ -5,13 +5,13 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import L, { Map } from 'leaflet';
 import { pullClubsListContent } from '../[locale]/clubs/clubsListContent';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import styles from '@/app/[locale]/clubs/ClubCard.module.css';
 import CustomPopup from './CustomPopup'; // Import the custom popup component
 import CustomMarker from './CustomMarker';
 import jumpToMarker from '../helpers/jumpToMarker';
 
-interface Club {
+export type Club = {
     name: string;
     slug: string;
     imageUrl: string;
@@ -21,7 +21,7 @@ interface Club {
     harm_reduction?: string;
 }
 
-const customIcon = L.icon({
+const customIcon: L.Icon<L.IconOptions> = L.icon({
     iconUrl: '/leaf-weed.png',
     iconSize: [38, 38], // size of the icon
     iconAnchor: [19, 37], // point of the icon which will correspond to marker's location
@@ -31,7 +31,6 @@ const customIcon = L.icon({
 const OpenStreetMap: React.FC = () => {
     const mainMapRef = useRef(null);
     const t = useTranslations('ClubsPage');
-    const localActive = useLocale();
     const [map, setMap] = useState<Map | null>(null);
     const [selectedClub, setSelectedClub] = useState<Club | null>(null);
     const [clubIndex, setClubIndex] = useState<number | null>(null);
@@ -51,42 +50,18 @@ const OpenStreetMap: React.FC = () => {
         club.harm_reduction = t(`${club.slug}.harm_reduction`);
     });
 
-    const locations = clubs.map((club) => {
-        return {
-            lat: club.geoLocation[0],
-            lng: club.geoLocation[1],
-            club: club,
-        };
-    });
-
     const zoom = 13;
 
-    function getNextClub(clubIndex: any, clubs: Club[]) {
-        let nextClub;
-        // cycle back to start of clubs if we hit array end
-        nextClub =
-            (clubIndex as number) + 1 > clubs.length - 1
+    function getNextClub(clubIndex: any, clubs: Club[]): Club {
+        return (clubIndex as number) + 1 > clubs.length - 1
                 ? clubs[0]
                 : clubs[(clubIndex as number) + 1];
-        return {
-            lat: nextClub.geoLocation[0],
-            lng: nextClub.geoLocation[1],
-            club: nextClub,
-        };
     }
 
-    function getPreviousClub(clubIndex: any, clubs: Club[]) {
-        let previousClub;
-        // cycle back to end of clubs if we hit array start
-        previousClub =
-            (clubIndex as number) - 1 < 0
+    function getPreviousClub(clubIndex: any, clubs: Club[]): Club {
+        return (clubIndex as number) - 1 < 0
                 ? clubs[clubs.length - 1]
                 : clubs[(clubIndex as number) - 1];
-        return {
-            lat: previousClub.geoLocation[0],
-            lng: previousClub.geoLocation[1],
-            club: previousClub,
-        };
     }
 
     return (
@@ -102,16 +77,16 @@ const OpenStreetMap: React.FC = () => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                {locations.map((location, index) => (
+                {clubs.map((club, index) => (
                     <CustomMarker
                         index={index}
-                        location={location}
+                        location={club.geoLocation}
                         customIcon={customIcon}
                         clickedOnMarker={() => {
                             jumpToMarker(
                                 map,
                                 mainMapRef,
-                                location,
+                                club,
                                 clubs,
                                 setSelectedClub,
                                 setCenterCoords,
@@ -131,11 +106,11 @@ const OpenStreetMap: React.FC = () => {
                     club={selectedClub}
                     onClose={() => setSelectedClub(null)}
                     switchNextClub={() => {
-                        let nextClubLocation = getNextClub(clubIndex, clubs);
+                        const nextClub: Club = getNextClub(clubIndex, clubs);
                         jumpToMarker(
                             map,
                             mainMapRef,
-                            nextClubLocation,
+                            nextClub,
                             clubs,
                             setSelectedClub,
                             setCenterCoords,
@@ -143,14 +118,14 @@ const OpenStreetMap: React.FC = () => {
                         );
                     }}
                     switchPreviousClub={() => {
-                        let previousClubLocation = getPreviousClub(
+                        const previousClub: Club = getPreviousClub(
                             clubIndex,
                             clubs
                         );
                         jumpToMarker(
                             map,
                             mainMapRef,
-                            previousClubLocation,
+                            previousClub,
                             clubs,
                             setSelectedClub,
                             setCenterCoords,

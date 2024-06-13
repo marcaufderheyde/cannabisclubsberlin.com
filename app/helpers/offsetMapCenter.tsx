@@ -1,17 +1,19 @@
+import { LatLng, Map, Point } from 'leaflet';
+
 export default function offsetMapCenter(
-    targetZoom: any,
-    overlayHeight: any,
-    mapInstance: any,
-    targetLocation: any
+    targetZoom: number,
+    overlayHeight: number,
+    mapInstance: Map | null,
+    targetLocation: number[]
 ) {
-    var targetLatLng = {
-        lat: targetLocation.lat,
-        lng: targetLocation.lng,
+    const targetLatLng = {
+        lat: targetLocation[0],
+        lng: targetLocation[1],
     };
-    var targetPoint: any = mapInstance
+    const targetPoint: Point = mapInstance!
         .project(targetLatLng, targetZoom)
         .subtract([0, -overlayHeight / 3]);
-    var offsetTargetLatLng: any = mapInstance.unproject(
+    const offsetTargetLatLng: LatLng = mapInstance!.unproject(
         targetPoint,
         targetZoom
     );

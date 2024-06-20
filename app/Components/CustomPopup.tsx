@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from '@/app/[locale]/clubs/ClubCard.module.css';
+import styles from '@/app/styles/ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import Triangle from '../ui/Home/triangle';

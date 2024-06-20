@@ -1,11 +1,12 @@
 import ClubContent from '../club-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import {getClubMetadata} from '@/app/[locale]/clubs/getClubMetadata';
+import { getClubMetadata } from '@/app/[locale]/clubs/getClubMetadata';
 
 export const generateMetadata = async () => {
-    return await getClubMetadata('cscd--dachverband-deutscher-cannabis-social-clubs');
+    return await getClubMetadata(
+        'cscd--dachverband-deutscher-cannabis-social-clubs'
+    );
 };
-
 
 export default function Clubs({
     params: { locale },

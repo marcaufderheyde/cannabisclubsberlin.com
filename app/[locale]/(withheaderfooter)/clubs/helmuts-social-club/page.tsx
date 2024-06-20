@@ -1,11 +1,9 @@
 import ClubContent from '../club-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { getClubMetadata } from '../getClubMetadata';
+import { getClubMetadata } from '@/app/[locale]/clubs/getClubMetadata';
 
 export const generateMetadata = async () => {
-    return await getClubMetadata(
-        'we-love-weed-wlw--cannabis-social-club-berlin-kreuzberg-ev'
-    );
+    return await getClubMetadata('helmuts-social-club');
 };
 
 export default function Clubs({

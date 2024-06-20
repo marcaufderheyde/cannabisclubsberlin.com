@@ -7,10 +7,19 @@ import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import MobileNav from '@/app/ui/Navigation/mobilenav';
 import { usePathname } from 'next/navigation';
 import isPathNameHome from '@/app/helpers/isPathnameHome';
+import { useState } from 'react';
+import { Club } from '@/app/helpers/clubsListContent';
 
-export default function Navbar() {
+type Props = {
+    isOnMap: boolean;
+};
+
+export default function Navbar({ isOnMap = false }: Props) {
     const t = useTranslations('Navbar');
     const localActive = useLocale();
+
+    const navZAxis = isOnMap ? 'z-[1200]' : 'z-10';
+    const translucentBackground = isOnMap ? 'bg-white bg-opacity-85' : '';
 
     const links: Array<LinkInfo> = [
         { name: t('clubs_title'), href: `/${localActive}/clubs` },
@@ -32,16 +41,23 @@ export default function Navbar() {
         <div
             className={
                 fontColor +
-                ' absolute top-0 left-0 z-10 w-full h-[var(--navbar-height)]'
+                ' absolute top-0 left-0 ' +
+                navZAxis +
+                ' w-full h-[var(--navbar-height)] ' +
+                translucentBackground
             }
         >
-            <div className='flex flex-row items-center justify-center py-4 relative max-w-[var(--layout-width)] px-[var(--layout-x-padding)] mx-auto'>
+            <div
+                className={
+                    'flex flex-row items-center justify-center py-4 relative max-w-[var(--layout-width)] px-[var(--layout-x-padding)] mx-auto'
+                }
+            >
                 <Logo />
-                <div className='hidden lg:flex lg:flex-row items-center w-full justify-between gap-6'>
+                <div className="hidden lg:flex lg:flex-row items-center w-full justify-between gap-6">
                     <Links links={links} />
                     <TranslationSwitch />
                 </div>
-                <div className='flex flex-row items-center w-full justify-end lg:hidden'>
+                <div className="flex flex-row items-center w-full justify-end lg:hidden">
                     <MobileNav links={links} />
                 </div>
             </div>

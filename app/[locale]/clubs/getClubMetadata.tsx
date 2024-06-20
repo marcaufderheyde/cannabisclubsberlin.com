@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { pullClubsListContent } from './clubsListContent';
+import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 
 export const getClubMetadata = async (clubSlug: string) => {
     const club = pullClubsListContent().find((club) => club.slug === clubSlug);

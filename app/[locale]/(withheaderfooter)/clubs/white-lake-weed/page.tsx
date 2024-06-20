@@ -1,6 +1,6 @@
 import ClubContent from '../club-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { getClubMetadata } from '../getClubMetadata';
+import { getClubMetadata } from '../../../clubs/getClubMetadata';
 
 export const generateMetadata = async () => {
     return await getClubMetadata('white-lake-weed');

@@ -1,6 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import LawSVG from '../../Components/svg/law-svg';
+import LawSVG from '../../../Components/svg/law-svg';
 
 import LawContainer from './law-container';
 import UserWeedSVG from '@/app/Components/svg/user-weed-svg';

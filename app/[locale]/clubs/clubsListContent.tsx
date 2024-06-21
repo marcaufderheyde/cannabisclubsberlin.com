@@ -521,6 +521,19 @@ const clubs: Club[] = [
         slug: '',
         geoLocation: [52.501072, 13.358058],
     },
+    {
+        key: 'club40',
+        name: 'Berlin Blatt und Blüte e.V.',
+        prices: '',
+        location: '',
+        description: '',
+        offerings: '',
+        harm_reduction: '',
+        imageUrl: '/club40.png',
+        clubPageUrl: 'https://b3ev.de/',
+        slug: '',
+        geoLocation: [52.492805, 13.418272],
+    },
 ];
 
 // Function to generate slugs

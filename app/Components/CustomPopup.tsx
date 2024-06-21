@@ -34,7 +34,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
 
     return (
         <div className={styles.customPopup}>
-            <div className={styles.popupOverlay} onClick={onClose}></div>
+            {/* <div className={styles.popupOverlay} onClick={onClose}></div> */}
             <div className={styles.mapCardContainer}>
                 <button className={styles.closeButton} onClick={onClose}>
                     ×

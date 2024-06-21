@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import L, { Map } from 'leaflet';
@@ -10,7 +10,6 @@ import styles from '@/app/styles/ClubCard.module.css';
 import CustomPopup from './CustomPopup'; // Import the custom popup component
 import CustomMarker from './CustomMarker';
 import jumpToMarker from '../helpers/jumpToMarker';
-import Navbar from '../ui/Navigation/navbar';
 
 export type Club = {
     name: string;
@@ -22,11 +21,6 @@ export type Club = {
     harm_reduction?: string;
 };
 
-export type Props = {
-    showMap: boolean;
-    handleClickAndToggleMapView: any;
-};
-
 const customIcon: L.Icon<L.IconOptions> = L.icon({
     iconUrl: '/leaf-weed.png',
     iconSize: [38, 38], // size of the icon
@@ -34,10 +28,7 @@ const customIcon: L.Icon<L.IconOptions> = L.icon({
     popupAnchor: [0, -37], // point from which the popup should open relative to the iconAnchor
 });
 
-export default function OpenStreetMap({
-    showMap,
-    handleClickAndToggleMapView,
-}: Props) {
+export default function OpenStreetMap() {
     const mainMapRef = useRef(null);
     const t = useTranslations('ClubsPage');
     const [map, setMap] = useState<Map | null>(null);
@@ -75,14 +66,15 @@ export default function OpenStreetMap({
 
     return (
         <div className={styles.mapContainer} ref={mainMapRef}>
-            <Navbar isOnMap={true} />
             <MapContainer
                 key={0}
                 center={centerCoords}
                 zoom={zoom}
+                zoomControl={false}
                 style={{ height: '100%', width: '100%' }}
                 ref={setMap}
             >
+                <ZoomControl position="bottomright" />
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -144,19 +136,6 @@ export default function OpenStreetMap({
                     }}
                 />
             )}
-            <button
-                onClick={() => handleClickAndToggleMapView()}
-                className={
-                    'z-[1000] absolute bottom-0 left-0 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
-                }
-                style={{
-                    color: '#FFFFFF',
-                    backgroundColor: '#B6CF54',
-                    padding: '20px',
-                }}
-            >
-                {showMap ? t('clubs_menu_show_list') : t('clubs_menu_show_map')}
-            </button>
         </div>
     );
 }

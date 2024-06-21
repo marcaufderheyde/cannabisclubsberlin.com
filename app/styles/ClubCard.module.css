@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    margin-bottom: auto;
+    /* margin-bottom: auto; */
   }
   
   .card {
@@ -26,30 +26,31 @@
     top: 0; /* Ensure it starts from the very top */
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
-    z-index: 1003;
+    z-index: 900;
   }
   
   .customPopup {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 25%;
     height: 80%; /* Cover the bottom half of the map */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure the popup is on top of the map */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    z-index: 1005; /* Ensure the popup is on top of the map */
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    /* Optional: Add a semi-transparent background */
   }
   
   .popupOverlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 25%;
     height: 100%;
     background: transparent; /* Make the overlay transparent */
-    z-index: 999; /* Ensure the overlay is behind the popup content */
+    z-index: 1005; /* Ensure the overlay is behind the popup content */
   }
   
   .mapCardContainer {
@@ -62,7 +63,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    z-index: 1001; /* Ensure the card is on top of everything */
+    z-index: 1005; /* Ensure the card is on top of everything */
     height: 90%;
   }
   
@@ -99,7 +100,7 @@
   }
   
   .mapCardImage {
-    height: 250px;
+    height: 100px;
     object-fit: contain;
     padding: 5px;
     border-radius: 8px;

@@ -4,6 +4,8 @@ import styles from '@/app/styles/ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import Triangle from '../ui/Home/triangle';
+import ActionButton from '../ui/Home/actionbutton';
+import ArrowButton from '../ui/Home/arrowbutton';
 
 interface Club {
     name: string;
@@ -69,16 +71,28 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                     </a>
                     <div
                         className={
-                            'inline-flex py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3 border-rose-600'
+                            'absolute bottom-0 inline-flex py-2 px-4 md:py-3'
                         }
                     >
-                        <button onClick={switchPreviousClub}>
-                            <Triangle toggleRotate={true} color={'red'} />
-                        </button>
-                        <div>{clubIndex}</div>
-                        <button onClick={switchNextClub}>
-                            <Triangle toggleRotate={false} color={'red'} />
-                        </button>
+                        <ArrowButton
+                            boxClassName={'rounded-l-full'}
+                            triangleClassName={'w-8 h-8 p-2 align-middle'}
+                            toggleRotate={true}
+                            backgroundColor={'bg-lime-500'}
+                            triangleColor={'white'}
+                            onClickFunction={switchPreviousClub}
+                        />
+                        <div className="bg-lime-500 flex text-white text-base p-2">
+                            {clubIndex}
+                        </div>
+                        <ArrowButton
+                            boxClassName={'rounded-r-full'}
+                            triangleClassName={'w-8 h-8 p-2 align-middle'}
+                            toggleRotate={false}
+                            backgroundColor={'bg-lime-500'}
+                            triangleColor={'white'}
+                            onClickFunction={switchNextClub}
+                        />
                     </div>
                 </div>
             </div>

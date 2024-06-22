@@ -31,40 +31,29 @@
   
   .customPopup {
     position: absolute;
-    bottom: 0;
+    top: var(--navbar-height);
     left: 0;
     width: 25%;
-    height: 80%; /* Cover the bottom half of the map */
+    height: 80%;
     display: flex;
+    /* Cover the bottom half of the map */
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-    z-index: 1005; /* Ensure the popup is on top of the map */
-    /* background-color: rgba(0, 0, 0, 0.5);  */
-    /* Optional: Add a semi-transparent background */
-  }
-  
-  .popupOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    background: transparent; /* Make the overlay transparent */
-    z-index: 1005; /* Ensure the overlay is behind the popup content */
+    z-index: 2005; /* Ensure the popup is on top of the map */
   }
   
   .mapCardContainer {
-    position: relative;
-    max-width: 90%;
+    position: absolute;
+    max-width: 100%;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    padding: 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    z-index: 1005; /* Ensure the card is on top of everything */
-    height: 90%;
+    z-index: 2005; /* Ensure the card is on top of everything */
+    height: 100%;
   }
   
   .closeButton {

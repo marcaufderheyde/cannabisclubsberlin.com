@@ -3,9 +3,8 @@ import { useLocale, useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import ClubsList from './club-list';
-import DropdownContent from '@/app/Components/DropdownContent';
-import styles from '@/app/styles/ClubCard.module.css';
 import Navbar from '@/app/ui/Navigation/navbar';
+import MapListViewSwitcher from '@/app/Components/MapListViewSwitcher';
 
 export default function ClubsContent() {
     //unstable_setRequestLocale(locale);
@@ -29,36 +28,23 @@ export default function ClubsContent() {
     return (
         <div>
             <Navbar isOnMap={true} />
-            {showMap ? <OpenStreetMap /> : <ClubsList />}
-            <div className="inline-flex absolute top-[var(--navbar-height)] right-0 z-[998] lg:m-8 m-4 rounded-3xl shadow-md">
-                <div
-                    className={
-                        'z-[999] cursor-pointer items-center p-4 rounded-l-3xl ' +
-                        mapButtonBackground
-                    }
-                >
-                    <button
-                        onClick={() => setShowMap(true)}
-                        className={'flex z-[999]'}
-                    >
-                        {t('clubs_menu_show_map')}
-                    </button>
+            {showMap ? (
+                <div>
+                    <OpenStreetMap />
+                    <MapListViewSwitcher
+                        showMap={showMap}
+                        setShowMap={setShowMap}
+                    />
                 </div>
-                <div
-                    className={
-                        'z-[999] cursor-pointer items-center p-4 rounded-r-3xl ' +
-                        listButtonBackground
-                    }
-                >
-                    <button
-                        onClick={() => setShowMap(false)}
-                        className={'flex z-[999]'}
-                    >
-                        {t('clubs_menu_show_list')}
-                    </button>
+            ) : (
+                <div className="absolute top-[var(--navbar-height)] left-0">
+                    <MapListViewSwitcher
+                        showMap={showMap}
+                        setShowMap={setShowMap}
+                    />
+                    <ClubsList />
                 </div>
-            </div>
-            {/* <br /> */}
+            )}
             {/* {showMap ? (
                 <p style={{ padding: '20px' }}>{t('map_disclaimer')}</p>
             ) : null}

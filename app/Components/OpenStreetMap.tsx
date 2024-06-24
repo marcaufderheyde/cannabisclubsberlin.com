@@ -28,6 +28,13 @@ const customIcon: L.Icon<L.IconOptions> = L.icon({
     popupAnchor: [0, -37], // point from which the popup should open relative to the iconAnchor
 });
 
+const selectedIcon: L.Icon<L.IconOptions> = L.icon({
+    iconUrl: '/leaf-weed-selected.png',
+    iconSize: [38, 38], // size of the icon
+    iconAnchor: [19, 37], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -37], // point from which the popup should open relative to the iconAnchor
+});
+
 export default function OpenStreetMap() {
     const mainMapRef = useRef(null);
     const t = useTranslations('ClubsPage');
@@ -113,16 +120,20 @@ export default function OpenStreetMap() {
                     style={{ height: '100%', width: '100%' }}
                     ref={setMap}
                 >
-                    <ZoomControl position="bottomright" />
+                    <ZoomControl position='bottomright' />
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (
                         <CustomMarker
                             index={index}
                             location={club.geoLocation}
-                            customIcon={customIcon}
+                            customIcon={
+                                selectedClub && club.slug == selectedClub.slug
+                                    ? selectedIcon
+                                    : customIcon
+                            }
                             clickedOnMarker={() => {
                                 jumpToMarker(
                                     map,

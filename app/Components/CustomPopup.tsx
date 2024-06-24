@@ -40,13 +40,13 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                 <button className={styles.closeButton} onClick={onClose}>
                     ×
                 </button>
-                <div className="flex flex-col items-center">
+                <div className='flex flex-col items-center'>
                     <a
                         href={`/${localActive}/clubs/${club.slug}`}
                         className={styles.mapCardLink}
                     >
                         <div className={styles.mapCard}>
-                            <div className="flex justify-center items-center">
+                            <div className='flex justify-center items-center'>
                                 <Image
                                     src={club.imageUrl}
                                     alt={`${club.name} Club Picture`}
@@ -82,7 +82,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                             triangleColor={'white'}
                             onClickFunction={switchPreviousClub}
                         />
-                        <div className="bg-lime-500 flex text-white text-base p-2">
+                        <div className='bg-lime-500 flex text-white text-base p-2'>
                             {clubIndex}
                         </div>
                         <ArrowButton

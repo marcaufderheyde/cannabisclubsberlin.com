@@ -28,7 +28,8 @@ export default function jumpToMarker(
     clubs: Club[],
     setSelectedClub: any,
     setCenterCoords: any,
-    setClubIndex: any
+    setClubIndex: any,
+    isDesktopMap: boolean
 ) {
     const targetZoom: number = map!.getZoom();
     const overlayHeight: number = mainMapRef.current.offsetHeight;
@@ -39,7 +40,8 @@ export default function jumpToMarker(
         overlayHeight,
         overlayWidth,
         map,
-        nextClub.geoLocation
+        nextClub.geoLocation,
+        isDesktopMap
     );
 
     map!.flyTo(offsetTargetLatLng, targetZoom);

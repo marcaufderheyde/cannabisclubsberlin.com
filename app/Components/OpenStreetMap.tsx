@@ -119,22 +119,46 @@ export default function OpenStreetMap() {
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (
-                        <CustomMarker
-                            index={index}
-                            location={club.geoLocation}
-                            customIcon={customIcon}
-                            clickedOnMarker={() => {
-                                jumpToMarker(
-                                    map,
-                                    mainMapRef,
-                                    club,
-                                    clubs,
-                                    setSelectedClub,
-                                    setCenterCoords,
-                                    setClubIndex
-                                );
-                            }}
-                        />
+                        <div>
+                            <div className="hidden">
+                                <CustomMarker
+                                    index={index}
+                                    location={club.geoLocation}
+                                    customIcon={customIcon}
+                                    clickedOnMarker={() => {
+                                        jumpToMarker(
+                                            map,
+                                            mainMapRef,
+                                            club,
+                                            clubs,
+                                            setSelectedClub,
+                                            setCenterCoords,
+                                            setClubIndex,
+                                            true
+                                        );
+                                    }}
+                                />
+                            </div>
+                            <div className="lg:hidden">
+                                <CustomMarker
+                                    index={index}
+                                    location={club.geoLocation}
+                                    customIcon={customIcon}
+                                    clickedOnMarker={() => {
+                                        jumpToMarker(
+                                            map,
+                                            mainMapRef,
+                                            club,
+                                            clubs,
+                                            setSelectedClub,
+                                            setCenterCoords,
+                                            setClubIndex,
+                                            false
+                                        );
+                                    }}
+                                />
+                            </div>
+                        </div>
                     ))}
                 </MapContainer>
             </div>

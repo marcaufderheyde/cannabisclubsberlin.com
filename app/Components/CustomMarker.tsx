@@ -19,7 +19,7 @@ const CustomMarker = (props: Props) => {
             position={[props.location[0], props.location[1]]}
             icon={props.customIcon}
             eventHandlers={{
-                click: props.clickedOnMarker
+                click: props.clickedOnMarker,
             }}
         />
     );

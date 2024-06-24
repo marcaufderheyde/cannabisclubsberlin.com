@@ -29,6 +29,7 @@ export default function ClubsContent() {
         <div>
             <Navbar isOnMap={true} />
             {showMap ? (
+                
                 <div>
                     <OpenStreetMap />
                     <MapListViewSwitcher

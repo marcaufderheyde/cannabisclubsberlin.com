@@ -3,6 +3,7 @@ import { LatLng, Map, Point } from 'leaflet';
 export default function offsetMapCenter(
     targetZoom: number,
     overlayHeight: number,
+    overlayWidth: number,
     mapInstance: Map | null,
     targetLocation: number[]
 ) {
@@ -12,7 +13,7 @@ export default function offsetMapCenter(
     };
     const targetPoint: Point = mapInstance!
         .project(targetLatLng, targetZoom)
-        .subtract([0, -overlayHeight / 3]);
+        .subtract([+overlayHeight / 3, 0]);
     const offsetTargetLatLng: LatLng = mapInstance!.unproject(
         targetPoint,
         targetZoom

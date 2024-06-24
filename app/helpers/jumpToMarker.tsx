@@ -32,15 +32,17 @@ export default function jumpToMarker(
 ) {
     const targetZoom: number = map!.getZoom();
     const overlayHeight: number = mainMapRef.current.offsetHeight;
+    const overlayWidth: number = mainMapRef.current.offsetWidth;
 
     const offsetTargetLatLng = offsetMapCenter(
         targetZoom,
         overlayHeight,
+        overlayWidth,
         map,
         nextClub.geoLocation
     );
 
-    map!.flyTo(offsetTargetLatLng, map!.getZoom());
+    map!.flyTo(offsetTargetLatLng, targetZoom);
     setCenterCoords({
         lat: offsetTargetLatLng.lat,
         lng: nextClub.geoLocation[1],

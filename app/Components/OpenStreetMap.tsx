@@ -65,39 +65,7 @@ export default function OpenStreetMap() {
     }
 
     return (
-        <div className={styles.mapContainer} ref={mainMapRef}>
-            <MapContainer
-                key={0}
-                center={centerCoords}
-                zoom={zoom}
-                zoomControl={false}
-                style={{ height: '100%', width: '100%' }}
-                ref={setMap}
-            >
-                <ZoomControl position="bottomright" />
-                <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                />
-                {clubs.map((club, index) => (
-                    <CustomMarker
-                        index={index}
-                        location={club.geoLocation}
-                        customIcon={customIcon}
-                        clickedOnMarker={() => {
-                            jumpToMarker(
-                                map,
-                                mainMapRef,
-                                club,
-                                clubs,
-                                setSelectedClub,
-                                setCenterCoords,
-                                setClubIndex
-                            );
-                        }}
-                    />
-                ))}
-            </MapContainer>
+        <div>
             {selectedClub && (
                 <CustomPopup
                     clubIndex={
@@ -136,6 +104,40 @@ export default function OpenStreetMap() {
                     }}
                 />
             )}
+            <div className={styles.mapContainer} ref={mainMapRef}>
+                <MapContainer
+                    key={0}
+                    center={centerCoords}
+                    zoom={zoom}
+                    zoomControl={false}
+                    style={{ height: '100%', width: '100%' }}
+                    ref={setMap}
+                >
+                    <ZoomControl position="bottomright" />
+                    <TileLayer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    />
+                    {clubs.map((club, index) => (
+                        <CustomMarker
+                            index={index}
+                            location={club.geoLocation}
+                            customIcon={customIcon}
+                            clickedOnMarker={() => {
+                                jumpToMarker(
+                                    map,
+                                    mainMapRef,
+                                    club,
+                                    clubs,
+                                    setSelectedClub,
+                                    setCenterCoords,
+                                    setClubIndex
+                                );
+                            }}
+                        />
+                    ))}
+                </MapContainer>
+            </div>
         </div>
     );
 }

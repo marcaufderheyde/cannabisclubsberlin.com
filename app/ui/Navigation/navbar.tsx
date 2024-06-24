@@ -18,7 +18,7 @@ export default function Navbar({ isOnMap = false }: Props) {
     const t = useTranslations('Navbar');
     const localActive = useLocale();
 
-    const navZAxis = isOnMap ? 'z-[1200]' : 'z-10';
+    const navZAxis = isOnMap ? 'z-[3000]' : 'z-10';
     const translucentBackground = isOnMap ? 'bg-white bg-opacity-85' : '';
 
     const links: Array<LinkInfo> = [

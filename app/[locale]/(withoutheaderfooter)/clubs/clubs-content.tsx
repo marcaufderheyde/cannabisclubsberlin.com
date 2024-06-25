@@ -50,31 +50,6 @@ export default function ClubsContent() {
                     <ClubsList />
                 </div>
             )}
-            {/* {showMap ? (
-                <p style={{ padding: '20px' }}>{t('map_disclaimer')}</p>
-            ) : null}
-            <p style={{ padding: '20px' }}>
-                {t('headline_description')}
-                <br />
-                {t('headline_subdescription')}
-                <br />
-                <br />
-                <button
-                    onClick={() => setShowMap(!showMap)}
-                    className={
-                        'py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'
-                    }
-                    style={{
-                        color: '#FFFFFF',
-                        backgroundColor: '#B6CF54',
-                        padding: '20px',
-                    }}
-                >
-                    {showMap
-                        ? t('clubs_menu_show_list')
-                        : t('clubs_menu_show_map')}
-                </button>
-            </p> */}
         </div>
     );
 }

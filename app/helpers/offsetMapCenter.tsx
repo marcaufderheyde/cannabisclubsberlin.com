@@ -14,12 +14,12 @@ export default function offsetMapCenter(
     };
 
     const targetPoint: Point = isDesktopMap
-        ? (mapInstance!
+        ? mapInstance!
               .project(targetLatLng, targetZoom)
-              .subtract([+overlayHeight / 3, 0]))
-        : (mapInstance!
+              .subtract([+overlayWidth / 6, 0])
+        : mapInstance!
               .project(targetLatLng, targetZoom)
-              .subtract([0, -overlayWidth / 3]));
+              .subtract([0, -overlayHeight / 6]);
     const offsetTargetLatLng: LatLng = mapInstance!.unproject(
         targetPoint,
         targetZoom

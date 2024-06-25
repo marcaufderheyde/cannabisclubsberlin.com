@@ -28,7 +28,18 @@ const customIcon: L.Icon<L.IconOptions> = L.icon({
     popupAnchor: [0, -37], // point from which the popup should open relative to the iconAnchor
 });
 
-export default function OpenStreetMap() {
+const selectedIcon: L.Icon<L.IconOptions> = L.icon({
+    iconUrl: '/leaf-weed-selected.png',
+    iconSize: [38, 38], // size of the icon
+    iconAnchor: [19, 37], // point of the icon which will correspond to marker's location
+    popupAnchor: [0, -37], // point from which the popup should open relative to the iconAnchor
+});
+
+type OpenStreetMapProps = {
+    isDesktopMap: boolean;
+};
+
+export default function OpenStreetMap(props: OpenStreetMapProps) {
     const mainMapRef = useRef(null);
     const t = useTranslations('ClubsPage');
     const [map, setMap] = useState<Map | null>(null);
@@ -69,7 +80,7 @@ export default function OpenStreetMap() {
             {selectedClub && (
                 <CustomPopup
                     clubIndex={
-                        ((clubIndex as unknown as string) +
+                        (((clubIndex + 1) as unknown as string) +
                             '/' +
                             clubs.length) as string
                     }
@@ -84,7 +95,8 @@ export default function OpenStreetMap() {
                             clubs,
                             setSelectedClub,
                             setCenterCoords,
-                            setClubIndex
+                            setClubIndex,
+                            props.isDesktopMap
                         );
                     }}
                     switchPreviousClub={() => {
@@ -99,7 +111,8 @@ export default function OpenStreetMap() {
                             clubs,
                             setSelectedClub,
                             setCenterCoords,
-                            setClubIndex
+                            setClubIndex,
+                            props.isDesktopMap
                         );
                     }}
                 />
@@ -119,46 +132,27 @@ export default function OpenStreetMap() {
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (
-                        <div>
-                            <div className="hidden">
-                                <CustomMarker
-                                    index={index}
-                                    location={club.geoLocation}
-                                    customIcon={customIcon}
-                                    clickedOnMarker={() => {
-                                        jumpToMarker(
-                                            map,
-                                            mainMapRef,
-                                            club,
-                                            clubs,
-                                            setSelectedClub,
-                                            setCenterCoords,
-                                            setClubIndex,
-                                            true
-                                        );
-                                    }}
-                                />
-                            </div>
-                            <div className="lg:hidden">
-                                <CustomMarker
-                                    index={index}
-                                    location={club.geoLocation}
-                                    customIcon={customIcon}
-                                    clickedOnMarker={() => {
-                                        jumpToMarker(
-                                            map,
-                                            mainMapRef,
-                                            club,
-                                            clubs,
-                                            setSelectedClub,
-                                            setCenterCoords,
-                                            setClubIndex,
-                                            false
-                                        );
-                                    }}
-                                />
-                            </div>
-                        </div>
+                        <CustomMarker
+                            index={index}
+                            location={club.geoLocation}
+                            customIcon={
+                                selectedClub && club.slug == selectedClub.slug
+                                    ? selectedIcon
+                                    : customIcon
+                            }
+                            clickedOnMarker={() => {
+                                jumpToMarker(
+                                    map,
+                                    mainMapRef,
+                                    club,
+                                    clubs,
+                                    setSelectedClub,
+                                    setCenterCoords,
+                                    setClubIndex,
+                                    props.isDesktopMap
+                                );
+                            }}
+                        />
                     ))}
                 </MapContainer>
             </div>

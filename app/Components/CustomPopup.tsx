@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 import Triangle from '../ui/Home/triangle';
 import ActionButton from '../ui/Home/actionbutton';
 import ArrowButton from '../ui/Home/arrowbutton';
+import Close from '../ui/Navigation/close';
 
 interface Club {
     name: string;
@@ -38,7 +39,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
         <div className={styles.customPopup}>
             <div className={styles.mapCardContainer}>
                 <button className={styles.closeButton} onClick={onClose}>
-                    ×
+                    <Close color={'#828282'} />
                 </button>
                 <div className="flex flex-col items-center">
                     <a

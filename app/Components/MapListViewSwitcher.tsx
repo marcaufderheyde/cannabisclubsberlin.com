@@ -25,13 +25,15 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
             className={
                 'inline-flex ' +
                 mapListViewSwitcherPosition +
-                ' z-[998] lg:m-8 m-4 rounded-3xl shadow-md'
+                ' z-[998] lg:m-8 lg:ml-20 m-4 rounded-3xl shadow-md'
             }
         >
             <div className={'z-[999] rounded-l-3xl ' + mapButtonBackground}>
                 <button
                     onClick={() => setShowMap(true)}
-                    className={'flex z-[999] cursor-pointer items-center p-4'}
+                    className={
+                        'flex z-[999] cursor-pointer items-center p-2 lg:p-4'
+                    }
                 >
                     {t('clubs_menu_show_map')}
                 </button>
@@ -39,7 +41,9 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
             <div className={'z-[999] rounded-r-3xl ' + listButtonBackground}>
                 <button
                     onClick={() => setShowMap(false)}
-                    className={'flex z-[999] cursor-pointer items-center p-4'}
+                    className={
+                        'flex z-[999] cursor-pointer items-center p-2 lg:p-4'
+                    }
                 >
                     {t('clubs_menu_show_list')}
                 </button>

@@ -29,9 +29,13 @@ export default function ClubsContent() {
         <div>
             <Navbar isOnMap={true} />
             {showMap ? (
-                
                 <div>
-                    <OpenStreetMap />
+                    <div className="hidden lg:flex">
+                        <OpenStreetMap isDesktopMap={true} />
+                    </div>
+                    <div className="lg:hidden flex">
+                        <OpenStreetMap isDesktopMap={false} />
+                    </div>
                     <MapListViewSwitcher
                         showMap={showMap}
                         setShowMap={setShowMap}

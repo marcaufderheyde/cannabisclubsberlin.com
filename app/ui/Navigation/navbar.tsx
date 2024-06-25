@@ -43,7 +43,7 @@ export default function Navbar({ isOnMap = false }: Props) {
                 fontColor +
                 ' absolute top-0 left-0 ' +
                 navZAxis +
-                ' w-full h-[var(--navbar-height)] ' +
+                ' w-[100vw] h-[var(--navbar-height)] ' +
                 translucentBackground
             }
         >
@@ -53,11 +53,11 @@ export default function Navbar({ isOnMap = false }: Props) {
                 }
             >
                 <Logo />
-                <div className="hidden lg:flex lg:flex-row items-center w-full justify-between gap-6">
+                <div className='hidden lg:flex lg:flex-row items-center w-full justify-between gap-6'>
                     <Links links={links} />
                     <TranslationSwitch />
                 </div>
-                <div className="flex flex-row items-center w-full justify-end lg:hidden">
+                <div className='flex flex-row items-center w-full justify-end lg:hidden'>
                     <MobileNav links={links} />
                 </div>
             </div>

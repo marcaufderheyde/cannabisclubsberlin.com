@@ -60,7 +60,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                                 <h3 className={styles.mapCardTitle}>
                                     {club.name}
                                 </h3>
-                                <p className={styles.mapCardOfferings}>
+                                <p className={styles.mapCardDescription}>
                                     {club.description}
                                 </p>
                                 <br />

@@ -133,7 +133,7 @@
     overflow: hidden; /* Ensures overflow is hidden */
     text-overflow: ellipsis; /* Adds ellipses at the end of the text */
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* Number of lines to show */
+    -webkit-line-clamp: 15; /* Number of lines to show */
     -webkit-box-orient: vertical;
   }
 

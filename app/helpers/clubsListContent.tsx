@@ -88,7 +88,7 @@ const clubs: Club[] = [
         harm_reduction: '',
         imageUrl: '/club6.png',
         clubPageUrl: 'https://www.bastardo-berlin.de/',
-        slug: '',
+        slug: 'bastardo-csc-berlin',
         geoLocation: [52.47016, 13.42675],
     },
     {
@@ -558,9 +558,9 @@ export function generateSlug(name: string): string {
 
 // Add slugs to the clubs
 clubs.forEach((club) => {
-    club.slug = generateSlug(club.name);
+    if (club.slug === '') club.slug = generateSlug(club.name);
 });
 
-export function pullClubsListContent() : Club[] {
+export function pullClubsListContent(): Club[] {
     return clubs;
 }

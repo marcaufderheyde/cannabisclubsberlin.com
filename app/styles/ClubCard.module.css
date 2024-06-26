@@ -133,7 +133,7 @@
     overflow: hidden; /* Ensures overflow is hidden */
     text-overflow: ellipsis; /* Adds ellipses at the end of the text */
     display: -webkit-box;
-    -webkit-line-clamp: 15; /* Number of lines to show */
+    -webkit-line-clamp: 10; /* Number of lines to show */
     -webkit-box-orient: vertical;
   }
 
@@ -144,7 +144,7 @@
       color: #666;
       width: 100%;
       height: 80%; /* Adjust this height to control the vertical space */
-      line-height: 1.5rem; /* Adjust to match font size and desired spacing */
+      line-height: 0.8rem; /* Adjust to match font size and desired spacing */
       overflow: hidden; /* Ensures overflow is hidden */
       text-overflow: ellipsis; /* Adds ellipses at the end of the text */
       display: -webkit-box;
@@ -160,20 +160,44 @@
       width: 100%;
       height: 60%;
     }
+
+    .mapCardTitle {
+      font-size: 1rem;
+    }
+
+    .mapCardDescription {
+      font-size: 0.8rem;
+      height: 80%; /* Adjust this height to control the vertical space */
+      line-height: 1.5rem; /* Adjust to match font size and desired spacing */
+      display: -webkit-box;
+      -webkit-line-clamp: 5; /* Number of lines to show */
+    }
+
+    .mapCardOfferings {
+      font-size: 0.8rem;
+    }
   }
 
   @media only screen and (max-width: 375px) {
     .mapCardDescription {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #666;
       width: 100%;
       height: 80%; /* Adjust this height to control the vertical space */
-      line-height: 1.5rem; /* Adjust to match font size and desired spacing */
+      line-height: 0.8rem; /* Adjust to match font size and desired spacing */
       overflow: hidden; /* Ensures overflow is hidden */
       text-overflow: ellipsis; /* Adds ellipses at the end of the text */
       display: -webkit-box;
       -webkit-line-clamp: 3; /* Number of lines to show */
       -webkit-box-orient: vertical;
+    }
+
+    .mapCardTitle {
+      font-size: 1rem;
+    }
+
+    .mapCardOfferings {
+      font-size: 0.8rem;
     }
   }
 

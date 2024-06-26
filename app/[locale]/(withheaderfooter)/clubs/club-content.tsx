@@ -1,7 +1,7 @@
 'use client';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { pullClubsListContent } from './clubsListContent';
+import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import ActionButton from '@/app/ui/Home/actionbutton';
@@ -29,11 +29,11 @@ export default function ClubContent() {
             club.harm_reduction = t(`${club.slug}.harm_reduction`);
 
             return (
-                <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16'>
-                    <h1 className='font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight'>
+                <div className="flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16">
+                    <h1 className="font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight">
                         {club.name}
                     </h1>
-                    <div className='flex flex-row text-lg font-semibold gap-2'>
+                    <div className="flex flex-row text-lg font-semibold gap-2">
                         <ActionButton
                             backgroundColor={'#B6CF54'}
                             textColor={'#FFFFFF'}
@@ -50,33 +50,33 @@ export default function ClubContent() {
                             height={300}
                         />
                     </div>
-                    <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>
+                    <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('price_title')}
                     </h2>
                     <p>{club.prices}</p>
-                    <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>
+                    <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('description_title')}
                     </h2>
                     <p>{club.description}</p>
-                    <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>
+                    <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('offerings_title')}
                     </h2>
                     {club.offerings.split(',').map((offering, index) => (
                         <li key={index}>{offering.trim()}</li>
                     ))}
-                    <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>
+                    <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('harm_reduction_title')}
                     </h2>
                     <p>{club.harm_reduction}</p>
-                    <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>
+                    <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('visit_website_title')}
                     </h2>
                     <p>
-                        <a href={club.clubPageUrl} target='_blank'>
+                        <a href={club.clubPageUrl} target="_blank">
                             {club.clubPageUrl}
                         </a>
                     </p>
-                    <h2 className='font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight'>
+                    <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('location_title')}
                     </h2>
                     <p>{club.location}</p>

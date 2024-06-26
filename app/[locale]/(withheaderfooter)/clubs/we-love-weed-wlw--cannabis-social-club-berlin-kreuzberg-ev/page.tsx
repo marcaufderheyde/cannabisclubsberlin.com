@@ -1,9 +1,11 @@
 import ClubContent from '../club-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { getClubMetadata } from '../getClubMetadata';
+import { getClubMetadata } from '../../../clubs/getClubMetadata';
 
 export const generateMetadata = async () => {
-    return await getClubMetadata('spliffers-berlin-ig');
+    return await getClubMetadata(
+        'we-love-weed-wlw--cannabis-social-club-berlin-kreuzberg-ev'
+    );
 };
 
 export default function Clubs({

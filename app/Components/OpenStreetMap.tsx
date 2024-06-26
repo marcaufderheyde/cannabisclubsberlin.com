@@ -77,7 +77,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     return (
         <div>
-            {selectedClub && (
+            {selectedClub && clubIndex && (
                 <CustomPopup
                     clubIndex={
                         (((clubIndex + 1) as unknown as string) +
@@ -87,7 +87,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     club={selectedClub}
                     onClose={() => setSelectedClub(null)}
                     switchNextClub={() => {
-                        const nextClub: Club = getNextClub(clubIndex!, clubs);
+                        const nextClub: Club = getNextClub(clubIndex, clubs);
                         jumpToMarker(
                             map,
                             mainMapRef,
@@ -101,7 +101,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     }}
                     switchPreviousClub={() => {
                         const previousClub: Club = getPreviousClub(
-                            clubIndex!,
+                            clubIndex,
                             clubs
                         );
                         jumpToMarker(
@@ -126,9 +126,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     style={{ height: '100%', width: '100%' }}
                     ref={setMap}
                 >
-                    <ZoomControl position="bottomright" />
+                    <ZoomControl position='bottomright' />
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (

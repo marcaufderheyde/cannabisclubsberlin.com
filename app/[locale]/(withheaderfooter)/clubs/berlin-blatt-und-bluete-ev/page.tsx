@@ -3,7 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { getClubMetadata } from '@/app/[locale]/clubs/getClubMetadata';
 
 export const generateMetadata = async () => {
-    return await getClubMetadata('bastardo-csc-berlin');
+    return await getClubMetadata('berlin-blatt-und-bluete-ev');
 };
 
 export default function Clubs({
@@ -13,7 +13,7 @@ export default function Clubs({
 }) {
     unstable_setRequestLocale(locale);
     return (
-        <div className="flex flex-col md:flex-col w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 md:pl-[YourNavbarWidth]">
+        <div className='flex flex-col md:flex-col w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 md:pl-[YourNavbarWidth]'>
             <ClubContent />
         </div>
     );

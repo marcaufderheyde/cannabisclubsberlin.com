@@ -1,9 +1,9 @@
 import ClubContent from '../club-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import {getClubMetadata} from '@/app/[locale]/clubs/getClubMetadata';
+import { getClubMetadata } from '../../../clubs/getClubMetadata';
 
 export const generateMetadata = async () => {
-    return await getClubMetadata('helmuts-social-club');
+    return await getClubMetadata('spliffers-berlin-ig');
 };
 
 export default function Clubs({

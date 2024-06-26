@@ -5,9 +5,9 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import L, { icon, popup } from 'leaflet';
 import { useLocale, useTranslations } from 'next-intl';
-import styles from '@/app/[locale]/clubs/ClubCard.module.css';
+import styles from '@/app/styles/ClubCard.module.css';
 import Image from 'next/image';
-import { Club } from '../[locale]/clubs/clubsListContent';
+import { Club } from '@/app/helpers/clubsListContent';
 
 const customIcon = L.icon({
     iconUrl: '/leaf-weed.png',

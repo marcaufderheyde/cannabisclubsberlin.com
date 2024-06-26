@@ -6,13 +6,13 @@ import {
     useTranslations,
 } from 'next-intl';
 import { Inter } from 'next/font/google';
-import '../globals.css';
-import Footer from '../ui/Footer/footer';
-import Navbar from '../ui/Navigation/navbar';
-import CookieBanner from '../Components/CookieBanner';
+import '@/app/globals.css';
+import Footer from '../../ui/Footer/footer';
+import Navbar from '../../ui/Navigation/navbar';
+import CookieBanner from '../../Components/CookieBanner';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import AgeVerification from '../Components/AgeVerification';
+import AgeVerification from '../../Components/AgeVerification';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -44,15 +44,7 @@ export default function LocaleLayout({
     return (
         <div>
             <NextIntlClientProvider messages={messages}>
-                <Navbar />
-                <div className='bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg '>
-                    <div className='z-[2] px-[var(--layout-x-padding)] h-full  max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] pb-10 '>
-                        {children}
-                    </div>
-                </div>
-                <AgeVerification />
-                <CookieBanner />
-                <Footer />
+                {children}
             </NextIntlClientProvider>
         </div>
     );

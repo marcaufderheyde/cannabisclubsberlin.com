@@ -1,8 +1,9 @@
 'use client';
 import { useLocale, useTranslations } from 'next-intl';
-import styles from './ClubCard.module.css';
+import styles from '@/app/styles/ClubCard.module.css';
+
 import Image from 'next/image';
-import { pullClubsListContent } from './clubsListContent';
+import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 
 const clubs = pullClubsListContent();
 
@@ -30,7 +31,9 @@ export default function ClubsList() {
                                 />
                             </div>
                             <div className={styles.cardContent}>
-                                <h3 className={styles.cardTitle}>{club.name}</h3>
+                                <h3 className={styles.cardTitle}>
+                                    {club.name}
+                                </h3>
                                 <p className={styles.cardDescription}>
                                     {club.offerings}
                                 </p>

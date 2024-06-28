@@ -12,45 +12,41 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
     const localActive = useLocale();
 
     const mapButtonBackground = showMap
-        ? 'bg-white text-black'
-        : 'bg-gray-200 text-neutral-400';
+        ? 'bg-white text-black font-semibold'
+        : 'bg-gray-100 text-neutral-400';
     const listButtonBackground = showMap
-        ? 'bg-gray-200 text-neutral-400'
-        : 'bg-white text-black';
+        ? 'bg-gray-100 text-neutral-400'
+        : 'bg-white text-black font-semibold';
     const mapListViewSwitcherPosition = showMap
         ? 'absolute top-[var(--navbar-height)] right-0'
         : 'relative';
     return (
-        <div className='w-[100vw] flex align-middle justify-end'>
+        <div className="w-[100vw] flex align-middle justify-end">
             <div
                 className={
                     'inline-flex ' +
                     mapListViewSwitcherPosition +
-                    ' z-[998] lg:m-8 lg:ml-20 m-4 rounded-3xl shadow-md'
+                    ' z-[998] lg:m-8 lg:ml-20 m-4 rounded-xl shadow-xl bg-gray-100'
                 }
             >
-                <div className={'z-[999] rounded-l-3xl ' + mapButtonBackground}>
-                    <button
-                        onClick={() => setShowMap(true)}
-                        className={
-                            'flex z-[999] cursor-pointer items-center p-2 lg:p-4'
-                        }
-                    >
-                        {t('clubs_menu_show_map')}
-                    </button>
-                </div>
-                <div
-                    className={'z-[999] rounded-r-3xl ' + listButtonBackground}
+                <button
+                    onClick={() => setShowMap(true)}
+                    className={
+                        'z-[999] cursor-pointer items-center rounded-xl text-lg my-1 ml-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
+                        mapButtonBackground
+                    }
                 >
-                    <button
-                        onClick={() => setShowMap(false)}
-                        className={
-                            'flex z-[999] cursor-pointer items-center p-2 lg:p-4'
-                        }
-                    >
-                        {t('clubs_menu_show_list')}
-                    </button>
-                </div>
+                    {t('clubs_menu_show_map')}
+                </button>
+                <button
+                    onClick={() => setShowMap(false)}
+                    className={
+                        'z-[999] rounded-xl cursor-pointer items-center text-lg  my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
+                        listButtonBackground
+                    }
+                >
+                    {t('clubs_menu_show_list')}
+                </button>
             </div>
         </div>
     );

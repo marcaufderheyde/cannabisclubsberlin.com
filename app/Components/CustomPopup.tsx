@@ -3,8 +3,6 @@ import React from 'react';
 import styles from '@/app/styles/ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
-import Triangle from '../ui/Home/triangle';
-import ActionButton from '../ui/Home/actionbutton';
 import ArrowButton from '../ui/Home/arrowbutton';
 import Close from '../ui/Navigation/close';
 
@@ -20,7 +18,7 @@ interface Club {
 
 interface CustomPopupProps {
     club: Club;
-    clubIndex: string;
+    clubIndex: number;
     onClose: () => void;
     switchNextClub: () => void;
     switchPreviousClub: () => void;
@@ -60,7 +58,6 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                                 <h3 className={styles.mapCardTitle}>
                                     {club.name}
                                 </h3>
-                                <h4>Description</h4>
                                 <p className={styles.mapCardDescription}>
                                     {club.description}
                                 </p>
@@ -86,7 +83,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                             onClickFunction={switchPreviousClub}
                         />
                         <div className="bg-lime-500 flex text-white text-base p-2">
-                            {clubIndex}
+                            {clubIndex + 1}
                         </div>
                         <ArrowButton
                             boxClassName={'rounded-r-full'}

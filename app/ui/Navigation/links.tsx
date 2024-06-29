@@ -26,7 +26,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
                         }
                     >
                         {link.name as String}
-                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[0.2rem] bg-lime-500"></span>
+                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[0.2rem] bg-neutral-400"></span>
                     </Link>
                 );
             })}

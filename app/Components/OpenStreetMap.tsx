@@ -77,13 +77,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     return (
         <div>
-            {selectedClub && clubIndex && (
+            {selectedClub && clubIndex != null && (
                 <CustomPopup
-                    clubIndex={
-                        (((clubIndex + 1) as unknown as string) +
-                            '/' +
-                            clubs.length) as string
-                    }
+                    clubIndex={clubIndex}
                     club={selectedClub}
                     onClose={() => setSelectedClub(null)}
                     switchNextClub={() => {
@@ -128,8 +124,8 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 >
                     <ZoomControl position="bottomright" />
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        // url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+                        // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
                         // url='https://tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-token=T0jPaapxVv26fwYeoIIhL6km0xZ6ypaM963Jd45djhLgBGHsOW6VG0t5mwnSaAKL'
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />

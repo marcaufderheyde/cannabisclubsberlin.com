@@ -1,5 +1,5 @@
 'use client';
-import { useLocale, useTranslations } from 'next-intl';
+
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import ClubsList from './club-list';
@@ -7,23 +7,14 @@ import Navbar from '@/app/ui/Navigation/navbar';
 import MapListViewSwitcher from '@/app/Components/MapListViewSwitcher';
 
 export default function ClubsContent() {
-    //unstable_setRequestLocale(locale);
     const OpenStreetMap = dynamic(
         () => import('@/app/Components/OpenStreetMap'),
         {
             ssr: false,
         }
     );
-    const [showMap, setShowMap] = useState(true);
-    const t = useTranslations('ClubsPage');
-    const localActive = useLocale();
 
-    const mapButtonBackground = showMap
-        ? 'bg-white text-black'
-        : 'bg-gray-200 text-neutral-400';
-    const listButtonBackground = showMap
-        ? 'bg-gray-200 text-neutral-400'
-        : 'bg-white text-black';
+    const [showMap, setShowMap] = useState(true);
 
     return (
         <div>

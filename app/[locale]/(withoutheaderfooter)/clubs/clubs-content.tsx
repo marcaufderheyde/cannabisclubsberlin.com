@@ -30,10 +30,10 @@ export default function ClubsContent() {
             <Navbar isOnMap={true} />
             {showMap ? (
                 <div>
-                    <div className="hidden lg:flex">
+                    <div className='hidden lg:flex'>
                         <OpenStreetMap isDesktopMap={true} />
                     </div>
-                    <div className="lg:hidden flex">
+                    <div className='lg:hidden flex'>
                         <OpenStreetMap isDesktopMap={false} />
                     </div>
                     <MapListViewSwitcher
@@ -42,7 +42,7 @@ export default function ClubsContent() {
                     />
                 </div>
             ) : (
-                <div className="absolute top-[var(--navbar-height)] left-0">
+                <div className='absolute top-[var(--navbar-height)] left-0'>
                     <MapListViewSwitcher
                         showMap={showMap}
                         setShowMap={setShowMap}

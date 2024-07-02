@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
@@ -10,6 +10,7 @@ import styles from '@/app/styles/ClubCard.module.css';
 import CustomPopup from './CustomPopup'; // Import the custom popup component
 import CustomMarker from './CustomMarker';
 import jumpToMarker from '../helpers/jumpToMarker';
+import mod from '../helpers/mod';
 
 export type Club = {
     name: string;
@@ -43,7 +44,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     const mainMapRef = useRef(null);
     const t = useTranslations('ClubsPage');
     const [map, setMap] = useState<Map | null>(null);
-    const [selectedClub, setSelectedClub] = useState<Club | null>(null);
     const [clubIndex, setClubIndex] = useState<number | null>(null);
     const [centerCoords, setCenterCoords] = useState<{
         lat: number;
@@ -53,7 +53,11 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         lng: 13.40828,
     });
 
-    const clubs: Club[] = pullClubsListContent();
+    const clubIndexExists = clubIndex != null;
+
+    const clubsRef = useRef<Club[]>(pullClubsListContent());
+    const clubs = clubsRef.current;
+    const selectedClub = clubIndexExists && clubs[clubIndex];
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
@@ -63,57 +67,41 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     const zoom = 13;
 
-    function getNextClub(clubIndex: number, clubs: Club[]): Club {
-        return clubIndex + 1 > clubs.length - 1
-            ? clubs[0]
-            : clubs[clubIndex + 1];
-    }
+    const setNextClub = () => {
+        console.log(clubIndex);
+        if (clubIndexExists) setClubIndex(mod(clubIndex + 1, clubs.length));
+    };
+    const setPreviousClub = () => {
+        if (clubIndexExists) setClubIndex(mod(clubIndex - 1, clubs.length));
+    };
 
-    function getPreviousClub(clubIndex: number, clubs: Club[]): Club {
-        return clubIndex - 1 < 0
-            ? clubs[clubs.length - 1]
-            : clubs[clubIndex - 1];
-    }
+    useEffect(() => {
+        if (map && clubIndexExists) {
+            jumpToMarker(
+                map,
+                mainMapRef,
+                clubIndex,
+                clubs,
+                setCenterCoords,
+                props.isDesktopMap
+            );
+        }
+        console.log(clubIndex);
+    }, [clubIndex]);
 
     return (
         <div>
-            {selectedClub && clubIndex != null && (
+            {selectedClub && clubIndexExists && (
                 <CustomPopup
-                    clubIndex={
-                        (((clubIndex + 1) as unknown as string) +
-                            '/' +
-                            clubs.length) as string
-                    }
+                    clubIndex={clubIndex}
                     club={selectedClub}
-                    onClose={() => setSelectedClub(null)}
+                    clubs={clubs}
+                    onClose={() => setClubIndex(null)}
                     switchNextClub={() => {
-                        const nextClub: Club = getNextClub(clubIndex, clubs);
-                        jumpToMarker(
-                            map,
-                            mainMapRef,
-                            nextClub,
-                            clubs,
-                            setSelectedClub,
-                            setCenterCoords,
-                            setClubIndex,
-                            props.isDesktopMap
-                        );
+                        setNextClub();
                     }}
                     switchPreviousClub={() => {
-                        const previousClub: Club = getPreviousClub(
-                            clubIndex,
-                            clubs
-                        );
-                        jumpToMarker(
-                            map,
-                            mainMapRef,
-                            previousClub,
-                            clubs,
-                            setSelectedClub,
-                            setCenterCoords,
-                            setClubIndex,
-                            props.isDesktopMap
-                        );
+                        setPreviousClub();
                     }}
                 />
             )}
@@ -126,13 +114,14 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     style={{ height: '100%', width: '100%' }}
                     ref={setMap}
                 >
-                    <ZoomControl position="bottomright" />
+                    <ZoomControl position='bottomright' />
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (
                         <CustomMarker
+                            key={index}
                             index={index}
                             location={club.geoLocation}
                             customIcon={
@@ -141,16 +130,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                                     : customIcon
                             }
                             clickedOnMarker={() => {
-                                jumpToMarker(
-                                    map,
-                                    mainMapRef,
-                                    club,
-                                    clubs,
-                                    setSelectedClub,
-                                    setCenterCoords,
-                                    setClubIndex,
-                                    props.isDesktopMap
-                                );
+                                setClubIndex(index);
                             }}
                         />
                     ))}

@@ -68,7 +68,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     const zoom = 13;
 
     const setNextClub = () => {
-        console.log(clubIndex);
         if (clubIndexExists) setClubIndex(mod(clubIndex + 1, clubs.length));
     };
     const setPreviousClub = () => {

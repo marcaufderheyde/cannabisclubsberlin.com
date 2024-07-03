@@ -18,7 +18,7 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
         ? 'bg-gray-200 text-neutral-400'
         : 'bg-white text-black';
     const mapListViewSwitcherPosition = showMap
-        ? 'absolute top-[var(--navbar-height)] right-0'
+        ? 'absolute top-[var(--navbar-height-mobile)]   md:top-[var(--navbar-height)] right-0'
         : 'relative';
     return (
         <div className='w-[100vw] flex align-middle justify-end'>

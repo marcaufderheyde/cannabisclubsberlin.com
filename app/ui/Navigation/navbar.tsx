@@ -43,7 +43,7 @@ export default function Navbar({ isOnMap = false }: Props) {
                 fontColor +
                 ' absolute top-0 left-0 ' +
                 navZAxis +
-                ' w-[100vw] h-[var(--navbar-height)] ' +
+                ' w-[100vw] h-[var(--navbar-height-mobile)] md:h-[var(--navbar-height)] ' +
                 translucentBackground
             }
         >

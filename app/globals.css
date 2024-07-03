@@ -19,6 +19,7 @@ html, body {
   --layout-x-padding: 1rem;
   --footer-height: 150px;
   --navbar-height: 120px;
+  --navbar-height-mobile: 90px;
 }
 
 /* #section_footer {

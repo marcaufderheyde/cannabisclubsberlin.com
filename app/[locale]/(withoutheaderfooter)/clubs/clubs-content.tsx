@@ -42,7 +42,7 @@ export default function ClubsContent() {
                     />
                 </div>
             ) : (
-                <div className='absolute top-[var(--navbar-height)] left-0'>
+                <div className='absolute top-[var(--navbar-height-mobile)]   md:top-[var(--navbar-height)] left-0'>
                     <MapListViewSwitcher
                         showMap={showMap}
                         setShowMap={setShowMap}

@@ -40,6 +40,8 @@ export default function jumpToMarker(
         lng: nextClub.geoLocation[1],
     });
 
+    console.log(nextClub);
+
     const selectedClub = nextClub;
     setSelectedClub(selectedClub);
 

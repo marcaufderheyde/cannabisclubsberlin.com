@@ -12,7 +12,7 @@ interface Club {
     imageUrl: string;
     geoLocation: number[];
     description?: string;
-    offerings?: string;
+    offerings?: string[];
     harm_reduction?: string;
 }
 
@@ -58,13 +58,16 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                                 <h3 className={styles.mapCardTitle}>
                                     {club.name}
                                 </h3>
-                                <p className={styles.mapCardDescription}>
+                                <p className="text-wrap bg-gray-200 p-5 rounded-xl text-left max-h-48 text-ellipsis overflow-hidden">
                                     {club.description}
                                 </p>
                                 <br />
-                                <h4>Offerings</h4>
                                 <p className={styles.mapCardOfferings}>
-                                    {club.offerings}
+                                    {club.offerings?.map((offering) => (
+                                        <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">
+                                            {offering}
+                                        </span>
+                                    ))}
                                 </p>
                             </div>
                         </div>

@@ -85,7 +85,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 props.isDesktopMap
             );
         }
-        console.log(clubIndex);
     }, [clubIndex]);
 
     return (
@@ -113,9 +112,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     style={{ height: '100%', width: '100%' }}
                     ref={setMap}
                 >
-                    <ZoomControl position='bottomright' />
+                    <ZoomControl position="bottomright" />
                     <TileLayer
-                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (

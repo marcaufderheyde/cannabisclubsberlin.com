@@ -11,6 +11,8 @@ import CustomPopup from './CustomPopup'; // Import the custom popup component
 import CustomMarker from './CustomMarker';
 import jumpToMarker from '../helpers/jumpToMarker';
 import mod from '../helpers/mod';
+import SwipeableClubCard from './SwipeableClubCard';
+import SwipeableDeck from './SwipeableDeck';
 
 export type Club = {
     name: string;
@@ -91,18 +93,26 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     return (
         <div>
             {selectedClub && clubIndexExists && (
-                <CustomPopup
-                    clubIndex={clubIndex}
-                    club={selectedClub}
-                    clubs={clubs}
-                    onClose={() => setClubIndex(null)}
-                    switchNextClub={() => {
-                        setNextClub();
-                    }}
-                    switchPreviousClub={() => {
-                        setPreviousClub();
-                    }}
+                <SwipeableDeck
+                    items={clubs}
+                    Card={SwipeableClubCard}
+                    currentIndex={clubIndex}
+                    onRightSwipe={() => setNextClub()}
+                    onLeftSwipe={() => setPreviousClub()}
                 />
+
+                // <CustomPopup
+                //     clubIndex={clubIndex}
+                //     club={selectedClub}
+                //     clubs={clubs}
+                //     onClose={() => setClubIndex(null)}
+                //     switchNextClub={() => {
+                //         setNextClub();
+                //     }}
+                //     switchPreviousClub={() => {
+                //         setPreviousClub();
+                //     }}
+                // />
             )}
             <div className={styles.mapContainer} ref={mainMapRef}>
                 <MapContainer

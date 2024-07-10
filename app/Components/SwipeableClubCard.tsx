@@ -13,6 +13,7 @@ export default function SwipeableClubCard({
     onRightSwipe,
     onLeftSwipe,
     zHeight,
+    canSwipe = true,
 }: {
     readonly club: Club;
     readonly index: number;
@@ -21,6 +22,7 @@ export default function SwipeableClubCard({
     onRightSwipe?: Function;
     onLeftSwipe?: Function;
     readonly zHeight: number;
+    readonly canSwipe: boolean;
 }) {
     const [position, setPosition] = useState({
         y: startPosition.y,
@@ -37,19 +39,23 @@ export default function SwipeableClubCard({
     }, [startPosition]);
 
     const swipeAnimation = (touchDetails: TouchDetails) => {
-        setTranformDuration(0);
-        setPosition((prevPosition) => ({
-            ...prevPosition,
-            x: startPosition.x + touchDetails.distX,
-        }));
+        if (canSwipe) {
+            setTranformDuration(0);
+            setPosition((prevPosition) => ({
+                ...prevPosition,
+                x: startPosition.x + touchDetails.distX,
+            }));
+        }
     };
 
     const swipeOnCancel = () => {
-        setTranformDuration(0.2);
-        setPosition({
-            y: startPosition.y,
-            x: startPosition.x,
-        });
+        if (canSwipe) {
+            setTranformDuration(0.2);
+            setPosition({
+                y: startPosition.y,
+                x: startPosition.x,
+            });
+        }
     };
 
     const translationStyling: React.CSSProperties = {

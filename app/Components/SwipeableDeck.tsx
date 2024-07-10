@@ -15,6 +15,7 @@ export interface CardInfo {
     onLeftSwipe: Function;
     onRightSwipe: Function;
     zHeight: number;
+    canSwipe: boolean;
 }
 
 export default function SwipeableDeck<T>({
@@ -92,6 +93,7 @@ export default function SwipeableDeck<T>({
                     onRightSwipe: i == currentIndex ? onRightSwipe : () => {},
                     index: i,
                     zHeight: i == currentIndex ? 1 : -distance,
+                    canSwipe: i == currentIndex,
                 };
                 cards.push(cardInfo);
 
@@ -104,7 +106,7 @@ export default function SwipeableDeck<T>({
     }, [currentIndex]);
 
     return (
-        <div className='absolute bottom-0 z-[3000] w-full h-full bg-[rgba(233,246,166,0.3)] pointer-events-[fill] overflow-hidden pointer-events-none'>
+        <div className='lg:hidden absolute bottom-0 z-[3000] w-full h-full pointer-events-[fill] overflow-hidden pointer-events-none'>
             {shownCards.map((card) => {
                 return (
                     <Card
@@ -115,6 +117,7 @@ export default function SwipeableDeck<T>({
                         onLeftSwipe={card.onLeftSwipe}
                         onRightSwipe={card.onRightSwipe}
                         zHeight={card.zHeight}
+                        canSwipe={card.canSwipe}
                     />
                 );
             })}

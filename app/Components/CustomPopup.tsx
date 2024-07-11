@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '@/app/styles/ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';

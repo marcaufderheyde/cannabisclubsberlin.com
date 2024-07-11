@@ -87,6 +87,28 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 props.isDesktopMap
             );
         }
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            switch (event.key) {
+                case 'ArrowUp':
+                    break;
+                case 'ArrowDown':
+                    break;
+                case 'ArrowLeft':
+                    setPreviousClub();
+                    break;
+                case 'ArrowRight':
+                    setNextClub();
+                    break;
+                default:
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
     }, [clubIndex]);
 
     return (

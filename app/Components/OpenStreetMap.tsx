@@ -13,6 +13,7 @@ import jumpToMarker from '../helpers/jumpToMarker';
 import mod from '../helpers/mod';
 import SwipeableClubCard from './SwipeableClubCard';
 import SwipeableDeck from './SwipeableDeck';
+import useDebounceFunction from '../helpers/useDebounceFunction';
 
 export type Club = {
     name: string;
@@ -76,8 +77,8 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         if (clubIndexExists) setClubIndex(mod(clubIndex - 1, clubs.length));
     };
 
-    useEffect(() => {
-        if (map && clubIndexExists) {
+    const debouncedMapFly = useDebounceFunction(
+        (clubIndex) =>
             jumpToMarker(
                 map,
                 mainMapRef,
@@ -85,7 +86,13 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 clubs,
                 setCenterCoords,
                 props.isDesktopMap
-            );
+            ),
+        400
+    );
+
+    useEffect(() => {
+        if (map && clubIndexExists) {
+            debouncedMapFly(clubIndex);
         }
 
         const handleKeyDown = (event: KeyboardEvent) => {

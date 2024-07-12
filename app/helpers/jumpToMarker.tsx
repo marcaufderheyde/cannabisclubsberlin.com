@@ -18,9 +18,10 @@ export default function jumpToMarker(
     nextClubIndex: any,
     clubs: Club[],
     setCenterCoords: any,
-    isDesktopMap: boolean
+    isDesktopMap: boolean,
+    zoom: number
 ) {
-    const targetZoom: number = map!.getZoom();
+    const targetZoom: number = zoom;
     const overlayHeight: number = mainMapRef.current.offsetHeight;
     const overlayWidth: number = mainMapRef.current.offsetWidth;
 

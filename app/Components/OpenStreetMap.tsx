@@ -55,6 +55,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         lat: 52.51664,
         lng: 13.40828,
     });
+    const zoomRef = useRef(12);
 
     const clubIndexExists = clubIndex != null;
 
@@ -85,9 +86,10 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 clubIndex,
                 clubs,
                 setCenterCoords,
-                props.isDesktopMap
+                props.isDesktopMap,
+                zoomRef.current
             ),
-        400
+        100
     );
 
     useEffect(() => {
@@ -117,6 +119,18 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, [clubIndex]);
+
+    useEffect(() => {
+        const handleZoomEnd = () => {
+            if (map) zoomRef.current = map.getZoom();
+        };
+
+        map?.addEventListener('zoomend', handleZoomEnd);
+
+        return () => {
+            map?.removeEventListener('zoomend', handleZoomEnd);
+        };
+    }, [map]);
 
     return (
         <div>

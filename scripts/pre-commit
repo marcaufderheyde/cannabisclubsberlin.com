@@ -2,6 +2,8 @@
 
 echo "*****Running pre commit build******"
 
+cmd="npm run build"
+
 #!/bin/bash
 
 current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
@@ -11,12 +13,11 @@ then
   echo "ERROR: Cannot push to develop. Switch to a different branch and create a pull request."
   exit 1 # push will not execute
 else
-  current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-
-  if [ 'master' = ${current_branch} ]
-  then
-    echo "ERROR: Cannot push to master. Switch to a different branch and create a pull request."
-    exit 1 # push will not execute
+  eval $cmd
+  result=$?
+  if ! eval "$cmd"; then
+    echo "failed $cmd" >&2
+    exit 1
   fi
-  exit 0 # push will execute
 fi
+exit 0 # push will execute

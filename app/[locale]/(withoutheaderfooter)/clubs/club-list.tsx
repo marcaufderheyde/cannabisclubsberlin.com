@@ -7,9 +7,14 @@ import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 
 const clubs = pullClubsListContent();
 
-export default function ClubsList() {
+type Props = {
+    showHRInfo: boolean;
+};
+
+export default function ClubsList({ showHRInfo }: Props) {
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
+
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
         club.offerings = t(`${club.slug}.offerings`);
@@ -21,11 +26,18 @@ export default function ClubsList() {
                 'Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.'
         ) {
             club.hasHRInformation = false;
+        } else {
+            club.hasHRInformation = true;
         }
     });
+
+    const filteredClubs = showHRInfo
+        ? clubs.filter((club) => club.hasHRInformation)
+        : clubs;
+
     return (
         <div className={styles.container}>
-            {clubs.map((club, index) => (
+            {filteredClubs.map((club, index) => (
                 <a href={`/${localActive}/clubs/${club.slug}`} key={club.slug}>
                     <div className="flex justify-center items-center">
                         <div className={styles.card} key={index}>

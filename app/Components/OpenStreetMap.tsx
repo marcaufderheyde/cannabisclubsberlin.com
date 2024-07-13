@@ -38,6 +38,7 @@ const selectedIcon: L.Icon<L.IconOptions> = L.icon({
 
 type OpenStreetMapProps = {
     isDesktopMap: boolean;
+    showHRInfo: boolean;
 };
 
 export default function OpenStreetMap(props: OpenStreetMapProps) {
@@ -67,8 +68,14 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 'Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.'
         ) {
             club.hasHRInformation = false;
+        } else {
+            club.hasHRInformation = true;
         }
     });
+
+    const filteredClubs = props.showHRInfo
+        ? clubs.filter((club) => club.hasHRInformation)
+        : clubs;
 
     const zoom = 13;
 
@@ -91,17 +98,20 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     clubIndex={
                         (((clubIndex + 1) as unknown as string) +
                             '/' +
-                            clubs.length) as string
+                            filteredClubs.length) as string
                     }
                     club={selectedClub}
                     onClose={() => setSelectedClub(null)}
                     switchNextClub={() => {
-                        const nextClub: Club = getNextClub(clubIndex, clubs);
+                        const nextClub: Club = getNextClub(
+                            clubIndex,
+                            filteredClubs
+                        );
                         jumpToMarker(
                             map,
                             mainMapRef,
                             nextClub,
-                            clubs,
+                            filteredClubs,
                             setSelectedClub,
                             setCenterCoords,
                             setClubIndex,
@@ -111,13 +121,13 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     switchPreviousClub={() => {
                         const previousClub: Club = getPreviousClub(
                             clubIndex,
-                            clubs
+                            filteredClubs
                         );
                         jumpToMarker(
                             map,
                             mainMapRef,
                             previousClub,
-                            clubs,
+                            filteredClubs,
                             setSelectedClub,
                             setCenterCoords,
                             setClubIndex,
@@ -140,8 +150,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
-                    {clubs.map((club, index) => (
+                    {filteredClubs.map((club, index) => (
                         <CustomMarker
+                            key={index}
                             index={index}
                             location={club.geoLocation}
                             customIcon={
@@ -154,7 +165,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                                     map,
                                     mainMapRef,
                                     club,
-                                    clubs,
+                                    filteredClubs,
                                     setSelectedClub,
                                     setCenterCoords,
                                     setClubIndex,

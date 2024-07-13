@@ -1,13 +1,13 @@
 'use client';
 import { useLocale, useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import ClubsList from './club-list';
 import Navbar from '@/app/ui/Navigation/navbar';
 import MapListViewSwitcher from '@/app/Components/MapListViewSwitcher';
+import MapLIstFilterSwitcher from '@/app/Components/MapListFilterSwitcher';
 
 export default function ClubsContent() {
-    //unstable_setRequestLocale(locale);
     const OpenStreetMap = dynamic(
         () => import('@/app/Components/OpenStreetMap'),
         {
@@ -15,6 +15,7 @@ export default function ClubsContent() {
         }
     );
     const [showMap, setShowMap] = useState(true);
+    const [showHRFilter, setShowHRFilter] = useState(false);
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
 
@@ -31,11 +32,22 @@ export default function ClubsContent() {
             {showMap ? (
                 <div>
                     <div className="hidden lg:flex">
-                        <OpenStreetMap isDesktopMap={true} />
+                        <OpenStreetMap
+                            isDesktopMap={true}
+                            showHRInfo={showHRFilter}
+                        />
                     </div>
                     <div className="lg:hidden flex">
-                        <OpenStreetMap isDesktopMap={false} />
+                        <OpenStreetMap
+                            isDesktopMap={false}
+                            showHRInfo={showHRFilter}
+                        />
                     </div>
+                    <MapLIstFilterSwitcher
+                        showMap={showMap}
+                        showHRFilter={showHRFilter}
+                        setShowHRFilter={setShowHRFilter}
+                    />{' '}
                     <MapListViewSwitcher
                         showMap={showMap}
                         setShowMap={setShowMap}
@@ -43,11 +55,16 @@ export default function ClubsContent() {
                 </div>
             ) : (
                 <div className="absolute top-[var(--navbar-height)] left-0">
+                    <MapLIstFilterSwitcher
+                        showMap={showMap}
+                        showHRFilter={showHRFilter}
+                        setShowHRFilter={setShowHRFilter}
+                    />
                     <MapListViewSwitcher
                         showMap={showMap}
                         setShowMap={setShowMap}
                     />
-                    <ClubsList />
+                    <ClubsList showHRInfo={showHRFilter} />
                 </div>
             )}
         </div>

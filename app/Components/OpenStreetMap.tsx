@@ -18,7 +18,8 @@ export type Club = {
     geoLocation: number[];
     description?: string;
     offerings?: string;
-    harm_reduction?: string;
+    harmReduction?: string;
+    hasHRInformation: boolean;
 };
 
 const customIcon: L.Icon<L.IconOptions> = L.icon({
@@ -58,7 +59,15 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
         club.offerings = t(`${club.slug}.offerings`);
-        club.harm_reduction = t(`${club.slug}.harm_reduction`);
+        club.harmReduction = t(`${club.slug}.harm_reduction`);
+        if (
+            club.harmReduction ===
+                'This club has currently not listed any specific harm reduction services.' ||
+            club.harmReduction ===
+                'Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.'
+        ) {
+            club.hasHRInformation = false;
+        }
     });
 
     const zoom = 13;

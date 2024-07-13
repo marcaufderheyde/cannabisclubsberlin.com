@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "node ./generate-sitemap.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prestart": "cp scripts/pre-commit .git/hooks/ && chmod +x .git/hooks/pre-commit && echo 'hook copied'"
   },
   "dependencies": {
     "globby": "^14.0.1",

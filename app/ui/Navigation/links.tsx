@@ -9,16 +9,18 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
         'text-[#E3E71F] font-bold text-xl group transition duration-300';
     const defaultLinkStyling =
         'font-normal text-xl group transition duration-300';
+    // @ts-ignore
     const isHomePage = isPathNameHome(pathname);
 
     return (
-        <div className='flex flex-row justify-evenly flex-grow'>
+        <div className="flex flex-row justify-evenly flex-grow">
             {links.map((link: LinkInfo) => {
                 return (
                     <Link
                         key={link.name}
                         href={link.href}
                         className={
+                            // @ts-ignore
                             link.href.toString().includes(pathname) &&
                             !isHomePage
                                 ? currentPageStyling
@@ -26,7 +28,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
                         }
                     >
                         {link.name as String}
-                        <span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-600'></span>
+                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-600"></span>
                     </Link>
                 );
             })}

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, useRef } from 'react';
 import * as THREE from 'three';
 import { CannabisClub, GameState, NPC, Task } from './BerlinCannabisAdventure';
 import { pullClubsListContent } from '../helpers/clubsListContent';
@@ -25,6 +25,14 @@ export default function useGameLogic() {
     const [interactionOptions, setInteractionOptions] = useState<
         InteractionOption[]
     >([]);
+    const [interactionMessage, setInteractionMessage] = useState<string | null>(
+        null
+    );
+    const [isInitialized, setIsInitialized] = useState(false);
+    const initGameCalled = useRef(false);
+
+    const clubList = pullClubsListContent();
+
     const createNPCs = () => {
         const npcNames = [
             'Friendly Frank',
@@ -59,20 +67,22 @@ export default function useGameLogic() {
     };
 
     const initGame = useCallback(() => {
-        const clubs = pullClubsListContent()
-            .map((club) => club.name)
-            .map((name) => ({
-                name,
-                information: `Welcome to ${name}! We offer a variety of cannabis products and a comfortable environment for our members.`,
-                items: [
-                    { name: 'Basic Membership', price: 50 },
-                    { name: 'Premium Membership', price: 100 },
-                    { name: 'Cannabis Starter Pack', price: 30 },
-                    { name: 'Artisanal Edibles', price: 25 },
-                    { name: 'Vaporizer Kit', price: 80 },
-                ],
-                members: [],
-            }));
+        if (initGameCalled.current) return;
+        initGameCalled.current = true;
+
+        const clubs = clubList.map((club) => ({
+            name: club.name,
+            information: `Welcome to ${club.name}! We offer a variety of cannabis products and a comfortable environment for our members.`,
+            items: [
+                { name: 'Basic Membership', price: 50 },
+                { name: 'Premium Membership', price: 100 },
+                { name: 'Cannabis Starter Pack', price: 30 },
+                { name: 'Artisanal Edibles', price: 25 },
+                { name: 'Vaporizer Kit', price: 80 },
+            ],
+            members: [],
+            imageUrl: club.imageUrl, // Include imageUrl
+        }));
 
         const taskDescriptions = [
             'Deliver a package',
@@ -114,7 +124,12 @@ export default function useGameLogic() {
             npcs,
             tasks,
         }));
-    }, []);
+        setIsInitialized(true); // Set the initialization flag to true
+    }, [clubList]);
+
+    useEffect(() => {
+        initGame();
+    }, [initGame]);
 
     const movePlayer = useCallback((newPosition: THREE.Vector3) => {
         setGameState((prevState) => ({
@@ -173,6 +188,9 @@ export default function useGameLogic() {
                 clubs: updatedClubs,
             };
         });
+        setInteractionMessage(
+            `Welcome to ${clubName}. What would you like to do?`
+        );
     }, []);
 
     const buyItem = useCallback(
@@ -198,7 +216,7 @@ export default function useGameLogic() {
 
     const completeTask = useCallback(
         (npcName: string) => {
-            setGameState((prevState: { npcs: any[] }) => {
+            setGameState((prevState) => {
                 const npc = prevState.npcs.find((n) => n.name === npcName);
                 if (!npc || !npc.task || npc.task.completed) return prevState;
 
@@ -238,6 +256,7 @@ export default function useGameLogic() {
                         action: () => {
                             completeTask(npcName);
                             setInteractionOptions([]);
+                            setInteractionMessage(null);
                         },
                     },
                     {
@@ -255,6 +274,7 @@ export default function useGameLogic() {
                             if (spendMoney(itemForSale.price)) {
                                 gameState.player.inventory.push(itemForSale);
                                 setInteractionOptions([]);
+                                setInteractionMessage(null);
                                 return `You bought ${itemForSale.name}!`;
                             } else {
                                 return 'Not enough money!';
@@ -291,7 +311,9 @@ export default function useGameLogic() {
                         if (spendMoney(50)) {
                             joinClub(clubName);
                             setInteractionOptions([]);
-                            return `You've joined ${clubName}!`;
+                            setInteractionMessage(
+                                `You've joined ${clubName}! What would you like to do next?`
+                            );
                         } else {
                             return 'Not enough money to join the club!';
                         }
@@ -306,7 +328,9 @@ export default function useGameLogic() {
                                 price: 30,
                             });
                             setInteractionOptions([]);
-                            return 'You bought a Cannabis Starter Pack!';
+                            setInteractionMessage(
+                                'You bought a Cannabis Starter Pack!'
+                            );
                         } else {
                             return 'Not enough money!';
                         }
@@ -314,17 +338,16 @@ export default function useGameLogic() {
                 },
                 {
                     label: 'Leave',
-                    action: () => setInteractionOptions([]),
+                    action: () => {
+                        setInteractionOptions([]);
+                        setInteractionMessage(null);
+                    },
                 },
             ]);
             return `Welcome to ${clubName}. What would you like to do?`;
         },
         [gameState, joinClub, spendMoney]
     );
-
-    useEffect(() => {
-        initGame();
-    }, [initGame]);
 
     return {
         gameState,
@@ -338,5 +361,8 @@ export default function useGameLogic() {
         interactWithClub,
         interactionOptions,
         setInteractionOptions,
+        interactionMessage,
+        setInteractionMessage,
+        isInitialized, // Return the initialization flag
     };
 }

@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import gsap from 'gsap';
 import useGameLogic from './useGameLogic';
 
 export interface Player {
@@ -19,6 +20,7 @@ export interface CannabisClub {
     information: string;
     items: Item[];
     members: Player[];
+    imageUrl: string; // Add imageUrl to the club interface
 }
 
 export interface NPC {
@@ -47,9 +49,6 @@ const BerlinCannabisAdventure: React.FC = () => {
     const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
     const playerRef = useRef<THREE.Mesh | null>(null);
     const [hoveredEntity, setHoveredEntity] = useState<string | null>(null);
-    const [interactionMessage, setInteractionMessage] = useState<string | null>(
-        null
-    );
 
     const {
         gameState,
@@ -58,6 +57,9 @@ const BerlinCannabisAdventure: React.FC = () => {
         interactWithClub,
         interactionOptions,
         setInteractionOptions,
+        interactionMessage,
+        setInteractionMessage,
+        isInitialized,
     } = useGameLogic();
 
     const interactWithNearbyEntity = () => {
@@ -74,8 +76,11 @@ const BerlinCannabisAdventure: React.FC = () => {
                 (child.userData.type === 'npc' ||
                     child.userData.type === 'club')
             ) {
-                const distance = playerPosition.distanceTo(child.position);
-                if (distance <= interactionRadius) {
+                const boundingBox = new THREE.Box3().setFromObject(child);
+                if (
+                    boundingBox.distanceToPoint(playerPosition) <=
+                    interactionRadius
+                ) {
                     interacted = true;
                     if (child.userData.type === 'npc') {
                         const npcResponse = interactWithNPC(
@@ -98,7 +103,7 @@ const BerlinCannabisAdventure: React.FC = () => {
     };
 
     useEffect(() => {
-        if (!mountRef.current) return;
+        if (!mountRef.current || !isInitialized) return;
 
         mountRef.current.focus();
 
@@ -125,63 +130,119 @@ const BerlinCannabisAdventure: React.FC = () => {
         scene.add(ambientLight);
         scene.add(directionalLight);
 
-        // Add a ground plane
-        const groundGeometry = new THREE.PlaneGeometry(100, 100);
-        const groundMaterial = new THREE.MeshBasicMaterial({ color: 0x333333 });
+        // Add a ground plane with grey asphalt-like texture
+        const groundTexture = new THREE.TextureLoader().load(
+            'https://imgur.com/gallery/asphalt-road-texture-qpbCiAi'
+        );
+        groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
+        groundTexture.repeat.set(20, 20);
+        const groundMaterial = new THREE.MeshStandardMaterial({
+            map: groundTexture,
+        });
+        const groundGeometry = new THREE.PlaneGeometry(200, 200);
         const ground = new THREE.Mesh(groundGeometry, groundMaterial);
         ground.rotation.x = -Math.PI / 2;
         scene.add(ground);
 
+        // Standardize size for player and NPCs
+        const entityGeometry = new THREE.BoxGeometry(1, 2, 1);
+
         // Add player (green cube)
-        const playerGeometry = new THREE.BoxGeometry(1, 1, 1);
         const playerMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
-        const player = new THREE.Mesh(playerGeometry, playerMaterial);
-        player.position.y = 0.5;
+        const player = new THREE.Mesh(entityGeometry, playerMaterial);
+        player.position.y = 1; // half of height to place it on the ground
         scene.add(player);
         playerRef.current = player;
 
         // Add shops and NPCs
-        gameState.clubs.forEach((club: { name: any }, index: any) => {
-            const entityGeometry = new THREE.BoxGeometry(
-                Math.random() * 8,
-                Math.random() * 8,
-                Math.random() * 8
+        const textureLoader = new THREE.TextureLoader();
+
+        const gridSize = Math.ceil(Math.sqrt(gameState.clubs.length));
+        const spacing = 20;
+        gameState.clubs.forEach((club, index) => {
+            const row = Math.floor(index / gridSize);
+            const col = index % gridSize;
+
+            const clubWidth = Math.random() * 3 + 3; // Random width between 3 and 6
+            const clubHeight = Math.random() * 6 + 6; // Random height between 6 and 12
+            const clubDepth = Math.random() * 3 + 3; // Random depth between 3 and 6
+
+            const clubGeometry = new THREE.BoxGeometry(
+                clubWidth,
+                clubHeight,
+                clubDepth
             );
 
-            const clubMaterial = new THREE.MeshPhongMaterial({
-                color: 0xff0000,
+            const clubTexture = textureLoader.load(club.imageUrl, (texture) => {
+                texture.wrapS = texture.wrapT = THREE.ClampToEdgeWrapping;
+                texture.minFilter = THREE.LinearFilter;
             });
-            const clubMesh = new THREE.Mesh(entityGeometry, clubMaterial);
+
+            const clubMaterial = new THREE.MeshPhongMaterial({
+                map: clubTexture,
+            });
+            const clubMesh = new THREE.Mesh(clubGeometry, clubMaterial);
             clubMesh.position.set(
-                Math.random() * 80 - 40,
-                1,
-                Math.random() * 80 - 40
+                col * spacing - (gridSize * spacing) / 2,
+                clubHeight / 2,
+                row * spacing - (gridSize * spacing) / 2
             );
             clubMesh.userData = { type: 'club', name: club.name };
             scene.add(clubMesh);
         });
 
-        gameState.npcs.forEach((npc: { name: any }, index: any) => {
-            const entityGeometry = new THREE.BoxGeometry(
-                Math.random() * 2,
-                Math.random() * 4,
-                Math.random() * 2
-            );
-
+        gameState.npcs.forEach((npc) => {
             const npcMaterial = new THREE.MeshPhongMaterial({
                 color: 0x0000ff,
             });
             const npcMesh = new THREE.Mesh(entityGeometry, npcMaterial);
             npcMesh.position.set(
-                Math.random() * 80 - 40,
+                Math.random() * 160 - 80,
                 1,
-                Math.random() * 80 - 40
+                Math.random() * 160 - 80
             );
             npcMesh.userData = { type: 'npc', name: npc.name };
             scene.add(npcMesh);
         });
 
-        camera.position.set(0, 10, 10);
+        // Add white street markings
+        const markingMaterial = new THREE.MeshBasicMaterial({
+            color: 0xffffff,
+        });
+        for (let row = 0; row < gridSize; row++) {
+            for (let col = 0; col < gridSize; col++) {
+                const markingGeometry = new THREE.PlaneGeometry(1, spacing - 1);
+                const marking = new THREE.Mesh(
+                    markingGeometry,
+                    markingMaterial
+                );
+                marking.rotation.x = -Math.PI / 2;
+                marking.position.set(
+                    col * spacing - gridSize * spacing,
+                    0.01, // Slightly above ground
+                    row * spacing - (gridSize * spacing) / 2 - spacing / 2
+                );
+                scene.add(marking);
+
+                const markingGeometry2 = new THREE.PlaneGeometry(
+                    spacing - 1,
+                    1
+                );
+                const marking2 = new THREE.Mesh(
+                    markingGeometry2,
+                    markingMaterial
+                );
+                marking2.rotation.x = -Math.PI / 2;
+                marking2.position.set(
+                    col * spacing - (gridSize * spacing) / 2 - spacing / 2,
+                    0.01, // Slightly above ground
+                    row * spacing - (gridSize * spacing) / 2
+                );
+                scene.add(marking2);
+            }
+        }
+
+        camera.position.set(0, 30, 30);
         camera.lookAt(player.position);
 
         // Raycaster for entity interaction
@@ -237,7 +298,7 @@ const BerlinCannabisAdventure: React.FC = () => {
                 mountRef.current.removeChild(renderer.domElement);
             }
         };
-    }, [gameState.clubs, gameState.npcs]);
+    }, [gameState.clubs, gameState.npcs, isInitialized]);
 
     // Handle window resize
     useEffect(() => {
@@ -260,7 +321,7 @@ const BerlinCannabisAdventure: React.FC = () => {
     // Handle keyboard input
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
-            if (!playerRef.current) return;
+            if (!playerRef.current || !isInitialized) return; // Ensure initialization
 
             // Prevent default behavior for arrow keys and space bar
             if (
@@ -276,20 +337,20 @@ const BerlinCannabisAdventure: React.FC = () => {
             }
 
             const moveDistance = 0.5;
-            let newPosition = playerRef.current.position.clone();
+            const targetPosition = playerRef.current.position.clone();
 
             switch (event.key) {
                 case 'ArrowUp':
-                    newPosition.z -= moveDistance;
+                    targetPosition.z -= moveDistance;
                     break;
                 case 'ArrowDown':
-                    newPosition.z += moveDistance;
+                    targetPosition.z += moveDistance;
                     break;
                 case 'ArrowLeft':
-                    newPosition.x -= moveDistance;
+                    targetPosition.x -= moveDistance;
                     break;
                 case 'ArrowRight':
-                    newPosition.x += moveDistance;
+                    targetPosition.x += moveDistance;
                     break;
                 case ' ': // Space bar for interaction
                     interactWithNearbyEntity();
@@ -309,16 +370,36 @@ const BerlinCannabisAdventure: React.FC = () => {
             }
 
             // Constrain movement within the ground plane
-            newPosition.x = Math.max(-50, Math.min(50, newPosition.x));
-            newPosition.z = Math.max(-50, Math.min(50, newPosition.z));
+            targetPosition.x = Math.max(-100, Math.min(100, targetPosition.x));
+            targetPosition.z = Math.max(-100, Math.min(100, targetPosition.z));
 
-            playerRef.current.position.copy(newPosition);
-            movePlayer(newPosition);
+            // Use gsap for smooth animation
+            gsap.to(playerRef.current.position, {
+                x: targetPosition.x,
+                z: targetPosition.z,
+                duration: 0.3,
+                onUpdate: () => {
+                    movePlayer(playerRef.current.position);
+                },
+            });
         };
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [movePlayer, interactionOptions]);
+    }, [movePlayer, interactionOptions, isInitialized]);
+
+    // Clear interaction message when leaving a club
+    useEffect(() => {
+        if (!gameState.player.currentClub) {
+            setInteractionMessage(null);
+        }
+    }, [gameState.player.currentClub]);
+
+    // Render only if initialized
+    if (!isInitialized) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div>
             <div
@@ -330,7 +411,7 @@ const BerlinCannabisAdventure: React.FC = () => {
             <div
                 style={{
                     position: 'absolute',
-                    top: 10,
+                    top: 90,
                     left: 10,
                     color: 'white',
                 }}
@@ -353,7 +434,7 @@ const BerlinCannabisAdventure: React.FC = () => {
                 <div
                     style={{
                         position: 'absolute',
-                        top: 50,
+                        top: 120,
                         left: 10,
                         color: 'white',
                         backgroundColor: 'rgba(0,0,0,0.5)',

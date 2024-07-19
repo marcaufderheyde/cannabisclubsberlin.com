@@ -13,6 +13,7 @@
   "dependencies": {
     "@next/third-parties": "^14.2.5",
     "globby": "^14.0.1",
+    "gsap": "^3.12.5",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "^14.2.5",

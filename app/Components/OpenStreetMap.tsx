@@ -21,7 +21,7 @@ export type Club = {
     imageUrl: string;
     geoLocation: number[];
     description?: string;
-    offerings?: string;
+    offerings?: string[];
     harm_reduction?: string;
 };
 
@@ -65,7 +65,11 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
-        club.offerings = t(`${club.slug}.offerings`);
+        let clubOfferings = t(
+            `offerings_tags.slug_to_tags_indices.${club.slug}`
+        );
+        const pattern = /, |and /;
+        club.offerings = clubOfferings.split(pattern);
         club.harm_reduction = t(`${club.slug}.harm_reduction`);
     });
 
@@ -139,6 +143,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     items={clubs}
                     Card={SwipeableClubCard}
                     currentIndex={clubIndex}
+                    onClose={() => setClubIndex(null)}
                     onRightSwipe={() => setNextClub()}
                     onLeftSwipe={() => setPreviousClub()}
                 />
@@ -167,9 +172,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     style={{ height: '100%', width: '100%' }}
                     ref={setMap}
                 >
-                    <ZoomControl position='bottomright' />
+                    <ZoomControl position="bottomright" />
                     <TileLayer
-                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (

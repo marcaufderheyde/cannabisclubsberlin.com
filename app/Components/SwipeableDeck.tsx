@@ -1,5 +1,11 @@
 'use client';
-import React, { ReactElement, useEffect, useState, useMemo } from 'react';
+import React, {
+    ReactElement,
+    useEffect,
+    useState,
+    useMemo,
+    MouseEventHandler,
+} from 'react';
 import useWindowSize from '../helpers/useWindowSize';
 import mod from '../helpers/mod';
 
@@ -12,6 +18,7 @@ export interface CardInfo {
     position: Position;
     scale: number;
     index: number;
+    onClose: () => void;
     onLeftSwipe: Function;
     onRightSwipe: Function;
     zHeight: number;
@@ -22,12 +29,14 @@ export default function SwipeableDeck<T>({
     items,
     currentIndex,
     Card,
+    onClose,
     onRightSwipe,
     onLeftSwipe,
 }: {
     items: Array<T>;
     Card: React.JSX.ElementType;
     currentIndex: number;
+    onClose: () => void;
     onRightSwipe: Function;
     onLeftSwipe: Function;
 }) {
@@ -89,6 +98,7 @@ export default function SwipeableDeck<T>({
                 const cardInfo = {
                     position: startPosition,
                     scale: scale,
+                    onClose: onClose,
                     onLeftSwipe: i == currentIndex ? onLeftSwipe : () => {},
                     onRightSwipe: i == currentIndex ? onRightSwipe : () => {},
                     index: i,
@@ -106,14 +116,16 @@ export default function SwipeableDeck<T>({
     }, [currentIndex]);
 
     return (
-        <div className='lg:hidden absolute bottom-0 z-[3000] w-full h-full pointer-events-[fill] overflow-hidden pointer-events-none'>
+        <div className="lg:hidden absolute bottom-0 z-[3000] w-full h-full pointer-events-[fill] overflow-hidden pointer-events-none">
             {shownCards.map((card) => {
                 return (
                     <Card
+                        club={items[card.index]}
                         startPosition={card.position}
                         startScale={card.scale}
                         index={card.index}
                         key={card.index}
+                        onClose={card.onClose}
                         onLeftSwipe={card.onLeftSwipe}
                         onRightSwipe={card.onRightSwipe}
                         zHeight={card.zHeight}

@@ -418,6 +418,16 @@ const BerlinCannabisAdventure: React.FC = () => {
             >
                 Budget: €{gameState.player.budget}
             </div>
+            <div
+                style={{
+                    position: 'absolute',
+                    top: 90,
+                    right: 10,
+                    color: 'white',
+                }}
+            >
+                Controls: Arrow Keys, SPACE, Numpad
+            </div>
             {hoveredEntity && (
                 <div
                     style={{

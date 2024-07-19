@@ -1,22 +1,29 @@
 # The CCB Project
+
 Main repository for cannabisclubsberlin.com, berlincannabisclubs.de and berlincannabisclubs.info
 
 ## The CCB Project
-This is the project of Marc, Hector and Fabrizio. This is a webapp to discover new clubs in Berlin. 
+
+This is the project of Marc, Hector and Fabrizio. This is a webapp to discover new clubs in Berlin.
 
 ## Environment Requirements:
 
-- NodeJS v20 (LTS): (https://nodejs.org/en)
-- NPM 
-- NextJS 
+-   NodeJS v20 (LTS): (https://nodejs.org/en)
+-   NPM
+-   NextJS
 
 ## Getting Started
-
 
 First, install dependencies:
 
 ```bash
 npm install
+```
+
+Next, run the setup scripts:
+
+```bash
+npm run prestart
 ```
 
 Next, run the development server:

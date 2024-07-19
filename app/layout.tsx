@@ -6,6 +6,7 @@ import './globals.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { GoogleTagManager } from '@next/third-parties/google';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {

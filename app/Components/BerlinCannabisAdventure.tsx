@@ -363,7 +363,7 @@ const BerlinCannabisAdventure: React.FC = () => {
                 const optionIndex = parseInt(event.key) - 1;
                 if (interactionOptions[optionIndex]) {
                     const result = interactionOptions[optionIndex].action();
-                    if (result) {
+                    if (result !== undefined) {
                         setInteractionMessage(result);
                     }
                 }

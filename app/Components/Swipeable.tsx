@@ -9,6 +9,8 @@ enum SwipeStates {
     'left',
     'right',
     'moving',
+    'movingHorizontal',
+    'movingVertical',
     'none',
 }
 
@@ -23,6 +25,8 @@ export interface TouchDetails {
     elapsedTime: number;
     startTime: number;
     swipeDir: SwipeStates;
+    swipingThreshold: number;
+    swipingRestraint: number;
 }
 
 var initTouchDetails: TouchDetails = {
@@ -36,6 +40,8 @@ var initTouchDetails: TouchDetails = {
     elapsedTime: new Date().getTime(),
     startTime: new Date().getTime(),
     swipeDir: SwipeStates.none,
+    swipingThreshold: 5,
+    swipingRestraint: 20,
 };
 
 export default function Swipeable({
@@ -45,6 +51,8 @@ export default function Swipeable({
     onUpSwipe,
     onDownSwipe,
     duringSwipe,
+    duringHorizontalSwipe,
+    duringVerticalSwipe,
     onCancel,
 }: {
     readonly children: ReactElement<any>;
@@ -53,6 +61,8 @@ export default function Swipeable({
     readonly onUpSwipe?: Function;
     readonly onDownSwipe?: Function;
     readonly duringSwipe?: Function;
+    readonly duringHorizontalSwipe?: Function;
+    readonly duringVerticalSwipe?: Function;
     readonly onCancel?: Function;
 }) {
     const parentRef = useRef<HTMLDivElement>(null);
@@ -77,6 +87,14 @@ export default function Swipeable({
                 case SwipeStates.moving:
                     if (duringSwipe) duringSwipe(touchDetailsRef.current);
                     break;
+                case SwipeStates.movingHorizontal:
+                    if (duringHorizontalSwipe)
+                        duringHorizontalSwipe(touchDetailsRef.current);
+                    break;
+                case SwipeStates.movingVertical:
+                    if (duringVerticalSwipe)
+                        duringVerticalSwipe(touchDetailsRef.current);
+                    break;
                 case SwipeStates.none:
                     if (onCancel) onCancel();
                 default:
@@ -98,7 +116,28 @@ export default function Swipeable({
             var touchObj = e.changedTouches[0];
             touchDetails.distX = touchObj.pageX - touchDetails.startX;
             touchDetails.distY = touchObj.pageY - touchDetails.startY;
-            touchDetails.swipeDir = SwipeStates.moving;
+
+            if (
+                touchDetails.swipeDir != SwipeStates.movingHorizontal &&
+                touchDetails.swipeDir != SwipeStates.movingVertical
+            ) {
+                touchDetails.swipeDir = SwipeStates.moving;
+
+                if (
+                    Math.abs(touchDetails.distX) >
+                        touchDetails.swipingThreshold &&
+                    Math.abs(touchDetails.distY) < touchDetails.swipingRestraint
+                ) {
+                    touchDetails.swipeDir = SwipeStates.movingHorizontal;
+                } else if (
+                    Math.abs(touchDetails.distY) >
+                        touchDetails.swipingThreshold &&
+                    Math.abs(touchDetails.distX) < touchDetails.swipingRestraint
+                ) {
+                    touchDetails.swipeDir = SwipeStates.movingVertical;
+                }
+            }
+
             handleSwipe(touchDetails.swipeDir);
         };
 

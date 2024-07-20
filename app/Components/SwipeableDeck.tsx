@@ -109,7 +109,6 @@ export default function SwipeableDeck<T>({
             let distance = -(preRenderCount - 1) / 2;
             while (inBetweenBounds(minIndex, maxIndex, items.length, i)) {
                 const startPosition = calcStartPosition(distance);
-                console.log(startPosition);
                 const scale = currentIndex == i ? 1.0 : 0.6;
                 const cardInfo = {
                     position: startPosition,

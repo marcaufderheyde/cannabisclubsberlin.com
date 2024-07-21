@@ -8,6 +8,7 @@ import React, {
 } from 'react';
 import useWindowSize from '../helpers/useWindowSize';
 import mod from '../helpers/mod';
+import { motion } from 'framer-motion';
 
 export interface Position {
     x: number;

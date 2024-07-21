@@ -13,13 +13,17 @@ import Image from 'next/image';
 import PageHeader from './PageHeader';
 import styles from '@/app/styles/ClubCard.module.css';
 import Close from '@/app/ui/Navigation/close';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
 
 export default function SwipeableClubCard({
     club,
     index,
     startPosition,
     startScale,
-    onClose,
+    onDownSwipeClose,
+    onUpSwipeClose,
     onRightSwipe,
     onLeftSwipe,
     zHeight,
@@ -29,7 +33,8 @@ export default function SwipeableClubCard({
     readonly index: number;
     readonly startPosition: Position;
     readonly startScale: number;
-    onClose: () => void;
+    onDownSwipeClose?: Function;
+    onUpSwipeClose?: Function;
     onRightSwipe?: Function;
     onLeftSwipe?: Function;
     readonly zHeight: number;
@@ -39,6 +44,7 @@ export default function SwipeableClubCard({
         y: startPosition.y,
         x: startPosition.x,
     });
+    const localActive = useLocale();
 
     const [transformDuration, setTranformDuration] = useState(0.2);
     const [scale, setScale] = useState(startScale);
@@ -59,12 +65,15 @@ export default function SwipeableClubCard({
         }
     };
 
-    const swipeVecticalAnimation = (touchDetails: TouchDetails) => {
+    const swipeVerticalAnimation = (touchDetails: TouchDetails) => {
         if (canSwipe) {
             setTranformDuration(0);
             setPosition((prevPosition) => ({
                 ...prevPosition,
-                y: startPosition.y + touchDetails.distY,
+                y:
+                    prevPosition.y + touchDetails.distY < startPosition.y
+                        ? startPosition.y
+                        : startPosition.y + touchDetails.distY,
             }));
         }
     };
@@ -77,6 +86,11 @@ export default function SwipeableClubCard({
                 x: startPosition.x,
             });
         }
+    };
+
+    const router = useRouter();
+    const handleExpandToClubPage = () => {
+        router.push(`/${localActive}/clubs/${club.slug}`);
     };
 
     const translationStyling: React.CSSProperties = {
@@ -93,48 +107,51 @@ export default function SwipeableClubCard({
                     : () => {}
             }
             duringVerticalSwipe={
-                onLeftSwipe && onRightSwipe ? swipeVecticalAnimation : () => {}
+                onLeftSwipe && onRightSwipe ? swipeVerticalAnimation : () => {}
             }
             onCancel={swipeOnCancel}
             onLeftSwipe={onLeftSwipe}
             onRightSwipe={onRightSwipe}
+            onDownSwipeClose={onDownSwipeClose}
+            // onUpSwipeClose={onUpSwipeClose}
         >
+            {/* <motion.div
+                layoutId={`club-${club.slug}`}
+                initial={{ height: '100px' }}
+                animate={{ height: '800px', width: '400px' }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+            > */}
             <div
                 style={translationStyling}
                 className={
-                    'absolute bg-white w-[250px] h-[70%] bottom-0 rounded-[3em] shadow-lg z-1 pointer-events-auto'
+                    'overscroll-contained absolute bg-white w-[250px] h-[450px] bottom-0 rounded-[3em] shadow-lg z-1 pointer-events-auto'
                 }
             >
-                <button
-                    className='absolute top-2 left-2 p-1 bg-none border-none text-2xl cursor-pointer z-[3000]'
-                    onClick={onClose}
-                >
-                    <Close color={'#828282'} />
-                </button>
-                <div className='relative'>
-                    <div className='relative'>
+                <div className="relative overscroll-contained">
+                    <div className="relative overscroll-contained">
                         <Image
                             src={club.imageUrl}
                             alt={`${club.name} Club Picture`}
                             width={300}
                             height={300}
-                            className='absolute top-[-20px] h-[100px] object-contain p-[5px] rounded-[8px]'
+                            className="absolute top-[-20px] h-[100px] object-contain p-[5px] rounded-[8px]"
                         />
                     </div>
-                    <div className='absolute top-[80px] overflow-hidden'>
+                    <div className="absolute top-[80px] max-h-[calc(100%-80px)]">
                         <h1
                             className={
                                 'text-black font-bold md:text-[4rem] text-center m-2'
                             }
+                            onClick={handleExpandToClubPage}
                         >
                             {club.name}
                         </h1>
-                        <p className='bg-gray-200 mx-2 px-2 pt-2 rounded-xl text-left text-ellipsis text-sm sm:text-base md:text-lg m-2 line-clamp-5 text-wrap'>
-                            {club.description}
-                        </p>
-                        <div className='mx-2 overflow-hidden justify-center'>
-                            {club.offerings?.map((offering) => (
-                                <span className='bg-blue-100 text-blue-800 text-xs font-medium me-2 p-0.5 inline-block overflow-hidden text-center rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400'>
+                        <div className="mx-2 flex flex-wrap justify-center">
+                            {club.offerings?.map((offering: string) => (
+                                <span
+                                    key={offering}
+                                    className="bg-blue-100 text-blue-800 text-xs font-medium me-2 p-0.5 inline-block overflow-hidden text-center rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                                >
                                     {offering}
                                 </span>
                             ))}
@@ -142,6 +159,7 @@ export default function SwipeableClubCard({
                     </div>
                 </div>
             </div>
+            {/* </motion.div> */}
         </Swipeable>
     );
 }

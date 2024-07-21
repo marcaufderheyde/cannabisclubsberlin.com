@@ -143,7 +143,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     items={clubs}
                     Card={SwipeableClubCard}
                     currentIndex={clubIndex}
-                    onClose={() => setClubIndex(null)}
+                    onDownSwipeClose={() => setClubIndex(null)}
+                    // change "true" to setClubIndex(null) whenever animations are figured out
+                    // onUpSwipeClose={() => true}
                     onRightSwipe={() => setNextClub()}
                     onLeftSwipe={() => setPreviousClub()}
                 />
@@ -163,7 +165,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     }}
                 />
             )}
-            <div className={styles.mapContainer} ref={mainMapRef}>
+            <div className={`${styles.mapContainer} h-screen`} ref={mainMapRef}>
                 <MapContainer
                     key={0}
                     center={centerCoords}

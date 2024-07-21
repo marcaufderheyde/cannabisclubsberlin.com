@@ -18,7 +18,8 @@ export interface CardInfo {
     position: Position;
     scale: number;
     index: number;
-    onClose: () => void;
+    onDownSwipeClose: () => void;
+    // onUpSwipeClose: () => void;
     onLeftSwipe: Function;
     onRightSwipe: Function;
     zHeight: number;
@@ -29,14 +30,16 @@ export default function SwipeableDeck<T>({
     items,
     currentIndex,
     Card,
-    onClose,
+    onDownSwipeClose,
+    // onUpSwipeClose,
     onRightSwipe,
     onLeftSwipe,
 }: {
     items: Array<T>;
     Card: React.JSX.ElementType;
     currentIndex: number;
-    onClose: () => void;
+    onDownSwipeClose: Function;
+    // onUpSwipeClose: Function;
     onRightSwipe: Function;
     onLeftSwipe: Function;
 }) {
@@ -113,7 +116,10 @@ export default function SwipeableDeck<T>({
                 const cardInfo = {
                     position: startPosition,
                     scale: scale,
-                    onClose: onClose,
+                    onDownSwipeClose:
+                        i == currentIndex ? onDownSwipeClose : () => {},
+                    // onUpSwipeClose:
+                    //     i == currentIndex ? onUpSwipeClose : () => {},
                     onLeftSwipe: i == currentIndex ? onLeftSwipe : () => {},
                     onRightSwipe: i == currentIndex ? onRightSwipe : () => {},
                     index: i,
@@ -131,7 +137,7 @@ export default function SwipeableDeck<T>({
     }, [currentIndex, windowSize]);
 
     return (
-        <div className='lg:hidden absolute bottom-0 z-[3000] w-full h-full pointer-events-[fill] overflow-hidden pointer-events-none'>
+        <div className="overscroll-contained lg:hidden absolute bottom-0 z-[2004] w-full h-full pointer-events-[fill] overflow-clip pointer-events-none">
             {windowSize &&
                 shownCards.map((card) => {
                     return (
@@ -141,7 +147,8 @@ export default function SwipeableDeck<T>({
                             startScale={card.scale}
                             index={card.index}
                             key={card.index}
-                            onClose={card.onClose}
+                            onDownSwipeClose={card.onDownSwipeClose}
+                            // onUpSwipeClose={card.onUpSwipeClose}
                             onLeftSwipe={card.onLeftSwipe}
                             onRightSwipe={card.onRightSwipe}
                             zHeight={card.zHeight}

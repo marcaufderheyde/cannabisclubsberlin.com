@@ -1,18 +1,11 @@
 import type { Metadata } from 'next';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import {
-    NextIntlClientProvider,
-    useMessages,
-    useTranslations,
-} from 'next-intl';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { Inter } from 'next/font/google';
 import '@/app/globals.css';
-import Footer from '../../ui/Footer/footer';
-import Navbar from '../../ui/Navigation/navbar';
-import CookieBanner from '../../Components/CookieBanner';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import AgeVerification from '../../Components/AgeVerification';
+import ViewportHandler from '@/app/helpers/ViewportHandler';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -44,7 +37,7 @@ export default function LocaleLayout({
     return (
         <div>
             <NextIntlClientProvider messages={messages}>
-                {children}
+                <ViewportHandler>{children}</ViewportHandler>
             </NextIntlClientProvider>
         </div>
     );

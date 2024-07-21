@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^11.3.8",
     "globby": "^14.0.1",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",

@@ -27,6 +27,8 @@ export interface TouchDetails {
     swipeDir: SwipeStates;
     swipingThreshold: number;
     swipingRestraint: number;
+    swipeDownCloseBoundary: number;
+    swipeUpCloseBoundary: number;
 }
 
 var initTouchDetails: TouchDetails = {
@@ -42,6 +44,8 @@ var initTouchDetails: TouchDetails = {
     swipeDir: SwipeStates.none,
     swipingThreshold: 5,
     swipingRestraint: 20,
+    swipeDownCloseBoundary: -150,
+    swipeUpCloseBoundary: 600,
 };
 
 export default function Swipeable({
@@ -53,6 +57,8 @@ export default function Swipeable({
     duringSwipe,
     duringHorizontalSwipe,
     duringVerticalSwipe,
+    onDownSwipeClose,
+    // onUpSwipeClose,
     onCancel,
 }: {
     readonly children: ReactElement<any>;
@@ -63,6 +69,8 @@ export default function Swipeable({
     readonly duringSwipe?: Function;
     readonly duringHorizontalSwipe?: Function;
     readonly duringVerticalSwipe?: Function;
+    readonly onDownSwipeClose?: Function;
+    // readonly onUpSwipeClose?: Function;
     readonly onCancel?: Function;
 }) {
     const parentRef = useRef<HTMLDivElement>(null);
@@ -167,10 +175,29 @@ export default function Swipeable({
                     Math.abs(touchDetails.distY) >= touchDetails.threshold &&
                     Math.abs(touchDetails.distX) < touchDetails.restraint
                 ) {
-                    touchDetails.swipeDir =
-                        touchDetails.distY < 0
-                            ? SwipeStates.up
-                            : SwipeStates.down;
+                    if (
+                        touchDetails.distY >=
+                            touchDetails.swipeDownCloseBoundary &&
+                        onDownSwipeClose
+                    ) {
+                        console.log('down swipe boundary hit');
+                        onDownSwipeClose();
+                    } else if (
+                        touchDetails.distY <= touchDetails.swipeUpCloseBoundary
+                        // &&
+                        // onUpSwipeClose
+                    ) {
+                        console.log('up swipe boundary hit');
+                        // uncomment whenever animations are ready
+                        // onUpSwipeClose();
+                    } else {
+                        console.log('no boundary hit boundary hit');
+                        touchDetails.swipeDir =
+                            touchDetails.distY < 0
+                                ? SwipeStates.up
+                                : SwipeStates.down;
+                        if (onCancel) onCancel();
+                    }
                 }
             }
             handleSwipe(touchDetails.swipeDir);
@@ -204,7 +231,19 @@ export default function Swipeable({
                 );
             }
         };
-    }, [onLeftSwipe, onRightSwipe, onDownSwipe, onUpSwipe, duringSwipe]);
+    }, [
+        onLeftSwipe,
+        onRightSwipe,
+        onDownSwipe,
+        onUpSwipe,
+        duringSwipe,
+        duringHorizontalSwipe,
+        duringVerticalSwipe,
+    ]);
 
-    return <div ref={parentRef}>{children}</div>;
+    return (
+        <div ref={parentRef} className="overscroll-none">
+            {children}
+        </div>
+    );
 }

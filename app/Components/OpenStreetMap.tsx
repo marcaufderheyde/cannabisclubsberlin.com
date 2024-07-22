@@ -103,7 +103,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
             debouncedMapFly(clubIndex);
         }
 
-        setClubIndexExists(clubIndex != null);
+        setTimeout(() => setClubIndexExists(clubIndex != null), 3000);
 
         const handleKeyDown = (event: KeyboardEvent) => {
             switch (event.key) {
@@ -142,6 +142,18 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     return (
         <div>
+            <button
+                className="absolute top-[var(--navbar-height-mobile)] z-[2009] bg-red-500 w-[50px]"
+                onClick={() => setTimeout(() => setClubIndex(null), 3000)}
+            >
+                close
+            </button>
+            <button
+                className="absolute top-[var(--navbar-height-mobile)] left-[50px] z-[2009] bg-black text-white"
+                onClick={() => setClubIndex(1)}
+            >
+                set club index
+            </button>
             <AnimatePresence
                 mode="wait"
                 onExitComplete={() => console.log('Exit animation complete')}
@@ -153,7 +165,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                             initial={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{
-                                duration: 1,
+                                duration: 3,
                                 ease: 'easeOut',
                             }}
                             onAnimationStart={() =>
@@ -163,7 +175,21 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                                 console.log('Animation completed')
                             }
                         >
-                            <SwipeableDeck
+                            <div className="flex overscroll-contained bg-red-500 lg:hidden absolute bottom-0 z-[2020] w-full h-[50%] pointer-events-[fill] overflow-clip pointer-events-none">
+                                <CustomPopup
+                                    clubIndex={clubIndex}
+                                    club={selectedClub}
+                                    clubs={clubs}
+                                    onClose={() => setClubIndex(null)}
+                                    switchNextClub={() => {
+                                        setNextClub();
+                                    }}
+                                    switchPreviousClub={() => {
+                                        setPreviousClub();
+                                    }}
+                                />
+                            </div>
+                            {/* <SwipeableDeck
                                 items={clubs}
                                 Card={SwipeableClubCard}
                                 currentIndex={clubIndex}
@@ -174,7 +200,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                                 // onUpSwipeClose={() => true}
                                 onRightSwipe={() => setNextClub()}
                                 onLeftSwipe={() => setPreviousClub()}
-                            />
+                            /> */}
                         </motion.div>
                     )}
                 </div>
@@ -195,7 +221,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 />
             )}
             <div className={`${styles.mapContainer} h-screen`} ref={mainMapRef}>
-                <MapContainer
+                {/* <MapContainer
                     key={0}
                     center={centerCoords}
                     zoom={zoom}
@@ -223,7 +249,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                             }}
                         />
                     ))}
-                </MapContainer>
+                </MapContainer> */}
             </div>
         </div>
     );

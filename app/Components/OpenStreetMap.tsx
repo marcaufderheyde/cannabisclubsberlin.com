@@ -16,6 +16,35 @@ import SwipeableDeck from './SwipeableDeck';
 import useDebounceFunction from '../helpers/useDebounceFunction';
 import { AnimatePresence, motion } from 'framer-motion';
 
+function withMotion(WrappedComponent) {
+    return function MotionComponent({
+        initial,
+        animate,
+        transition,
+        variants,
+        whileHover,
+        whileTap,
+        exit,
+        ...props
+    }) {
+        return (
+            <motion.div
+                initial={initial}
+                animate={animate}
+                transition={transition}
+                variants={variants}
+                whileHover={whileHover}
+                whileTap={whileTap}
+                exit={exit}
+            >
+                <WrappedComponent {...props} />
+            </motion.div>
+        );
+    };
+}
+
+const MotionSwipableDeck = withMotion(SwipeableDeck);
+
 export type Club = {
     name: string;
     slug: string;
@@ -103,8 +132,8 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
             debouncedMapFly(clubIndex);
         }
 
-        setTimeout(() => setClubIndexExists(clubIndex != null), 3000);
-
+        // setTimeout(() => , 3000);
+        setClubIndexExists(clubIndex != null);
         const handleKeyDown = (event: KeyboardEvent) => {
             switch (event.key) {
                 case 'ArrowUp':
@@ -143,70 +172,53 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     return (
         <div>
             <button
-                className="absolute top-[var(--navbar-height-mobile)] z-[2009] bg-red-500 w-[50px]"
-                onClick={() => setTimeout(() => setClubIndex(null), 3000)}
+                className='absolute top-[var(--navbar-height-mobile)] z-[2009] bg-red-500 w-[50px]'
+                onClick={() => setClubIndex(null)}
             >
                 close
             </button>
             <button
-                className="absolute top-[var(--navbar-height-mobile)] left-[50px] z-[2009] bg-black text-white"
+                className='absolute top-[var(--navbar-height-mobile)] left-[50px] z-[2009] bg-black text-white'
                 onClick={() => setClubIndex(1)}
             >
                 set club index
             </button>
             <AnimatePresence
-                mode="wait"
+                mode='sync'
                 onExitComplete={() => console.log('Exit animation complete')}
             >
-                <div>
-                    {selectedClub && clubIndexExists && (
-                        <motion.div
-                            key={'swipeable-deck'}
-                            initial={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{
-                                duration: 3,
-                                ease: 'easeOut',
-                            }}
-                            onAnimationStart={() =>
-                                console.log('Animation started')
-                            }
-                            onAnimationComplete={() =>
-                                console.log('Animation completed')
-                            }
-                        >
-                            <div className="flex overscroll-contained bg-red-500 lg:hidden absolute bottom-0 z-[2020] w-full h-[50%] pointer-events-[fill] overflow-clip pointer-events-none">
-                                <CustomPopup
-                                    clubIndex={clubIndex}
-                                    club={selectedClub}
-                                    clubs={clubs}
-                                    onClose={() => setClubIndex(null)}
-                                    switchNextClub={() => {
-                                        setNextClub();
-                                    }}
-                                    switchPreviousClub={() => {
-                                        setPreviousClub();
-                                    }}
-                                />
-                            </div>
-                            {/* <SwipeableDeck
-                                items={clubs}
-                                Card={SwipeableClubCard}
-                                currentIndex={clubIndex}
-                                onDownSwipeClose={() =>
-                                    setTimeout(() => setClubIndex(null), 3000)
-                                }
-                                // change "true" to setClubIndex(null) whenever animations are figured out
-                                // onUpSwipeClose={() => true}
-                                onRightSwipe={() => setNextClub()}
-                                onLeftSwipe={() => setPreviousClub()}
-                            /> */}
-                        </motion.div>
-                    )}
-                </div>
+                {selectedClub && clubIndexExists && (
+                    <motion.div
+                        initial={{ '--deck-opacity': 0 }}
+                        animate={{ '--deck-opacity': 1 }}
+                        exit={{ '--deck-opacity': 0 }}
+                        transition={{
+                            duration: 0.2,
+                            ease: 'easeOut',
+                        }}
+                        onAnimationStart={() =>
+                            console.log('Animation started')
+                        }
+                        onAnimationComplete={() =>
+                            console.log('Animation completed')
+                        }
+                    >
+                        <SwipeableDeck
+                            style={{ opacity: 'var(--deck-opacity)' }}
+                            items={clubs}
+                            Card={SwipeableClubCard}
+                            currentIndex={clubIndex}
+                            onDownSwipeClose={() => setClubIndex(null)}
+                            // change "true" to setClubIndex(null) whenever animations are figured out
+                            // onUpSwipeClose={() => true}
+                            onRightSwipe={() => setNextClub()}
+                            onLeftSwipe={() => setPreviousClub()}
+                        />
+                    </motion.div>
+                )}
             </AnimatePresence>
 
-            {selectedClub && clubIndexExists && (
+            {/* {selectedClub && clubIndexExists && (
                 <CustomPopup
                     clubIndex={clubIndex}
                     club={selectedClub}
@@ -219,9 +231,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                         setPreviousClub();
                     }}
                 />
-            )}
+            )} */}
             <div className={`${styles.mapContainer} h-screen`} ref={mainMapRef}>
-                {/* <MapContainer
+                <MapContainer
                     key={0}
                     center={centerCoords}
                     zoom={zoom}
@@ -229,9 +241,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     style={{ height: '100%', width: '100%' }}
                     ref={setMap}
                 >
-                    <ZoomControl position="bottomright" />
+                    <ZoomControl position='bottomright' />
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (
@@ -249,7 +261,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                             }}
                         />
                     ))}
-                </MapContainer> */}
+                </MapContainer>
             </div>
         </div>
     );

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ClubsList from './club-list';
 import Navbar from '@/app/ui/Navigation/navbar';
 import MapListViewSwitcher from '@/app/Components/MapListViewSwitcher';
+import { Club } from '@/app/helpers/clubsListContent';
 
 export default function ClubsContent() {
     //unstable_setRequestLocale(locale);
@@ -15,6 +16,7 @@ export default function ClubsContent() {
         }
     );
     const [showMap, setShowMap] = useState(true);
+    const [selectedClubFromList, setSelectedClubFromList] = useState<Club>();
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
 
@@ -52,15 +54,21 @@ export default function ClubsContent() {
             {showMap ? (
                 <div>
                     <div className="hidden lg:flex">
-                        <OpenStreetMap isDesktopMap={true} />
+                        <OpenStreetMap
+                            isDesktopMap={true}
+                            selectedClubFromList={selectedClubFromList}
+                        />
                     </div>
                     <div className="lg:hidden flex">
-                        <OpenStreetMap isDesktopMap={false} />
+                        <OpenStreetMap
+                            isDesktopMap={false}
+                            selectedClubFromList={selectedClubFromList}
+                        />
+                        <MapListViewSwitcher
+                            showMap={showMap}
+                            setShowMap={setShowMap}
+                        />
                     </div>
-                    <MapListViewSwitcher
-                        showMap={showMap}
-                        setShowMap={setShowMap}
-                    />
                 </div>
             ) : (
                 <div className="absolute top-[var(--navbar-height-mobile)]   md:top-[var(--navbar-height)] left-0">
@@ -68,7 +76,11 @@ export default function ClubsContent() {
                         showMap={showMap}
                         setShowMap={setShowMap}
                     />
-                    <ClubsList />
+                    <ClubsList
+                        clubClickedFromList={() => {
+                            setSelectedClubFromList;
+                        }}
+                    />
                 </div>
             )}
         </div>

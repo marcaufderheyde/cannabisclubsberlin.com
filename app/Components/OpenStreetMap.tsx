@@ -15,6 +15,7 @@ import SwipeableClubCard from './SwipeableClubCard';
 import SwipeableDeck from './SwipeableDeck';
 import useDebounceFunction from '../helpers/useDebounceFunction';
 import { AnimatePresence, motion } from 'framer-motion';
+import ClubsList from '@/app/[locale]/(withoutheaderfooter)/clubs/club-list';
 
 export type Club = {
     name: string;
@@ -142,6 +143,13 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     return (
         <div>
+            {props.isDesktopMap && (
+                <ClubsList
+                    clubClickedFromList={(selectedIndex: number) => {
+                        setClubIndex(selectedIndex);
+                    }}
+                />
+            )}
             <AnimatePresence
                 mode="wait"
                 onExitComplete={() => console.log('Exit animation complete')}
@@ -179,7 +187,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     )}
                 </div>
             </AnimatePresence>
-
             {selectedClub && clubIndexExists && (
                 <CustomPopup
                     clubIndex={clubIndex}

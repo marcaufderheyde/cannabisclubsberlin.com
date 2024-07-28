@@ -146,7 +146,7 @@ export default function SwipeableClubCard({
                         >
                             {club.name}
                         </h1>
-                        <div className="mx-2 flex flex-wrap justify-center">
+                        {/* <div className="mx-2 flex flex-wrap justify-center">
                             {club.offerings?.map((offering: string) => (
                                 <span
                                     key={offering}
@@ -155,7 +155,7 @@ export default function SwipeableClubCard({
                                     {offering}
                                 </span>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

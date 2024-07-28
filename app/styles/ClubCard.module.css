@@ -4,7 +4,9 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    /* margin-bottom: auto; */
+    margin-bottom: auto;
+    overflow-y: scroll;
+    height: calc(100% - var(--navbar-height));
   }
   
   .card {

@@ -18,6 +18,10 @@ html, body {
   height: calc(var(--vh, 1vh) * 100);
 }
 
+.dynamic-height {
+  height: calc(100% - var(--navbar-height));
+}
+
 :root {
   --layout-width: 1080px;
   --layout-x-padding: 1rem;

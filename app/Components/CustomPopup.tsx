@@ -1,13 +1,9 @@
 'use client';
-import React, { useEffect } from 'react';
 import styles from '@/app/styles/ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
-import Triangle from '../ui/Home/triangle';
-import ActionButton from '../ui/Home/actionbutton';
 import ArrowButton from '../ui/Home/arrowbutton';
 import Close from '../ui/Navigation/close';
-import Swipeable from './Swipeable';
 
 interface Club {
     name: string;
@@ -44,13 +40,13 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                 <button className={styles.closeButton} onClick={onClose}>
                     <Close color={'#828282'} />
                 </button>
-                <div className='flex flex-col items-center'>
+                <div className="flex flex-col items-center">
                     <a
                         href={`/${localActive}/clubs/${club.slug}`}
                         className={styles.mapCardLink}
                     >
                         <div className={styles.mapCard}>
-                            <div className='flex justify-center items-center'>
+                            <div className="flex justify-center items-center">
                                 <Image
                                     src={club.imageUrl}
                                     alt={`${club.name} Club Picture`}
@@ -63,9 +59,6 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                                 <h3 className={styles.mapCardTitle}>
                                     {club.name}
                                 </h3>
-                                <p className={styles.mapCardDescription}>
-                                    {club.description}
-                                </p>
                                 <br />
                                 <p className={styles.mapCardOfferings}>
                                     {club.offerings}
@@ -86,7 +79,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                             triangleColor={'white'}
                             onClickFunction={() => switchPreviousClub()}
                         />
-                        <div className='bg-lime-500 flex text-white text-base p-2'>
+                        <div className="bg-lime-500 flex text-white text-base p-2">
                             {
                                 (((clubIndex + 1) as unknown as string) +
                                     '/' +

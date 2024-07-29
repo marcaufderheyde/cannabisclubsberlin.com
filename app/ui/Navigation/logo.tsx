@@ -16,7 +16,7 @@ export default function Logo({ onClick }: { onClick?: Function }) {
 
     return (
         <Link onClick={() => handleClick()} href={home}>
-            <div className='font-bold text-sm md:text-xl'>
+            <div className="font-bold text-sm md:text-xl">
                 <p>Cannabis</p>
                 <p>Clubs</p>
                 <p>Berlin</p>

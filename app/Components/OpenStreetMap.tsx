@@ -15,7 +15,7 @@ import SwipeableClubCard from './SwipeableClubCard';
 import SwipeableDeck from './SwipeableDeck';
 import useDebounceFunction from '../helpers/useDebounceFunction';
 import { AnimatePresence, motion } from 'framer-motion';
-import ClubsList from '@/app/[locale]/(withoutheaderfooter)/clubs/club-list';
+import DesktopClubList from './DesktopClubList';
 
 export type Club = {
     name: string;
@@ -60,8 +60,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     });
     const zoomRef = useRef(12);
 
-    // const clubIndexExists = clubIndex != null;
-
     const clubsRef = useRef<Club[]>(pullClubsListContent());
     const clubs = clubsRef.current;
     const selectedClub = clubIndexExists && clubs[clubIndex];
@@ -100,11 +98,11 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     );
 
     useEffect(() => {
+        setClubIndexExists(clubIndex != null);
+
         if (map && clubIndexExists) {
             debouncedMapFly(clubIndex);
         }
-
-        setClubIndexExists(clubIndex != null);
 
         const handleKeyDown = (event: KeyboardEvent) => {
             switch (event.key) {
@@ -144,7 +142,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     return (
         <div>
             {props.isDesktopMap && (
-                <ClubsList
+                <DesktopClubList
                     clubClickedFromList={(selectedIndex: number) => {
                         setClubIndex(selectedIndex);
                     }}
@@ -212,7 +210,8 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 >
                     <ZoomControl position="bottomright" />
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+                        // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {clubs.map((club, index) => (

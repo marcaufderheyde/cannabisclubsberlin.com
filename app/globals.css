@@ -26,8 +26,8 @@ html, body {
   --layout-width: 1080px;
   --layout-x-padding: 1rem;
   --footer-height: 150px;
-  --navbar-height: 120px;
-  --navbar-height-mobile: 90px;
+  --navbar-height: 100px;
+  --navbar-height-mobile: 80px;
   --doc-height: 100%;
   --vh: 1vh;
 }

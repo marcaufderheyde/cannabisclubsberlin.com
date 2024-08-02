@@ -36,11 +36,11 @@
     position: absolute;
     top: var(--navbar-height);
     left: 0;
-    width: 40%;
-    height: calc(92% - var(--navbar-height));
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    width: 20%;
+    height: calc(100% - var(--navbar-height));
+    /* margin-left: 5%; */
+    /* margin-top: 2%; */
+    /* margin-bottom: 2%; */
     /* Cover the bottom half of the map */
     /* display: flex; */
     justify-content: center;

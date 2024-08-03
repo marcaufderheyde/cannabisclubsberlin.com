@@ -16,6 +16,7 @@ import SwipeableDeck from './SwipeableDeck';
 import useDebounceFunction from '../helpers/useDebounceFunction';
 import { AnimatePresence, motion } from 'framer-motion';
 import DesktopClubList from './DesktopClubList';
+import withMotion from '../helpers/WithMotion';
 
 export type Club = {
     name: string;
@@ -65,6 +66,8 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     const clubsRef = useRef<Club[]>(pullClubsListContent());
     const clubs = clubsRef.current;
     const selectedClub = clubIndexExists && clubs[clubIndex!];
+
+    // const MotionSwipableDeck = withMotion(SwipeableDeck);
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
@@ -122,6 +125,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
             debouncedMapFly(clubIndex);
         }
 
+        // setTimeout(() => , 3000);
+        setClubIndexExists(clubIndex != null);
+
         const handleKeyDown = (event: KeyboardEvent) => {
             switch (event.key) {
                 case 'ArrowUp':
@@ -167,42 +173,40 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 />
             )}
             <AnimatePresence
-                mode="wait"
+                mode="sync"
                 onExitComplete={() => console.log('Exit animation complete')}
             >
-                <div>
-                    {selectedClub && clubIndexExists && (
-                        <motion.div
-                            key={'swipeable-deck'}
-                            initial={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{
-                                duration: 1,
-                                ease: 'easeOut',
-                            }}
-                            onAnimationStart={() =>
-                                console.log('Animation started')
-                            }
-                            onAnimationComplete={() =>
-                                console.log('Animation completed')
-                            }
-                        >
-                            <SwipeableDeck
-                                items={filteredClubs}
-                                Card={SwipeableClubCard}
-                                currentIndex={clubIndex!}
-                                onDownSwipeClose={() =>
-                                    setTimeout(() => setClubIndex(null), 3000)
-                                }
-                                // change "true" to setClubIndex(null) whenever animations are figured out
-                                // onUpSwipeClose={() => true}
-                                onRightSwipe={() => setNextClub()}
-                                onLeftSwipe={() => setPreviousClub()}
-                            />
-                        </motion.div>
-                    )}
-                </div>
+                {selectedClub && clubIndexExists && (
+                    <motion.div
+                        initial={{ '--deck-opacity': 0 }}
+                        animate={{ '--deck-opacity': 1 }}
+                        exit={{ '--deck-opacity': 0 }}
+                        transition={{
+                            duration: 0.2,
+                            ease: 'easeOut',
+                        }}
+                        onAnimationStart={() =>
+                            console.log('Animation started')
+                        }
+                        onAnimationComplete={() =>
+                            console.log('Animation completed')
+                        }
+                    >
+                        <SwipeableDeck
+                            style={{ opacity: 'var(--deck-opacity)' }}
+                            items={clubs}
+                            Card={SwipeableClubCard}
+                            currentIndex={clubIndex}
+                            onDownSwipeClose={() => setClubIndex(null)}
+                            // change "true" to setClubIndex(null) whenever animations are figured out
+                            // onUpSwipeClose={() => true}
+                            onRightSwipe={() => setNextClub()}
+                            onLeftSwipe={() => setPreviousClub()}
+                        />
+                    </motion.div>
+                )}
             </AnimatePresence>
+
             {selectedClub && clubIndexExists && (
                 <CustomPopup
                     clubIndex={clubIndex!}
@@ -228,6 +232,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 >
                     <ZoomControl position="bottomright" />
                     <TileLayer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
                         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -35,6 +35,7 @@ export default function SwipeableDeck<T>({
     // onUpSwipeClose,
     onRightSwipe,
     onLeftSwipe,
+    ...props
 }: {
     items: Array<T>;
     Card: React.JSX.ElementType;
@@ -138,7 +139,10 @@ export default function SwipeableDeck<T>({
     }, [currentIndex, windowSize]);
 
     return (
-        <div className="overscroll-contained lg:hidden absolute bottom-0 z-[2004] w-full h-full pointer-events-[fill] overflow-clip pointer-events-none">
+        <div
+            className='overscroll-contained lg:hidden absolute bottom-0 z-[2004] w-full h-full pointer-events-[fill] overflow-clip pointer-events-none '
+            {...props}
+        >
             {windowSize &&
                 shownCards.map((card) => {
                     return (

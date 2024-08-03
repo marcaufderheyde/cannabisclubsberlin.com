@@ -36,8 +36,12 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
     const localActive = useLocale();
 
     return (
-        <div className={'hidden lg:flex ' + styles.customPopup}>
-            <div className={styles.mapCardContainer}>
+        <div className={'hidden lg:flex absolute h-full z-[2005]'}>
+            <div
+                className={
+                    'h-full bg-white rounded-lg shadow-md flex flex-col z-[2005]'
+                }
+            >
                 <button className={styles.closeButton} onClick={onClose}>
                     <Close color={'#828282'} />
                 </button>

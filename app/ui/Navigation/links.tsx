@@ -9,6 +9,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
         'text-[#E3E71F] font-bold text-xl group transition duration-300';
     const defaultLinkStyling =
         'font-normal text-xl group transition duration-300';
+    // @ts-ignore
     const isHomePage = isPathNameHome(pathname);
 
     return (
@@ -19,6 +20,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
                         key={link.name}
                         href={link.href}
                         className={
+                            // @ts-ignore
                             link.href.toString().includes(pathname) &&
                             !isHomePage
                                 ? currentPageStyling

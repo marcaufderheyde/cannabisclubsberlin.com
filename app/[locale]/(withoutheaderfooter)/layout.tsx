@@ -6,6 +6,10 @@ import '@/app/globals.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import ViewportHandler from '@/app/helpers/ViewportHandler';
+import AgeVerification from '../../Components/AgeVerification';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,6 +43,21 @@ export default function LocaleLayout({
             <NextIntlClientProvider messages={messages}>
                 <ViewportHandler>{children}</ViewportHandler>
             </NextIntlClientProvider>
+            <GoogleTagManager gtmId="GTM-PBKDVXT9" />
+            <Script
+                async
+                strategy="lazyOnload"
+                src="https://www.googletagmanager.com/gtag/js?id=G-7NZJ6HL34T"
+            ></Script>
+            <Script strategy="lazyOnload">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'G-7NZJ6HL34T');
+                `}
+            </Script>
         </div>
     );
 }

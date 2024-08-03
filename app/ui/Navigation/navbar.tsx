@@ -31,6 +31,7 @@ export default function Navbar({ isOnMap = false }: Props) {
     ];
 
     const pathname = usePathname();
+    // @ts-ignore
     const fontColor = isPathNameHome(pathname)
         ? 'text-white'
         : 'text-[#868686]';

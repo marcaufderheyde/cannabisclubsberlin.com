@@ -3,6 +3,9 @@ import { Inter } from 'next/font/google';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +27,7 @@ export default function RootLayout({
     return (
         <html lang={locale}>
             <body className={inter.className}>{children}</body>
+            <GoogleTagManager gtmId="GTM-PBKDVXT9" />
         </html>
     );
 }

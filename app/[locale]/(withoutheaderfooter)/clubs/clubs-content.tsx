@@ -50,6 +50,11 @@ export default function ClubsContent() {
                             showHRInfo={showHRFilter}
                             isDesktopMap={true}
                         />
+                        <MapLIstFilterSwitcher
+                            showMap={showMap}
+                            showHRFilter={showHRFilter}
+                            setShowHRFilter={setShowHRFilter}
+                        />{' '}
                     </div>
                     <div className="lg:hidden flex">
                         <OpenStreetMap

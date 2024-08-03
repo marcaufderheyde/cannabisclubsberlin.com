@@ -54,6 +54,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     const [map, setMap] = useState<Map | null>(null);
     const [clubIndex, setClubIndex] = useState<number | null>(null);
     const [clubIndexExists, setClubIndexExists] = useState(false);
+    const [clubListExpanded, setClubListExpanded] = useState(false);
     const [centerCoords, setCenterCoords] = useState<{
         lat: number;
         lng: number;
@@ -166,11 +167,31 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     return (
         <div>
             {props.isDesktopMap && (
-                <DesktopClubList
-                    clubClickedFromList={(selectedIndex: number) => {
-                        setClubIndex(selectedIndex);
-                    }}
-                />
+                <div className="absolute flex right-0 top-[var(--navbar-height)] dynamic-height z-[2005]">
+                    {selectedClub && clubIndexExists && (
+                        <div className="w-[250px] bg-red-100">
+                            <CustomPopup
+                                clubIndex={clubIndex!}
+                                club={selectedClub!}
+                                clubs={filteredClubs}
+                                onClose={() => setClubIndex(null)}
+                                switchNextClub={() => {
+                                    setNextClub();
+                                }}
+                                switchPreviousClub={() => {
+                                    setPreviousClub();
+                                }}
+                            />
+                        </div>
+                    )}
+                    <DesktopClubList
+                        clubClickedFromList={(selectedIndex: number) => {
+                            setClubIndex(selectedIndex);
+                        }}
+                    />
+                    {/* {selectedClub && clubIndexExists && (
+                    )} */}
+                </div>
             )}
             <AnimatePresence
                 mode="sync"
@@ -207,20 +228,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 )}
             </AnimatePresence>
 
-            {selectedClub && clubIndexExists && (
-                <CustomPopup
-                    clubIndex={clubIndex!}
-                    club={selectedClub!}
-                    clubs={filteredClubs}
-                    onClose={() => setClubIndex(null)}
-                    switchNextClub={() => {
-                        setNextClub();
-                    }}
-                    switchPreviousClub={() => {
-                        setPreviousClub();
-                    }}
-                />
-            )}
             <div className={`${styles.mapContainer} h-screen`} ref={mainMapRef}>
                 <MapContainer
                     key={0}

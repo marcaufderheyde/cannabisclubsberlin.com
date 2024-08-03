@@ -13,7 +13,7 @@ export default function MapHamburgerButton({
     return (
         <div
             onClick={() => showClubList()}
-            className="absolute top-[var(--navbar-height)] z-[2005] right-0 m-2 p-2 bg-[rgba(255,255,255,0.5)]"
+            className="absolute z-[2005] right-0 m-2 p-2 bg-[rgba(255,255,255,0.5)]"
         >
             <Burger color={homeBurgerLineColor} />
         </div>

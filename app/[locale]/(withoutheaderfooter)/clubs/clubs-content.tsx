@@ -7,14 +7,11 @@ import MapListViewSwitcher from '@/app/Components/MapListViewSwitcher';
 import { Club } from '@/app/helpers/clubsListContent';
 import MobileClubList from '@/app/Components/MobileClubList';
 import MapLIstFilterSwitcher from '@/app/Components/MapListFilterSwitcher';
+const OpenStreetMap = dynamic(() => import('@/app/Components/OpenStreetMap'), {
+    ssr: false,
+});
 
 export default function ClubsContent() {
-    const OpenStreetMap = dynamic(
-        () => import('@/app/Components/OpenStreetMap'),
-        {
-            ssr: false,
-        }
-    );
     const [showMap, setShowMap] = useState(true);
     const [selectedClubFromList, setSelectedClubFromList] = useState<Club>();
     const [showHRFilter, setShowHRFilter] = useState(false);
@@ -45,7 +42,7 @@ export default function ClubsContent() {
             <Navbar isOnMap={true} />
             {showMap ? (
                 <div>
-                    <div className="hidden lg:flex">
+                    <div className='hidden lg:flex'>
                         <OpenStreetMap
                             showHRInfo={showHRFilter}
                             isDesktopMap={true}
@@ -56,7 +53,7 @@ export default function ClubsContent() {
                             setShowHRFilter={setShowHRFilter}
                         />{' '}
                     </div>
-                    <div className="lg:hidden flex">
+                    <div className='lg:hidden flex'>
                         <OpenStreetMap
                             showHRInfo={showHRFilter}
                             isDesktopMap={false}
@@ -69,7 +66,7 @@ export default function ClubsContent() {
                     </div>
                 </div>
             ) : (
-                <div className="md:hidden absolute top-[var(--navbar-height-mobile)] md:top-[var(--navbar-height)] left-0">
+                <div className='md:hidden absolute top-[var(--navbar-height-mobile)] md:top-[var(--navbar-height)] left-0'>
                     <MapLIstFilterSwitcher
                         showMap={showMap}
                         showHRFilter={showHRFilter}

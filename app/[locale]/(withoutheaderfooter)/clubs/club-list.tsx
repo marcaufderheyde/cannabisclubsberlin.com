@@ -7,6 +7,7 @@ import DesktopClubList from '@/app/Components/DesktopClubList';
 
 export type ClubsListProps = {
     clubClickedFromList: (index: number) => void;
+    showHRInfo: boolean;
 };
 
 export default function ClubsList(props: ClubsListProps) {
@@ -15,6 +16,7 @@ export default function ClubsList(props: ClubsListProps) {
             <div className="lg:hidden flex">
                 <MobileClubList
                     clubClickedFromList={props.clubClickedFromList}
+                    showHRInfo={props.showHRInfo}
                 />
             </div>
         </div>

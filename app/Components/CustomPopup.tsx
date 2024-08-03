@@ -12,7 +12,8 @@ interface Club {
     geoLocation: number[];
     description?: string;
     offerings?: string;
-    harm_reduction?: string;
+    harmReduction?: string;
+    hasHRInformation: true;
 }
 
 interface CustomPopupProps {

@@ -29,8 +29,15 @@ export default function ClubContent() {
             club.location = t(`${club.slug}.location`);
             club.description = t(`${club.slug}.description`);
             club.offerings = t(`${club.slug}.offerings`);
-            club.harm_reduction = t(`${club.slug}.harm_reduction`);
-
+            club.harmReduction = t(`${club.slug}.harm_reduction`);
+            if (
+                club.harmReduction ===
+                    'This club has currently not listed any specific harm reduction services.' ||
+                club.harmReduction ===
+                    'Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.'
+            ) {
+                club.hasHRInformation = false;
+            }
             const handleBackToMapPage = () => {
                 router.push(`/${localActive}/clubs`);
             };
@@ -77,7 +84,7 @@ export default function ClubContent() {
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('harm_reduction_title')}
                     </h2>
-                    <p>{club.harm_reduction}</p>
+                    <p>{club.harmReduction}</p>
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('visit_website_title')}
                     </h2>

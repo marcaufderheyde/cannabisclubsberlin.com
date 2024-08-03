@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl';
 type Props = {
     showMap: boolean;
     setShowMap: Dispatch<SetStateAction<boolean>>;
+    setShowHRFilter: Dispatch<SetStateAction<boolean>>;
 };
 
 function MapListViewSwitcher({ showMap, setShowMap }: Props) {
@@ -21,7 +22,7 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
         ? 'absolute top-[var(--navbar-height-mobile)] md:top-[var(--navbar-height)] right-0'
         : 'relative';
     return (
-        <div className="w-[100vw] flex align-middle justify-end">
+        <div className="w-[100vw] flex align-middle justify-left">
             <div
                 className={
                     'inline-flex ' +

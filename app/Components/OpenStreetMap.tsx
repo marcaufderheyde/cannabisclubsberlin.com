@@ -24,7 +24,8 @@ export type Club = {
     geoLocation: number[];
     description?: string;
     offerings?: string[];
-    harm_reduction?: string;
+    harmReduction?: string;
+    hasHRInformation: boolean;
 };
 
 const customIcon: L.Icon<L.IconOptions> = L.icon({
@@ -43,6 +44,7 @@ const selectedIcon: L.Icon<L.IconOptions> = L.icon({
 
 type OpenStreetMapProps = {
     isDesktopMap: boolean;
+    showHRInfo: boolean;
 };
 
 export default function OpenStreetMap(props: OpenStreetMapProps) {
@@ -62,7 +64,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     const clubsRef = useRef<Club[]>(pullClubsListContent());
     const clubs = clubsRef.current;
-    const selectedClub = clubIndexExists && clubs[clubIndex];
+    const selectedClub = clubIndexExists && clubs[clubIndex!];
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
@@ -71,16 +73,32 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         );
         const pattern = /, |and /;
         club.offerings = clubOfferings.split(pattern);
-        club.harm_reduction = t(`${club.slug}.harm_reduction`);
+        club.harmReduction = t(`${club.slug}.harm_reduction`);
+        if (
+            club.harmReduction ===
+                'This club has currently not listed any specific harm reduction services.' ||
+            club.harmReduction ===
+                'Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.'
+        ) {
+            club.hasHRInformation = false;
+        } else {
+            club.hasHRInformation = true;
+        }
     });
+
+    const filteredClubs = props.showHRInfo
+        ? clubs.filter((club) => club.hasHRInformation)
+        : clubs;
 
     const zoom = 13;
 
     const setNextClub = () => {
-        if (clubIndexExists) setClubIndex(mod(clubIndex + 1, clubs.length));
+        if (clubIndexExists)
+            setClubIndex(mod(clubIndex! + 1, filteredClubs.length));
     };
     const setPreviousClub = () => {
-        if (clubIndexExists) setClubIndex(mod(clubIndex - 1, clubs.length));
+        if (clubIndexExists)
+            setClubIndex(mod(clubIndex! - 1, filteredClubs.length));
     };
 
     const debouncedMapFly = useDebounceFunction(
@@ -170,9 +188,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                             }
                         >
                             <SwipeableDeck
-                                items={clubs}
+                                items={filteredClubs}
                                 Card={SwipeableClubCard}
-                                currentIndex={clubIndex}
+                                currentIndex={clubIndex!}
                                 onDownSwipeClose={() =>
                                     setTimeout(() => setClubIndex(null), 3000)
                                 }
@@ -187,9 +205,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
             </AnimatePresence>
             {selectedClub && clubIndexExists && (
                 <CustomPopup
-                    clubIndex={clubIndex}
-                    club={selectedClub}
-                    clubs={clubs}
+                    clubIndex={clubIndex!}
+                    club={selectedClub!}
+                    clubs={filteredClubs}
                     onClose={() => setClubIndex(null)}
                     switchNextClub={() => {
                         setNextClub();
@@ -214,7 +232,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
-                    {clubs.map((club, index) => (
+                    {filteredClubs.map((club, index) => (
                         <CustomMarker
                             key={index}
                             index={index}

@@ -9,9 +9,17 @@ import MapHamburgerButton from './MapHamburgerButton';
 
 export type DesktopClubsListProps = {
     clubClickedFromList: (index: number) => void;
+    setClubListExpanded: (isExpanded: boolean) => void;
 };
 
-export default function DesktopClubList(props: DesktopClubsListProps) {
+export default function DesktopClubList({
+    clubClickedFromList,
+    setClubListExpanded,
+    ...props
+}: {
+    clubClickedFromList: (index: number) => void;
+    setClubListExpanded: (isExpanded: boolean) => void;
+}) {
     const clubs = pullClubsListContent();
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
@@ -30,72 +38,66 @@ export default function DesktopClubList(props: DesktopClubsListProps) {
         }
     };
     return (
-        <div>
-            {desktopClubListExpanded ? (
-                <div className="w-[250px] z-[2005] bg-white overflow-y-scroll flex flex-wrap justify-center gap-5 mb-auto">
-                    <button
-                        className={
-                            'relative top-0 left-0 p-2 bg-transparent border-none text-2xl cursor-pointer'
-                        }
-                        onClick={() => {
-                            setDesktopClubListExpanded(false);
-                        }}
-                    >
-                        <Close color={'#828282'} />
-                    </button>
-                    <div className="mt-8">
-                        {clubs.map((club, index) => (
+        <div className="h-full">
+            <div
+                className="w-[300px] z-[2005] bg-white overflow-y-scroll flex flex-wrap gap-5 mb-auto h-full justify-center"
+                {...props}
+            >
+                <button
+                    className={
+                        'absolute z-[2008] top-0 right-[300px] p-2 bg-transparent border-none text-2xl cursor-pointer bg-lime-300'
+                    }
+                    onClick={() => {
+                        setDesktopClubListExpanded(false);
+                        setClubListExpanded(false);
+                    }}
+                >
+                    <Close color={'#828282'} />
+                </button>
+                <div className="relative mt-8">
+                    {clubs.map((club, index) => (
+                        <div
+                            key={index}
+                            ref={(el) => (refs.current[index] = el)}
+                            className="flex justify-center items-center"
+                            onClick={() => {
+                                clubClickedFromList(index);
+                                handleClick(index);
+                            }}
+                        >
                             <div
+                                className={
+                                    'w-[250px] h-[250px] border border-gray-300 rounded-lg overflow-hidden shadow-md'
+                                }
                                 key={index}
-                                ref={(el) => (refs.current[index] = el)}
-                                className="flex justify-center items-center"
-                                onClick={() => {
-                                    props.clubClickedFromList(index);
-                                    handleClick(index);
-                                }}
                             >
-                                <div
-                                    className={
-                                        'w-[250px] h-[250px] border border-gray-300 rounded-lg overflow-hidden shadow-md'
-                                    }
-                                    key={index}
+                                <div className="flex justify-center items-center">
+                                    <Image
+                                        src={club.imageUrl}
+                                        alt={club.name + ' Club Picture'}
+                                        width={300}
+                                        height={300}
+                                        className={styles.cardImage}
+                                    />
+                                </div>
+                                <a
+                                    href={`/${localActive}/clubs/${club.slug}`}
+                                    key={club.slug}
                                 >
-                                    <a
-                                        href={`/${localActive}/clubs/${club.slug}`}
-                                        key={club.slug}
-                                    >
-                                        <div className="flex justify-center items-center">
-                                            <Image
-                                                src={club.imageUrl}
-                                                alt={
-                                                    club.name + ' Club Picture'
-                                                }
-                                                width={300}
-                                                height={300}
-                                                className={styles.cardImage}
-                                            />
-                                        </div>
-                                        <div className={styles.cardContent}>
-                                            <h3 className={styles.cardTitle}>
-                                                {club.name}
-                                            </h3>
-                                            {/* <p className={styles.cardDescription}>
+                                    <div className={styles.cardContent}>
+                                        <h3 className={styles.cardTitle}>
+                                            {club.name}
+                                        </h3>
+                                        {/* <p className={styles.cardDescription}>
                                     {club.offerings}
                                 </p> */}
-                                        </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
-            ) : (
-                <MapHamburgerButton
-                    showClubList={() => {
-                        setDesktopClubListExpanded(true);
-                    }}
-                />
-            )}
+            </div>
         </div>
     );
 }

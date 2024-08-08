@@ -22,6 +22,10 @@ html, body {
   height: calc(100% - var(--navbar-height));
 }
 
+.dynamic-desktop-maps-list-right-offset {
+  right: 600px;
+}
+
 :root {
   --layout-width: 1080px;
   --layout-x-padding: 1rem;

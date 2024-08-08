@@ -1,14 +1,7 @@
 'use client';
-import React, {
-    ReactElement,
-    useEffect,
-    useState,
-    useMemo,
-    MouseEventHandler,
-} from 'react';
+import React, { useEffect, useState } from 'react';
 import useWindowSize from '../helpers/useWindowSize';
 import mod from '../helpers/mod';
-import { motion } from 'framer-motion';
 
 export interface Position {
     x: number;
@@ -140,7 +133,7 @@ export default function SwipeableDeck<T>({
 
     return (
         <div
-            className='overscroll-contained lg:hidden absolute bottom-0 z-[2004] w-full h-full pointer-events-[fill] overflow-clip pointer-events-none '
+            className="overscroll-contained lg:hidden absolute bottom-0 z-[2004] w-full h-full pointer-events-[fill] overflow-clip pointer-events-none "
             {...props}
         >
             {windowSize &&

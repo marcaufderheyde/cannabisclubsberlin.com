@@ -23,6 +23,8 @@ interface CustomPopupProps {
     onClose: () => void;
     switchNextClub: () => void;
     switchPreviousClub: () => void;
+    clubListExpanded: boolean;
+    props: any;
 }
 
 const CustomPopup: React.FC<CustomPopupProps> = ({
@@ -32,45 +34,54 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
     switchNextClub,
     switchPreviousClub,
     clubIndex,
+    clubListExpanded,
+    ...props
 }) => {
     const localActive = useLocale();
 
     return (
-        <div className={'hidden lg:flex absolute h-full z-[2005]'}>
+        <div
+            className={
+                'hidden lg:flex absolute h-full w-[300px] z-[2005] right-0 mr-20' +
+                ' ' +
+                (clubListExpanded ? 'right-[300px] mr-20' : 'right-0 mr-20')
+            }
+            {...props}
+        >
             <div
                 className={
-                    'h-full bg-white rounded-lg shadow-md flex flex-col z-[2005]'
+                    'h-full w-full bg-white rounded-lg shadow-md flex flex-col z-[2005]'
                 }
             >
                 <button className={styles.closeButton} onClick={onClose}>
                     <Close color={'#828282'} />
                 </button>
                 <div className="flex flex-col items-center">
-                    <a
-                        href={`/${localActive}/clubs/${club.slug}`}
-                        className={styles.mapCardLink}
-                    >
-                        <div className={styles.mapCard}>
-                            <div className="flex justify-center items-center">
-                                <Image
-                                    src={club.imageUrl}
-                                    alt={`${club.name} Club Picture`}
-                                    width={300}
-                                    height={300}
-                                    className={styles.mapCardImage}
-                                />
-                            </div>
-                            <div className={styles.mapCardContent}>
+                    <div className={styles.mapCard}>
+                        <div className="flex justify-center items-center">
+                            <Image
+                                src={club.imageUrl}
+                                alt={`${club.name} Club Picture`}
+                                width={300}
+                                height={300}
+                                className={styles.mapCardImage}
+                            />
+                        </div>
+                        <div className={styles.mapCardContent}>
+                            <a
+                                href={`/${localActive}/clubs/${club.slug}`}
+                                className={styles.mapCardLink}
+                            >
                                 <h3 className={styles.mapCardTitle}>
                                     {club.name}
                                 </h3>
-                                <br />
-                                <p className={styles.mapCardOfferings}>
-                                    {club.offerings}
-                                </p>
-                            </div>
+                            </a>
+                            <br />
+                            <p className={styles.mapCardOfferings}>
+                                {club.offerings}
+                            </p>
                         </div>
-                    </a>
+                    </div>
                     <div
                         className={
                             'absolute bottom-0 inline-flex py-2 px-4 md:py-3'

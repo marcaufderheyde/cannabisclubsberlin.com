@@ -1,10 +1,8 @@
 'use client';
 import React from 'react';
-import styles from '@/app/styles/ClubCard.module.css';
+import styles from '.ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
-import Triangle from '../ui/Home/triangle';
-import ActionButton from '../ui/Home/actionbutton';
 import ArrowButton from '../ui/Home/arrowbutton';
 import Close from '../ui/Navigation/close';
 
@@ -38,7 +36,11 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
     return (
         <div className={styles.customPopup}>
             <div className={styles.mapCardContainer}>
-                <button className={styles.closeButton} onClick={onClose}>
+                <button
+                    className={styles.closeButton}
+                    onClick={onClose}
+                    aria-label="close"
+                >
                     <Close color={'#828282'} />
                 </button>
                 <div className="flex flex-col items-center">
@@ -82,6 +84,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                             backgroundColor={'bg-lime-500'}
                             triangleColor={'white'}
                             onClickFunction={switchPreviousClub}
+                            ariaLabel="previous"
                         />
                         <div className="bg-lime-500 flex text-white text-base p-2">
                             {clubIndex}
@@ -93,6 +96,7 @@ const CustomPopup: React.FC<CustomPopupProps> = ({
                             backgroundColor={'bg-lime-500'}
                             triangleColor={'white'}
                             onClickFunction={switchNextClub}
+                            ariaLabel="next"
                         />
                     </div>
                 </div>

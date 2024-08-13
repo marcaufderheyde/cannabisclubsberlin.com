@@ -8,6 +8,7 @@ type ArrowButtonProps = {
     triangleClassName?: string;
     onClickFunction: any;
     toggleRotate: boolean;
+    ariaLabel?: string;
 };
 
 export default function ArrowButton({
@@ -17,11 +18,13 @@ export default function ArrowButton({
     triangleClassName,
     onClickFunction,
     toggleRotate,
+    ariaLabel,
 }: ArrowButtonProps) {
     return (
         <button
             onClick={onClickFunction}
             className={boxClassName + ' ' + backgroundColor}
+            aria-label={ariaLabel}
         >
             <Triangle
                 toggleRotate={toggleRotate}

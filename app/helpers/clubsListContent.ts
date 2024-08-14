@@ -539,22 +539,22 @@ const clubs: Club[] = [
 // Function to generate slugs
 // Probably can just make the key the slug...?
 export function generateSlug(name: string): string {
-    // Replace commas and periods, then lower and replace spaces
-    let slug: string = name
+    // Replace commas and periods, trim leading/trailing spaces, and replace multiple spaces with a single hyphen
+    const slug: string = name
         .replace(/,/g, '')
         .replace(/\./g, '')
+        .trim() // Trim leading and trailing spaces
+        .replace(/\s+/g, '-') // Replace multiple spaces with a single hyphen
         .toLowerCase()
-        .replace(/ /g, '-');
-    // Replace German Umlauts and "ß"
-    slug = slug
         .replace(/ä/g, 'ae')
         .replace(/ö/g, 'oe')
         .replace(/ü/g, 'ue')
-        .replace(/ß/g, 'ss');
-    // Remove all other non-alphanumeric characters except hyphens
-    slug = slug.replace(/[^a-z0-9-]/g, '');
+        .replace(/ß/g, 'ss')
+        .replace(/[^a-z0-9-]/g, ''); // Remove all other non-alphanumeric characters except hyphens
+
     return slug;
 }
+
 
 // Add slugs to the clubs
 clubs.forEach((club) => {

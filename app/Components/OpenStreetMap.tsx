@@ -6,7 +6,7 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import L, { Map } from 'leaflet';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 import { useTranslations } from 'next-intl';
-import styles from '@/app/styles/ClubCard.module.css';
+import styles from './ClubCard.module.css';
 import CustomPopup from './CustomPopup'; // Import the custom popup component
 import CustomMarker from './CustomMarker';
 import jumpToMarker from '../helpers/jumpToMarker';
@@ -77,13 +77,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     return (
         <div>
-            {selectedClub && clubIndex != null && (
+            {selectedClub && clubIndex !== null && (
                 <CustomPopup
-                    clubIndex={
-                        (((clubIndex + 1) as unknown as string) +
-                            '/' +
-                            clubs.length) as string
-                    }
+                    clubIndex={`${clubIndex + 1}/${clubs.length}`}
                     club={selectedClub}
                     onClose={() => setSelectedClub(null)}
                     switchNextClub={() => {
@@ -124,7 +120,11 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     zoom={zoom}
                     zoomControl={false}
                     style={{ height: '100%', width: '100%' }}
-                    ref={setMap}
+                    ref={(mapInstance) => {
+                        if (mapInstance) {
+                            setMap(mapInstance);
+                        }
+                    }}
                 >
                     <ZoomControl position="bottomright" />
                     <TileLayer
@@ -133,14 +133,17 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     />
                     {clubs.map((club, index) => (
                         <CustomMarker
+                            key={club.slug}
                             index={index}
                             location={club.geoLocation}
                             customIcon={
-                                selectedClub && club.slug == selectedClub.slug
+                                selectedClub && club.slug === selectedClub.slug
                                     ? selectedIcon
                                     : customIcon
                             }
                             clickedOnMarker={() => {
+                                setSelectedClub(club); // Explicitly set the selected club
+                                setClubIndex(index); // Explicitly set the club index
                                 jumpToMarker(
                                     map,
                                     mainMapRef,

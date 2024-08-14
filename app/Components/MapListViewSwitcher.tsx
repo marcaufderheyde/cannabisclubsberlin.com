@@ -9,7 +9,6 @@ type Props = {
 
 function MapListViewSwitcher({ showMap, setShowMap }: Props) {
     const t = useTranslations('ClubsPage');
-    const localActive = useLocale();
 
     const mapButtonBackground = showMap
         ? 'bg-white text-black'
@@ -21,7 +20,7 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
         ? 'absolute top-[var(--navbar-height)] right-0'
         : 'relative';
     return (
-        <div className='w-[100vw] flex align-middle justify-end'>
+        <div className="w-[100vw] flex align-middle justify-end">
             <div
                 className={
                     'inline-flex ' +
@@ -29,7 +28,10 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
                     ' z-[998] lg:m-8 lg:ml-20 m-4 rounded-3xl shadow-md'
                 }
             >
-                <div className={'z-[999] rounded-l-3xl ' + mapButtonBackground}>
+                <div
+                    aria-label="show map"
+                    className={'z-[999] rounded-l-3xl ' + mapButtonBackground}
+                >
                     <button
                         onClick={() => setShowMap(true)}
                         className={
@@ -40,6 +42,7 @@ function MapListViewSwitcher({ showMap, setShowMap }: Props) {
                     </button>
                 </div>
                 <div
+                    aria-label="show list"
                     className={'z-[999] rounded-r-3xl ' + listButtonBackground}
                 >
                     <button

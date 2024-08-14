@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from '.ClubCard.module.css';
+import styles from './ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import ArrowButton from '../ui/Home/arrowbutton';

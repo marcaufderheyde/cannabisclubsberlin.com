@@ -36,7 +36,7 @@ export default function ActionButton({
     ) : (
         <a
             href={href}
-            target='_blank'
+            target="_blank"
             className={
                 className +
                 ' py-2 px-4 md:py-3 md:px-7 flex flex-row justify-center rounded-3xl cursor-pointer items-center gap-3'

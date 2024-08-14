@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import L from 'leaflet';
 import { useLocale, useTranslations } from 'next-intl';
-import styles from '@/app/styles/ClubCard.module.css';
+import styles from './ClubCard.module.css';
 import Image from 'next/image';
 import { Club } from '@/app/helpers/clubsListContent';
 

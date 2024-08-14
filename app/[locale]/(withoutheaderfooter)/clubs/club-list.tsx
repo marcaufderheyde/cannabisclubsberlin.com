@@ -1,6 +1,6 @@
 'use client';
 import { useLocale, useTranslations } from 'next-intl';
-import styles from '@/app/styles/ClubCard.module.css';
+import styles from '@/app/Components/ClubCard.module.css';
 
 import Image from 'next/image';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';

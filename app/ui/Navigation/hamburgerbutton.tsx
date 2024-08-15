@@ -13,8 +13,9 @@ export default function HamburgerButton({
 
     return (
         <div
+            aria-label="hamburger button"
             onClick={() => showOverlay()}
-            className='py-3 px-3 backdrop-blur-xl rounded-[2rem] bg-[rgba(255,255,255,0.11)]'
+            className="py-3 px-3 backdrop-blur-xl rounded-[2rem] bg-[rgba(255,255,255,0.11)]"
         >
             <Burger
                 color={

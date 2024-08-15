@@ -1,9 +1,9 @@
 'use client';
 
-import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import HamburgerButton from '@/app/ui/Navigation/hamburgerbutton';
 import OverlayNav from '@/app/ui/Navigation/overlaynav';
 import { useState } from 'react';
+import { LinkInfo } from './links';
 
 export default function MobileNav({ links }: { links: Array<LinkInfo> }) {
     const [showOverlay, setShowOverlay] = useState(false);

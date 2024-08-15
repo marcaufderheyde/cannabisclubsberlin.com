@@ -1,7 +1,14 @@
 import Link from 'next/link';
-import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import { usePathname } from 'next/navigation';
 import isPathNameHome from '@/app/helpers/isPathnameHome';
+
+import { Url } from 'next/dist/shared/lib/router/router';
+import { Key } from 'react';
+
+export interface LinkInfo {
+    name: Key | null | undefined;
+    href: Url;
+}
 
 export default function Links({ links }: { links: Array<LinkInfo> }) {
     const pathname = usePathname();

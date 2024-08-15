@@ -1,14 +1,11 @@
 'use client';
 import Logo from '@/app/ui/Navigation/logo';
-import Links from '@/app/ui/Navigation/links';
+import Links, { LinkInfo } from '@/app/ui/Navigation/links';
 import TranslationSwitch from './translation-switch';
 import { useLocale, useTranslations } from 'next-intl';
-import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import MobileNav from '@/app/ui/Navigation/mobilenav';
 import { usePathname } from 'next/navigation';
 import isPathNameHome from '@/app/helpers/isPathnameHome';
-import { useState } from 'react';
-import { Club } from '@/app/helpers/clubsListContent';
 
 type Props = {
     isOnMap: boolean;
@@ -40,6 +37,7 @@ export default function Navbar({ isOnMap = false }: Props) {
 
     return (
         <div
+            role="banner"
             className={
                 fontColor +
                 ' absolute top-0 left-0 ' +
@@ -54,11 +52,11 @@ export default function Navbar({ isOnMap = false }: Props) {
                 }
             >
                 <Logo />
-                <div className='hidden lg:flex lg:flex-row items-center w-full justify-between gap-6'>
+                <div className="hidden lg:flex lg:flex-row items-center w-full justify-between gap-6">
                     <Links links={links} />
                     <TranslationSwitch />
                 </div>
-                <div className='flex flex-row items-center w-full justify-end lg:hidden'>
+                <div className="flex flex-row items-center w-full justify-end lg:hidden">
                     <MobileNav links={links} />
                 </div>
             </div>

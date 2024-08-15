@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import LinkInfo from '@/app/ui/Navigation/linkinfo';
 import Logo from '@/app/ui/Navigation/logo';
 import Close from '@/app/ui/Navigation/close';
 import LocalSwitcher from './translation-switch';
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { LinkInfo } from './links';
 import usePrevious from '@/app/Helpers/usePrevious';
 import usePreventScrolling from '@/app/Helpers/usePreventScrolling';
 

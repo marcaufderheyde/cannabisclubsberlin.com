@@ -4,8 +4,8 @@ import '@testing-library/jest-dom';
 import Navbar from './navbar';
 import { usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import isPathNameHome from '@/app/Helpers/isPathnameHome';
 import { LinkInfo } from './links';
+import isPathNameHome from '@/app/Helpers/isPathnameHome';
 
 // Mock the necessary hooks and components
 jest.mock('next/navigation', () => ({
@@ -17,7 +17,7 @@ jest.mock('next-intl', () => ({
     useTranslations: jest.fn(() => (key: string) => key),
 }));
 
-jest.mock('@/app/helpers/isPathnameHome', () => jest.fn());
+jest.mock('@/app/Helpers/isPathnameHome', () => jest.fn());
 
 jest.mock('@/app/ui/Navigation/logo', () => ({
     __esModule: true,

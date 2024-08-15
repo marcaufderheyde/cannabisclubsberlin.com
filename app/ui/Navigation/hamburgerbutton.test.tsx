@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import HamburgerButton from './hamburgerbutton';
-import isPathnameHome from '@/app/Helpers/isPathnameHome';
 import { usePathname } from 'next/navigation';
+import isPathnameHome from '@/app/Helpers/isPathnameHome';
 
 // Mock Burger component
 jest.mock('@/app/ui/Navigation/burger', () => {
@@ -22,7 +22,7 @@ jest.mock('next/navigation', () => ({
 }));
 
 // Mock isPathnameHome function
-jest.mock('@/app/helpers/isPathnameHome', () => jest.fn());
+jest.mock('@/app/Helpers/isPathnameHome', () => jest.fn());
 
 describe('HamburgerButton Component', () => {
     it('renders Burger with the correct color when pathname is home', () => {

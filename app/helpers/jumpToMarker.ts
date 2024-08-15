@@ -1,6 +1,6 @@
-import offsetMapCenter from '@/app/Helpers/offsetMapCenter';
 import { Map } from 'leaflet';
 import { Club } from '../Components/OpenStreetMap';
+import offsetMapCenter from './offsetMapCenter';
 
 /*
 This function and offsetMapCenter.tsx were created using a combination of:

@@ -4,11 +4,11 @@ import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import L, { Map } from 'leaflet';
-import { pullClubsListContent } from '@/app/Helpers/clubsListContent';
 import { useTranslations } from 'next-intl';
 import styles from './ClubCard.module.css';
 import CustomPopup from './CustomPopup'; // Import the custom popup component
 import CustomMarker from './CustomMarker';
+import { pullClubsListContent } from '../Helpers/clubsListContent';
 import jumpToMarker from '../Helpers/jumpToMarker';
 
 export type Club = {

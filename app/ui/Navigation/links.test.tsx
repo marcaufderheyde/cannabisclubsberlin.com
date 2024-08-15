@@ -11,7 +11,7 @@ jest.mock('next/navigation', () => ({
 }));
 
 // Mock the isPathNameHome function
-jest.mock('@/app/helpers/isPathnameHome', () => jest.fn());
+jest.mock('@/app/Helpers/isPathnameHome', () => jest.fn());
 
 describe('Links Component', () => {
     const mockLinks = [

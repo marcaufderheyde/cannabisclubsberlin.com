@@ -44,7 +44,9 @@ jest.mock('@/app/ui/Navigation/mobilenav', () => ({
         return React.createElement(
             'div',
             { 'data-testid': 'mobile-nav' },
-            links.map((link) => link.name).join(', ')
+            links.map((link) =>
+                React.createElement('span', { key: link.name }, link.name)
+            )
         );
     },
 }));
@@ -56,7 +58,9 @@ jest.mock('@/app/ui/Navigation/links', () => ({
         return React.createElement(
             'div',
             { 'data-testid': 'links' },
-            links.map((link) => link.name).join(', ')
+            links.map((link) =>
+                React.createElement('span', { key: link.name }, link.name)
+            )
         );
     },
 }));
@@ -82,36 +86,18 @@ describe('Navbar Component', () => {
         expect(translationSwitchElement).toBeInTheDocument();
         expect(mobileNavElement).toBeInTheDocument();
 
-        // Instead of using getByText, you can use a function to match the exact text content
-        expect(
-            screen.getByText((content, element) => {
-                return element?.textContent === 'clubs_title';
-            })
-        ).toBeInTheDocument();
-
-        expect(
-            screen.getByText((content, element) => {
-                return element?.textContent === 'harm_reduction_title';
-            })
-        ).toBeInTheDocument();
-
-        expect(
-            screen.getByText((content, element) => {
-                return element?.textContent === 'law_title';
-            })
-        ).toBeInTheDocument();
-
-        expect(
-            screen.getByText((content, element) => {
-                return element?.textContent === 'contact_title';
-            })
-        ).toBeInTheDocument();
-
-        expect(
-            screen.getByText((content, element) => {
-                return element?.textContent === 'about_title';
-            })
-        ).toBeInTheDocument();
+        // Use getAllByText to find all occurrences of each link text
+        const linkTexts = [
+            'clubs_title',
+            'harm_reduction_title',
+            'law_title',
+            'contact_title',
+            'about_title',
+        ];
+        linkTexts.forEach((text) => {
+            const elements = screen.getAllByText(text);
+            expect(elements.length).toBeGreaterThan(0);
+        });
 
         const navbarElement = screen.getByRole('banner');
         expect(navbarElement).toHaveClass('text-white');

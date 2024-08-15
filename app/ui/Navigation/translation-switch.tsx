@@ -25,13 +25,14 @@ export default function LocalSwitcher() {
     };
 
     const createPageURL = (locale: string) => {
-        if (searchParams !== null && pathname !== null) {
-            const params = new URLSearchParams(searchParams);
+        if (pathname !== null) {
             const pathnameWithoutCurrentLocale =
                 removeFirstDirectoryFromPathname(pathname);
-            return `/${locale}${pathnameWithoutCurrentLocale}?${params.toString()}`;
+            const params = searchParams?.toString();
+            const url = `/${locale}${pathnameWithoutCurrentLocale}`;
+            return params ? `${url}?${params}` : url;
         }
-        return '';
+        return `/${locale}`;
     };
 
     const changeLocaleDesktop = (nextLocale: string) => {

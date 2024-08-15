@@ -1,4 +1,4 @@
-import offsetMapCenter from '@/app/helpers/offsetMapCenter';
+import offsetMapCenter from '@/app/Helpers/offsetMapCenter';
 import { Map } from 'leaflet';
 import { Club } from '../Components/OpenStreetMap';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Background from './background';
-import useWindowSize from '@/app/helpers/useWindowSize';
+import useWindowSize from '@/app/Helpers/useWindowSize';
 
 jest.mock('@/app/helpers/useWindowSize');
 

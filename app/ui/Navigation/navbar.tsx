@@ -5,7 +5,7 @@ import TranslationSwitch from './translation-switch';
 import { useLocale, useTranslations } from 'next-intl';
 import MobileNav from '@/app/ui/Navigation/mobilenav';
 import { usePathname } from 'next/navigation';
-import isPathNameHome from '@/app/helpers/isPathnameHome';
+import isPathNameHome from '@/app/Helpers/isPathnameHome';
 
 type Props = {
     isOnMap: boolean;

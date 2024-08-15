@@ -7,7 +7,7 @@ import L from 'leaflet';
 import { useLocale, useTranslations } from 'next-intl';
 import styles from './ClubCard.module.css';
 import Image from 'next/image';
-import { Club } from '@/app/helpers/clubsListContent';
+import { Club } from '@/app/Helpers/clubsListContent';
 
 const customIcon = L.icon({
     iconUrl: '/leaf-weed.png',

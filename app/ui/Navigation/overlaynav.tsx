@@ -7,8 +7,8 @@ import Close from '@/app/ui/Navigation/close';
 import LocalSwitcher from './translation-switch';
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import usePrevious from '@/app/helpers/usePrevious';
-import usePreventScrolling from '@/app/helpers/usePreventScrolling';
+import usePrevious from '@/app/Helpers/usePrevious';
+import usePreventScrolling from '@/app/Helpers/usePreventScrolling';
 
 export default function OverlayNav({
     closeOverlay,

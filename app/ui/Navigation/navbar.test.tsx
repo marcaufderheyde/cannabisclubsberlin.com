@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import Navbar from './navbar';
 import { usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import isPathNameHome from '@/app/helpers/isPathnameHome';
+import isPathNameHome from '@/app/Helpers/isPathnameHome';
 import { LinkInfo } from './links';
 
 // Mock the necessary hooks and components

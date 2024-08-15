@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import isPathNameHome from '@/app/helpers/isPathnameHome';
+import isPathNameHome from '@/app/Helpers/isPathnameHome';
 
 import { Url } from 'next/dist/shared/lib/router/router';
 import { Key } from 'react';

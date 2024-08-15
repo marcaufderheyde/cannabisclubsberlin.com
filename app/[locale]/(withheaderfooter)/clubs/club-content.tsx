@@ -1,7 +1,7 @@
 'use client';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { pullClubsListContent } from '@/app/helpers/clubsListContent';
+import { pullClubsListContent } from '@/app/Helpers/clubsListContent';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import ActionButton from '@/app/ui/Home/actionbutton';

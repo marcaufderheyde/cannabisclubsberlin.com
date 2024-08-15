@@ -1,5 +1,5 @@
 import Burger from '@/app/ui/Navigation/burger';
-import isPathnameHome from '@/app/helpers/isPathnameHome';
+import isPathnameHome from '@/app/Helpers/isPathnameHome';
 import { usePathname } from 'next/navigation';
 
 export default function HamburgerButton({

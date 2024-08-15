@@ -1,6 +1,6 @@
 import { Map } from 'leaflet';
 import jumpToMarker from './jumpToMarker';
-import offsetMapCenter from '@/app/helpers/offsetMapCenter';
+import offsetMapCenter from '@/app/Helpers/offsetMapCenter';
 import { Club } from '../Components/OpenStreetMap';
 
 jest.mock('@/app/helpers/offsetMapCenter');

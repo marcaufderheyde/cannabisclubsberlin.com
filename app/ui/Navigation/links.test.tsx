@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Links from './links';
 import { usePathname } from 'next/navigation';
-import isPathNameHome from '@/app/helpers/isPathnameHome';
+import isPathNameHome from '@/app/Helpers/isPathnameHome';
 
 // Mock the usePathname hook
 jest.mock('next/navigation', () => ({

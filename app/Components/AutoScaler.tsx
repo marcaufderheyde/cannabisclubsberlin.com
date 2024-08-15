@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
-import useWindowSize from '../helpers/useWindowSize';
-import ClassNameMatcher from '../helpers/ClassNameMatcher';
+import useWindowSize from '../Helpers/useWindowSize';
+import ClassNameMatcher from '../Helpers/ClassNameMatcher';
 
 export default function AutoScaler({
     children,

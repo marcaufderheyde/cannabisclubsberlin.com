@@ -1,6 +1,6 @@
 'use client';
 
-import useWindowSize from '@/app/helpers/useWindowSize';
+import useWindowSize from '@/app/Helpers/useWindowSize';
 import React, { useRef, useEffect } from 'react';
 
 export default function Background() {
@@ -43,7 +43,7 @@ export default function Background() {
     }, [windowSize]);
 
     return (
-        <div className='absolute top-0 left-0 w-full overflow-hidden z-[-1]'>
+        <div className="absolute top-0 left-0 w-full overflow-hidden z-[-1]">
             <canvas
                 ref={canvasRef}
                 width={windowSize.width}

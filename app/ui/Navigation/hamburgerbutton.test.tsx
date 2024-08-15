@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import HamburgerButton from './hamburgerbutton';
-import isPathnameHome from '@/app/helpers/isPathnameHome';
+import isPathnameHome from '@/app/Helpers/isPathnameHome';
 import { usePathname } from 'next/navigation';
 
 // Mock Burger component

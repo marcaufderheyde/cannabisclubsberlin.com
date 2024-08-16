@@ -1,10 +1,8 @@
-'use client';
-
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Logo from '@/app/ui/Navigation/logo';
 import Close from '@/app/ui/Navigation/close';
 import LocalSwitcher from './translation-switch';
-import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { LinkInfo } from './links';
 import usePrevious from '@/app/Helpers/usePrevious';
@@ -14,12 +12,14 @@ export default function OverlayNav({
     closeOverlay,
     links,
 }: {
-    closeOverlay: Function;
+    closeOverlay: () => void;
     links: Array<LinkInfo>;
 }) {
     const pathname = usePathname();
-    let prevPathnameRef = usePrevious(pathname);
-    const preventScroll = usePreventScrolling();
+    const prevPathnameRef = usePrevious(pathname);
+    const [shouldClose, setShouldClose] = useState(false);
+
+    usePreventScrolling();
 
     useEffect(() => {
         const prevPathname = prevPathnameRef as string;
@@ -28,25 +28,50 @@ export default function OverlayNav({
             pathname !== null &&
             prevPathname !== pathname
         ) {
-            closeOverlay();
-            prevPathnameRef = pathname;
+            setShouldClose(true);
         }
-    }, [pathname]);
+
+        return () => {
+            setShouldClose(false);
+        };
+    }, [pathname, prevPathnameRef]);
+
+    useEffect(() => {
+        const prevPathname = prevPathnameRef as string;
+        if (
+            shouldClose &&
+            prevPathname !== null &&
+            pathname !== null &&
+            prevPathname !== pathname
+        ) {
+            closeOverlay();
+        }
+    }, [shouldClose, closeOverlay]);
+
+    const handleClick = useCallback(
+        (e: React.MouseEvent, href?: string) => {
+            e.stopPropagation();
+            if (href && pathname !== href) {
+                setShouldClose(true);
+            }
+        },
+        [pathname]
+    );
 
     return (
-        <div className="fixed bg-[rgba(255,255,255,0.30)] z-10 min-w-full min-h-full backdrop-blur-md top-0 left-0 flex flex-col justify-start items-center">
+        <div
+            className="fixed bg-[rgba(255,255,255,0.30)] z-10 min-w-full min-h-full backdrop-blur-md top-0 left-0 flex flex-col justify-start items-center"
+            onClick={() => closeOverlay()}
+        >
             <div
-                onClick={(e) => {
-                    e.stopPropagation(); // Stop the click event from propagating to parent
-                }}
                 className="bg-white rounded-[2rem] flex flex-col z-20 w-[90%] my-3 py-8 px-8 shadow-md"
+                onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex flex-row justify-between items-center text-[#B6CF54]">
-                    <Logo onClick={closeOverlay} />
+                    <Logo onClick={() => closeOverlay()} />
                     <div
                         data-testid="close-button"
-                        //onClick={() => closeOverlay()}
-                        onClick={(e) => e.stopPropagation()}
+                        onClick={handleClick}
                         className="px-4"
                     >
                         <Close color={'#828282'} />
@@ -57,22 +82,10 @@ export default function OverlayNav({
                         <Link
                             key={'mobile_' + link.name}
                             href={link.href}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                if (
-                                    !(pathname as string).includes(
-                                        link.href as string
-                                    )
-                                ) {
-                                    closeOverlay();
-                                } else {
-                                    e.stopPropagation();
-                                    e.preventDefault();
-                                }
-                            }}
+                            onClick={(e) => handleClick(e, link.href as string)}
                             className="min-w-full py-2"
                         >
-                            {link.name as String}
+                            {link.name as string}
                         </Link>
                     ))}
                 </div>

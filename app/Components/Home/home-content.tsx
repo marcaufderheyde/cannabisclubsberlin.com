@@ -1,5 +1,5 @@
 'use client';
-import Headline from '@/app/components/Home/headline';
+import Headline from '@/app/components/Home/Headline';
 import ActionButton from '@/app/components/ActionButton/ActionButton';
 import { useLocale, useTranslations } from 'next-intl';
 

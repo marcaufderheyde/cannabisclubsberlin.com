@@ -7,7 +7,7 @@ import {
 } from 'next-intl';
 import { Inter } from 'next/font/google';
 import '@/app/globals.css';
-import Footer from '../../components/Footer/footer';
+import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import CookieBanner from '../../components/CookieBanner/CookieBanner';
 import 'leaflet/dist/leaflet.css';

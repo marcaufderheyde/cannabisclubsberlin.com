@@ -76,9 +76,12 @@ The project is organized as follows, please note this structure is in draft and 
 │   │        │  ├── page.tsx
 │   │        ├── clubs
 │   ├── components
-│   │   ├── ActionButton
-│   │        ├── ActionButton.test.tsx
-│   │        ├── ActionButton.test.tsx
+│   │   ├── AutoScaler
+│   │        ├── helpers
+│   │        │  ├── classNameMatcher.tsx
+│   │        │  ├── classNameMatcher.test.tsx
+│   │        ├── AutoScaler.test.tsx
+│   │        ├── AutoScaler.test.tsx
 │   ├── helpers
 │   │   ├── clubsListContent.test.ts
 │   │   ├── clubsListContent.ts
@@ -90,14 +93,38 @@ The project is organized as follows, please note this structure is in draft and 
 │   ├── en.json
 ├── public
 │   ├── images
-│   └──
+├── scripts
+│   ├── pre-push
+├── .eslintrc.json
+├── .gitignore
+├── .gitmessage
+├── CNAME
+├── generate-sitemap.mjs
+├── i18n.ts
+├── jest.config.js
+├── jest.setup.js
+├── next-sitemap.config.js
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── robots.txt
+├── tailwind.config.ts
+├── tsconfig.jest.json
+├── tsconfig.json
+├── .github/workflows
+├── __mocks__
+│   ├── next-intl.js
 └── 
 ```
 
 - **[locale]/(withheaderfooter)** Pages and their content.
 - **[locale]/(withoutheaderfooter)** Pages and their content without header and footer, for map pages.
 - **app/components:** Reusable components used throughout the application.
-- **app/helpers:** Utility functions and helpers.
+- **app/components/[ComponentName]:** Reusable components used throughout the application, specific to the component, ComponentName (i.e., they are only used by the main component with name ComponentName).
+- **app/components/[ComponentName]/helpers:** Helpers specific to ComponentName, not used by other components.
+- **app/helpers:** Utility functions and helpers used by multiple components.
 - **public:** Static assets like images, fonts, etc.
 
 ## Coding Conventions
@@ -126,6 +153,9 @@ To maintain consistency across the project, we follow these coding conventions:
    - Use Jest and React Testing Library for testing.
    - Mock dependencies and APIs in tests.
    - Place test files alongside the components/helpers they test, with a `.test.tsx` or `.test.ts` extension.
+
+### 5. **Git Commit Messages:**
+- Follow .gitmessage found in the root directory.
 
 ## Contributing
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Headline from './headline';
+import Headline from './Headline';
 import { useTranslations } from 'next-intl';
 
 jest.mock('next-intl', () => ({

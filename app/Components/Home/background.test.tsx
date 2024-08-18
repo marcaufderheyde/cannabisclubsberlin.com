@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Background from './background';
+import Background from './Background';
 import useWindowSize from '@/app/helpers/useWindowSize';
 
 jest.mock('@/app/helpers/useWindowSize');

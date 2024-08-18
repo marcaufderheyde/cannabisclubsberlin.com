@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import styles from '@/app/Components/ClubCard.module.css';
 
 import Image from 'next/image';
-import { pullClubsListContent } from '@/app/Helpers/clubsListContent';
+import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 
 const clubs = pullClubsListContent();
 

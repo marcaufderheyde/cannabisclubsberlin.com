@@ -7,12 +7,12 @@ import {
 } from 'next-intl';
 import { Inter } from 'next/font/google';
 import '@/app/globals.css';
-import Footer from '../../ui/Footer/footer';
-import Navbar from '../../ui/Navigation/navbar';
-import CookieBanner from '../../Components/CookieBanner';
+import Footer from '../../components/Footer/footer';
+import Navbar from '../../components/Navbar/Navbar';
+import CookieBanner from '../../components/CookieBanner/CookieBanner';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import AgeVerification from '../../Components/AgeVerification';
+import AgeVerification from '../../components/AgeVerification/AgeVerification';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';

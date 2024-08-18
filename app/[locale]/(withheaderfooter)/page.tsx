@@ -1,14 +1,13 @@
 'use client';
-import CookieBanner from '../../Components/CookieBanner';
-import Content from '../../ui/Home/content';
-import Background from '../../ui/Home/background';
+import HomeContent from '../../components/Home/home-content';
+import Background from '../../components/Home/background';
 
 export default function IndexPage() {
     return (
         <>
             <Background />
-            <div className='flex flex-col md:flex-row w-full justify-center md:justify-between items-center'>
-                <Content />
+            <div className="flex flex-col md:flex-row w-full justify-center md:justify-between items-center">
+                <HomeContent />
             </div>
         </>
     );

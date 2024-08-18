@@ -3,12 +3,12 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import ActionButton from '@/app/ui/Home/actionbutton';
-import { pullClubsListContent } from '@/app/Helpers/clubsListContent';
+import ActionButton from '@/app/components/ActionButton/ActionButton';
+import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 
 export default function ClubContent() {
     const ClubOpenStreetMap = dynamic(
-        () => import('@/app/Components/ClubOpenStreetMap'),
+        () => import('@/app/components/OpenStreetMap/ClubOpenStreetMap'),
         {
             ssr: false,
         }

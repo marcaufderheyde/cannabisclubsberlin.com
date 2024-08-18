@@ -3,13 +3,13 @@ import { useLocale, useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import ClubsList from './club-list';
-import Navbar from '@/app/ui/Navigation/navbar';
-import MapListViewSwitcher from '@/app/Components/MapListViewSwitcher';
+import Navbar from '@/app/components/Navbar/Navbar';
+import MapListViewSwitcher from '@/app/components/MapListViewSwitcher/MapListViewSwitcher';
 
 export default function ClubsContent() {
     //unstable_setRequestLocale(locale);
     const OpenStreetMap = dynamic(
-        () => import('@/app/Components/OpenStreetMap'),
+        () => import('@/app/components/OpenStreetMap/OpenStreetMap'),
         {
             ssr: false,
         }

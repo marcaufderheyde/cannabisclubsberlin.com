@@ -127,20 +127,20 @@ export default function SwipeableClubCard({
                     'overscroll-contained absolute bg-white w-[250px] h-[450px] bottom-0 rounded-[3em] shadow-lg z-1 pointer-events-auto'
                 }
             >
-                <div className="relative overscroll-contained">
-                    <div className="relative overscroll-contained">
+                <div className='relative overscroll-contained'>
+                    <div className='relative overscroll-contained'>
                         <Image
                             src={club.imageUrl}
                             alt={`${club.name} Club Picture`}
                             width={300}
                             height={300}
-                            className="absolute top-[-20px] h-[100px] object-contain p-[5px] rounded-[8px]"
+                            className='absolute top-[-20px] h-[100px] object-contain p-[5px] rounded-[8px]'
                         />
                     </div>
-                    <div className="absolute top-[80px] max-h-[calc(100%-80px)]">
+                    <div className='absolute top-[80px] max-h-[calc(100%-80px)] w-full'>
                         <h1
                             className={
-                                'text-black font-bold md:text-[4rem] text-center m-2'
+                                'text-black font-bold md:text-[1.5rem] lg:text-[4rem] text-center m-2'
                             }
                             onClick={handleExpandToClubPage}
                         >

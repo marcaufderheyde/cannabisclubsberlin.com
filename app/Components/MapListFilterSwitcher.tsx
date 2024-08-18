@@ -8,7 +8,7 @@ type Props = {
     setShowHRFilter: Dispatch<SetStateAction<boolean>>;
 };
 
-function MapLIstFilterSwitcher({
+function MapListFilterSwitcher({
     setShowHRFilter: setShowHRInfo,
     showMap,
     showHRFilter,
@@ -27,7 +27,7 @@ function MapLIstFilterSwitcher({
         : 'relative top-[var(--navbar-height)]';
 
     return (
-        <div className="w-[100vw] flex align-middle justify-left">
+        <div className='w-[100vw] flex align-middle justify-left'>
             <div
                 className={
                     'inline-flex ' +
@@ -62,4 +62,4 @@ function MapLIstFilterSwitcher({
     );
 }
 
-export default MapLIstFilterSwitcher;
+export default MapListFilterSwitcher;

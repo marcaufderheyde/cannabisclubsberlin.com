@@ -13,9 +13,6 @@ html, body {
   margin: 0;
   overflow-x: hidden;
   overscroll-behavior-y: contain;
-  height: 100vh; /* fallback for Js load */
-  /* height: var(--doc-height); */
-  height: calc(var(--vh, 1vh) * 100);
 }
 
 .dynamic-height {

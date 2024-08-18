@@ -15,6 +15,10 @@ html, body {
   overscroll-behavior-y: contain;
 }
 
+body {
+  height: 100%;
+}
+
 .dynamic-height {
   height: calc(100% - var(--navbar-height));
 }

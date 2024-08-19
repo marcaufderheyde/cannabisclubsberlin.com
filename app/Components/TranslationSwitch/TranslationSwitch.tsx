@@ -4,14 +4,7 @@ import DropdownContent from '@/app/components/TranslationSwitch/DropdownContent'
 import DropdownTrigger from '@/app/components/TranslationSwitch/DropdownTrigger';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import {
-    ChangeEvent,
-    forwardRef,
-    useEffect,
-    useRef,
-    useState,
-    useTransition,
-} from 'react';
+import { ChangeEvent, useEffect, useRef, useState, useTransition } from 'react';
 
 export default function LocalSwitcher() {
     const [isPending, startTransition] = useTransition();

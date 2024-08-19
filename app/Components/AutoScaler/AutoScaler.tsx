@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode, useEffect, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import useWindowSize from '@/app/helpers/useWindowSize';
 import ClassNameMatcher from './helpers/classNameMatcher';
 

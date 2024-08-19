@@ -13,10 +13,8 @@ describe('GradientText Component', () => {
             </GradientText>
         );
 
-        // Check if the text is rendered
         expect(screen.getByText(text)).toBeInTheDocument();
 
-        // Check if the gradient background is applied by finding the child with the class name
         const gradientElement = screen.getByText(text)
             .nextSibling as HTMLElement;
         expect(gradientElement).toBeInTheDocument();
@@ -45,7 +43,6 @@ describe('GradientText Component', () => {
             </GradientText>
         );
 
-        // Check if the custom class is applied to the wrapper div
         const wrapperDiv = screen.getByText('Test Text').parentElement
             ?.parentElement as HTMLElement;
         expect(wrapperDiv).toHaveClass(customClass);

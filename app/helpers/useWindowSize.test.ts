@@ -3,7 +3,6 @@ import useWindowSize from './useWindowSize';
 
 describe('useWindowSize Hook', () => {
     beforeEach(() => {
-        // Mock the window.outerWidth/outerHeight
         Object.defineProperty(window, 'outerWidth', {
             writable: true,
             configurable: true,
@@ -27,11 +26,9 @@ describe('useWindowSize Hook', () => {
         const { result } = renderHook(() => useWindowSize());
 
         act(() => {
-            // Update the window size
             window.outerWidth = 800;
             window.outerHeight = 600;
 
-            // Trigger the resize event
             window.dispatchEvent(new Event('resize'));
         });
 

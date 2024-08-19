@@ -7,7 +7,6 @@ import { useLocale, useTranslations } from 'next-intl';
 import { LinkInfo } from './Links';
 import isPathNameHome from '@/app/helpers/isPathnameHome';
 
-// Mock the necessary hooks and components
 jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),
 }));
@@ -86,7 +85,6 @@ describe('Navbar Component', () => {
         expect(translationSwitchElement).toBeInTheDocument();
         expect(mobileNavElement).toBeInTheDocument();
 
-        // Use getAllByText to find all occurrences of each link text
         const linkTexts = [
             'clubs_title',
             'harm_reduction_title',

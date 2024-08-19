@@ -15,7 +15,6 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
         'text-[#E3E71F] font-bold text-xl group transition duration-300';
     const defaultLinkStyling =
         'font-normal text-xl group transition duration-300';
-    // @ts-ignore
     const isHomePage = isPathNameHome(pathname);
 
     return (

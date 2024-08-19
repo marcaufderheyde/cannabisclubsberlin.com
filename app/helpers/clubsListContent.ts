@@ -15,32 +15,27 @@ export type Club = {
     address: string;
 };
 
-// Function to generate slugs
-// Probably can just make the key the slug...?
 export function generateSlug(name: string): string {
-    // Replace commas and periods, trim leading/trailing spaces, and replace multiple spaces with a single hyphen
     const slug: string = name
         .replace(/,/g, '')
         .replace(/\./g, '')
-        .trim() // Trim leading and trailing spaces
-        .replace(/\s+/g, '-') // Replace multiple spaces with a single hyphen
+        .trim() 
+        .replace(/\s+/g, '-') 
         .toLowerCase()
         .replace(/ä/g, 'ae')
         .replace(/ö/g, 'oe')
         .replace(/ü/g, 'ue')
         .replace(/ß/g, 'ss')
-        .replace(/[^a-z0-9-]/g, ''); // Remove all other non-alphanumeric characters except hyphens
+        .replace(/[^a-z0-9-]/g, ''); 
 
     return slug;
 }
 
 const geoLocationsCount: any = {};
 
-// Add slugs to the clubs
 clubs.forEach((club) => {
     if (club.slug === '') club.slug = generateSlug(club.name);
     const geoLocationsKey = JSON.stringify(club.geoLocation);
-    // Used for debugging geolocation data
     if(!geoLocationsCount[geoLocationsKey]) {
         geoLocationsCount[geoLocationsKey] = {"clubs" : [club.name], "count" : 1}
     } else {
@@ -49,8 +44,7 @@ clubs.forEach((club) => {
     }
 });
 
-// Used for debugging geolocation data
-//console.log(geoLocationsCount);
+
 
 
 export function pullClubsListContent(): Club[] {

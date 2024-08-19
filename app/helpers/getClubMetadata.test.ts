@@ -1,14 +1,11 @@
-// getClubMetadata.test.ts
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 import { getTranslations } from 'next-intl/server';
 import { getClubMetadata } from './getClubMetadata';
 
-// Mock the dependencies
 jest.mock('@/app/helpers/clubsListContent');
 jest.mock('next-intl/server');
 
 describe('getClubMetadata', () => {
-  // Mock data
   const mockClub = {
     slug: 'test-club',
     description: 'Test club description',
@@ -24,10 +21,8 @@ describe('getClubMetadata', () => {
   };
 
   beforeEach(() => {
-    // Reset mocks before each test
     jest.resetAllMocks();
 
-    // Set up mock implementations
     (pullClubsListContent as jest.Mock).mockReturnValue([mockClub]);
     (getTranslations as jest.Mock).mockResolvedValue((key: string) => {
       return mockTranslations[key as keyof typeof mockTranslations] || key;

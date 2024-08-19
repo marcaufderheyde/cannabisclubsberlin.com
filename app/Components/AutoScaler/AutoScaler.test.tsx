@@ -3,13 +3,11 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AutoScaler from './AutoScaler';
 
-// Mocking the useWindowSize hook
 jest.mock('@/app/helpers/useWindowSize', () => ({
     __esModule: true,
     default: jest.fn(() => ({ width: 800, height: 600 })),
 }));
 
-// Mocking the ClassNameMatcher helper
 jest.mock('./helpers/ClassNameMatcher', () => ({
     __esModule: true,
     default: {

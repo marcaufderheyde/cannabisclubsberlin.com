@@ -4,7 +4,6 @@ import '@testing-library/jest-dom';
 import MobileNav from './MobileNav';
 import { LinkInfo } from '../Navbar/Links';
 
-// Mock HamburgerButton component
 jest.mock('@/app/components/MobileNav/Hamburgerbutton', () => {
     const React = require('react');
     return ({ showOverlay }: { showOverlay: () => void }) => {
@@ -15,7 +14,6 @@ jest.mock('@/app/components/MobileNav/Hamburgerbutton', () => {
     };
 });
 
-// Mock OverlayNav component
 jest.mock('@/app/components/OverlayNav/Overlaynav', () => {
     const React = require('react');
     return ({ closeOverlay }: { closeOverlay: () => void }) => {

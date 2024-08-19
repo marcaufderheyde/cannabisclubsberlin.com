@@ -4,7 +4,6 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    /* margin-bottom: auto; */
   }
   
   .card {
@@ -21,11 +20,11 @@
     position: absolute;
     height: 100vh;
     width: 100vw;
-    left: 0; /* Ensure it starts from the very left */
+    left: 0; 
     right: 0;
-    top: 0; /* Ensure it starts from the very top */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
+    top: 0; 
+    margin: 0; 
+    padding: 0; 
     z-index: 900;
   }
   
@@ -39,11 +38,9 @@
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 2%;
-    /* Cover the bottom half of the map */
-    /* display: flex; */
     justify-content: center;
     align-items: center;
-    z-index: 2005; /* Ensure the popup is on top of the map */
+    z-index: 2005;
   }
   
   
@@ -57,7 +54,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    z-index: 2005; /* Ensure the card is on top of everything */
+    z-index: 2005; 
     height: 100%;
   }
   
@@ -116,24 +113,24 @@
   .mapCardOfferings {
     font-size: 1rem;
     color: #666;
-    overflow: hidden; /* Ensures overflow is hidden */
-    text-overflow: ellipsis; /* Adds ellipses at the end of the text */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;    
-    width: 100%; /* Ensure the element takes full width for truncation to apply correctly */
+    width: 100%; 
   }
 
   .mapCardDescription {
     font-size: 1rem;
     color: #666;
     width: 100%;
-    height: 80%; /* Adjust this height to control the vertical space */
-    line-height: 1.5rem; /* Adjust to match font size and desired spacing */
-    overflow: hidden; /* Ensures overflow is hidden */
-    text-overflow: ellipsis; /* Adds ellipses at the end of the text */
+    height: 80%; 
+    line-height: 1.5rem; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     display: -webkit-box;
-    -webkit-line-clamp: 10; /* Number of lines to show */
+    -webkit-line-clamp: 10; 
     -webkit-box-orient: vertical;
   }
 
@@ -143,12 +140,12 @@
       font-size: 1rem;
       color: #666;
       width: 100%;
-      height: 80%; /* Adjust this height to control the vertical space */
-      line-height: 0.8rem; /* Adjust to match font size and desired spacing */
-      overflow: hidden; /* Ensures overflow is hidden */
-      text-overflow: ellipsis; /* Adds ellipses at the end of the text */
+      height: 80%; 
+      line-height: 0.8rem; 
+      overflow: hidden; 
+      text-overflow: ellipsis; 
       display: -webkit-box;
-      -webkit-line-clamp: 5; /* Number of lines to show */
+      -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
     }
     .customPopup {
@@ -167,10 +164,10 @@
 
     .mapCardDescription {
       font-size: 0.8rem;
-      height: 80%; /* Adjust this height to control the vertical space */
-      line-height: 1.5rem; /* Adjust to match font size and desired spacing */
+      height: 80%; 
+      line-height: 1.5rem; 
       display: -webkit-box;
-      -webkit-line-clamp: 5; /* Number of lines to show */
+      -webkit-line-clamp: 5; 
     }
 
     .mapCardOfferings {
@@ -183,12 +180,12 @@
       font-size: 0.8rem;
       color: #666;
       width: 100%;
-      height: 80%; /* Adjust this height to control the vertical space */
-      line-height: 0.8rem; /* Adjust to match font size and desired spacing */
-      overflow: hidden; /* Ensures overflow is hidden */
-      text-overflow: ellipsis; /* Adds ellipses at the end of the text */
+      height: 80%; 
+      line-height: 0.8rem; 
+      overflow: hidden; 
+      text-overflow: ellipsis;
       display: -webkit-box;
-      -webkit-line-clamp: 3; /* Number of lines to show */
+      -webkit-line-clamp: 3; 
       -webkit-box-orient: vertical;
     }
 

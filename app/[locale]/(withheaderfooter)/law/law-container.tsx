@@ -1,5 +1,5 @@
 import GradientText from '@/app/components/GradientText/GradientText';
-import { ComponentType, ReactNode } from 'react';
+import { ComponentType } from 'react';
 
 export default function LawContainer({
     title,

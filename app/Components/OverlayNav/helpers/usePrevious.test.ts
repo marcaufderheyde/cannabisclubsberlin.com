@@ -1,4 +1,4 @@
-import { render, renderHook } from '@testing-library/react';
+import { renderHook } from '@testing-library/react';
 import usePrevious from './usePrevious';
 
 describe('usePrevious Hook', () => {
@@ -15,14 +15,11 @@ describe('usePrevious Hook', () => {
             }
         );
 
-        // On initial render, the previous value should be undefined
         expect(result.current).toBeUndefined();
 
-        // After rerender, it should return the initial value as previous
         rerender({ value: 'updated' });
         expect(result.current).toBe('initial');
 
-        // After another rerender, it should return the updated value as previous
         rerender({ value: 'final' });
         expect(result.current).toBe('updated');
     });

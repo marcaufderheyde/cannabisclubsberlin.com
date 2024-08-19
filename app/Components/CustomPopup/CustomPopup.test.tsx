@@ -3,7 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CustomPopup from './CustomPopup';
 
-// Mock the necessary dependencies
 jest.mock('next-intl', () => ({
     useLocale: () => 'en',
 }));

@@ -3,15 +3,12 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Logo from './Logo';
 import { useLocale } from 'next-intl';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-// Mock the useLocale hook
 jest.mock('next-intl', () => ({
     useLocale: jest.fn(),
 }));
 
-// Mock the usePathname hook
 jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),
 }));

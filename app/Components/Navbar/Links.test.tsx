@@ -5,12 +5,10 @@ import Links from './Links';
 import { usePathname } from 'next/navigation';
 import isPathNameHome from '@/app/helpers/isPathnameHome';
 
-// Mock the usePathname hook
 jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),
 }));
 
-// Mock the isPathNameHome function
 jest.mock('@/app/Helpers/isPathnameHome', () => jest.fn());
 
 describe('Links Component', () => {

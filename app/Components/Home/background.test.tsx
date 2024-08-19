@@ -8,13 +8,11 @@ jest.mock('@/app/helpers/useWindowSize');
 
 describe('Background Component', () => {
     beforeEach(() => {
-        // Mock the window size
         (useWindowSize as jest.Mock).mockReturnValue({
             width: 1024,
             height: 768,
         });
 
-        // Mock canvas context
         const mockGetContext = jest.fn();
         const mockFill = jest.fn();
         const mockBeginPath = jest.fn();
@@ -38,7 +36,6 @@ describe('Background Component', () => {
             createRadialGradient: mockCreateRadialGradient,
         });
 
-        // Mock the canvas element
         jest.spyOn(
             HTMLCanvasElement.prototype,
             'getContext'

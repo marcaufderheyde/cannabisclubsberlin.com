@@ -5,7 +5,6 @@ import HamburgerButton from './Hamburgerbutton';
 import { usePathname } from 'next/navigation';
 import isPathnameHome from '@/app/helpers/isPathnameHome';
 
-// Mock Burger component
 jest.mock('@/app/components/Burger/Burger', () => {
     const React = require('react');
     return ({ color }: { color: string }) => {
@@ -16,12 +15,10 @@ jest.mock('@/app/components/Burger/Burger', () => {
     };
 });
 
-// Mock usePathname hook
 jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),
 }));
 
-// Mock isPathnameHome function
 jest.mock('@/app/helpers/isPathnameHome', () => jest.fn());
 
 describe('HamburgerButton Component', () => {

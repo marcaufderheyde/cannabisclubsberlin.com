@@ -4,7 +4,6 @@ import '@testing-library/jest-dom';
 import ClubOpenStreetMap from './ClubOpenStreetMap';
 import { useLocale, useTranslations } from 'next-intl';
 
-// Mocking react-leaflet components
 jest.mock('react-leaflet', () => {
     const React = require('react');
     return {
@@ -23,7 +22,6 @@ jest.mock('react-leaflet', () => {
     };
 });
 
-// Mocking the Image component from next/image
 jest.mock('next/image', () => {
     const React = require('react');
     return {
@@ -50,6 +48,7 @@ describe('ClubOpenStreetMap Component', () => {
         imageUrl: '/club1.png',
         clubPageUrl: 'https://csc-highground.de/',
         slug: '',
+        address: '',
         geoLocation: [52.51664, 13.40828],
     };
 

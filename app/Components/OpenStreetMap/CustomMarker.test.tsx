@@ -1,10 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import L from 'leaflet'; // Importing L from leaflet
+import L from 'leaflet';
 import CustomMarker from './CustomMarker';
 
-// Mocking react-leaflet components
 jest.mock('react-leaflet', () => {
     const React = require('react');
     return {

@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ActionButton from './ActionButton';
 
-// Mock Triangle component
 jest.mock('@/app/components/CustomPopup/Triangle', () => {
     const React = require('react');
     return {
@@ -17,7 +16,6 @@ jest.mock('@/app/components/CustomPopup/Triangle', () => {
     };
 });
 
-// Mock Link component from Next.js
 jest.mock('next/link', () => {
     const React = require('react');
     return {

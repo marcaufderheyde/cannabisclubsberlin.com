@@ -3,14 +3,12 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CookieBanner from './CookieBanner';
 
-// Mocking the useTranslations hook from next-intl
 jest.mock('next-intl', () => ({
     useTranslations: () => (key: string) => key,
 }));
 
 describe('CookieBanner Component', () => {
     beforeEach(() => {
-        // Clear localStorage before each test to ensure isolation
         localStorage.clear();
     });
 
@@ -24,7 +22,6 @@ describe('CookieBanner Component', () => {
     });
 
     it('should not render the cookie banner if cookies have already been accepted', () => {
-        // Set the cookiesAccepted flag in localStorage
         localStorage.setItem('cookiesAccepted', 'true');
 
         render(<CookieBanner />);

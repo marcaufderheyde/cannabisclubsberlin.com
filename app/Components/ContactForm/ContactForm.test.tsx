@@ -1,10 +1,8 @@
-// ContactForm.test.tsx
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContactForm from './ContactForm';
 
-// Mock the fetch function
 global.fetch = jest.fn();
 
 describe('ContactForm', () => {

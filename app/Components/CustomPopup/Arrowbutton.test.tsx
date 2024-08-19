@@ -3,7 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ArrowButton from './Arrowbutton';
 
-// Mock Triangle component
 jest.mock('./Triangle', () => {
     const React = require('react');
     return {

@@ -5,7 +5,6 @@ import OverlayNav from './Overlaynav';
 import { usePathname } from 'next/navigation';
 import { LinkInfo } from '../Navbar/Links';
 import usePrevious from '@/app/components/OverlayNav/helpers/usePrevious';
-import usePreventScrolling from '@/app/components/OverlayNav/helpers/usePreventScrolling';
 
 jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),

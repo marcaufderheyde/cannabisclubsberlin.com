@@ -5,6 +5,7 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import ActionButton from '@/app/components/ActionButton/ActionButton';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
+import generateGoogleMapsLink from '@/app/helpers/generateGoogleMapsLink';
 
 export default function ClubContent() {
     const ClubOpenStreetMap = dynamic(
@@ -79,6 +80,15 @@ export default function ClubContent() {
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('location_title')}
                     </h2>
+                    <a
+                        target="_blank"
+                        href={generateGoogleMapsLink(
+                            club.geoLocation[0],
+                            club.geoLocation[1]
+                        )}
+                    >
+                        Route: {club.address}
+                    </a>
                     <p>{club.location}</p>
                     <ClubOpenStreetMap club={club} />
                     <br />

@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import styles from './ClubCard.module.css';
 import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import ArrowButton from './Arrowbutton';
 import Close from '../Close/Close';
+import styles from '../OpenStreetMap/ClubCard.module.css';
 
 interface Club {
     name: string;

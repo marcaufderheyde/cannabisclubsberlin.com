@@ -82,6 +82,8 @@ The project is organized as follows, please note this structure is in draft and 
 │   │        │  ├── classNameMatcher.test.tsx
 │   │        ├── AutoScaler.test.tsx
 │   │        ├── AutoScaler.test.tsx
+│   ├── data
+│   │   ├── clubs.ts
 │   ├── helpers
 │   │   ├── clubsListContent.test.ts
 │   │   ├── clubsListContent.ts
@@ -124,6 +126,7 @@ The project is organized as follows, please note this structure is in draft and 
 - **app/components:** Reusable components used throughout the application.
 - **app/components/[ComponentName]:** Reusable components used throughout the application, specific to the component, ComponentName (i.e., they are only used by the main component with name ComponentName).
 - **app/components/[ComponentName]/helpers:** Helpers specific to ComponentName, not used by other components.
+- **app/data:** Static content used across the site, clubs.ts holds core information that requires no translation.
 - **app/helpers:** Utility functions and helpers used by multiple components.
 - **public:** Static assets like images, fonts, etc.
 

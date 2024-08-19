@@ -179,100 +179,43 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     return (
         <div>
             {props.isDesktopMap && (
-                <div className="absolute flex right-0 top-[var(--navbar-height)] dynamic-height z-[2005]">
-                    <AnimatePresence
-                        mode="sync"
-                        onExitComplete={() =>
-                            console.log('Exit animation complete')
-                        }
-                    >
-                        <motion.div
-                            key="custom-popup"
-                            initial={{ '--deck-opacity': 0 }}
-                            animate={{ '--deck-opacity': 1 }}
-                            exit={{ '--deck-opacity': 0 }}
-                            transition={{
-                                duration: 2,
-                                ease: 'easeIn',
+                <div className='absolute flex flex-row flex-nowrap justify-end items-stretch right-0 top-[var(--navbar-height)] dynamic-height z-[2005]'>
+                    {selectedClub && clubIndexExists && (
+                        <CustomPopup
+                            style={{
+                                opacity: 'var(--deck-opacity)',
                             }}
-                            onAnimationStart={() =>
-                                console.log('Animation started')
-                            }
-                            onAnimationComplete={() =>
-                                console.log('Animation completed')
-                            }
-                        >
-                            {selectedClub && clubIndexExists && (
-                                <CustomPopup
-                                    style={{
-                                        opacity: 'var(--deck-opacity)',
-                                    }}
-                                    clubIndex={clubIndex!}
-                                    club={selectedClub!}
-                                    clubs={filteredClubs}
-                                    onClose={() => setClubIndex(null)}
-                                    switchNextClub={() => {
-                                        setNextClub();
-                                    }}
-                                    switchPreviousClub={() => {
-                                        setPreviousClub();
-                                    }}
-                                    clubListExpanded={clubListExpanded}
-                                />
-                            )}
-                        </motion.div>
-                    </AnimatePresence>
-
-                    <AnimatePresence>
-                        {showClubList ? (
-                            <motion.div
-                                key="desktop-club-list"
-                                initial={{
-                                    '--deck-opacity': '300px',
-                                    x: '100%',
-                                }}
-                                animate={{ '--deck-opacity': '300px', x: '0%' }}
-                                exit={{ '--deck-opacity': '300px', x: '100%' }}
-                                transition={{
-                                    duration: 0.1,
-                                    ease: 'easeIn',
-                                }}
-                                onAnimationStart={() =>
-                                    console.log('Animation started')
-                                }
-                                onAnimationComplete={() =>
-                                    console.log('Animation completed')
-                                }
-                            >
-                                <DesktopClubList
-                                    style={{ width: 'var(--deck-opacity)' }}
-                                    clubClickedFromList={(
-                                        selectedIndex: number
-                                    ) => {
-                                        setClubIndex(selectedIndex);
-                                    }}
-                                    setClubListExpanded={(
-                                        isExpanded: boolean
-                                    ) => setClubListExpanded(isExpanded)}
-                                />
-                            </motion.div>
-                        ) : (
-                            <MapHamburgerButton
-                                showClubList={() => {
-                                    setClubListExpanded(true);
-                                }}
-                            />
-                        )}
-                    </AnimatePresence>
+                            clubIndex={clubIndex!}
+                            club={selectedClub!}
+                            clubs={filteredClubs}
+                            onClose={() => setClubIndex(null)}
+                            switchNextClub={() => {
+                                setNextClub();
+                            }}
+                            switchPreviousClub={() => {
+                                setPreviousClub();
+                            }}
+                            clubListExpanded={clubListExpanded}
+                        />
+                    )}
+                    <DesktopClubList
+                        clubClickedFromList={(selectedIndex: number) => {
+                            setClubIndex(selectedIndex);
+                        }}
+                        setClubListExpanded={(isExpanded: boolean) =>
+                            setClubListExpanded(isExpanded)
+                        }
+                        currentClubIndex={clubIndex}
+                    />
                 </div>
             )}
             <AnimatePresence
-                mode="sync"
+                mode='sync'
                 onExitComplete={() => console.log('Exit animation complete')}
             >
                 {selectedClub && clubIndexExists && (
                     <motion.div
-                        key="swipeable-deck"
+                        key='swipeable-deck'
                         initial={{ '--deck-opacity': 0 }}
                         animate={{ '--deck-opacity': 1 }}
                         exit={{ '--deck-opacity': 0 }}
@@ -311,11 +254,11 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     style={{ height: '100%', width: '100%' }}
                     ref={setMap}
                 >
-                    <ZoomControl position="bottomright" />
+                    <ZoomControl position='bottomright' />
                     <TileLayer
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
-                        // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                        // url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+                        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />
                     {filteredClubs.map((club, index) => (

@@ -12,7 +12,6 @@ const OpenStreetMap = dynamic(() => import('@/app/Components/OpenStreetMap'), {
 });
 
 export default function ClubsContent() {
-    const [selectedClubFromList, setSelectedClubFromList] = useState<Club>();
     const [showHRFilter, setShowHRFilter] = useState(false);
 
     return (

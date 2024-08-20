@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import ActionButton from '@/app/components/ActionButton/ActionButton';
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 import generateGoogleMapsLink from '@/app/helpers/generateGoogleMapsLink';
 
@@ -14,27 +16,42 @@ export default function ClubContent() {
             ssr: false,
         }
     );
+    const router = useRouter();
     const proxyPathname = usePathname();
+    const t = useTranslations('ClubsPage');
+    const localActive = useLocale();
     if (proxyPathname !== null) {
         const pathname = proxyPathname.split('/')[3];
         const club = pullClubsListContent().find(
             (club) => club.slug === pathname
         );
-        const t = useTranslations('ClubsPage');
-        const localActive = useLocale();
         if (club) {
             club.prices = t(`${club.slug}.prices`);
             club.location = t(`${club.slug}.location`);
             club.description = t(`${club.slug}.description`);
             club.offerings = t(`${club.slug}.offerings`);
             club.harm_reduction = t(`${club.slug}.harm_reduction`);
+            if (
+                club.harm_reduction ===
+                    'This club has currently not listed any specific harm reduction services.' ||
+                club.harm_reduction ===
+                    'Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.'
+            ) {
+                club.hasHRInformation = false;
+            }
+            const handleBackToMapPage = () => {
+                router.push(`/${localActive}/clubs`);
+            };
 
             return (
                 <div className="flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16">
                     <h1 className="font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight">
                         {club.name}
                     </h1>
-                    <div className="flex flex-row text-lg font-semibold gap-2">
+                    <div
+                        className="flex flex-row text-lg font-semibold gap-2"
+                        onClick={handleBackToMapPage}
+                    >
                         <ActionButton
                             backgroundColor={'#B6CF54'}
                             textColor={'#FFFFFF'}

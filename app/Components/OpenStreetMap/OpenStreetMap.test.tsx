@@ -11,46 +11,63 @@ jest.mock('react-leaflet', () => {
         setView: jest.fn(),
         getZoom: jest.fn(),
     };
+
+    const MapContainer = ({
+        children,
+        whenCreated,
+    }: {
+        children: React.ReactNode;
+        whenCreated?: (map: any) => void;
+    }) => {
+        React.useEffect(() => {
+            if (whenCreated) {
+                whenCreated(mockMap);
+            }
+        }, [whenCreated]);
+        return React.createElement(
+            'div',
+            { 'data-testid': 'map-container' },
+            children
+        );
+    };
+    MapContainer.displayName = 'MockMapContainer';
+
+    const TileLayer = () =>
+        React.createElement('div', { 'data-testid': 'tile-layer' });
+    TileLayer.displayName = 'MockTileLayer';
+
+    const ZoomControl = () =>
+        React.createElement('div', { 'data-testid': 'zoom-control' });
+    ZoomControl.displayName = 'MockZoomControl';
+
     return {
-        MapContainer: ({
-            children,
-            whenCreated,
-        }: {
-            children: React.ReactNode;
-            whenCreated?: (map: any) => void;
-        }) => {
-            React.useEffect(() => {
-                if (whenCreated) {
-                    whenCreated(mockMap);
-                }
-            }, [whenCreated]);
-            return React.createElement(
-                'div',
-                { 'data-testid': 'map-container' },
-                children
-            );
-        },
-        TileLayer: () =>
-            React.createElement('div', { 'data-testid': 'tile-layer' }),
-        ZoomControl: () =>
-            React.createElement('div', { 'data-testid': 'zoom-control' }),
+        MapContainer,
+        TileLayer,
+        ZoomControl,
     };
 });
 
 jest.mock('./CustomMarker', () => {
     const React = require('react');
-    return ({ index, location, customIcon, clickedOnMarker }: any) =>
+    const CustomMarker = ({
+        index,
+        location,
+        customIcon,
+        clickedOnMarker,
+    }: any) =>
         React.createElement('div', {
             'data-testid': `marker-${index}`,
             'data-location': location,
             'data-icon': customIcon.options.iconUrl,
             onClick: clickedOnMarker,
         });
+    CustomMarker.displayName = 'MockCustomMarker';
+    return CustomMarker;
 });
 
 jest.mock('../CustomPopup/CustomPopup', () => {
     const React = require('react');
-    return ({
+    const CustomPopup = ({
         club,
         onClose,
         switchNextClub,
@@ -69,6 +86,8 @@ jest.mock('../CustomPopup/CustomPopup', () => {
             ),
             React.createElement('span', {}, clubIndex)
         );
+    CustomPopup.displayName = 'MockCustomPopup';
+    return CustomPopup;
 });
 
 jest.mock('next-intl', () => ({
@@ -86,12 +105,16 @@ describe('OpenStreetMap Component', () => {
             slug: 'club-1',
             imageUrl: '/club1.jpg',
             geoLocation: [52.52, 13.405],
+            hasHRInformation: true,
+            address: '',
         },
         {
             name: 'Club 2',
             slug: 'club-2',
             imageUrl: '/club2.jpg',
             geoLocation: [52.51, 13.404],
+            hasHRInformation: true,
+            address: '',
         },
     ];
 
@@ -109,7 +132,7 @@ describe('OpenStreetMap Component', () => {
 
     it('should render the map and markers correctly', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={true} />);
+            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
         });
 
         expect(screen.getByTestId('map-container')).toBeInTheDocument();
@@ -123,7 +146,7 @@ describe('OpenStreetMap Component', () => {
 
     it('should render CustomPopup when a marker is clicked', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={true} />);
+            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
         });
 
         await act(async () => {
@@ -139,7 +162,7 @@ describe('OpenStreetMap Component', () => {
         const mockJumpToMarker = require('@/app/components/OpenStreetMap/helpers/jumpToMarker');
 
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={true} />);
+            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
         });
 
         await act(async () => {

@@ -4,6 +4,9 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    margin-bottom: auto;
+    overflow-y: scroll;
+    height: calc(100% - var(--navbar-height));
   }
   
   .card {
@@ -18,9 +21,10 @@
 
   .mapContainer {
     position: absolute;
-    height: 100vh;
-    width: 100vw;
-    left: 0; 
+    height: 100vh; /* fallback for older browsers */
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    left: 0; /* Ensure it starts from the very left */
     right: 0;
     top: 0; 
     margin: 0; 
@@ -31,13 +35,15 @@
   .customPopup {
     position: absolute;
     top: var(--navbar-height);
-    left: 0;
-    width: 40%;
-    height: calc(92% - var(--navbar-height));
+    height: var(--dynamic-height);
+    /* left: 0; */
+    width: 50%;
+    /* height: calc(100% - var(--navbar-height)); */
+    /* margin-left: 5%; */
+    /* margin-top: 2%; */
+    /* margin-bottom: 2%; */
+    /* Cover the bottom half of the map */
     display: flex;
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
     justify-content: center;
     align-items: center;
     z-index: 2005;
@@ -45,8 +51,8 @@
   
   
   .mapCardContainer {
-    position: relative;
-    left: 0;
+    position: absolute;
+    /* left: 0; */
     width: 100%;
     background-color: white;
     border-radius: 8px;
@@ -54,8 +60,8 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    z-index: 2005; 
-    height: 100%;
+    z-index: 2005; /* Ensure the card is on top of everything */
+    /* height: 100%; */
   }
   
   .closeButton {
@@ -122,6 +128,7 @@
   }
 
   .mapCardDescription {
+    text-align: justify;
     font-size: 1rem;
     color: #666;
     width: 100%;

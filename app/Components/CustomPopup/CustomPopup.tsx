@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useLocale } from 'next-intl';
 import ArrowButton from './Arrowbutton';
 import Close from '../Close/Close';
-import styles from '../OpenStreetMap/ClubCard.module.css';
+import styles from '@/app/components/OpenStreetMap/ClubCard.module.css';
 
 interface Club {
     name: string;
@@ -12,66 +12,77 @@ interface Club {
     imageUrl: string;
     geoLocation: number[];
     description?: string;
-    offerings?: string;
+    offerings?: string[];
     harm_reduction?: string;
+    hasHRInformation: boolean;
 }
 
 interface CustomPopupProps {
     club: Club;
-    clubIndex: string;
+    clubs: Club[];
+    clubIndex: number;
     onClose: () => void;
     switchNextClub: () => void;
     switchPreviousClub: () => void;
+    clubListExpanded: boolean;
+    style?: React.CSSProperties;
 }
 
 export default function CustomPopup({
     club,
-    clubIndex,
+    clubs,
     onClose,
     switchNextClub,
     switchPreviousClub,
+    clubIndex,
+    clubListExpanded,
+    ...props
 }: CustomPopupProps) {
     const localActive = useLocale();
 
     return (
-        <div className={styles.customPopup}>
-            <div className={styles.mapCardContainer}>
-                <button
-                    className={styles.closeButton}
-                    onClick={onClose}
-                    aria-label="close"
-                >
+        <div
+            className={
+                'hidden lg:flex absolute h-full w-[300px] z-[2005] right-0 mr-20' +
+                ' ' +
+                (clubListExpanded ? 'right-[300px] mr-20' : 'right-0 mr-20')
+            }
+            {...props}
+        >
+            <div
+                className={
+                    'h-full w-full bg-white rounded-lg shadow-md flex flex-col z-[2005]'
+                }
+            >
+                <button className={styles.closeButton} onClick={onClose}>
                     <Close color={'#828282'} />
                 </button>
                 <div className="flex flex-col items-center">
-                    <a
-                        href={`/${localActive}/clubs/${club.slug}`}
-                        className={styles.mapCardLink}
-                    >
-                        <div className={styles.mapCard}>
-                            <div className="flex justify-center items-center">
-                                <Image
-                                    src={club.imageUrl}
-                                    alt={`${club.name} Club Picture`}
-                                    width={300}
-                                    height={300}
-                                    className={styles.mapCardImage}
-                                />
-                            </div>
-                            <div className={styles.mapCardContent}>
+                    <div className={styles.mapCard}>
+                        <div className="flex justify-center items-center">
+                            <Image
+                                src={club.imageUrl}
+                                alt={`${club.name} Club Picture`}
+                                width={300}
+                                height={300}
+                                className={styles.mapCardImage}
+                            />
+                        </div>
+                        <div className={styles.mapCardContent}>
+                            <a
+                                href={`/${localActive}/clubs/${club.slug}`}
+                                className={styles.mapCardLink}
+                            >
                                 <h3 className={styles.mapCardTitle}>
                                     {club.name}
                                 </h3>
-                                <p className={styles.mapCardDescription}>
-                                    {club.description}
-                                </p>
-                                <br />
-                                <p className={styles.mapCardOfferings}>
-                                    {club.offerings}
-                                </p>
-                            </div>
+                            </a>
+                            <br />
+                            <p className={styles.mapCardOfferings}>
+                                {club.offerings}
+                            </p>
                         </div>
-                    </a>
+                    </div>
                     <div
                         className={
                             'absolute bottom-0 inline-flex py-2 px-4 md:py-3'
@@ -83,11 +94,14 @@ export default function CustomPopup({
                             toggleRotate={true}
                             backgroundColor={'bg-lime-500'}
                             triangleColor={'white'}
-                            onClickFunction={switchPreviousClub}
-                            ariaLabel="previous"
+                            onClickFunction={() => switchPreviousClub()}
                         />
                         <div className="bg-lime-500 flex text-white text-base p-2">
-                            {clubIndex}
+                            {
+                                (((clubIndex + 1) as unknown as string) +
+                                    '/' +
+                                    clubs.length) as string
+                            }
                         </div>
                         <ArrowButton
                             boxClassName={'rounded-r-full'}
@@ -95,8 +109,7 @@ export default function CustomPopup({
                             toggleRotate={false}
                             backgroundColor={'bg-lime-500'}
                             triangleColor={'white'}
-                            onClickFunction={switchNextClub}
-                            ariaLabel="next"
+                            onClickFunction={() => switchNextClub()}
                         />
                     </div>
                 </div>

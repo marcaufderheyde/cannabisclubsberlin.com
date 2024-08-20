@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import '@/app/globals.css';
-import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import CookieBanner from '../../components/CookieBanner/CookieBanner';
 import 'leaflet/dist/leaflet.css';
@@ -10,6 +9,7 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import AgeVerification from '../../components/AgeVerification/AgeVerification';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
+import Footer from '@/app/components/Footer/Footer';
 
 export const metadata: Metadata = {
     title: {
@@ -51,11 +51,12 @@ export default function LocaleLayout({
             </NextIntlClientProvider>
             <GoogleTagManager gtmId="GTM-PBKDVXT9" />
             <Script
+                id="googleTagManager"
                 async
                 strategy="lazyOnload"
                 src="https://www.googletagmanager.com/gtag/js?id=G-7NZJ6HL34T"
             ></Script>
-            <Script strategy="lazyOnload">
+            <Script id="googleAnalyticsDataLayer" strategy="lazyOnload">
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}

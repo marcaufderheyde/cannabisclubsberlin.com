@@ -45,6 +45,7 @@ describe('ClubOpenStreetMap Component', () => {
         description: '',
         offerings: '',
         harm_reduction: '',
+        hasHRInformation: true,
         imageUrl: '/club1.png',
         clubPageUrl: 'https://csc-highground.de/',
         slug: '',

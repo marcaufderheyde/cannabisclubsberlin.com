@@ -8,7 +8,7 @@ jest.mock('@/app/helpers/useWindowSize', () => ({
     default: jest.fn(() => ({ width: 800, height: 600 })),
 }));
 
-jest.mock('./helpers/ClassNameMatcher', () => ({
+jest.mock('./helpers/classNameMatcher', () => ({
     __esModule: true,
     default: {
         getCustomWidth: jest.fn((className: string) => '200'),

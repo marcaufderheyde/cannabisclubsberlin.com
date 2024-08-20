@@ -14,15 +14,22 @@ describe('CustomPopup Component', () => {
         imageUrl: '/test-image.jpg',
         geoLocation: [52.52, 13.405],
         description: 'Test description',
-        offerings: 'Test offerings',
+        offerings: ['Test offerings'],
+        harm_reduction: '',
+        hasHRInformation: true,
     };
 
     const mockProps = {
         club: mockClub,
-        clubIndex: '1/10',
+        clubs: [
+            mockClub,
+            { ...mockClub, name: 'Another Club', slug: 'another-club' },
+        ],
+        clubIndex: 1,
         onClose: jest.fn(),
         switchNextClub: jest.fn(),
         switchPreviousClub: jest.fn(),
+        clubListExpanded: false,
     };
 
     it('should render the club details correctly', () => {
@@ -30,11 +37,11 @@ describe('CustomPopup Component', () => {
 
         expect(screen.getByText(mockClub.name)).toBeInTheDocument();
         expect(screen.getByText(mockClub.description)).toBeInTheDocument();
-        expect(screen.getByText(mockClub.offerings)).toBeInTheDocument();
+        expect(screen.getByText(mockClub.offerings[0])).toBeInTheDocument();
         expect(
             screen.getByAltText(`${mockClub.name} Club Picture`)
         ).toBeInTheDocument();
-        expect(screen.getByText(mockProps.clubIndex)).toBeInTheDocument();
+        expect(screen.getByText('1/2')).toBeInTheDocument();
     });
 
     it('should call onClose when the close button is clicked', () => {

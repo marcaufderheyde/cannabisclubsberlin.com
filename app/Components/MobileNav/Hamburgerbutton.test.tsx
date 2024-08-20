@@ -7,12 +7,14 @@ import isPathnameHome from '@/app/helpers/isPathnameHome';
 
 jest.mock('@/app/components/Burger/Burger', () => {
     const React = require('react');
-    return ({ color }: { color: string }) => {
+    const MockBurger = ({ color }: { color: string }) => {
         return React.createElement('div', {
             'data-testid': 'burger-svg',
             style: { color },
         });
     };
+    MockBurger.displayName = 'MockBurger';
+    return MockBurger;
 });
 
 jest.mock('next/navigation', () => ({

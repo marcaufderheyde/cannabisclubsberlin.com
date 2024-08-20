@@ -1,29 +1,23 @@
 'use client';
-import { useLocale, useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import ClubsList from './club-list';
 import Navbar from '@/app/components/Navbar/Navbar';
 import MapListViewSwitcher from '@/app/components/MapListViewSwitcher/MapListViewSwitcher';
+import { Club } from '@/app/helpers/clubsListContent';
+import MobileClubList from '@/app/components/MobileClubList/MobileClubList';
+import MapListFilterSwitcher from '@/app/components/MapListFilterSwitcher/MapListFilterSwitcher';
+const OpenStreetMap = dynamic(
+    () => import('@/app/components/OpenStreetMap/OpenStreetMap'),
+    {
+        ssr: false,
+    }
+);
 
 export default function ClubsContent() {
-    //unstable_setRequestLocale(locale);
-    const OpenStreetMap = dynamic(
-        () => import('@/app/components/OpenStreetMap/OpenStreetMap'),
-        {
-            ssr: false,
-        }
-    );
     const [showMap, setShowMap] = useState(true);
-    const t = useTranslations('ClubsPage');
-    const localActive = useLocale();
-
-    const mapButtonBackground = showMap
-        ? 'bg-white text-black'
-        : 'bg-gray-200 text-neutral-400';
-    const listButtonBackground = showMap
-        ? 'bg-gray-200 text-neutral-400'
-        : 'bg-white text-black';
+    const [selectedClubFromList, setSelectedClubFromList] = useState<Club>();
+    const [showHRFilter, setShowHRFilter] = useState(false);
 
     return (
         <div>
@@ -31,23 +25,46 @@ export default function ClubsContent() {
             {showMap ? (
                 <div>
                     <div className="hidden lg:flex">
-                        <OpenStreetMap isDesktopMap={true} />
+                        <OpenStreetMap
+                            showHRInfo={showHRFilter}
+                            isDesktopMap={true}
+                        />
+                        <MapListFilterSwitcher
+                            showMap={showMap}
+                            showHRFilter={showHRFilter}
+                            setShowHRFilter={setShowHRFilter}
+                        />{' '}
                     </div>
                     <div className="lg:hidden flex">
-                        <OpenStreetMap isDesktopMap={false} />
+                        <OpenStreetMap
+                            showHRInfo={showHRFilter}
+                            isDesktopMap={false}
+                        />
+                        <MapListFilterSwitcher
+                            showMap={showMap}
+                            showHRFilter={showHRFilter}
+                            setShowHRFilter={setShowHRFilter}
+                        />{' '}
                     </div>
-                    <MapListViewSwitcher
-                        showMap={showMap}
-                        setShowMap={setShowMap}
-                    />
                 </div>
             ) : (
-                <div className="absolute top-[var(--navbar-height)] left-0">
+                <div className="md:hidden absolute top-[var(--navbar-height-mobile)] md:top-[var(--navbar-height)] left-0">
+                    <MapListFilterSwitcher
+                        showMap={showMap}
+                        showHRFilter={showHRFilter}
+                        setShowHRFilter={setShowHRFilter}
+                    />{' '}
                     <MapListViewSwitcher
                         showMap={showMap}
                         setShowMap={setShowMap}
+                        setShowHRFilter={setShowHRFilter}
                     />
-                    <ClubsList />
+                    <MobileClubList
+                        showHRInfo={showHRFilter}
+                        clubClickedFromList={() => {
+                            setSelectedClubFromList;
+                        }}
+                    />
                 </div>
             )}
         </div>

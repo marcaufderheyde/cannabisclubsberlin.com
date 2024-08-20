@@ -6,22 +6,30 @@ import { LinkInfo } from '../Navbar/Links';
 
 jest.mock('@/app/components/MobileNav/Hamburgerbutton', () => {
     const React = require('react');
-    return ({ showOverlay }: { showOverlay: () => void }) => {
+    const MockHamburgerButton = ({
+        showOverlay,
+    }: {
+        showOverlay: () => void;
+    }) => {
         return React.createElement('div', {
             'data-testid': 'hamburger-button',
             onClick: showOverlay,
         });
     };
+    MockHamburgerButton.displayName = 'MockHamburgerButton';
+    return MockHamburgerButton;
 });
 
 jest.mock('@/app/components/OverlayNav/Overlaynav', () => {
     const React = require('react');
-    return ({ closeOverlay }: { closeOverlay: () => void }) => {
+    const MockOverlayNav = ({ closeOverlay }: { closeOverlay: () => void }) => {
         return React.createElement('div', {
             'data-testid': 'overlay-nav',
             onClick: closeOverlay,
         });
     };
+    MockOverlayNav.displayName = 'MockOverlayNav';
+    return MockOverlayNav;
 });
 
 describe('MobileNav Component', () => {

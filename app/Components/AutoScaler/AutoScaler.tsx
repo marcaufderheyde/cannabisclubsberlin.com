@@ -18,7 +18,7 @@ export default function AutoScaler({
             ? windowSize.width
             : refScreenWidth;
         setScaleFactor(windowWidth / refScreenWidth);
-    }, [windowSize]);
+    }, [windowSize, refScreenWidthInPixels]);
 
     const ScaledChildren = () =>
         React.Children.map(children, (child: ReactElement<any>, index: any) => {

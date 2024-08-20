@@ -8,9 +8,7 @@ jest.mock('./offsetMapCenter');
 describe('jumpToMarker', () => {
     let mockMap: Map;
     let mockMainMapRef: any;
-    let mockSetSelectedClub: jest.Mock;
     let mockSetCenterCoords: jest.Mock;
-    let mockSetClubIndex: jest.Mock;
     let mockClub: Club;
     let mockClubs: Club[];
 
@@ -27,9 +25,7 @@ describe('jumpToMarker', () => {
             },
         };
 
-        mockSetSelectedClub = jest.fn();
         mockSetCenterCoords = jest.fn();
-        mockSetClubIndex = jest.fn();
 
         mockClub = {
             name: 'Test Club',
@@ -37,8 +33,10 @@ describe('jumpToMarker', () => {
             imageUrl: '/test.png',
             geoLocation: [52.52, 13.405],
             description: '',
-            offerings: '',
+            offerings: [''],
             harm_reduction: '',
+            hasHRInformation: true,
+            address: '',
         };
 
         mockClubs = [mockClub, { ...mockClub, slug: 'another-club' }];
@@ -53,12 +51,11 @@ describe('jumpToMarker', () => {
         jumpToMarker(
             mockMap,
             mockMainMapRef,
-            mockClub,
+            0, // nextClubIndex
             mockClubs,
-            mockSetSelectedClub,
             mockSetCenterCoords,
-            mockSetClubIndex,
-            true
+            true, // isDesktopMap
+            13 // zoom
         );
 
         expect(offsetMapCenter).toHaveBeenCalledWith(
@@ -75,12 +72,11 @@ describe('jumpToMarker', () => {
         jumpToMarker(
             mockMap,
             mockMainMapRef,
-            mockClub,
+            0, // nextClubIndex
             mockClubs,
-            mockSetSelectedClub,
             mockSetCenterCoords,
-            mockSetClubIndex,
-            true
+            true, // isDesktopMap
+            13 // zoom
         );
 
         expect(mockMap.flyTo).toHaveBeenCalledWith(
@@ -93,12 +89,11 @@ describe('jumpToMarker', () => {
         jumpToMarker(
             mockMap,
             mockMainMapRef,
-            mockClub,
+            0, // nextClubIndex
             mockClubs,
-            mockSetSelectedClub,
             mockSetCenterCoords,
-            mockSetClubIndex,
-            true
+            true, // isDesktopMap
+            13 // zoom
         );
 
         expect(mockSetCenterCoords).toHaveBeenCalledWith({
@@ -107,53 +102,18 @@ describe('jumpToMarker', () => {
         });
     });
 
-    it('should set the selected club correctly', () => {
+    it('should handle a non-existing club index without errors', () => {
         jumpToMarker(
             mockMap,
             mockMainMapRef,
-            mockClub,
+            10, // non-existing index
             mockClubs,
-            mockSetSelectedClub,
             mockSetCenterCoords,
-            mockSetClubIndex,
-            true
+            true, // isDesktopMap
+            13 // zoom
         );
 
-        expect(mockSetSelectedClub).toHaveBeenCalledWith(mockClub);
-    });
-
-    it('should set the club index correctly', () => {
-        jumpToMarker(
-            mockMap,
-            mockMainMapRef,
-            mockClub,
-            mockClubs,
-            mockSetSelectedClub,
-            mockSetCenterCoords,
-            mockSetClubIndex,
-            true
-        );
-
-        expect(mockSetClubIndex).toHaveBeenCalledWith(0);
-    });
-
-    it('should handle non-existing club index correctly', () => {
-        const nonExistingClub = {
-            ...mockClub,
-            slug: 'non-existing',
-        };
-
-        jumpToMarker(
-            mockMap,
-            mockMainMapRef,
-            nonExistingClub,
-            mockClubs,
-            mockSetSelectedClub,
-            mockSetCenterCoords,
-            mockSetClubIndex,
-            true
-        );
-
-        expect(mockSetClubIndex).toHaveBeenCalledWith(-1); // -1 indicates that the club was not found
+        expect(mockMap.flyTo).not.toHaveBeenCalled();
+        expect(mockSetCenterCoords).not.toHaveBeenCalled();
     });
 });

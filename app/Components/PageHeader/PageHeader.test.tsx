@@ -4,18 +4,13 @@ import '@testing-library/jest-dom';
 import PageHeader from './PageHeader';
 
 describe('PageHeader Component', () => {
-    it('should render the children within a GradientText component', () => {
+    it('renders the PageHeader with correct text', () => {
         const testText = 'Test Header';
+        const testClassName = 'header-class';
 
-        render(<PageHeader>{testText}</PageHeader>);
+        render(<PageHeader text={testText} className={testClassName} />);
 
-        const gradientTextElement = screen.getByLabelText('gradient text');
-        expect(gradientTextElement).toBeInTheDocument();
-
-        const headerElement = screen.getByText(testText);
-        expect(headerElement).toBeInTheDocument();
-        expect(headerElement).toHaveClass(
-            'text-black font-bold text-4xl md:text-[4rem] text-balance leading-tight'
-        );
+        expect(screen.getByText(testText)).toBeInTheDocument();
+        expect(screen.getByText(testText)).toHaveClass(testClassName);
     });
 });

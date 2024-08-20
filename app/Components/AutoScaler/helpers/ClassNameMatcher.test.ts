@@ -1,4 +1,4 @@
-import ClassNameMatcher from './classNameMatcher';
+import ClassNameMatcher from "./classNameMatcher";
 
 describe('ClassNameMatcher', () => {
     describe('getCustomWidth', () => {

@@ -14,10 +14,11 @@ jest.mock('@/app/Components/Home/headline', () => {
     return {
         __esModule: true,
         default: function MockHeadline() {
-            return React.createElement('div', {
-                'data-testid': 'headline',
-                children: 'Mock Headline',
-            });
+            return React.createElement(
+                'div',
+                { 'data-testid': 'headline' },
+                'Mock Headline'
+            );
         },
     };
 });

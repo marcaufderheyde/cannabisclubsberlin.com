@@ -8,6 +8,7 @@ export type Club = {
     description: string;
     offerings: string;
     harm_reduction: string;
+    hasHRInformation: boolean;
     imageUrl: string;
     clubPageUrl: string;
     slug: string;

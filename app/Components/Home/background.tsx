@@ -40,7 +40,7 @@ export default function Background() {
         return () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
         };
-    }, [windowSize]);
+    }, [windowSize, aspect_ratio]);
 
     return (
         <div className="absolute top-0 left-0 w-full overflow-hidden z-[-1]">

@@ -15,7 +15,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
         'text-[#E3E71F] font-bold text-xl group transition duration-300';
     const defaultLinkStyling =
         'font-normal text-xl group transition duration-300';
-    const isHomePage = isPathNameHome(pathname);
+    const isHomePage = isPathNameHome(pathname!);
 
     return (
         <div className="flex flex-row justify-evenly flex-grow">
@@ -33,7 +33,7 @@ export default function Links({ links }: { links: Array<LinkInfo> }) {
                         }
                     >
                         {link.name as String}
-                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-green-600"></span>
+                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-500"></span>
                     </Link>
                 );
             })}

@@ -42,13 +42,13 @@ export default function Navbar({ isOnMap = false }: Props) {
                 fontColor +
                 ' absolute top-0 left-0 ' +
                 navZAxis +
-                ' w-[100vw] h-[var(--navbar-height)] ' +
+                ' w-[100vw] h-[var(--navbar-height-mobile)] lg:h-[var(--navbar-height)] ' +
                 translucentBackground
             }
         >
             <div
                 className={
-                    'flex flex-row items-center justify-center py-4 relative max-w-[var(--layout-width)] px-[var(--layout-x-padding)] mx-auto'
+                    'flex flex-row items-center justify-center py-1 lg:py-2 relative max-w-[var(--layout-width)] px-[var(--layout-x-padding)] mx-auto'
                 }
             >
                 <Logo />

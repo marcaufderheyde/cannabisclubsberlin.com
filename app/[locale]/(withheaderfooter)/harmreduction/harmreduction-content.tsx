@@ -1,5 +1,4 @@
 'use client';
-import ActionButton from '@/app/components/ActionButton/ActionButton';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import HarmReductionCard from './harmreduction-card';

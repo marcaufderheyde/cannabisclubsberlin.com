@@ -29,7 +29,15 @@ describe('MapListViewSwitcher Component', () => {
 
     it('should render with the map button selected when showMap is true', () => {
         render(
-            <MapListViewSwitcher showMap={true} setShowMap={mockSetShowMap} />
+            <MapListViewSwitcher
+                showMap={true}
+                setShowMap={mockSetShowMap}
+                setShowHRFilter={function (
+                    value: React.SetStateAction<boolean>
+                ): void {
+                    throw new Error('Function not implemented.');
+                }}
+            />
         );
 
         expect(screen.getByLabelText('show map')).toHaveClass('text-black');
@@ -40,7 +48,15 @@ describe('MapListViewSwitcher Component', () => {
 
     it('should render with the list button selected when showMap is false', () => {
         render(
-            <MapListViewSwitcher showMap={false} setShowMap={mockSetShowMap} />
+            <MapListViewSwitcher
+                showMap={false}
+                setShowMap={mockSetShowMap}
+                setShowHRFilter={function (
+                    value: React.SetStateAction<boolean>
+                ): void {
+                    throw new Error('Function not implemented.');
+                }}
+            />
         );
 
         expect(screen.getByLabelText('show list')).toHaveClass('text-black');
@@ -51,7 +67,15 @@ describe('MapListViewSwitcher Component', () => {
 
     it('should call setShowMap with true when the map button is clicked', () => {
         render(
-            <MapListViewSwitcher showMap={false} setShowMap={mockSetShowMap} />
+            <MapListViewSwitcher
+                showMap={false}
+                setShowMap={mockSetShowMap}
+                setShowHRFilter={function (
+                    value: React.SetStateAction<boolean>
+                ): void {
+                    throw new Error('Function not implemented.');
+                }}
+            />
         );
 
         const mapButton = screen.getByText('Show Map');
@@ -62,7 +86,15 @@ describe('MapListViewSwitcher Component', () => {
 
     it('should call setShowMap with false when the list button is clicked', () => {
         render(
-            <MapListViewSwitcher showMap={true} setShowMap={mockSetShowMap} />
+            <MapListViewSwitcher
+                showMap={true}
+                setShowMap={mockSetShowMap}
+                setShowHRFilter={function (
+                    value: React.SetStateAction<boolean>
+                ): void {
+                    throw new Error('Function not implemented.');
+                }}
+            />
         );
 
         const listButton = screen.getByText('Show List');

@@ -3,14 +3,12 @@ import React, { Dispatch, SetStateAction } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 
 type Props = {
-    showMap: boolean;
     showHRFilter: boolean;
     setShowHRFilter: Dispatch<SetStateAction<boolean>>;
 };
 
 function MapListFilterSwitcher({
     setShowHRFilter: setShowHRInfo,
-    showMap,
     showHRFilter,
 }: Props) {
     const t = useTranslations('ClubsPage');
@@ -22,9 +20,8 @@ function MapListFilterSwitcher({
     const listButtonBackground = showHRFilter
         ? 'bg-gray-200 text-neutral-400'
         : 'bg-white text-black';
-    const mapListViewSwitcherPosition = showMap
-        ? 'absolute top-[var(--navbar-height)] left-0'
-        : 'relative top-[var(--navbar-height)]';
+    const mapListViewSwitcherPosition =
+        'absolute top-[var(--navbar-height)] left-0';
 
     return (
         <div className='w-[100vw] flex align-middle justify-left'>

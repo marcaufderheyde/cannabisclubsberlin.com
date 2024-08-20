@@ -1,9 +1,9 @@
-import React, { CSSProperties, useRef, useState } from 'react';
+import React, { CSSProperties, useEffect } from 'react';
+
 import Image from 'next/image';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
-import Close from '../Close/Close';
-import styles from './ClubCard.module.css';
+import { useRef } from 'react';
 
 export type DesktopClubsListProps = {
     clubClickedFromList: (index: number) => void;
@@ -14,14 +14,16 @@ export type DesktopClubsListProps = {
 export default function DesktopClubList({
     clubClickedFromList,
     setClubListExpanded,
+    currentClubIndex,
     ...props
-}: DesktopClubsListProps) {
+}: {
+    clubClickedFromList: (index: number) => void;
+    setClubListExpanded: (isExpanded: boolean) => void;
+    currentClubIndex: null | number;
+}) {
     const clubs = pullClubsListContent();
     const t = useTranslations('ClubsPage');
-    const localActive = useLocale();
     const refs = useRef<(HTMLDivElement | null)[]>([]);
-    const [desktopClubListExpanded, setDesktopClubListExpanded] =
-        useState(false);
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
@@ -29,75 +31,50 @@ export default function DesktopClubList({
         club.harm_reduction = t(`${club.slug}.harm_reduction`);
     });
 
-    const handleClick = (index: number) => {
-        if (refs.current[index]) {
-            refs.current[index]!.scrollIntoView({ behavior: 'smooth' });
+    useEffect(() => {
+        if (currentClubIndex && refs.current[currentClubIndex]) {
+            refs.current[currentClubIndex]!.scrollIntoView({
+                behavior: 'smooth',
+            });
         }
+    }, [currentClubIndex]);
+
+    const backgroundColor = (index: number) => {
+        return currentClubIndex == index ? ' bg-[rgb(87,87,87,0.1)] ' : '';
     };
 
     return (
-        <div className="h-full">
-            <div
-                className="w-[300px] z-[2005] bg-white overflow-y-scroll flex flex-wrap gap-5 mb-auto h-full justify-center"
-                {...props}
-            >
-                <button
+        <div
+            className="w-[289px] bg-[#F6F6F6] flex flex-col h-full overflow-y-scroll shadow-inner"
+            {...props}
+        >
+            {clubs.map((club, index) => (
+                <div
                     className={
-                        'absolute z-[2008] top-0 right-[300px] p-2 bg-transparent border-none text-2xl cursor-pointer bg-lime-300'
+                        backgroundColor(index) +
+                        ' flex flex-row justify-between items-center border-b-[1px] cursor-pointer transition ease-in-out duration-300 transform hover:bg-[rgb(87,87,87,0.1)]'
                     }
+                    key={club.key}
+                    ref={(el) => {
+                        refs.current[index] = el;
+                        return;
+                    }}
                     onClick={() => {
-                        setDesktopClubListExpanded(false);
-                        setClubListExpanded(false);
+                        clubClickedFromList(index);
                     }}
                 >
-                    <Close color={'#828282'} />
-                </button>
-                <div className="relative mt-8">
-                    {clubs.map((club, index) => (
-                        <div
-                            key={index}
-                            ref={(el) => {
-                                refs.current[index] = el;
-                            }}
-                            className="flex justify-center items-center"
-                            onClick={() => {
-                                clubClickedFromList(index);
-                                handleClick(index);
-                            }}
-                        >
-                            <div
-                                className={
-                                    'w-[250px] h-[250px] border border-gray-300 rounded-lg overflow-hidden shadow-md'
-                                }
-                                key={index}
-                            >
-                                <div className="flex justify-center items-center">
-                                    <Image
-                                        src={club.imageUrl}
-                                        alt={club.name + ' Club Picture'}
-                                        width={300}
-                                        height={300}
-                                        className={styles.cardImage}
-                                    />
-                                </div>
-                                <a
-                                    href={`/${localActive}/clubs/${club.slug}`}
-                                    key={club.slug}
-                                >
-                                    <div className={styles.cardContent}>
-                                        <h3 className={styles.cardTitle}>
-                                            {club.name}
-                                        </h3>
-                                        {/* <p className={styles.cardDescription}>
-                                            {club.offerings}
-                                        </p> */}
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    ))}
+                    <div className="h-[100px] m-4 flex items-center font-bold text-[#454545] ">
+                        {club.name}
+                    </div>
+                    <Image
+                        src={club.imageUrl}
+                        alt={club.name + ' Club Picture'}
+                        width={80}
+                        height={80}
+                        className="m-4"
+                    />
                 </div>
-            </div>
+            ))}
         </div>
     );
 }

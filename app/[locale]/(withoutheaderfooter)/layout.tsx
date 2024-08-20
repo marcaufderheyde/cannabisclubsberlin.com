@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 import '@/app/globals.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import ViewportHandler from '@/app/helpers/ViewportHandler';
+import ViewportHandler from '@/app/components/ViewportHandler/ViewportHandler';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
 

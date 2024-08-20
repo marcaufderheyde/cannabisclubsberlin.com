@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
@@ -12,10 +12,9 @@ import CustomPopup from '../CustomPopup/CustomPopup';
 import CustomMarker from './CustomMarker';
 import { AnimatePresence, motion } from 'framer-motion';
 import mod from '@/app/helpers/mod';
-import withMotion from '@/app/helpers/WithMotion';
+import withMotion from '@/app/components/WithMotion/WithMotion';
 import useDebounceFunction from '@/app/helpers/useDebounceFunction';
 import DesktopClubList from './DesktopClubList';
-import MapHamburgerButton from './MapHamburgerButton';
 import SwipeableClubCard from './SwipeableClubCard';
 import SwipeableDeck from './SwipeableDeck';
 
@@ -74,9 +73,13 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     const clubsRef = useRef<Club[]>(
         pullClubsListContent().map((club) => ({
             ...club,
-            offerings: club.offerings.split(', '), // Transform offerings to an array
+            offerings:
+                typeof club.offerings === 'string'
+                    ? club.offerings.split(', ')
+                    : [], // Ensure offerings is an array
         }))
     );
+
     const clubs = clubsRef.current;
     const selectedClub = clubIndexExists && clubs[clubIndex!];
 
@@ -108,14 +111,15 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     const zoom = 13;
 
-    const setNextClub = () => {
+    const setNextClub = useCallback(() => {
         if (clubIndexExists)
             setClubIndex(mod(clubIndex! + 1, filteredClubs.length));
-    };
-    const setPreviousClub = () => {
+    }, [clubIndex, clubIndexExists, filteredClubs.length]);
+
+    const setPreviousClub = useCallback(() => {
         if (clubIndexExists)
             setClubIndex(mod(clubIndex! - 1, filteredClubs.length));
-    };
+    }, [clubIndex, clubIndexExists, filteredClubs.length]);
 
     const debouncedMapFly = useDebounceFunction(
         (clubIndex) =>
@@ -162,7 +166,14 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [clubIndex]);
+    }, [
+        clubIndex,
+        debouncedMapFly,
+        map,
+        setNextClub,
+        setPreviousClub,
+        clubIndexExists,
+    ]);
 
     useEffect(() => {
         setTimeout(() => {

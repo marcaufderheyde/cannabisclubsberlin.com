@@ -23,7 +23,7 @@ export default function Footer() {
     const t = useTranslations('Footer');
 
     return (
-        <div style={footerStyle}>
+        <div aria-label="footer" style={footerStyle}>
             <div className="text-center py-4">
                 <Link href={`/${localActive}/imprint`}>{t('imprint')}</Link>
                 <span> | </span>

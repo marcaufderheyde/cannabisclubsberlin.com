@@ -12,7 +12,7 @@ describe('offsetMapCenter', () => {
 
     beforeEach(() => {
         mockMapInstance = {
-            project: jest.fn().mockReturnValue(mockProjectedPoint),
+            project: jest.fn().mockReturnValue(mockProjectedPoint.clone()),
             unproject: jest.fn().mockReturnValue(mockUnprojectedLatLng),
         } as unknown as Map;
     });
@@ -29,19 +29,22 @@ describe('offsetMapCenter', () => {
             isDesktopMap
         );
 
-        // Ensure the project method was called with the correct arguments
         expect(mockMapInstance.project).toHaveBeenCalledWith(
             { lat: targetLocation[0], lng: targetLocation[1] },
             targetZoom
         );
 
-        // Ensure the unproject method was called with the correct offset point
+        // Create a new point with expected values after subtraction
+        const expectedPoint = new Point(
+            mockProjectedPoint.x + overlayWidth / 6,
+            mockProjectedPoint.y
+        );
+
         expect(mockMapInstance.unproject).toHaveBeenCalledWith(
-            mockProjectedPoint.subtract([+overlayWidth / 6, 0]),
+            expectedPoint,
             targetZoom
         );
 
-        // Ensure the result is the expected LatLng
         expect(result).toEqual(mockUnprojectedLatLng);
     });
 
@@ -57,19 +60,22 @@ describe('offsetMapCenter', () => {
             isDesktopMap
         );
 
-        // Ensure the project method was called with the correct arguments
         expect(mockMapInstance.project).toHaveBeenCalledWith(
             { lat: targetLocation[0], lng: targetLocation[1] },
             targetZoom
         );
 
-        // Ensure the unproject method was called with the correct offset point
+        // Create a new point with expected values after subtraction
+        const expectedPoint = new Point(
+            mockProjectedPoint.x,
+            mockProjectedPoint.y + overlayHeight / 6
+        );
+
         expect(mockMapInstance.unproject).toHaveBeenCalledWith(
-            mockProjectedPoint.subtract([0, -overlayHeight / 6]),
+            expectedPoint,
             targetZoom
         );
 
-        // Ensure the result is the expected LatLng
         expect(result).toEqual(mockUnprojectedLatLng);
     });
 });

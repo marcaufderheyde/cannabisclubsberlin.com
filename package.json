@@ -6,6 +6,7 @@
         "dev": "next dev",
         "test": "jest",
         "build": "next build",
+        "build:debug": "next build && next export --debug",
         "postbuild": "node ./generate-sitemap.mjs",
         "start": "next start",
         "lint": "next lint",

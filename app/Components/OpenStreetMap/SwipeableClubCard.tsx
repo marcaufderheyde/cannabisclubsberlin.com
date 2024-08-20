@@ -1,8 +1,8 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Swipeable from '../Swipable/Swipeable';
+import Swipeable from './Swipeable';
 import { Club } from '../../helpers/clubsListContent';
-import { TouchDetails } from '../Swipable/Swipeable';
+import { TouchDetails } from './Swipeable';
 import { Position } from './SwipeableDeck';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -42,7 +42,7 @@ export default function SwipeableClubCard({
         setTranformDuration(0.2);
         setScale(startScale);
         setPosition(startPosition);
-    }, [startPosition]);
+    }, [startPosition, startScale]);
 
     const swipeHorizontalAnimation = (touchDetails: TouchDetails) => {
         if (canSwipe) {
@@ -90,18 +90,12 @@ export default function SwipeableClubCard({
 
     return (
         <Swipeable
-            duringHorizontalSwipe={
-                onLeftSwipe && onRightSwipe
-                    ? swipeHorizontalAnimation
-                    : () => {}
-            }
-            duringVerticalSwipe={
-                onLeftSwipe && onRightSwipe ? swipeVerticalAnimation : () => {}
-            }
+            duringHorizontalSwipe={swipeHorizontalAnimation}
+            duringVerticalSwipe={swipeVerticalAnimation}
             onCancel={swipeOnCancel}
-            onLeftSwipe={onLeftSwipe}
-            onRightSwipe={onRightSwipe}
-            onDownSwipeClose={onDownSwipeClose}
+            onLeftSwipe={canSwipe ? onLeftSwipe : undefined}
+            onRightSwipe={canSwipe ? onRightSwipe : undefined}
+            onDownSwipeClose={canSwipe ? onDownSwipeClose : undefined}
             // onUpSwipeClose={onUpSwipeClose}
         >
             {/* <motion.div
@@ -111,6 +105,7 @@ export default function SwipeableClubCard({
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
             > */}
             <div
+                aria-label="swipeable card"
                 style={translationStyling}
                 className={
                     'overscroll-contained absolute bg-white w-[250px] h-[450px] bottom-0 rounded-[3em] shadow-lg z-1 pointer-events-auto'

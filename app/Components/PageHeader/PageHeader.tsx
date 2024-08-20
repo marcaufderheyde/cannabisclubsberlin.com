@@ -8,7 +8,7 @@ export default function PageHeader({
     readonly className: string;
 }) {
     return (
-        <GradientText className={className}>
+        <GradientText aria-label="gradient text" className={className}>
             <h1 className={'text-black font-bold text-4xl md:text-[4rem]'}>
                 {text}
             </h1>

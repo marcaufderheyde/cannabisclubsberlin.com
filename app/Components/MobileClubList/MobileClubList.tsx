@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 import { useRef } from 'react';
-import styles from '@/app/components/OpenStreetMap/ClubCard.module.css';
+import styles from '../OpenStreetMap/ClubCard.module.css';
 
 export type MobileClubsListProps = {
     clubClickedFromList: (index: number) => void;

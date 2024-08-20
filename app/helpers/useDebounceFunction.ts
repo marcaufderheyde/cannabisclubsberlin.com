@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef, useEffect } from 'react';
 
 type DebouncedFunction<T extends (...args: any[]) => any> = (
     ...args: Parameters<T>
@@ -22,6 +22,14 @@ export default function useDebounceFunction<T extends (...args: any[]) => any>(
         },
         [func, delay]
     );
+
+    useEffect(() => {
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, []);
 
     return debouncedFunc;
 }

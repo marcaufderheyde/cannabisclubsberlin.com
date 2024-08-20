@@ -36,16 +36,16 @@ const initTouchDetails: TouchDetails = {
     startY: 0,
     distX: 0,
     distY: 0,
-    threshold: 100,
-    restraint: 400,
-    allowedTime: 3000,
+    threshold: 50,
+    restraint: 100,
+    allowedTime: 1000,
     elapsedTime: new Date().getTime(),
     startTime: new Date().getTime(),
     swipeDir: SwipeStates.none,
     swipingThreshold: 5,
     swipingRestraint: 20,
-    swipeDownCloseBoundary: -150,
-    swipeUpCloseBoundary: 600,
+    swipeDownCloseBoundary: 150,
+    swipeUpCloseBoundary: -150,
 };
 
 export default function Swipeable({
@@ -58,7 +58,6 @@ export default function Swipeable({
     duringHorizontalSwipe,
     duringVerticalSwipe,
     onDownSwipeClose,
-    // onUpSwipeClose,
     onCancel,
 }: {
     readonly children: ReactElement<any>;
@@ -70,7 +69,6 @@ export default function Swipeable({
     readonly duringHorizontalSwipe?: Function;
     readonly duringVerticalSwipe?: Function;
     readonly onDownSwipeClose?: Function;
-    // readonly onUpSwipeClose?: Function;
     readonly onCancel?: Function;
 }) {
     const parentRef = useRef<HTMLDivElement>(null);
@@ -78,7 +76,6 @@ export default function Swipeable({
 
     useEffect(() => {
         const handleSwipe = (swipeDir: SwipeStates) => {
-            console.log(swipeDir);
             switch (swipeDir) {
                 case SwipeStates.up:
                     if (onUpSwipe) onUpSwipe();
@@ -105,7 +102,6 @@ export default function Swipeable({
                     break;
                 case SwipeStates.none:
                     if (onCancel) onCancel();
-                default:
                     break;
             }
         };
@@ -154,78 +150,62 @@ export default function Swipeable({
             const touchObj = e.changedTouches[0];
 
             touchDetails.distX = touchObj.pageX - touchDetails.startX;
-
             touchDetails.distY = touchObj.pageY - touchDetails.startY;
-
-            touchDetails.elapsedTime =
-                new Date().getTime() - touchDetails.startTime;
 
             touchDetails.swipeDir = SwipeStates.none;
 
-            if (touchDetails.elapsedTime <= touchDetails.allowedTime) {
+            if (
+                Math.abs(touchDetails.distX) >= touchDetails.threshold &&
+                Math.abs(touchDetails.distY) < touchDetails.restraint
+            ) {
+                touchDetails.swipeDir =
+                    touchDetails.distX > 0
+                        ? SwipeStates.right
+                        : SwipeStates.left;
+            } else if (
+                Math.abs(touchDetails.distY) >= touchDetails.threshold &&
+                Math.abs(touchDetails.distX) < touchDetails.restraint
+            ) {
                 if (
-                    Math.abs(touchDetails.distX) >= touchDetails.threshold &&
-                    Math.abs(touchDetails.distY) < touchDetails.restraint
+                    touchDetails.distY >= touchDetails.swipeDownCloseBoundary &&
+                    onDownSwipeClose
                 ) {
+                    onDownSwipeClose();
+                } else {
                     touchDetails.swipeDir =
-                        touchDetails.distX > 0
-                            ? SwipeStates.left
-                            : SwipeStates.right;
-                } else if (
-                    Math.abs(touchDetails.distY) >= touchDetails.threshold &&
-                    Math.abs(touchDetails.distX) < touchDetails.restraint
-                ) {
-                    if (
-                        touchDetails.distY >=
-                            touchDetails.swipeDownCloseBoundary &&
-                        onDownSwipeClose
-                    ) {
-                        console.log('down swipe boundary hit');
-                        onDownSwipeClose();
-                    } else if (
-                        touchDetails.distY <= touchDetails.swipeUpCloseBoundary
-                        // &&
-                        // onUpSwipeClose
-                    ) {
-                        console.log('up swipe boundary hit');
-                        // uncomment whenever animations are ready
-                        // onUpSwipeClose();
-                    } else {
-                        console.log('no boundary hit boundary hit');
-                        touchDetails.swipeDir =
-                            touchDetails.distY < 0
-                                ? SwipeStates.up
-                                : SwipeStates.down;
-                        if (onCancel) onCancel();
-                    }
+                        touchDetails.distY < 0
+                            ? SwipeStates.up
+                            : SwipeStates.down;
                 }
             }
+
             handleSwipe(touchDetails.swipeDir);
         };
 
-        if (parentRef && parentRef.current) {
-            parentRef.current.addEventListener('touchstart', handleTouchStart, {
+        const currentParentRef = parentRef.current;
+        if (parentRef && currentParentRef) {
+            currentParentRef.addEventListener('touchstart', handleTouchStart, {
                 passive: true,
             });
-            parentRef.current.addEventListener('touchmove', handleTouchMove, {
+            currentParentRef.addEventListener('touchmove', handleTouchMove, {
                 passive: true,
             });
-            parentRef.current.addEventListener('touchend', handleTouchEnd, {
+            currentParentRef.addEventListener('touchend', handleTouchEnd, {
                 passive: true,
             });
         }
 
         return () => {
-            if (parentRef && parentRef.current) {
-                parentRef.current.removeEventListener(
+            if (parentRef && currentParentRef) {
+                currentParentRef.removeEventListener(
                     'touchstart',
                     handleTouchStart
                 );
-                parentRef.current.removeEventListener(
+                currentParentRef.removeEventListener(
                     'touchmove',
                     handleTouchMove
                 );
-                parentRef.current.removeEventListener(
+                currentParentRef.removeEventListener(
                     'touchend',
                     handleTouchEnd
                 );
@@ -239,6 +219,8 @@ export default function Swipeable({
         duringSwipe,
         duringHorizontalSwipe,
         duringVerticalSwipe,
+        onCancel,
+        onDownSwipeClose,
     ]);
 
     return (

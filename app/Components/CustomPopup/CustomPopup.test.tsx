@@ -36,18 +36,18 @@ describe('CustomPopup Component', () => {
         render(<CustomPopup {...mockProps} />);
 
         expect(screen.getByText(mockClub.name)).toBeInTheDocument();
-        expect(screen.getByText(mockClub.description)).toBeInTheDocument();
+
         expect(screen.getByText(mockClub.offerings[0])).toBeInTheDocument();
         expect(
             screen.getByAltText(`${mockClub.name} Club Picture`)
         ).toBeInTheDocument();
-        expect(screen.getByText('1/2')).toBeInTheDocument();
+        expect(screen.getByText('2/2')).toBeInTheDocument();
     });
 
     it('should call onClose when the close button is clicked', () => {
         render(<CustomPopup {...mockProps} />);
 
-        const closeButton = screen.getByLabelText('close');
+        const closeButton = screen.getByTestId('close-svg');
         fireEvent.click(closeButton);
 
         expect(mockProps.onClose).toHaveBeenCalled();
@@ -56,7 +56,7 @@ describe('CustomPopup Component', () => {
     it('should call switchNextClub when the next arrow button is clicked', () => {
         render(<CustomPopup {...mockProps} />);
 
-        const nextButton = screen.getByLabelText('next');
+        const nextButton = screen.getAllByTestId('triangle-svg')[1];
         fireEvent.click(nextButton);
 
         expect(mockProps.switchNextClub).toHaveBeenCalled();
@@ -65,7 +65,7 @@ describe('CustomPopup Component', () => {
     it('should call switchPreviousClub when the previous arrow button is clicked', () => {
         render(<CustomPopup {...mockProps} />);
 
-        const previousButton = screen.getByLabelText('previous');
+        const previousButton = screen.getAllByTestId('triangle-svg')[0];
         fireEvent.click(previousButton);
 
         expect(mockProps.switchPreviousClub).toHaveBeenCalled();

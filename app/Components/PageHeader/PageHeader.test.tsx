@@ -11,6 +11,11 @@ describe('PageHeader Component', () => {
         render(<PageHeader text={testText} className={testClassName} />);
 
         expect(screen.getByText(testText)).toBeInTheDocument();
-        expect(screen.getByText(testText)).toHaveClass(testClassName);
+        expect(screen.getByText(testText)).toHaveClass(
+            'text-black font-bold text-4xl md:text-[4rem]'
+        );
+        expect(screen.getByLabelText('gradient text')).toHaveClass(
+            testClassName
+        );
     });
 });

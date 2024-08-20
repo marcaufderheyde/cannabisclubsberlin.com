@@ -40,8 +40,10 @@ describe('MapListViewSwitcher Component', () => {
             />
         );
 
-        expect(screen.getByLabelText('show map')).toHaveClass('text-black');
-        expect(screen.getByLabelText('show list')).toHaveClass(
+        expect(screen.getByLabelText('show map button')).toHaveClass(
+            'text-black'
+        );
+        expect(screen.getByLabelText('show club list button')).toHaveClass(
             'text-neutral-400'
         );
     });
@@ -59,8 +61,10 @@ describe('MapListViewSwitcher Component', () => {
             />
         );
 
-        expect(screen.getByLabelText('show list')).toHaveClass('text-black');
-        expect(screen.getByLabelText('show map')).toHaveClass(
+        expect(screen.getByLabelText('show club list button')).toHaveClass(
+            'text-black'
+        );
+        expect(screen.getByLabelText('show map button')).toHaveClass(
             'text-neutral-400'
         );
     });

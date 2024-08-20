@@ -30,6 +30,7 @@ export default function MapListViewSwitcher({ showMap, setShowMap }: Props) {
                 }
             >
                 <button
+                    aria-label="show map button"
                     onClick={() => setShowMap(true)}
                     className={
                         'z-[999] cursor-pointer items-center rounded-xl text-lg my-1 ml-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
@@ -39,6 +40,7 @@ export default function MapListViewSwitcher({ showMap, setShowMap }: Props) {
                     {t('clubs_menu_show_map')}
                 </button>
                 <button
+                    aria-label="show club list button"
                     onClick={() => setShowMap(false)}
                     className={
                         'z-[999] rounded-xl cursor-pointer items-center text-lg  my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +

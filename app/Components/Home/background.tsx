@@ -6,11 +6,13 @@ import React, { useRef, useEffect } from 'react';
 export default function Background() {
     const windowSize = useWindowSize();
     const canvasRef = useRef<HTMLCanvasElement>(null!);
-    const defaultSize = { width: 2560, height: 600 };
-    const aspect_ratio = (current_width: any) =>
-        (current_width / defaultSize.width) * defaultSize.height;
 
     useEffect(() => {
+        const defaultSize = { width: 2560, height: 600 };
+
+        const aspect_ratio = (current_width: any) =>
+            (current_width / defaultSize.width) * defaultSize.height;
+
         const current_width = windowSize.width;
         const current_height = aspect_ratio(current_width);
         const bottomLeftArcPoint = { x: 0, y: current_height };
@@ -40,7 +42,7 @@ export default function Background() {
         return () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
         };
-    }, [windowSize, aspect_ratio]);
+    }, [windowSize]);
 
     return (
         <div className="absolute top-0 left-0 w-full overflow-hidden z-[-1]">

@@ -54,7 +54,7 @@ export default function DesktopClubList({
                         backgroundColor(index) +
                         ' flex flex-row justify-between items-center border-b-[1px] cursor-pointer transition ease-in-out duration-300 transform hover:bg-[rgb(87,87,87,0.1)]'
                     }
-                    key={club.key}
+                    key={club.slug}
                     ref={(el) => {
                         refs.current[index] = el;
                         return;

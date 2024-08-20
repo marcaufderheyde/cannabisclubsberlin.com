@@ -10,20 +10,22 @@ jest.mock('react-leaflet', () => {
     const mockMap = {
         setView: jest.fn(),
         getZoom: jest.fn(),
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
     };
 
     const MapContainer = ({
         children,
-        whenCreated,
+        ref,
     }: {
         children: React.ReactNode;
-        whenCreated?: (map: any) => void;
+        ref: any;
     }) => {
         React.useEffect(() => {
-            if (whenCreated) {
-                whenCreated(mockMap);
+            if (ref && ref.current) {
+                ref.current = mockMap;
             }
-        }, [whenCreated]);
+        }, [ref]);
         return React.createElement(
             'div',
             { 'data-testid': 'map-container' },
@@ -40,11 +42,7 @@ jest.mock('react-leaflet', () => {
         React.createElement('div', { 'data-testid': 'zoom-control' });
     ZoomControl.displayName = 'MockZoomControl';
 
-    return {
-        MapContainer,
-        TileLayer,
-        ZoomControl,
-    };
+    return { MapContainer, TileLayer, ZoomControl };
 });
 
 jest.mock('./CustomMarker', () => {
@@ -98,6 +96,57 @@ jest.mock('@/app/components/OpenStreetMap/helpers/jumpToMarker', () =>
     jest.fn()
 );
 
+jest.mock('./SwipeableDeck', () => {
+    const React = require('react');
+    const SwipeableDeck = ({
+        items,
+        currentIndex,
+        onDownSwipeClose,
+        onRightSwipe,
+        onLeftSwipe,
+    }: any) =>
+        React.createElement(
+            'div',
+            { 'data-testid': 'swipeable-deck' },
+            React.createElement(
+                'button',
+                { onClick: onDownSwipeClose },
+                'Close'
+            ),
+            React.createElement('button', { onClick: onRightSwipe }, 'Next'),
+            React.createElement('button', { onClick: onLeftSwipe }, 'Previous'),
+            React.createElement('span', {}, currentIndex)
+        );
+    SwipeableDeck.displayName = 'MockSwipeableDeck';
+    return SwipeableDeck;
+});
+
+jest.mock('./DesktopClubList', () => {
+    const React = require('react');
+    const DesktopClubList = ({
+        clubClickedFromList,
+        setClubListExpanded,
+        currentClubIndex,
+    }: any) =>
+        React.createElement(
+            'div',
+            { 'data-testid': 'desktop-club-list' },
+            React.createElement(
+                'button',
+                { onClick: () => clubClickedFromList(0) },
+                'Select Club 0'
+            ),
+            React.createElement(
+                'button',
+                { onClick: () => setClubListExpanded(true) },
+                'Expand'
+            ),
+            React.createElement('span', {}, currentClubIndex)
+        );
+    DesktopClubList.displayName = 'MockDesktopClubList';
+    return DesktopClubList;
+});
+
 describe('OpenStreetMap Component', () => {
     const mockClubs: Club[] = [
         {
@@ -106,6 +155,7 @@ describe('OpenStreetMap Component', () => {
             imageUrl: '/club1.jpg',
             geoLocation: [52.52, 13.405],
             hasHRInformation: true,
+            offerings: ['Offering1', 'Offering2'],
             address: '',
         },
         {
@@ -114,6 +164,7 @@ describe('OpenStreetMap Component', () => {
             imageUrl: '/club2.jpg',
             geoLocation: [52.51, 13.404],
             hasHRInformation: true,
+            offerings: ['Offering3', 'Offering4'],
             address: '',
         },
     ];
@@ -158,28 +209,35 @@ describe('OpenStreetMap Component', () => {
         });
     });
 
-    it('should trigger jumpToMarker with correct args on marker click', async () => {
-        const mockJumpToMarker = require('@/app/components/OpenStreetMap/helpers/jumpToMarker');
-
+    it('should render SwipeableDeck when a marker is clicked on mobile', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
+            render(<OpenStreetMap isDesktopMap={false} showHRInfo={false} />);
         });
 
         await act(async () => {
             fireEvent.click(screen.getByTestId('marker-0'));
         });
 
-        await waitFor(() =>
-            expect(mockJumpToMarker).toHaveBeenCalledWith(
-                expect.any(Object), // map instance
-                expect.any(Object), // mainMapRef
-                expect.objectContaining({ slug: 'club-1' }), // club 1
-                expect.any(Array), // clubs
-                expect.any(Function), // setSelectedClub
-                expect.any(Function), // setCenterCoords
-                expect.any(Function), // setClubIndex
-                true // isDesktopMap
-            )
-        );
+        await waitFor(() => {
+            expect(screen.getByTestId('swipeable-deck')).toBeInTheDocument();
+        });
+    });
+
+    it('should render DesktopClubList on desktop', async () => {
+        await act(async () => {
+            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
+        });
+
+        expect(screen.getByTestId('desktop-club-list')).toBeInTheDocument();
+    });
+
+    it('should not render DesktopClubList on mobile', async () => {
+        await act(async () => {
+            render(<OpenStreetMap isDesktopMap={false} showHRInfo={false} />);
+        });
+
+        expect(
+            screen.queryByTestId('desktop-club-list')
+        ).not.toBeInTheDocument();
     });
 });

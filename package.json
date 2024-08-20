@@ -1,6 +1,6 @@
 {
     "name": "cannabisclubsberlin",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -13,7 +13,6 @@
         "prestart": "cp scripts/pre-push .git/hooks/ && chmod +x .git/hooks/pre-push && echo 'hook copied'"
     },
     "dependencies": {
-        "framer-motion": "^11.3.8",
         "@next/third-parties": "^14.2.5",
         "framer-motion": "^11.3.8",
         "globby": "^14.0.1",

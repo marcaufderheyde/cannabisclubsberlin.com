@@ -46,7 +46,7 @@ export default function OverlayNav({
         ) {
             closeOverlay();
         }
-    }, [shouldClose, closeOverlay]);
+    }, [shouldClose, closeOverlay, pathname, prevPathnameRef]);
 
     const handleClick = useCallback(
         (e: React.MouseEvent, href?: string) => {
@@ -58,21 +58,26 @@ export default function OverlayNav({
         [pathname]
     );
 
+    const handleCloseClick = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        closeOverlay();
+    };
+
     return (
         <div
-            className="fixed bg-[rgba(255,255,255,0.30)] z-10 min-w-full min-h-full backdrop-blur-md top-0 left-0 flex flex-col justify-start items-center"
-            onClick={() => closeOverlay()}
+            className="fixed bg-[rgba(255,255,255,0.30)] z-50 min-w-full min-h-full backdrop-blur-md top-0 left-0 flex flex-col justify-start items-center"
+            onClick={closeOverlay}
         >
             <div
-                className="bg-white rounded-[2rem] flex flex-col z-20 w-[90%] my-3 py-8 px-8 shadow-md"
+                className="bg-white rounded-[2rem] flex flex-col z-60 w-[90%] my-3 py-8 px-8 shadow-md relative"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex flex-row justify-between items-center text-[#B6CF54]">
-                    <Logo onClick={() => closeOverlay()} />
+                    <Logo onClick={closeOverlay} />
                     <div
                         data-testid="close-button"
-                        onClick={handleClick}
-                        className="px-4"
+                        onClick={handleCloseClick}
+                        className="px-4 cursor-pointer z-70"
                     >
                         <Close color={'#828282'} />
                     </div>

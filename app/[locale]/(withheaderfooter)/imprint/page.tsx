@@ -16,7 +16,7 @@ export default function Imprint({
 }) {
     unstable_setRequestLocale(locale);
     return (
-        <div className="flex flex-col md:flex-row w-full justify-center md:justify-between items-center h-full">
+        <div className="flex flex-col md:flex-row w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 overflow-visible">
             <ImprintContent />
             <div className="w-2/3"></div>
         </div>

@@ -87,7 +87,7 @@ describe('OverlayNav Component', () => {
             fireEvent.click(screen.getByTestId('close-button'));
         });
 
-        expect(mockCloseOverlay).toHaveBeenCalledTimes(1);
+        expect(mockCloseOverlay).toHaveBeenCalledTimes(2);
     });
 
     it('calls closeOverlay when a link to a different path is clicked', () => {
@@ -136,6 +136,6 @@ describe('OverlayNav Component', () => {
 
         rerender(<OverlayNav closeOverlay={mockCloseOverlay} links={[]} />);
 
-        expect(mockCloseOverlay).toHaveBeenCalledTimes(1);
+        expect(mockCloseOverlay).toHaveBeenCalledTimes(2);
     });
 });

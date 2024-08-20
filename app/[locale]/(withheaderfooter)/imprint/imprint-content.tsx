@@ -1,13 +1,15 @@
 'use client';
+import PageHeader from '@/app/components/PageHeader/PageHeader';
 import { useTranslations } from 'next-intl';
 
 export default function ImprintContent() {
     const t = useTranslations('ImprintPage');
     return (
-        <div className="flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16">
-            <h1 className="font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight">
-                {t('headline')}
-            </h1>
+        <div className="flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16 justify-start items-start">
+            <PageHeader
+                text={t('headline')}
+                className={'scale-100'}
+            ></PageHeader>
             <p>{t('headline_description')}</p>
             <div>
                 <h2 className="font-bold text-1xl">{t('operator_title')}:</h2>

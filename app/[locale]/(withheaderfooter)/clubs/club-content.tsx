@@ -85,7 +85,7 @@ export default function ClubContent() {
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('harm_reduction_title')}
                     </h2>
-                    <p>{club.harmReduction}</p>
+                    <p>{club.harm_reduction}</p>
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('visit_website_title')}
                     </h2>

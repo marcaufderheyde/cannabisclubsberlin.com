@@ -38,7 +38,6 @@ export default function ClubsContent() {
                     />{' '}
                 </div>
             </div>
-            </div>
         </div>
     );
 }

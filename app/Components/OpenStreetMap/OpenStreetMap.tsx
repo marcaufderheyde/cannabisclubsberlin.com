@@ -166,14 +166,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [
-        clubIndex,
-        debouncedMapFly,
-        map,
-        setNextClub,
-        setPreviousClub,
-        clubIndexExists,
-    ]);
+    }, [clubIndex, map, setNextClub, setPreviousClub, clubIndexExists]);
 
     useEffect(() => {
         setTimeout(() => {

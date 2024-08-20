@@ -24,7 +24,7 @@ function MapListFilterSwitcher({
         'absolute top-[var(--navbar-height)] left-0';
 
     return (
-        <div className="w-[100vw] flex align-middle justify-left">
+        <div className='w-[100vw] flex align-middle justify-left'>
             <div
                 className={
                     'inline-flex ' +

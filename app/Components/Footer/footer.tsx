@@ -8,6 +8,7 @@ const footerStyle: React.CSSProperties = {
     textAlign: 'center',
     color: 'white',
     padding: '1.5em 0',
+    paddingTop: '5vh',
     transition: 'opacity 0.3s ease-in-out',
 };
 
@@ -47,10 +48,12 @@ export default function Footer() {
                     transition:
                         'opacity 0.3s ease-in-out, visibility 0.3s ease-in-out',
                     zIndex: 9,
-                    pointerEvents: 'none', // Ensures this div doesn't interfere with interactions
+                    pointerEvents: 'none',
                 }}
             />
             <footer
+                aria-label="footer"
+                className="footer-container"
                 style={{
                     ...footerStyle,
                     opacity: isVisible ? 1 : 0,
@@ -79,6 +82,17 @@ export default function Footer() {
                     </p>
                 </div>
             </footer>
+            <style jsx>{`
+                @media (max-width: 640px) {
+                    .footer-container {
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding-bottom: env(safe-area-inset-bottom);
+                    }
+                }
+            `}</style>
         </>
     );
 }

@@ -36,13 +36,13 @@ export default function OverlayNav({
             onClick={(e) => {
                 closeOverlay();
             }}
-            className='fixed bg-[rgba(255,255,255,0.30)] z-10 min-w-full min-h-full backdrop-blur-md top-0 left-0 flex flex-col justify-start items-center'
+            className='fixed bg-[rgba(255,255,255,0.30)] z-[2010] min-w-full min-h-full backdrop-blur-md top-0 left-0 flex flex-col justify-start items-center'
         >
             <div
                 onClick={(e) => {
                     e.stopPropagation();
                 }}
-                className='bg-white rounded-[2rem] flex flex-col z-20 w-[90%] my-3 py-8 px-8 shadow-md'
+                className='bg-white rounded-[2rem] flex flex-col z-[2020] w-[90%] my-3 py-8 px-8 shadow-md'
             >
                 <div className='flex flex-row justify-between items-center text-[#B6CF54]'>
                     <Logo onClick={() => closeOverlay()} />

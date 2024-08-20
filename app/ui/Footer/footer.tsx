@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
@@ -25,9 +25,11 @@ const Footer = () => {
     return (
         <div style={footerStyle}>
             <div className='text-center py-4'>
-                <Link href={`/${localActive}/imprint`}>{t("imprint")}</Link>
+                <Link href={`/${localActive}/imprint`}>{t('imprint')}</Link>
                 <span> | </span>
-                <Link href={`/${localActive}/termsofuse`}>{t("terms_of_use")}</Link>
+                <Link href={`/${localActive}/termsofuse`}>
+                    {t('terms_of_use')}
+                </Link>
                 <p>
                     © {currentYear} CannabisClubsBerlin.com. All rights
                     reserved.

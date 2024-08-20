@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ClubsContent from './clubs-content';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
@@ -18,7 +18,7 @@ export default function Clubs({
 }) {
     unstable_setRequestLocale(locale);
     return (
-        <div className="flex flex-col md:flex-col w-full max-w-none justify-center md:justify-between items-center h-full md:pl-[YourNavbarWidth]">
+        <div className="flex flex-col md:flex-col w-full max-w-none justify-center md:justify-between items-center h-full ">
             <ClubsContent />
         </div>
     );

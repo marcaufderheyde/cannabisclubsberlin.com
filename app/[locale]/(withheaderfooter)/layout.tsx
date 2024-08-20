@@ -48,8 +48,8 @@ export default function LocaleLayout({
         <div>
             <NextIntlClientProvider messages={messages}>
                 <Navbar isOnMap={false} />
-                <div className="bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg ">
-                    <div className="z-[2] px-[var(--layout-x-padding)] h-full max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] pb-10 ">
+                <div className='bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg '>
+                    <div className='z-[2] px-[var(--layout-x-padding)] h-full max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] pb-10 '>
                         {children}
                     </div>
                 </div>
@@ -57,13 +57,13 @@ export default function LocaleLayout({
                 <CookieBanner />
                 <Footer />
             </NextIntlClientProvider>
-            <GoogleTagManager gtmId="GTM-PBKDVXT9" />
+            <GoogleTagManager gtmId='GTM-PBKDVXT9' />
             <Script
                 async
-                strategy="lazyOnload"
-                src="https://www.googletagmanager.com/gtag/js?id=G-7NZJ6HL34T"
+                strategy='lazyOnload'
+                src='https://www.googletagmanager.com/gtag/js?id=G-7NZJ6HL34T'
             ></Script>
-            <Script strategy="lazyOnload">
+            <Script strategy='lazyOnload'>
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}

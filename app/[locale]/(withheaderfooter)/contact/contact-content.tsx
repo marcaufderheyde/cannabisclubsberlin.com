@@ -7,8 +7,11 @@ export default function ContactContent() {
     const t = useTranslations('ContactPage');
     const localActive = useLocale();
     return (
-        <div className='flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16 w-full'>
-            <PageHeader>{t('headline')}</PageHeader>
+        <div className="flex flex-col gap-8 md:gap-12 md:mt-30 lg:mt-16 w-full">
+            <PageHeader
+                text={t('headline')}
+                className={'scale-100'}
+            ></PageHeader>
             <ContactForm />
         </div>
     );

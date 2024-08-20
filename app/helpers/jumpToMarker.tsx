@@ -1,6 +1,7 @@
 import offsetMapCenter from '@/app/helpers/offsetMapCenter';
 import { Map } from 'leaflet';
 import { Club } from '../Components/OpenStreetMap';
+import next from 'next';
 
 /*
 This function and offsetMapCenter.tsx were created using a combination of:
@@ -14,38 +15,32 @@ This function and offsetMapCenter.tsx were created using a combination of:
 export default function jumpToMarker(
     map: Map | null,
     mainMapRef: any,
-    nextClub: Club,
+    nextClubIndex: any,
     clubs: Club[],
-    setSelectedClub: any,
     setCenterCoords: any,
-    setClubIndex: any,
-    isDesktopMap: boolean
+    isDesktopMap: boolean,
+    zoom: number
 ) {
-    const targetZoom: number = map!.getZoom();
+    const targetZoom: number = zoom;
     const overlayHeight: number = mainMapRef.current.offsetHeight;
     const overlayWidth: number = mainMapRef.current.offsetWidth;
 
-    const offsetTargetLatLng = offsetMapCenter(
-        targetZoom,
-        overlayHeight,
-        overlayWidth,
-        map,
-        nextClub.geoLocation,
-        isDesktopMap
-    );
+    const nextClub = clubs[nextClubIndex];
 
-    map!.flyTo(offsetTargetLatLng, targetZoom);
-    setCenterCoords({
-        lat: offsetTargetLatLng.lat,
-        lng: nextClub.geoLocation[1],
-    });
+    if (nextClub) {
+        const offsetTargetLatLng = offsetMapCenter(
+            targetZoom,
+            overlayHeight,
+            overlayWidth,
+            map,
+            nextClub.geoLocation,
+            isDesktopMap
+        );
 
-    const selectedClub = nextClub;
-    setSelectedClub(selectedClub);
-
-    // make sure current club index is stored, for popup club switcher
-    const clubIndex = clubs.findIndex(
-        (club: Club) => club.slug === selectedClub.slug
-    );
-    setClubIndex(clubIndex);
+        map!.flyTo(offsetTargetLatLng, targetZoom);
+        setCenterCoords({
+            lat: offsetTargetLatLng.lat,
+            lng: nextClub.geoLocation[1],
+        });
+    }
 }

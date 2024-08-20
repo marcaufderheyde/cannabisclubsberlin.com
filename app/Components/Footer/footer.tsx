@@ -4,12 +4,11 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 const footerStyle: React.CSSProperties = {
-    backgroundImage: 'linear-gradient(180deg, #E3E71F 0%, #B6CF54 100%)',
+    backgroundColor: '#b8d04c',
     textAlign: 'center',
     color: 'white',
     padding: '1.5em 0',
     transition: 'opacity 0.3s ease-in-out',
-    paddingTop: '5vh',
 };
 
 export default function Footer() {
@@ -42,8 +41,7 @@ export default function Footer() {
                     left: 0,
                     right: 0,
                     height: '100vh',
-                    backgroundImage:
-                        'linear-gradient(180deg, #E3E71F 0%, #b8d04c 100%)',
+                    backgroundColor: '#b8d04c',
                     opacity: isVisible ? 1 : 0,
                     visibility: isVisible ? 'visible' : 'hidden',
                     transition:
@@ -53,7 +51,6 @@ export default function Footer() {
                 }}
             />
             <footer
-                aria-label="footer"
                 style={{
                     ...footerStyle,
                     opacity: isVisible ? 1 : 0,

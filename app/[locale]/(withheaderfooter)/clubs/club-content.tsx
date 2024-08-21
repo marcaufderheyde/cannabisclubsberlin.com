@@ -79,9 +79,19 @@ export default function ClubContent() {
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('offerings_title')}
                     </h2>
-                    {club.offerings.split(',').map((offering, index) => (
-                        <li key={index}>{offering.trim()}</li>
-                    ))}
+                    <div className="flex flex-row gap-2 flex-wrap mx-3">
+                        {club.offerings
+                            ?.toString()
+                            .split(',')
+                            .map((offering) => (
+                                <div
+                                    key={offering}
+                                    className="bg-lime-500 text-white rounded-xl py-1 px-2 self-center overflow-ellipsis"
+                                >
+                                    {offering}
+                                </div>
+                            ))}
+                    </div>
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('harm_reduction_title')}
                     </h2>
@@ -90,9 +100,13 @@ export default function ClubContent() {
                         {t('visit_website_title')}
                     </h2>
                     <p>
-                        <a href={club.clubPageUrl} target="_blank">
-                            {club.clubPageUrl}
-                        </a>
+                        {club.clubPageUrl !== '' ? (
+                            <a href={club.clubPageUrl} target="_blank">
+                                {club.clubPageUrl}
+                            </a>
+                        ) : (
+                            'Link not found...'
+                        )}
                     </p>
                     <h2 className="font-bold text-4xl md:text-[2rem] opacity-[0.3] text-balance leading-tight">
                         {t('location_title')}
@@ -109,6 +123,18 @@ export default function ClubContent() {
                     <p>{club.location}</p>
                     <ClubOpenStreetMap club={club} />
                     <br />
+                    <div
+                        className="flex flex-row text-lg font-semibold gap-2"
+                        onClick={handleBackToMapPage}
+                    >
+                        <ActionButton
+                            backgroundColor={'#B6CF54'}
+                            textColor={'#FFFFFF'}
+                            href={`/${localActive}/clubs`}
+                        >
+                            {t('clubs_menu_back_button')}
+                        </ActionButton>
+                    </div>
                 </div>
             );
         }

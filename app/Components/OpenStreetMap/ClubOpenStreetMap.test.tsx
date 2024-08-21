@@ -70,7 +70,7 @@ describe('ClubOpenStreetMap Component', () => {
     it('should render the Popup with the correct content', () => {
         render(<ClubOpenStreetMap club={mockClub} />);
 
-        expect(screen.getAllByText(`#${mockClub.key}`).length).toBeGreaterThan(
+        expect(screen.getAllByText(`${mockClub.name}`).length).toBeGreaterThan(
             0
         );
         expect(screen.getByText(mockClub.name)).toBeInTheDocument();

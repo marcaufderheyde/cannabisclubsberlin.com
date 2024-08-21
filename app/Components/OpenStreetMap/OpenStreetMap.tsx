@@ -87,9 +87,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
-        let clubOfferings = t(
-            `offerings_tags.slug_to_tags_indices.${club.slug}`
-        );
+        let clubOfferings = t(`${club.slug}.offerings`);
         const pattern = /, |and /;
         club.offerings = clubOfferings.split(pattern);
         club.harm_reduction = t(`${club.slug}.harm_reduction`);

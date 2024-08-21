@@ -135,7 +135,6 @@
         "visit_website_title": "Visit Their Website",
         "clubs_menu_show_map": "Map",
         "clubs_menu_show_list": "List",
-        "clubs_menu_show_list": "List",
         "clubs_menu_back_button": "Back to Map",
         "map_disclaimer": "Not all clubs are shown on the map currently, given the information available. Please use the club list to see all available clubs! Please note the locations listed on the map below are taken from the imprint of the clubs found so far, and might not reflect the actual location of the club in the future.",
         "offerings_tags": {
@@ -316,13 +315,13 @@
             "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption."
         },
         "cannabis-social-club-prenzlauer-berg-berlin-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Cannabis Social Club Prenzlauer Berg Berlin e.V.",
-            "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Membership options include a monthly fee of €12 for individuals, with an additional registration fee of €95. Corporate membership is available at €24 per month with a registration fee of €95. Membership must be maintained for at least three months.",
+            "location": "The location and opening times for the Cannabis Social Club Prenzlauer Berg Berlin e.V. will be provided once available. A central distribution point in Berlin is planned for easy access by all members.",
+            "description": "The Cannabis Social Club Prenzlauer Berg Berlin e.V. is committed to fostering a responsible and informed cannabis culture within a supportive community. Located in the heart of Berlin's Prenzlauer Berg district, the club emphasizes the collective cultivation and distribution of high-quality cannabis products under legal conditions. The club aims to promote awareness about the positive aspects of cannabis while ensuring a safe environment for its members. Through regular meetings, workshops, and events, the club offers members the opportunity to exchange knowledge, test new strains, and engage in cannabis-related activities. The club also offers comprehensive prevention programs, including workshops and individual consultations, to support members in making informed decisions about cannabis consumption.",
+            "meta_description": "The Cannabis Social Club Prenzlauer Berg Berlin e.V. promotes a responsible cannabis culture through community engagement and informed consumption.",
+            "meta_keywords": "Cannabis Social Club Prenzlauer Berg, responsible cannabis consumption, cannabis community Berlin, cannabis prevention programs, high-quality cannabis distribution, Berlin cannabis club, collective cannabis cultivation, cannabis education workshops",
+            "offerings": "Community cultivation, Distribution of cannabis for members, Workshops, Prevention programs, Socialising",
+            "harm_reduction": "The club offers a comprehensive prevention program focused on educating members about the risks of cannabis consumption and supporting them in making informed decisions. The program includes individual consultations, workshops on risk minimization, and events that promote safe and responsible use."
         },
         "cannabis-social-club-meridiem-brandenburgo-et-berolina-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -397,13 +396,13 @@
             "harm_reduction": "This club has currently not listed any specific harm reduction services."
         },
         "cannabis-club-lammbock-ev": {
-            "prices": "30 EUR signup fee, 2 EUR monthly membership fee.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "Cannabis Club Lammbock e.V. offers advice on safe and responsible cannabis use, aiming to support informed decisions. Prices for cannabis and related products are not specified but will be below street value with guaranteed quality. The club organizes events to build community and share information. Currently seeking suitable locations in South-East Berlin, membership involves a one-time fee of €30 and a monthly fee of €2. For more details, interested individuals can contact the club through their website or follow them on Instagram for updates and activities.",
-            "meta_description": "Cannabis Club Lammbock e.V. provides advice for safe, responsible cannabis use and supports informed choices, hosting community events.",
-            "meta_keywords": "safe cannabis advice, responsible cannabis use, quality cannabis below street price, community strengthening events, Southeast Berlin cannabis club, monthly cannabis membership, cannabis cultivation community, direct cannabis counseling",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "The club offers advice on safe and responsible cannabis use, aiming to support informed decisions through direct consultation for it members."
+            "prices": "Membership options include a monthly fee of €12 for individuals and €24 for legal entities, with an additional €95 sign-up fee. Membership benefits include up to 50g of cannabis per month, participation in community events, and voting rights in strain selection.",
+            "location": "Located in Alt-Köpenick, Berlin. Specific opening hours and exact location details will be provided upon membership confirmation.",
+            "description": "Cannabis-Club Lammbock e.V. is committed to providing high-quality cannabis to its members while promoting a responsible and legal cannabis culture. The club is a community-driven organization that values transparency and collective decision-making. Members can contribute ideas, participate in events, and engage in the cultivation and distribution of cannabis as soon as legalization permits. The club also places a strong emphasis on harm reduction and prevention, offering educational resources and workshops.",
+            "meta_description": "Cannabis-Club Lammbock e.V. in Berlin offers a community-focused platform for high-quality cannabis and responsible use.",
+            "meta_keywords": "Cannabis-Club Lammbock, Berlin cannabis club, legal cannabis, responsible cannabis culture, community-driven cannabis, high-quality cannabis, harm reduction, cannabis workshops.",
+            "offerings": "Community cultivation, distribution of cannabis for members, socializing, and events.",
+            "harm_reduction": "The club provides comprehensive prevention services, including workshops, seminars, and individual consultations to educate members about the risks of cannabis use and promote safe consumption practices."
         },
         "high-circle": {
             "prices": "Monthly membership fee of 28-35EUR and a one-time fee of 1-28EUR.",
@@ -567,68 +566,68 @@
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
             "harm_reduction": "This club has currently not listed any specific harm reduction services."
         },
-        "berlin-blatt-und-bluete-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Berlin Blatt und Blüte e.V.",
-            "meta_keywords": "Berlin Blatt und Blüte e.V., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+        "berlin-blatt-und-blute-ev": {
+            "prices": "Membership tiers range from 20 EUR/month for 2 grams of cannabis up to 250 EUR/month for 50 grams. No additional fees.",
+            "location": "Cannabis is cultivated in Brandenburg and distributed in Berlin-Kreuzberg. Specific opening times will be shared soon.",
+            "description": "Berlin Blatt und Blüte e.V. is a community-driven cannabis social club in Berlin, legally cultivating cannabis in Berlin and Brandenburg. The club prioritizes sustainability, transparency, and the production of high-quality cannabis. Members can choose from various membership levels based on their cannabis needs, participate in cultivation activities, and engage in a supportive community.",
+            "meta_description": "Berlin Blatt und Blüte e.V. is a cannabis social club focused on sustainable cultivation and high-quality cannabis in Berlin.",
+            "meta_keywords": "Berlin Blatt und Blüte e.V., cannabis social club Berlin, sustainable cannabis cultivation, high-quality cannabis, community-driven cannabis, cannabis cultivation Berlin, cannabis distribution Berlin",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Events",
+            "harm_reduction": "The club emphasizes educating members on responsible cannabis use and offers information to minimize risks associated with consumption."
         },
         "realita-ev-csc": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Realita e.V. CSC",
-            "meta_keywords": "Realita e.V. CSC, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "The membership includes a one-time registration fee of 39.99 EUR and a monthly fee of 9.99 EUR, which includes 2 grams of cannabis.",
+            "location": "Realita e.V. is based in the southwest of Berlin, in Steglitz-Zehlendorf. Detailed location and opening times will be shared upon membership approval.",
+            "description": "Realita e.V. CSC, founded on April 27, 2024, is a cannabis social club in Berlin focused on providing a high-quality, legal alternative to the illicit market. The club emphasizes responsible cannabis use and community-driven cultivation, ensuring transparency and safety for its members. Realita supports the partial legalization of cannabis in Germany and aims to foster a safe and informed cannabis culture.",
+            "meta_description": "Realita e.V. CSC is a cannabis social club in Berlin promoting legal, high-quality cannabis and responsible consumption.",
+            "meta_keywords": "Realita e.V. CSC, cannabis social club Berlin, legal cannabis, responsible consumption, community cultivation, Steglitz-Zehlendorf",
+            "offerings": "Community cultivation, Cannabis distribution for members, Socializing",
+            "harm_reduction": "This club emphasizes responsible use and provides education to minimize the risks associated with cannabis consumption."
         },
-        "bunte-bluete-cannabis-club-berlin-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Bunte Blüte Cannabis Club Berlin e.V.",
-            "meta_keywords": "Bunte Blüte Cannabis Club Berlin e.V., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+        "bunte-blute-cannabis-club-berlin-ev": {
+            "prices": "Membership fee is 50 EUR per month, which includes a credit towards cannabis purchases. The price per gram starts at 7-8 EUR.",
+            "location": "The cannabis distribution center will be located in central Berlin. Specific details will be provided upon membership approval.",
+            "description": "Bunte Blüte Cannabis Club Berlin e.V. is a cannabis social club focused on offering high-quality, THC-rich cannabis through a transparent, community-driven model. The club, which is currently navigating the complexities of Berlin's legalization process, emphasizes sustainability and premium production standards. Members benefit from a variety of cannabis strains, seeds, and cuttings, with an emphasis on responsible use and community involvement.",
+            "meta_description": "Bunte Blüte Cannabis Club Berlin e.V. offers high-quality cannabis in a transparent and community-driven environment in Berlin.",
+            "meta_keywords": "Bunte Blüte Cannabis Club Berlin, cannabis social club, high-quality cannabis, community-driven cannabis, cannabis distribution Berlin, sustainable cannabis, THC-rich cannabis",
+            "offerings": "Community cultivation, Cannabis distribution, Seeds and cuttings, Socializing",
+            "harm_reduction": "The club focuses on responsible use, with efforts to educate members on safe consumption practices and minimize risks."
         },
         "420-bearz": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "420 Bearz",
-            "meta_keywords": "420 Bearz, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Membership options include 'Small Bear' at 75 EUR/month (5g included), 'Big Bear' at 130 EUR/month (15g included), and 'Mighty Bear' at 176 EUR/month (25g included). Additional grams are priced at 7 EUR each.",
+            "location": "The club's cannabis distribution center is located in southern Berlin, between Lichterfelde and Lichtenrade. Specific opening times will be provided upon membership.",
+            "description": "420 Bearz is a cannabis social club in Berlin, offering high-quality, THC-rich cannabis strains produced with precision and care. The club emphasizes professional cultivation methods, including the use of organic fertilizers and computer-controlled environments. Members can choose from various strains, all cultivated to ensure maximum potency and flavor. The club also prioritizes community and member engagement through its tiered membership system.",
+            "meta_description": "420 Bearz is a Berlin cannabis club offering high-quality, professionally cultivated cannabis strains with a focus on community and engagement.",
+            "meta_keywords": "420 Bearz, Berlin cannabis club, high-quality cannabis, THC-rich strains, community cultivation, organic cannabis, professional cannabis cultivation, cannabis distribution Berlin",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, High-THC strains",
+            "harm_reduction": "The club provides education on responsible cannabis use and offers support to members to minimize the risks associated with consumption."
         },
         "csc-gruenvereint-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "CSC Grünvereint e.V.",
-            "meta_keywords": "CSC Grünvereint e.V., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Membership fees start at 30 EUR per month, depending on the selected membership level. Prices for cannabis are adjusted according to cultivation costs.",
+            "location": "The club is based in Berlin, Germany. Detailed location information will be provided upon membership approval.",
+            "description": "CSC Grünvereint e.V. is a Berlin-based cannabis cultivation association focused on sustainable and community-driven cannabis production. The club operates under the principles of transparency and responsibility, providing members with access to high-quality cannabis while promoting education and harm reduction. Grünvereint emphasizes environmental sustainability in its cultivation practices, ensuring that all products are free from harmful chemicals.",
+            "meta_description": "CSC Grünvereint e.V. is a cannabis club in Berlin focused on sustainable, community-driven cannabis cultivation and harm reduction.",
+            "meta_keywords": "CSC Grünvereint e.V., Berlin cannabis club, sustainable cannabis cultivation, community-driven cannabis, high-quality cannabis, environmental sustainability, harm reduction",
+            "offerings": "Community cultivation, Cannabis distribution for members, Education, Environmental sustainability",
+            "harm_reduction": "The club is committed to harm reduction by educating members on safe cannabis consumption and minimizing the risks associated with cannabis use."
         },
         "budz-berlin-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Budz Berlin e.V.",
-            "meta_keywords": "Budz Berlin e.V., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Membership fees start at 25 EUR per month, with additional tiers offering discounts and exclusive benefits. Prices for cannabis are adjusted according to cultivation costs.",
+            "location": "Budz Berlin e.V. operates in Berlin with cultivation taking place in Solingen. Detailed distribution information will be shared with members.",
+            "description": "Budz Berlin e.V. is a cannabis social club dedicated to providing high-quality, safe cannabis to its members through controlled and secure cultivation. The club emphasizes transparency, community, and the protection of minors. Budz operates under strict guidelines to ensure that only adults have access to cannabis, and offers a range of membership options to support its mission of creating a friendly and safe cannabis community.",
+            "meta_description": "Budz Berlin e.V. is a cannabis club in Berlin focused on providing safe, high-quality cannabis through secure cultivation and community involvement.",
+            "meta_keywords": "Budz Berlin e.V., cannabis social club Berlin, safe cannabis, controlled cultivation, community cannabis, cannabis distribution Berlin, cannabis membership tiers",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Safe cannabis access",
+            "harm_reduction": "The club is committed to protecting minors and offers education on safe cannabis use, ensuring that all members are informed and responsible consumers."
         },
         "ambrosia-csc-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Ambrosia CSC e.V.",
-            "meta_keywords": "Ambrosia CSC e.V., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Monthly membership starts at 25 EUR. The price per gram ranges between 4 EUR and 8 EUR, based on cultivation costs.",
+            "location": "Ambrosia CSC e.V. operates in Berlin, with indoor cultivation in the eastern part of the city and outdoor growth in Brandenburg.",
+            "description": "Ambrosia CSC e.V. is a Berlin-based cannabis social club committed to sustainable and professional cannabis cultivation. The club uses state-of-the-art technology, including energy-saving LED systems and professional substrates, to produce high-quality cannabis. Members are encouraged to participate in the cultivation process, which is managed by experienced horticulturists. Ambrosia CSC is dedicated to promoting a community-oriented environment, where cannabis enthusiasts can share knowledge and enjoy a range of high-quality strains.",
+            "meta_description": "Ambrosia CSC e.V. is a Berlin cannabis club focused on sustainable cultivation and community involvement, offering high-quality strains.",
+            "meta_keywords": "Ambrosia CSC e.V., Berlin cannabis club, sustainable cultivation, community cannabis, high-quality strains, LED technology, cannabis horticulture",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Sustainable practices",
+            "harm_reduction": "The club focuses on educating its members about the potential risks of cannabis use, particularly for younger people, and emphasizes safe consumption practices."
         },
         "handcut-flowers": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -640,13 +639,13 @@
             "harm_reduction": "This club has currently not listed any specific harm reduction services."
         },
         "nicetime-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "NiceTime e.V.",
-            "meta_keywords": "NiceTime e.V., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Membership starts at 10 EUR per month. Cannabis prices are adjusted according to cultivation costs and member preferences.",
+            "location": "NiceTime e.V. is based in Berlin, with specific distribution locations provided upon membership approval.",
+            "description": "NiceTime e.V. is a community-focused cannabis social club in Berlin, committed to sustainable and responsible cannabis cultivation. The club offers members a diverse selection of high-quality strains, grown using organic and eco-friendly methods. NiceTime promotes a supportive, non-discriminatory environment, where members can engage in educational workshops and community activities that emphasize the importance of sustainable and legal cannabis use.",
+            "meta_description": "NiceTime e.V. is a Berlin cannabis club focused on sustainable, responsible cultivation and a supportive community environment.",
+            "meta_keywords": "NiceTime e.V., Berlin cannabis club, sustainable cannabis, responsible cultivation, organic cannabis, community-focused cannabis, educational workshops, high-quality strains",
+            "offerings": "Community cultivation, Cannabis distribution, Educational workshops, Socializing, High-quality strains",
+            "harm_reduction": "The club provides education on safe cannabis use and emphasizes harm reduction through its sustainable practices and community engagement."
         },
         "klub425-csc-berlin": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -685,13 +684,13 @@
             "harm_reduction": "This club has currently not listed any specific harm reduction services."
         },
         "weed-bros": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "WEED BROS.",
-            "meta_keywords": "WEED BROS., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Membership starts at 10 EUR per month, with the first three months free for the first 150 members. Prices for cannabis are set based on cultivation costs.",
+            "location": "WEED BROS. is located in Berlin Friedrichshain. The exact location will be provided upon membership approval.",
+            "description": "WEED BROS. is a cannabis social club in Berlin Friedrichshain focused on community-driven, sustainable, and organic cannabis cultivation. The club offers a welcoming environment where members can participate in high-quality cannabis production and enjoy a supportive, familial atmosphere. WEED BROS. emphasizes transparency and member involvement in all aspects of the cultivation process.",
+            "meta_description": "WEED BROS. is a cannabis club in Berlin Friedrichshain focusing on sustainable, community-driven cultivation and member involvement.",
+            "meta_keywords": "WEED BROS., Berlin cannabis club, sustainable cultivation, community-driven cannabis, organic cannabis, Friedrichshain cannabis club, member involvement",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Sustainable practices",
+            "harm_reduction": "The club educates members on safe and responsible cannabis use, promoting harm reduction through sustainable and organic practices."
         }
     }
 }

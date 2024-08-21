@@ -36,10 +36,11 @@ export default function ClubOpenStreetMap({ club }: ClubProps) {
         <MapContainer
             center={center}
             zoom={zoom}
-            style={{ height: '200px', width: '100%' }}
+            style={{ height: '400px', width: '100%' }}
         >
             <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
 
@@ -55,15 +56,12 @@ export default function ClubOpenStreetMap({ club }: ClubProps) {
                     >
                         <div className="flex justify-center items-center">
                             <div className={styles.mapCard} key={club.key}>
-                                <div className={styles.cardNumber}>
-                                    #{club.key}
-                                </div>
                                 <div className="flex justify-center items-center">
                                     <Image
                                         src={club.imageUrl}
                                         alt={club.name + ' Club Picture'}
-                                        width={300}
-                                        height={300}
+                                        width={150}
+                                        height={150}
                                         className={styles.mapCardImage}
                                     />
                                 </div>
@@ -71,9 +69,18 @@ export default function ClubOpenStreetMap({ club }: ClubProps) {
                                     <h3 className={styles.mapCardTitle}>
                                         {club.name}
                                     </h3>
-                                    <p className={styles.mapCardDescription}>
-                                        {club.offerings}
-                                    </p>
+
+                                    {club.offerings
+                                        ?.toString()
+                                        .split(',')
+                                        .map((offering) => (
+                                            <div
+                                                key={offering}
+                                                className="bg-lime-500 text-white rounded-xl py-1 px-2 self-center overflow-ellipsis"
+                                            >
+                                                {offering}
+                                            </div>
+                                        ))}
                                 </div>
                             </div>
                         </div>

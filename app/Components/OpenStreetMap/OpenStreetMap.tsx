@@ -187,7 +187,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     return (
         <div>
             {props.isDesktopMap && (
-                <div className="absolute flex flex-row flex-nowrap justify-end items-stretch right-0 top-[var(--navbar-height)] dynamic-height z-[2005]">
+                <div className='absolute flex flex-row flex-nowrap justify-end items-stretch right-0 top-[var(--navbar-height)] dynamic-height z-[2005]'>
                     {selectedClub && clubIndexExists && (
                         <CustomPopup
                             style={{
@@ -218,12 +218,12 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 </div>
             )}
             <AnimatePresence
-                mode="sync"
+                mode='sync'
                 onExitComplete={() => console.log('Exit animation complete')}
             >
                 {selectedClub && clubIndexExists && (
                     <motion.div
-                        key="swipeable-deck"
+                        key='swipeable-deck'
                         initial={{ '--deck-opacity': 0 } as any}
                         animate={{ '--deck-opacity': 1 } as any}
                         exit={{ '--deck-opacity': 0 } as any}
@@ -246,8 +246,8 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                             onDownSwipeClose={() => setClubIndex(null)}
                             // change "true" to setClubIndex(null) whenever animations are figured out
                             // onUpSwipeClose={() => true}
-                            onRightSwipe={() => setNextClub()}
-                            onLeftSwipe={() => setPreviousClub()}
+                            onRightSwipe={() => setPreviousClub()}
+                            onLeftSwipe={() => setNextClub()}
                         />
                     </motion.div>
                 )}
@@ -266,10 +266,10 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                         }
                     }}
                 >
-                    <ZoomControl position="bottomright" />
+                    <ZoomControl position='bottomright' />
                     <TileLayer
                         //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+                        url='https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
                         //url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     />

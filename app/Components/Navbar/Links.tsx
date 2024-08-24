@@ -12,7 +12,7 @@ export interface LinkInfo {
 export default function Links({ links }: { links: Array<LinkInfo> }) {
     const pathname = usePathname();
     const currentPageStyling =
-        'text-[#E3E71F] font-bold text-xl group transition duration-300';
+        'text-[#10b523] font-bold text-xl group transition duration-300';
     const defaultLinkStyling =
         'font-normal text-xl group transition duration-300';
     const isHomePage = isPathNameHome(pathname!);

@@ -130,16 +130,19 @@ export default function SwipeableClubCard({
                         >
                             {club.name}
                         </h1>
-                        {/* <div className="mx-2 flex flex-wrap justify-center">
-                            {club.offerings?.map((offering: string) => (
-                                <span
-                                    key={offering}
-                                    className="bg-blue-100 text-blue-800 text-xs font-medium me-2 p-0.5 inline-block overflow-hidden text-center rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
-                                >
-                                    {offering}
-                                </span>
-                            ))}
-                        </div> */}
+                        <div className="mx-2 flex flex-wrap justify-center">
+                            {club.offerings
+                                .toString()
+                                ?.split(',')
+                                .map((offering: string) => (
+                                    <span
+                                        key={offering}
+                                        className="bg-blue-100 text-blue-800 text-xs font-medium me-2 p-0.5 inline-block overflow-hidden text-center rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                                    >
+                                        {offering}
+                                    </span>
+                                ))}
+                        </div>
                     </div>
                 </div>
             </div>

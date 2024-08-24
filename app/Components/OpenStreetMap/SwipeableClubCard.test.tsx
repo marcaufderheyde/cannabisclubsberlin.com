@@ -96,9 +96,12 @@ describe('SwipeableClubCard', () => {
         ).toBeInTheDocument();
     });
 
-    it('navigates to club page when club name is clicked', () => {
+    it('navigates to club page when clicking anywhere on the card content', () => {
         renderComponent();
-        fireEvent.click(screen.getByText('Test Club'));
+        const cardContentElement = screen.getByText('Test Club').closest('div');
+        if (!cardContentElement)
+            throw new Error('Card content element not found');
+        fireEvent.click(cardContentElement);
         expect(mockPush).toHaveBeenCalledWith('/en/clubs/test-club');
     });
 
@@ -138,5 +141,54 @@ describe('SwipeableClubCard', () => {
             simulateSwipe(swipeableElement, [0, 0], [0, 200]);
         }
         expect(mockOnDownSwipeClose).toHaveBeenCalled();
+    });
+
+    it('renders offering tags correctly', () => {
+        renderComponent();
+        expect(screen.getByText('Offer 1')).toBeInTheDocument();
+        expect(screen.getByText('Offer 2')).toBeInTheDocument();
+    });
+
+    it('applies correct styling to offering tags', () => {
+        renderComponent();
+        const offerTags = screen.getAllByText(/Offer/);
+        offerTags.forEach((tag) => {
+            expect(tag).toHaveClass(
+                'bg-blue-100',
+                'text-blue-800',
+                'text-xs',
+                'font-medium',
+                'me-2',
+                'p-0.5',
+                'inline-block',
+                'overflow-hidden',
+                'text-center',
+                'rounded',
+                'dark:bg-gray-700',
+                'dark:text-blue-400',
+                'border',
+                'border-blue-400'
+            );
+        });
+    });
+
+    it('renders correct number of offering tags', () => {
+        const clubWithMoreOfferings = {
+            ...mockClub,
+            offerings: 'Offer 1, Offer 2, Offer 3, Offer 4',
+        };
+        renderComponent({ club: clubWithMoreOfferings });
+        const offerTags = screen.getAllByText(/Offer/);
+        expect(offerTags).toHaveLength(4);
+    });
+
+    it('handles empty offerings gracefully', () => {
+        const clubWithNoOfferings = {
+            ...mockClub,
+            offerings: '',
+        };
+        renderComponent({ club: clubWithNoOfferings });
+        const offerTags = screen.queryAllByText(/Offer/);
+        expect(offerTags).toHaveLength(0);
     });
 });

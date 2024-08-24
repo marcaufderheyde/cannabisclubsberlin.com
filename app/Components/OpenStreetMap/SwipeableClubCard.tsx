@@ -111,7 +111,10 @@ export default function SwipeableClubCard({
                     'overscroll-contained absolute bg-white w-[250px] h-[450px] bottom-0 rounded-[3em] shadow-lg z-1 pointer-events-auto'
                 }
             >
-                <div className="relative overscroll-contained">
+                <div
+                    className="relative overscroll-contained"
+                    onClick={handleExpandToClubPage}
+                >
                     <div className="relative overscroll-contained">
                         <Image
                             src={club.imageUrl}
@@ -126,7 +129,6 @@ export default function SwipeableClubCard({
                             className={
                                 'text-black font-bold md:text-[1.5rem] lg:text-[4rem] text-center m-2'
                             }
-                            onClick={handleExpandToClubPage}
                         >
                             {club.name}
                         </h1>

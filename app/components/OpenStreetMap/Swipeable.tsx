@@ -44,7 +44,7 @@ const initTouchDetails: TouchDetails = {
     swipeDir: SwipeStates.none,
     swipingThreshold: 5,
     swipingRestraint: 20,
-    swipeDownCloseBoundary: 150,
+    swipeDownCloseBoundary: 80,
     swipeUpCloseBoundary: -150,
 };
 

@@ -36,7 +36,7 @@ function MapListFilterSwitcher({
                     aria-label="show hr clubs button"
                     onClick={() => setShowHRInfo(true)}
                     className={
-                        'z-[999] rounded-xl cursor-pointer items-center text-lg  my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
+                        'z-[999] rounded-xl cursor-pointer items-center text-sm sm:text-md md:text-lg my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
                         displayHRClubsButtonBackground
                     }
                 >
@@ -46,7 +46,7 @@ function MapListFilterSwitcher({
                     aria-label="show all clubs button"
                     onClick={() => setShowHRInfo(false)}
                     className={
-                        'z-[999] rounded-xl cursor-pointer items-center text-lg  my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
+                        'z-[999] rounded-xl cursor-pointer items-center text-sm sm:text-md md:text-lg my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
                         displayAllClubsButtonBackground
                     }
                 >

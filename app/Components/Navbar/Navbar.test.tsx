@@ -18,7 +18,7 @@ jest.mock('next-intl', () => ({
 
 jest.mock('@/app/helpers/isPathnameHome', () => jest.fn());
 
-jest.mock('@/app/components/Logo/Logo', () => ({
+jest.mock('@/app/Components/Logo/Logo', () => ({
     __esModule: true,
     default: function MockLogo() {
         const React = require('react');
@@ -36,7 +36,7 @@ jest.mock('../TranslationSwitch/TranslationSwitch', () => ({
     },
 }));
 
-jest.mock('@/app/components/MobileNav/MobileNav', () => ({
+jest.mock('@/app/Components/MobileNav/MobileNav', () => ({
     __esModule: true,
     default: function MockMobileNav({ links }: { links: Array<LinkInfo> }) {
         const React = require('react');
@@ -50,7 +50,7 @@ jest.mock('@/app/components/MobileNav/MobileNav', () => ({
     },
 }));
 
-jest.mock('@/app/components/Navbar/Links', () => ({
+jest.mock('@/app/Components/Navbar/Links', () => ({
     __esModule: true,
     default: function MockLinks({ links }: { links: Array<LinkInfo> }) {
         const React = require('react');

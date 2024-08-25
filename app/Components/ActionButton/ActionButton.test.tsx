@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ActionButton from './ActionButton';
 
-jest.mock('@/app/components/CustomPopup/Triangle', () => {
+jest.mock('@/app/Components/CustomPopup/Triangle', () => {
     const React = require('react');
     return {
         __esModule: true,
@@ -31,10 +31,10 @@ describe('ActionButton Component', () => {
     it('renders a link when externalLink is false', () => {
         render(
             <ActionButton
-                href="/internal-link"
-                textColor="white"
-                backgroundColor="black"
-                className="custom-class"
+                href='/internal-link'
+                textColor='white'
+                backgroundColor='black'
+                className='custom-class'
             >
                 Internal Link
             </ActionButton>
@@ -52,11 +52,11 @@ describe('ActionButton Component', () => {
     it('renders an anchor tag when externalLink is true', () => {
         render(
             <ActionButton
-                href="https://external-link.com"
-                textColor="white"
-                backgroundColor="black"
+                href='https://external-link.com'
+                textColor='white'
+                backgroundColor='black'
                 externalLink={true}
-                className="custom-class"
+                className='custom-class'
             >
                 External Link
             </ActionButton>
@@ -76,7 +76,7 @@ describe('ActionButton Component', () => {
 
     it('renders the Triangle component with the correct color', () => {
         render(
-            <ActionButton href="/" textColor="white" backgroundColor="black">
+            <ActionButton href='/' textColor='white' backgroundColor='black'>
                 Test Button
             </ActionButton>
         );

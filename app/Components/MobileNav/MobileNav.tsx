@@ -1,7 +1,7 @@
 'use client';
 
-import HamburgerButton from '@/app/components/MobileNav/Hamburgerbutton';
-import OverlayNav from '@/app/components/OverlayNav/Overlaynav';
+import HamburgerButton from '@/app/Components/MobileNav/Hamburgerbutton';
+import OverlayNav from '@/app/Components/OverlayNav/Overlaynav';
 import { useState } from 'react';
 import { LinkInfo } from '../Navbar/Links';
 

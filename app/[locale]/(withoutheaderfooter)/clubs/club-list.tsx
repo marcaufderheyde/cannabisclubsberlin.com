@@ -1,5 +1,5 @@
 'use client';
-import MobileClubList from '@/app/components/MobileClubList/MobileClubList';
+import MobileClubList from '@/app/Components/MobileClubList/MobileClubList';
 
 export type ClubsListProps = {
     clubClickedFromList: (index: number) => void;
@@ -9,7 +9,7 @@ export type ClubsListProps = {
 export default function ClubsList(props: ClubsListProps) {
     return (
         <div>
-            <div className="lg:hidden flex">
+            <div className='lg:hidden flex'>
                 <MobileClubList
                     clubClickedFromList={props.clubClickedFromList}
                     showHRInfo={props.showHRInfo}

@@ -1,18 +1,18 @@
 'use client';
-import Headline from '@/app/components/Home/Headline';
-import ActionButton from '@/app/components/ActionButton/ActionButton';
+import Headline from '@/app/Components/Home/headline';
+import ActionButton from '@/app/Components/ActionButton/ActionButton';
 import { useLocale, useTranslations } from 'next-intl';
 
 export default function HomeContent() {
     const t = useTranslations('HomePage');
     const localActive = useLocale();
     return (
-        <div className="flex flex-col gap-8 md:gap-12">
+        <div className='flex flex-col gap-8 md:gap-12'>
             <Headline />
-            <p className="md:text-[1.5rem] text-[#2E2E2E] md:max-w-[500px]">
+            <p className='md:text-[1.5rem] text-[#2E2E2E] md:max-w-[500px]'>
                 {t('headline_description')}
             </p>
-            <div className="flex flex-row text-lg font-semibold gap-2">
+            <div className='flex flex-row text-lg font-semibold gap-2'>
                 <ActionButton
                     backgroundColor={'#B6CF54'}
                     textColor={'#FFFFFF'}

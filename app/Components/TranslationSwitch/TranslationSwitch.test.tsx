@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import LocalSwitcher from './TranslationSwitch';
+import LocalSwitcher from '@/app/Components/TranslationSwitch/TranslationSwitch';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
@@ -15,7 +15,7 @@ jest.mock('next-intl', () => ({
     useLocale: jest.fn(),
 }));
 
-jest.mock('@/app/components/TranslationSwitch/DropdownTrigger', () => ({
+jest.mock('@/app/Components/TranslationSwitch/DropdownTrigger', () => ({
     __esModule: true,
     default: function MockDropdownTrigger({
         dropdownRef,
@@ -34,7 +34,7 @@ jest.mock('@/app/components/TranslationSwitch/DropdownTrigger', () => ({
     },
 }));
 
-jest.mock('@/app/components/TranslationSwitch/DropdownContent', () => ({
+jest.mock('@/app/Components/TranslationSwitch/DropdownContent', () => ({
     __esModule: true,
     default: function MockDropdownContent({
         dropdownRef,

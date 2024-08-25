@@ -1,4 +1,4 @@
-import Burger from '@/app/components/Burger/Burger';
+import Burger from '@/app/Components/Burger/Burger';
 import { usePathname } from 'next/navigation';
 import isPathnameHome from '@/app/helpers/isPathnameHome';
 
@@ -13,9 +13,9 @@ export default function HamburgerButton({
 
     return (
         <div
-            aria-label="hamburger button"
+            aria-label='hamburger button'
             onClick={() => showOverlay()}
-            className="py-3 px-3 backdrop-blur-xl rounded-[2rem] bg-[rgba(255,255,255,0.11)]"
+            className='py-3 px-3 backdrop-blur-xl rounded-[2rem] bg-[rgba(255,255,255,0.11)]'
         >
             <Burger
                 color={

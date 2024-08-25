@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import MobileNav from './MobileNav';
 import { LinkInfo } from '../Navbar/Links';
 
-jest.mock('@/app/components/MobileNav/Hamburgerbutton', () => {
+jest.mock('@/app/Components/MobileNav/Hamburgerbutton', () => {
     const React = require('react');
     const MockHamburgerButton = ({
         showOverlay,
@@ -20,7 +20,7 @@ jest.mock('@/app/components/MobileNav/Hamburgerbutton', () => {
     return MockHamburgerButton;
 });
 
-jest.mock('@/app/components/OverlayNav/Overlaynav', () => {
+jest.mock('@/app/Components/OverlayNav/Overlaynav', () => {
     const React = require('react');
     const MockOverlayNav = ({ closeOverlay }: { closeOverlay: () => void }) => {
         return React.createElement('div', {

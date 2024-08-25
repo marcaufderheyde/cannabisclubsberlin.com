@@ -1,4 +1,4 @@
-import ClassNameMatcher from "./classNameMatcher";
+import ClassNameMatcher from "@/app/Components/AutoScaler/helpers/ClassNameMatcher";
 
 describe('ClassNameMatcher', () => {
     describe('getCustomWidth', () => {

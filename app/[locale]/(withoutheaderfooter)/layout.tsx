@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 import '@/app/globals.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import ViewportHandler from '@/app/components/ViewportHandler/ViewportHandler';
+import ViewportHandler from '@/app/Components/ViewportHandler/ViewportHandler';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
 
@@ -41,14 +41,14 @@ export default function LocaleLayout({
             <NextIntlClientProvider messages={messages}>
                 <ViewportHandler>{children}</ViewportHandler>
             </NextIntlClientProvider>
-            <GoogleTagManager gtmId="GTM-PBKDVXT9" />
+            <GoogleTagManager gtmId='GTM-PBKDVXT9' />
             <Script
-                id="googleTagManager"
+                id='googleTagManager'
                 async
-                strategy="lazyOnload"
-                src="https://www.googletagmanager.com/gtag/js?id=G-7NZJ6HL34T"
+                strategy='lazyOnload'
+                src='https://www.googletagmanager.com/gtag/js?id=G-7NZJ6HL34T'
             ></Script>
-            <Script id="googleAnalyticsDataLayer" strategy="lazyOnload">
+            <Script id='googleAnalyticsDataLayer' strategy='lazyOnload'>
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}

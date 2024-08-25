@@ -1,9 +1,9 @@
 'use client';
-import Logo from '@/app/components/Logo/Logo';
-import Links, { LinkInfo } from '@/app/components/Navbar/Links';
-import TranslationSwitch from '../TranslationSwitch/TranslationSwitch';
+import Logo from '@/app/Components/Logo/Logo';
+import Links, { LinkInfo } from '@/app/Components/Navbar/Links';
+import TranslationSwitch from '@/app/Components/TranslationSwitch/TranslationSwitch';
 import { useLocale, useTranslations } from 'next-intl';
-import MobileNav from '@/app/components/MobileNav/MobileNav';
+import MobileNav from '@/app/Components/MobileNav/MobileNav';
 import { usePathname } from 'next/navigation';
 import isPathNameHome from '@/app/helpers/isPathnameHome';
 

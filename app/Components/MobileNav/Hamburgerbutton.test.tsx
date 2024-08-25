@@ -5,7 +5,7 @@ import HamburgerButton from './Hamburgerbutton';
 import { usePathname } from 'next/navigation';
 import isPathnameHome from '@/app/helpers/isPathnameHome';
 
-jest.mock('@/app/components/Burger/Burger', () => {
+jest.mock('@/app/Components/Burger/Burger', () => {
     const React = require('react');
     const MockBurger = ({ color }: { color: string }) => {
         return React.createElement('div', {

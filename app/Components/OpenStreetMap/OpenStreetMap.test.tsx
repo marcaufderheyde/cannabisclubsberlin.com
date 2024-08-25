@@ -92,7 +92,7 @@ jest.mock('next-intl', () => ({
     useTranslations: jest.fn(),
 }));
 
-jest.mock('@/app/components/OpenStreetMap/helpers/jumpToMarker', () =>
+jest.mock('@/app/Components/OpenStreetMap/helpers/jumpToMarker', () =>
     jest.fn()
 );
 

@@ -1,7 +1,7 @@
 'use client';
 
-import DropdownContent from '@/app/components/TranslationSwitch/DropdownContent';
-import DropdownTrigger from '@/app/components/TranslationSwitch/DropdownTrigger';
+import DropdownContent from '@/app/Components/TranslationSwitch/DropdownContent';
+import DropdownTrigger from '@/app/Components/TranslationSwitch/DropdownTrigger';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { ChangeEvent, useEffect, useRef, useState, useTransition } from 'react';
@@ -101,23 +101,23 @@ export default function LocalSwitcher() {
     );
 
     return (
-        <div className="flex">
+        <div className='flex'>
             {/* Desktop */}
-            <div className="sm:visible invisible relative top-0">
+            <div className='sm:visible invisible relative top-0'>
                 {dropdownTrigger}
                 {showDropdownContent && dropDownContent}
             </div>
             {/* Mobile: can replace invisible with hidden and flex*/}
-            <div className="sm:invisible visible relative">
-                <p className="sr-only">change language</p>
+            <div className='sm:invisible visible relative'>
+                <p className='sr-only'>change language</p>
                 <select
                     defaultValue={localeActive}
-                    className="py-2 rounded-lg"
+                    className='py-2 rounded-lg'
                     onChange={changeLocaleMobile}
                     disabled={isPending}
                 >
-                    <option value="en">🇬🇧 English</option>
-                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value='en'>🇬🇧 English</option>
+                    <option value='de'>🇩🇪 Deutsch</option>
                 </select>
             </div>
         </div>

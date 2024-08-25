@@ -1,11 +1,11 @@
 'use client';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import Navbar from '@/app/components/Navbar/Navbar';
-import MapListFilterSwitcher from '@/app/components/MapListFilterSwitcher/MapListFilterSwitcher';
+import Navbar from '@/app/Components/Navbar/Navbar';
+import MapListFilterSwitcher from '@/app/Components/MapListFilterSwitcher/MapListFilterSwitcher';
 
 const OpenStreetMap = dynamic(
-    () => import('@/app/components/OpenStreetMap/OpenStreetMap'),
+    () => import('@/app/Components/OpenStreetMap/OpenStreetMap'),
     {
         ssr: false,
     }
@@ -19,7 +19,7 @@ export default function ClubsContent() {
         <div>
             <Navbar isOnMap={true} />
             <div>
-                <div className="hidden lg:flex">
+                <div className='hidden lg:flex'>
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={true}
@@ -31,7 +31,7 @@ export default function ClubsContent() {
                         setShowHRFilter={setShowHRFilter}
                     />
                 </div>
-                <div className="lg:hidden flex">
+                <div className='lg:hidden flex'>
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={false}

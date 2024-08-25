@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Footer from './Footer';
+import Footer from '@/app/Components/Footer/footer';
 import { useLocale, useTranslations } from 'next-intl';
 
 jest.mock('next-intl', () => ({

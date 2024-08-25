@@ -3,19 +3,19 @@ import { render, screen, fireEvent, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import OverlayNav from './Overlaynav';
 import { usePathname } from 'next/navigation';
-import { LinkInfo } from '../Navbar/Links';
-import usePrevious from '@/app/components/OverlayNav/helpers/usePrevious';
+import { LinkInfo } from '@/app/Components/Navbar/Links';
+import usePrevious from '@/app/Components/OverlayNav/helpers/usePrevious';
 
 jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),
 }));
 
-jest.mock('@/app/components/OverlayNav/helpers/usePrevious', () => jest.fn());
-jest.mock('@/app/components/OverlayNav/helpers/usePreventScrolling', () =>
+jest.mock('@/app/Components/OverlayNav/helpers/usePrevious', () => jest.fn());
+jest.mock('@/app/Components/OverlayNav/helpers/usePreventScrolling', () =>
     jest.fn()
 );
 
-jest.mock('@/app/components/Logo/Logo', () => ({
+jest.mock('@/app/Components/Logo/Logo', () => ({
     __esModule: true,
     default: function MockLogo({ onClick }: { onClick: () => void }) {
         const React = require('react');
@@ -29,7 +29,7 @@ jest.mock('@/app/components/Logo/Logo', () => ({
     },
 }));
 
-jest.mock('@/app/components/Close/Close', () => ({
+jest.mock('@/app/Components/Close/Close', () => ({
     __esModule: true,
     default: function MockClose({ color }: { color: string }) {
         const React = require('react');

@@ -135,6 +135,8 @@
         "visit_website_title": "Visit Their Website",
         "clubs_menu_show_map": "Map",
         "clubs_menu_show_list": "List",
+        "clubs_menu_show_hr_clubs": "Harm Reduction Clubs",
+        "clubs_menu_show_all_clubs": "All Clubs",
         "clubs_menu_back_button": "Back to Map",
         "map_disclaimer": "Not all clubs are shown on the map currently, given the information available. Please use the club list to see all available clubs! Please note the locations listed on the map below are taken from the imprint of the clubs found so far, and might not reflect the actual location of the club in the future.",
         "offerings_tags": {

@@ -13,8 +13,14 @@ describe('MapListFilterSwitcher', () => {
     const setShowHRFilterMock = jest.fn();
 
     beforeEach(() => {
-        (useTranslations as jest.Mock).mockReturnValue((key: string) => key);
         (useLocale as jest.Mock).mockReturnValue('en');
+        (useTranslations as jest.Mock).mockReturnValue((key: string) => {
+            const translations: { [key: string]: string } = {
+                clubs_menu_show_hr_clubs: 'Harm Reduction Clubs',
+                clubs_menu_show_all_clubs: 'All Clubs',
+            };
+            return translations[key];
+        });
     });
 
     it('renders correctly with "Harm Reduction Clubs" and "All Clubs" buttons', () => {
@@ -25,8 +31,12 @@ describe('MapListFilterSwitcher', () => {
             />
         );
 
-        expect(screen.getByText('Harm Reduction Clubs')).toBeInTheDocument();
-        expect(screen.getByText('All Clubs')).toBeInTheDocument();
+        expect(
+            screen.getByLabelText('show hr clubs button')
+        ).toBeInTheDocument();
+        expect(
+            screen.getByLabelText('show all clubs button')
+        ).toBeInTheDocument();
     });
 
     it('triggers setShowHRFilter with "true" when "Harm Reduction Clubs" button is clicked', () => {
@@ -37,7 +47,7 @@ describe('MapListFilterSwitcher', () => {
             />
         );
 
-        fireEvent.click(screen.getByText('Harm Reduction Clubs'));
+        fireEvent.click(screen.getByLabelText('show hr clubs button'));
         expect(setShowHRFilterMock).toHaveBeenCalledWith(true);
     });
 
@@ -49,7 +59,7 @@ describe('MapListFilterSwitcher', () => {
             />
         );
 
-        fireEvent.click(screen.getByText('All Clubs'));
+        fireEvent.click(screen.getByLabelText('show all clubs button'));
         expect(setShowHRFilterMock).toHaveBeenCalledWith(false);
     });
 
@@ -62,11 +72,11 @@ describe('MapListFilterSwitcher', () => {
         );
 
         // Verify that "Harm Reduction Clubs" has the active background and "All Clubs" is inactive
-        expect(
-            screen.getByText('Harm Reduction Clubs').parentElement
-        ).toHaveClass('bg-white text-black');
-        expect(screen.getByText('All Clubs').parentElement).toHaveClass(
-            'bg-gray-200 text-neutral-400'
+        expect(screen.getByLabelText('show hr clubs button')).toHaveClass(
+            'bg-white text-black'
+        );
+        expect(screen.getByLabelText('show all clubs button')).toHaveClass(
+            'bg-gray-100 text-neutral-400'
         );
 
         // Re-render with showHRFilter set to false
@@ -78,10 +88,10 @@ describe('MapListFilterSwitcher', () => {
         );
 
         // Verify that "All Clubs" has the active background and "Harm Reduction Clubs" is inactive
-        expect(
-            screen.getByText('Harm Reduction Clubs').parentElement
-        ).toHaveClass('bg-gray-200 text-neutral-400');
-        expect(screen.getByText('All Clubs').parentElement).toHaveClass(
+        expect(screen.getByLabelText('show hr clubs button')).toHaveClass(
+            'bg-gray-100 text-neutral-400'
+        );
+        expect(screen.getByLabelText('show all clubs button')).toHaveClass(
             'bg-white text-black'
         );
     });

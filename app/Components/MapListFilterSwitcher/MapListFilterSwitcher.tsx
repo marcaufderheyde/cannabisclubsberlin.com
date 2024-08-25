@@ -14,46 +14,44 @@ function MapListFilterSwitcher({
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
 
-    const mapButtonBackground = showHRFilter
-        ? 'bg-white text-black'
-        : 'bg-gray-200 text-neutral-400';
-    const listButtonBackground = showHRFilter
-        ? 'bg-gray-200 text-neutral-400'
-        : 'bg-white text-black';
-    const mapListViewSwitcherPosition =
-        'absolute top-[var(--navbar-height)] left-0';
+    const displayHRClubsButtonBackground = showHRFilter
+        ? 'bg-white text-black font-semibold'
+        : 'bg-gray-100 text-neutral-400';
+    const displayAllClubsButtonBackground = showHRFilter
+        ? 'bg-gray-100 text-neutral-400'
+        : 'bg-white text-black font-semibold';
+    const mapListFilterSwitcherPosition =
+        'absolute top-[var(--navbar-height)] md:top-[var(--navbar-height)] left-0';
 
     return (
         <div className="w-[100vw] flex align-middle justify-left">
             <div
                 className={
                     'inline-flex ' +
-                    mapListViewSwitcherPosition +
-                    ' z-[998] lg:m-8 lg:ml-20 m-4 rounded-3xl shadow-md'
+                    mapListFilterSwitcherPosition +
+                    ' z-[998] lg:m-8 lg:ml-20 m-4 rounded-xl shadow-xl bg-gray-100'
                 }
             >
-                <div className={'z-[999] rounded-l-3xl ' + mapButtonBackground}>
-                    <button
-                        onClick={() => setShowHRInfo(true)}
-                        className={
-                            'flex z-[999] cursor-pointer items-center p-2 lg:p-4'
-                        }
-                    >
-                        Harm Reduction Clubs
-                    </button>
-                </div>
-                <div
-                    className={'z-[999] rounded-r-3xl ' + listButtonBackground}
+                <button
+                    aria-label="show hr clubs button"
+                    onClick={() => setShowHRInfo(true)}
+                    className={
+                        'z-[999] rounded-xl cursor-pointer items-center text-lg  my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
+                        displayHRClubsButtonBackground
+                    }
                 >
-                    <button
-                        onClick={() => setShowHRInfo(false)}
-                        className={
-                            'flex z-[999] cursor-pointer items-center p-2 lg:p-4'
-                        }
-                    >
-                        All Clubs
-                    </button>
-                </div>
+                    {t('clubs_menu_show_hr_clubs')}
+                </button>
+                <button
+                    aria-label="show all clubs button"
+                    onClick={() => setShowHRInfo(false)}
+                    className={
+                        'z-[999] rounded-xl cursor-pointer items-center text-lg  my-1 mr-1 px-4 py-2 lg:px-5 lg:py-1.5 ' +
+                        displayAllClubsButtonBackground
+                    }
+                >
+                    {t('clubs_menu_show_all_clubs')}
+                </button>
             </div>
         </div>
     );

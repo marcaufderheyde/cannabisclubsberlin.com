@@ -17,9 +17,8 @@ export default function MapListViewSwitcher({ showMap, setShowMap }: Props) {
     const listButtonBackground = showMap
         ? 'bg-gray-100 text-neutral-400'
         : 'bg-white text-black font-semibold';
-    const mapListViewSwitcherPosition = showMap
-        ? 'absolute top-[var(--navbar-height-mobile)] md:top-[var(--navbar-height)] right-0'
-        : 'relative';
+    const mapListViewSwitcherPosition =
+        'absolute top-[var(--navbar-height-mobile)] md:top-[var(--navbar-height)] right-0';
     return (
         <div className="w-[100vw] flex align-middle justify-left">
             <div

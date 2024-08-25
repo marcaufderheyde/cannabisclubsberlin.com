@@ -197,7 +197,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     return (
         <div>
             {props.isDesktopMap && (
-                <div className='absolute flex flex-row flex-nowrap justify-end items-stretch right-0 top-[var(--navbar-height)] dynamic-height z-[2005]'>
+                <div className="absolute flex flex-row flex-nowrap justify-end items-stretch right-0 top-[var(--navbar-height)] dynamic-height z-[2005]">
                     {selectedClub && clubIndexExists && (
                         <CustomPopup
                             style={{
@@ -224,16 +224,17 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                             setClubListExpanded(isExpanded)
                         }
                         currentClubIndex={clubIndex}
+                        filteredClubs={filteredClubs}
                     />
                 </div>
             )}
             <AnimatePresence
-                mode='sync'
+                mode="sync"
                 onExitComplete={() => console.log('Exit animation complete')}
             >
                 {selectedClub && clubIndexExists && (
                     <motion.div
-                        key='swipeable-deck'
+                        key="swipeable-deck"
                         initial={{ '--deck-opacity': 0 } as any}
                         animate={{ '--deck-opacity': 1 } as any}
                         exit={{ '--deck-opacity': 0 } as any}
@@ -276,7 +277,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                         }
                     }}
                 >
-                    <ZoomControl position='bottomright' />
+                    <ZoomControl position="bottomright" />
                     <TileLayer
                         url={
                             props.isDarkMode
@@ -301,11 +302,11 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                         />
                     ))}
                 </MapContainer>
+                <MapModeToggle
+                    isDarkMode={props.isDarkMode}
+                    setIsDarkMode={props.setIsDarkMode}
+                />
             </div>
-            <MapModeToggle
-                isDarkMode={props.isDarkMode}
-                setIsDarkMode={props.setIsDarkMode}
-            />
         </div>
     );
 }

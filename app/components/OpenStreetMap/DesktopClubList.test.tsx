@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import DesktopClubList from './DesktopClubList';
 import { useTranslations } from 'next-intl';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
+import { Club } from './OpenStreetMap';
 
 jest.mock('next-intl', () => ({
     useTranslations: jest.fn(),
@@ -28,15 +29,17 @@ describe('DesktopClubList', () => {
     const mockClubClickedFromList = jest.fn();
     const mockSetClubListExpanded = jest.fn();
 
-    const clubsMockData = [
+    const clubsMockData: Club[] = [
         {
             name: 'Club 1',
             slug: 'club-1',
             imageUrl: '/images/club1.jpg',
             geoLocation: [52.52, 13.405],
             description: '',
-            offerings: '',
+            offerings: [''],
             harm_reduction: '',
+            hasHRInformation: true,
+            address: '',
         },
         {
             name: 'Club 2',
@@ -44,8 +47,10 @@ describe('DesktopClubList', () => {
             imageUrl: '/images/club2.jpg',
             geoLocation: [52.53, 13.406],
             description: '',
-            offerings: '',
+            offerings: [''],
             harm_reduction: '',
+            hasHRInformation: true,
+            address: '',
         },
     ];
 
@@ -64,6 +69,7 @@ describe('DesktopClubList', () => {
                 clubClickedFromList={mockClubClickedFromList}
                 setClubListExpanded={mockSetClubListExpanded}
                 currentClubIndex={null}
+                filteredClubs={clubsMockData}
             />
         );
 
@@ -77,6 +83,7 @@ describe('DesktopClubList', () => {
                 clubClickedFromList={mockClubClickedFromList}
                 setClubListExpanded={mockSetClubListExpanded}
                 currentClubIndex={null}
+                filteredClubs={clubsMockData}
             />
         );
 
@@ -92,6 +99,7 @@ describe('DesktopClubList', () => {
                 clubClickedFromList={mockClubClickedFromList}
                 setClubListExpanded={mockSetClubListExpanded}
                 currentClubIndex={1} // Assuming this is the index for "Club 2"
+                filteredClubs={clubsMockData}
             />
         );
 

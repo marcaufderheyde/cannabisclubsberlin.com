@@ -67,7 +67,7 @@ describe('MapModeToggle Component', () => {
         render(<MapModeToggle isDarkMode={true} setIsDarkMode={() => {}} />);
         const button = screen.getByRole('button');
         expect(button).toHaveClass(
-            'absolute bottom-4 left-4 z-[1000] bg-white rounded-full p-2 shadow-md'
+            'absolute bottom-4 left-4 z-[3000] bg-white rounded-full p-2 shadow-md'
         );
     });
 });

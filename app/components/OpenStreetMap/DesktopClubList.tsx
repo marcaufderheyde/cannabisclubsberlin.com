@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 import { useRef } from 'react';
+import { Club } from './OpenStreetMap';
 
 export type DesktopClubsListProps = {
     clubClickedFromList: (index: number) => void;
@@ -15,19 +16,21 @@ export default function DesktopClubList({
     clubClickedFromList,
     setClubListExpanded,
     currentClubIndex,
+    filteredClubs,
     ...props
 }: {
     clubClickedFromList: (index: number) => void;
     setClubListExpanded: (isExpanded: boolean) => void;
     currentClubIndex: null | number;
+    filteredClubs: Club[];
 }) {
-    const clubs = pullClubsListContent();
+    const clubs = filteredClubs;
     const t = useTranslations('ClubsPage');
     const refs = useRef<(HTMLDivElement | null)[]>([]);
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
-        club.offerings = t(`${club.slug}.offerings`);
+        club.offerings = t(`${club.slug}.offerings`).split(',');
         club.harm_reduction = t(`${club.slug}.harm_reduction`);
     });
 

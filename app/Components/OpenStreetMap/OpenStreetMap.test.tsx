@@ -169,6 +169,13 @@ describe('OpenStreetMap Component', () => {
         },
     ];
 
+    const mockProps = {
+        isDesktopMap: true,
+        showHRInfo: false,
+        isDarkMode: true,
+        setIsDarkMode: jest.fn(),
+    };
+
     beforeEach(() => {
         (useTranslations as jest.Mock).mockReturnValue((key: string) => key);
         jest.spyOn(
@@ -183,7 +190,7 @@ describe('OpenStreetMap Component', () => {
 
     it('should render the map and markers correctly', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
+            render(<OpenStreetMap {...mockProps} />);
         });
 
         expect(screen.getByTestId('map-container')).toBeInTheDocument();
@@ -197,7 +204,7 @@ describe('OpenStreetMap Component', () => {
 
     it('should render CustomPopup when a marker is clicked', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
+            render(<OpenStreetMap {...mockProps} />);
         });
 
         await act(async () => {
@@ -211,7 +218,7 @@ describe('OpenStreetMap Component', () => {
 
     it('should render SwipeableDeck when a marker is clicked on mobile', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={false} showHRInfo={false} />);
+            render(<OpenStreetMap {...mockProps} isDesktopMap={false} />);
         });
 
         await act(async () => {
@@ -225,7 +232,7 @@ describe('OpenStreetMap Component', () => {
 
     it('should render DesktopClubList on desktop', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={true} showHRInfo={false} />);
+            render(<OpenStreetMap {...mockProps} />);
         });
 
         expect(screen.getByTestId('desktop-club-list')).toBeInTheDocument();
@@ -233,11 +240,32 @@ describe('OpenStreetMap Component', () => {
 
     it('should not render DesktopClubList on mobile', async () => {
         await act(async () => {
-            render(<OpenStreetMap isDesktopMap={false} showHRInfo={false} />);
+            render(<OpenStreetMap {...mockProps} isDesktopMap={false} />);
         });
 
         expect(
             screen.queryByTestId('desktop-club-list')
         ).not.toBeInTheDocument();
+    });
+
+    it('should render MapModeToggle', async () => {
+        await act(async () => {
+            render(<OpenStreetMap {...mockProps} />);
+        });
+
+        expect(
+            screen.getByLabelText('Switch to light mode')
+        ).toBeInTheDocument();
+    });
+
+    it('should call setIsDarkMode when MapModeToggle is clicked', async () => {
+        await act(async () => {
+            render(<OpenStreetMap {...mockProps} />);
+        });
+
+        const toggleButton = screen.getByLabelText('Switch to light mode');
+        fireEvent.click(toggleButton);
+
+        expect(mockProps.setIsDarkMode).toHaveBeenCalledWith(false);
     });
 });

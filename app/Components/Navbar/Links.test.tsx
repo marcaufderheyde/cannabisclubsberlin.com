@@ -37,7 +37,7 @@ describe('Links Component', () => {
 
         const aboutLink = screen.getByText('About');
         expect(aboutLink).toHaveClass(
-            'text-[#E3E71F] font-bold text-xl group transition duration-300'
+            'text-[#10b523] font-bold text-xl group transition duration-300'
         );
     });
 

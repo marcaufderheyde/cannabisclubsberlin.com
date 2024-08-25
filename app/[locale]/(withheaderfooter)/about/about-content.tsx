@@ -1,6 +1,6 @@
 'use client';
-import PageHeader from '@/app/Components/PageHeader/PageHeader';
-import ActionButton from '@/app/Components/ActionButton/ActionButton';
+import PageHeader from '@/app/components/PageHeader/PageHeader';
+import ActionButton from '@/app/components/ActionButton/ActionButton';
 import { useLocale, useTranslations } from 'next-intl';
 
 export default function AboutContent() {

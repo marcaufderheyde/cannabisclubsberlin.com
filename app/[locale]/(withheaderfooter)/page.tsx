@@ -1,6 +1,6 @@
 'use client';
-import Background from '@/app/Components/Home/Background';
-import HomeContent from '../../Components/Home/home-content';
+import Background from '@/app/components/Home/Background';
+import HomeContent from '../../components/Home/Home-content';
 
 export default function IndexPage() {
     return (

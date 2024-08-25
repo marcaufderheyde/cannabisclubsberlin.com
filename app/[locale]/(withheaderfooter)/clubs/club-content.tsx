@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import ActionButton from '@/app/Components/ActionButton/ActionButton';
+import ActionButton from '@/app/components/ActionButton/ActionButton';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
@@ -11,7 +11,7 @@ import generateGoogleMapsLink from '@/app/helpers/generateGoogleMapsLink';
 
 export default function ClubContent() {
     const ClubOpenStreetMap = dynamic(
-        () => import('@/app/Components/OpenStreetMap/ClubOpenStreetMap'),
+        () => import('@/app/components/OpenStreetMap/ClubOpenStreetMap'),
         {
             ssr: false,
         }

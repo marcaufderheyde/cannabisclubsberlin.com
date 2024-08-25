@@ -1,5 +1,5 @@
 'use client';
-import MobileClubList from '@/app/Components/MobileClubList/MobileClubList';
+import MobileClubList from '@/app/components/MobileClubList/MobileClubList';
 
 export type ClubsListProps = {
     clubClickedFromList: (index: number) => void;

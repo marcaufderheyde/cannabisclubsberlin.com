@@ -2,14 +2,14 @@ import type { Metadata } from 'next';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import '@/app/globals.css';
-import Navbar from '../../Components/Navbar/Navbar';
-import CookieBanner from '../../Components/CookieBanner/CookieBanner';
+import Navbar from '../../components/Navbar/Navbar';
+import CookieBanner from '../../components/CookieBanner/CookieBanner';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import AgeVerification from '../../Components/AgeVerification/AgeVerification';
+import AgeVerification from '../../components/AgeVerification/AgeVerification';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
-import Footer from '@/app/Components/Footer/Footer';
+import Footer from '@/app/components/Footer/Footer';
 
 export const metadata: Metadata = {
     // ... (metadata remains unchanged)

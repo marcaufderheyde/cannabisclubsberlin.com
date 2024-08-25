@@ -1,4 +1,4 @@
-import GradientText from '@/app/Components/GradientText/GradientText';
+import GradientText from '@/app/components/GradientText/GradientText';
 import { ComponentType } from 'react';
 
 export default function LawContainer({

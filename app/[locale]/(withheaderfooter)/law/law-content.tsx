@@ -1,14 +1,14 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import LawSVG from '../../../Components/Svg/law-svg';
+import LawSVG from '../../../components/Svg/law-svg';
 
 import LawContainer from './law-container';
-import UserWeedSVG from '@/app/Components/Svg/user-weed-svg';
-import PlantWeedSVG from '@/app/Components/Svg/plant-weed-svg';
-import PeopleSVG from '@/app/Components/Svg/people-svg';
-import NoWeedSVG from '@/app/Components/Svg/no-weed-svg';
-import WeedAdSVG from '@/app/Components/Svg/weed-ad-svg';
-import SafeWeedSVG from '@/app/Components/Svg/safe-weed-svg';
+import UserWeedSVG from '@/app/components/Svg/user-weed-svg';
+import PlantWeedSVG from '@/app/components/Svg/plant-weed-svg';
+import PeopleSVG from '@/app/components/Svg/people-svg';
+import NoWeedSVG from '@/app/components/Svg/no-weed-svg';
+import WeedAdSVG from '@/app/components/Svg/weed-ad-svg';
+import SafeWeedSVG from '@/app/components/Svg/safe-weed-svg';
 
 export default function AboutContent() {
     const pictureGridStyle = {

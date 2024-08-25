@@ -1,11 +1,11 @@
 'use client';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import Navbar from '@/app/Components/Navbar/Navbar';
-import MapListFilterSwitcher from '@/app/Components/MapListFilterSwitcher/MapListFilterSwitcher';
+import Navbar from '@/app/components/Navbar/Navbar';
+import MapListFilterSwitcher from '@/app/components/MapListFilterSwitcher/MapListFilterSwitcher';
 
 const OpenStreetMap = dynamic(
-    () => import('@/app/Components/OpenStreetMap/OpenStreetMap'),
+    () => import('@/app/components/OpenStreetMap/OpenStreetMap'),
     {
         ssr: false,
     }

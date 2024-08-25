@@ -1,5 +1,5 @@
 'use client';
-import PageHeader from '@/app/Components/PageHeader/PageHeader';
+import PageHeader from '@/app/components/PageHeader/PageHeader';
 import { useTranslations } from 'next-intl';
 
 export default function TermsOfUseContent() {

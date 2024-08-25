@@ -1,8 +1,8 @@
 'use client';
 import { useLocale, useTranslations } from 'next-intl';
-import ContactForm from '../../../Components/ContactForm/ContactForm';
+import ContactForm from '../../../components/ContactForm/ContactForm';
 import React from 'react';
-import PageHeader from '../../../Components/PageHeader/PageHeader';
+import PageHeader from '../../../components/PageHeader/PageHeader';
 
 export default function ContactContent() {
     const t = useTranslations('ContactPage');

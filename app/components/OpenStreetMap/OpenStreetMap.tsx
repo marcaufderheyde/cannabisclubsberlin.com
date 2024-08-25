@@ -301,11 +301,11 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                         />
                     ))}
                 </MapContainer>
-                <MapModeToggle
-                    isDarkMode={props.isDarkMode}
-                    setIsDarkMode={props.setIsDarkMode}
-                />
             </div>
+            <MapModeToggle
+                isDarkMode={props.isDarkMode}
+                setIsDarkMode={props.setIsDarkMode}
+            />
         </div>
     );
 }

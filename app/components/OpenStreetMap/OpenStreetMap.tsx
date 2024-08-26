@@ -291,7 +291,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                     <TileLayer
                         url={
                             props.isDarkMode
-                                ? 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+                                ? 'https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.png'
                                 : 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                         }
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

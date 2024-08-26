@@ -10,7 +10,9 @@ Main repository for [cannabisclubsberlin.com](https://cannabisclubsberlin.com), 
 
 ## About the Project
 
-This project is a collaborative effort by Marc Auf der Heyde, Hector Jones, and Fabrizio Catinella to create a user-centred web application that helps users discover new cannabis clubs in Berlin. The web application aims to make all important cannabis-related information accessible in a post-legalization Berlin. Which clubs are available, which offer specific harm reduction services, alongside club ratings will be featured on the web application.
+This project is a collaborative effort by Marc Auf der Heyde, Hector Jones, and Fabrizio Catinella to create a user-centred web application that helps users discover new cannabis clubs in Berlin.
+
+The web application aims to make all important cannabis-related information accessible in a post-legalization Berlin. Which clubs are available, which offer specific harm reduction services, and the German laws to adhere to, alongside club ratings which will be featured on the web application.
 
 ## Environment Requirements
 

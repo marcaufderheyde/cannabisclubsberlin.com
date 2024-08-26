@@ -1,3 +1,5 @@
+[![deployment](https://github.com/marcaufderheyde/cannabisclubsberlin.com/actions/workflows/nextjs.yml/badge.svg?branch=main)](https://github.com/marcaufderheyde/cannabisclubsberlin.com/actions/workflows/nextjs.yml)
+
 # The CCB Project
 
 Main repository for [cannabisclubsberlin.com](https://cannabisclubsberlin.com), [berlincannabisclubs.de](https://berlincannabisclubs.de), and [berlincannabisclubs.info](https://berlincannabisclubs.info)
@@ -8,9 +10,9 @@ This project is a collaborative effort by Marc Auf der Heyde, Hector Jones, and 
 
 ## Environment Requirements
 
-- **NodeJS v20 (LTS):** [Download NodeJS](https://nodejs.org/en)
-- **NPM:** Comes with NodeJS
-- **NextJS:** The React framework for production
+-   **NodeJS v20 (LTS):** [Download NodeJS](https://nodejs.org/en)
+-   **NPM:** Comes with NodeJS
+-   **NextJS:** The React framework for production
 
 ## Getting Started
 
@@ -118,47 +120,52 @@ The project is organized as follows, please note this structure is in draft and 
 ├── .github/workflows
 ├── __mocks__
 │   ├── next-intl.js
-└── 
+└──
 ```
 
-- **[locale]/(withheaderfooter)** Pages and their content.
-- **[locale]/(withoutheaderfooter)** Pages and their content without header and footer, for map pages.
-- **app/components:** Reusable components used throughout the application.
-- **app/components/[ComponentName]:** Reusable components used throughout the application, specific to the component, ComponentName (i.e., they are only used by the main component with name ComponentName).
-- **app/components/[ComponentName]/helpers:** Helpers specific to ComponentName, not used by other components.
-- **app/data:** Static content used across the site, clubs.ts holds core information that requires no translation.
-- **app/helpers:** Utility functions and helpers used by multiple components.
-- **public:** Static assets like images, fonts, etc.
+-   **[locale]/(withheaderfooter)** Pages and their content.
+-   **[locale]/(withoutheaderfooter)** Pages and their content without header and footer, for map pages.
+-   **app/components:** Reusable components used throughout the application.
+-   **app/components/[ComponentName]:** Reusable components used throughout the application, specific to the component, ComponentName (i.e., they are only used by the main component with name ComponentName).
+-   **app/components/[ComponentName]/helpers:** Helpers specific to ComponentName, not used by other components.
+-   **app/data:** Static content used across the site, clubs.ts holds core information that requires no translation.
+-   **app/helpers:** Utility functions and helpers used by multiple components.
+-   **public:** Static assets like images, fonts, etc.
 
 ## Coding Conventions
 
 To maintain consistency across the project, we follow these coding conventions:
 
 ### 1. **JavaScript/TypeScript:**
-   - Use TypeScript for type safety.
-   - Use `const` and `let` instead of `var`.
-   - Prefer arrow functions over regular functions (unless for function components).
-   - Use template literals for string concatenation.
+
+-   Use TypeScript for type safety.
+-   Use `const` and `let` instead of `var`.
+-   Prefer arrow functions over regular functions (unless for function components).
+-   Use template literals for string concatenation.
 
 ### 2. **React/NextJS:**
-   - Use functional components with hooks.
-   - Organize components in the `components` folder.
-   - Name component files with PascalCase (e.g., `ContactForm.tsx`).
-   - Use the `useEffect` hook for side effects.
+
+-   Use functional components with hooks.
+-   Organize components in the `components` folder.
+-   Name component files with PascalCase (e.g., `ContactForm.tsx`).
+-   Use the `useEffect` hook for side effects.
 
 ### 3. **CSS/Styling:**
-   - Use CSS modules or styled-components for component-specific styles.
-   - Global styles should be placed in `globals.css`.
-   - Follow a BEM-like naming convention for class names.
+
+-   Use CSS modules or styled-components for component-specific styles.
+-   Global styles should be placed in `globals.css`.
+-   Follow a BEM-like naming convention for class names.
 
 ### 4. **Testing:**
-   - Write tests for components and helpers.
-   - Use Jest and React Testing Library for testing.
-   - Mock dependencies and APIs in tests.
-   - Place test files alongside the components/helpers they test, with a `.test.tsx` or `.test.ts` extension.
+
+-   Write tests for components and helpers.
+-   Use Jest and React Testing Library for testing.
+-   Mock dependencies and APIs in tests.
+-   Place test files alongside the components/helpers they test, with a `.test.tsx` or `.test.ts` extension.
 
 ### 5. **Git Commit Messages:**
-- Follow .gitmessage found in the root directory.
+
+-   Follow .gitmessage found in the root directory.
 
 ## Contributing
 

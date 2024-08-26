@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import {useLocale, useTranslations} from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import ArrowButton from './Arrowbutton';
 import Close from '../Close/Close';
 import styles from '../OpenStreetMap/ClubCard.module.css';
@@ -39,7 +39,6 @@ export default function CustomPopup({
     ...props
 }: CustomPopupProps) {
     const localActive = useLocale();
-    const t = useTranslations('ClubsPage');
 
     return (
         <div className="w-[400px] bg-white flex flex-col h-full">
@@ -75,7 +74,7 @@ export default function CustomPopup({
                 <br />
             </div>
             <div className="flex flex-row gap-2 flex-wrap mx-3">
-                {t(`offerings_tags.slug_to_tags_indices.${club.slug}`)
+                {club.offerings
                     ?.toString()
                     .split(',')
                     .map((offering) => (

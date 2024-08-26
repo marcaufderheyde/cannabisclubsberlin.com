@@ -91,26 +91,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     );
 
     const clubs = clubsRef.current;
-    const selectedClub = clubIndexExists && clubs[clubIndex!];
-
-    const [filteredClubs, setFilteredClubs] = useState<Club[]>([]);
-    const [isFiltering, setIsFiltering] = useState(false);
-
-    useEffect(() => {
-        const newFilteredClubs = props.showHRInfo
-            ? clubs.filter((club) => club.hasHRInformation)
-            : clubs;
-        setFilteredClubs(newFilteredClubs);
-        setIsFiltering(true);
-        setClubIndex(null);
-
-        // Reset filtering state after a short delay
-        const timer = setTimeout(() => {
-            setIsFiltering(false);
-        }, 300);
-
-        return () => clearTimeout(timer);
-    }, [props.showHRInfo, clubs]);
 
     // const MotionSwipableDeck = withMotion(SwipeableDeck);
 
@@ -132,6 +112,27 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         }
     });
 
+    const [filteredClubs, setFilteredClubs] = useState<Club[]>([]);
+    const [isFiltering, setIsFiltering] = useState(false);
+
+    useEffect(() => {
+        const newFilteredClubs = props.showHRInfo
+            ? clubs.filter((club) => club.hasHRInformation)
+            : clubs;
+        setFilteredClubs(newFilteredClubs);
+        setIsFiltering(true);
+        setClubIndex(null);
+
+        // Reset filtering state after a short delay
+        const timer = setTimeout(() => {
+            setIsFiltering(false);
+        }, 300);
+
+        return () => clearTimeout(timer);
+    }, [props.showHRInfo, clubs]);
+
+    const selectedClub = clubIndexExists && filteredClubs[clubIndex!];
+
     const zoom = 13;
 
     const setNextClub = useCallback(() => {
@@ -150,7 +151,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 map,
                 mainMapRef,
                 clubIndex,
-                clubs,
+                filteredClubs,
                 setCenterCoords,
                 props.isDesktopMap,
                 zoomRef.current
@@ -208,6 +209,9 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
             map?.removeEventListener('zoomend', handleZoomEnd);
         };
     }, [map]);
+
+    console.log(filteredClubs);
+    console.log(clubIndex);
 
     return (
         <div>

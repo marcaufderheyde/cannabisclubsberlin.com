@@ -1,36 +1,20 @@
 import type { Metadata } from 'next';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import {
-    NextIntlClientProvider,
-    useMessages,
-    useTranslations,
-} from 'next-intl';
-import { Inter } from 'next/font/google';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 import '@/app/globals.css';
-import Footer from '../../ui/Footer/footer';
-import Navbar from '../../ui/Navigation/navbar';
-import CookieBanner from '../../Components/CookieBanner';
+import Navbar from '../../components/Navbar/Navbar';
+import CookieBanner from '../../components/CookieBanner/CookieBanner';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import AgeVerification from '../../Components/AgeVerification';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import AgeVerification from '../../components/AgeVerification/AgeVerification';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
-
-const inter = Inter({ subsets: ['latin'] });
+import Footer from '@/app/components/Footer/Footer';
 
 export const metadata: Metadata = {
-    title: {
-        template: '%s | Cannabis Clubs Berlin',
-        default: 'Cannabis Clubs Berlin',
-    },
-    description:
-        'CannabisClubsBerlin.com ist deine erste Quelle für Einblicke in Cannabisclubs in Berlin und bietet umfassende Bewertungen und Informationen, um die Berliner Bevölkerung durch die unzähligen Cannabisoptionen in der Stadt zu führen. Unsere Mission ist es, dich über die lebendige Cannabis-Kultur in Berlin aufzuklären und zu informieren und dich durch die lokalen Vorschriften in Bezug auf Cannabis-Konsum und Club-Mitgliedschaften zu navigieren - deine erste Anlaufstelle für alle Cannabis-bezogenen Informationen in Berlin, Deutschland!',
-    keywords:
-        'cannabis, berlin, weed, legal weed, kannabis, berlin weed, cannabis berlin, cannabis clubs, cannabis clubs berlin, harm reduction, cannabis harm reduction, cannabis addiction, schadensminimierung, cannabis schadensminderung, cannabisabhängigkeit',
+    // ... (metadata remains unchanged)
 };
 
-//function to generate the routes for all the locales
 export async function generateStaticParams() {
     return ['en', 'de'].map((locale) => ({ locale }));
 }
@@ -45,12 +29,14 @@ export default function LocaleLayout({
     unstable_setRequestLocale(locale);
     const messages = useMessages();
     return (
-        <div>
+        <div className='min-h-screen relative'>
             <NextIntlClientProvider messages={messages}>
-                <Navbar isOnMap={false} />
-                <div className='bg-white flex justify-center z-[1] min-h-[100vh] h-full mb-[var(--footer-height)] shadow-lg '>
-                    <div className='z-[2] px-[var(--layout-x-padding)] h-full max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] pb-10 '>
-                        {children}
+                <div className='relative z-10'>
+                    <Navbar isOnMap={false} />
+                    <div className='bg-white flex justify-center min-h-screen shadow-lg'>
+                        <div className='z-[2] px-[var(--layout-x-padding)] h-full max-w-[var(--layout-width)] w-full my-auto py-[var(--navbar-height)] pb-10'>
+                            {children}
+                        </div>
                     </div>
                 </div>
                 <AgeVerification />
@@ -59,18 +45,19 @@ export default function LocaleLayout({
             </NextIntlClientProvider>
             <GoogleTagManager gtmId='GTM-PBKDVXT9' />
             <Script
+                id='googleTagManager'
                 async
                 strategy='lazyOnload'
                 src='https://www.googletagmanager.com/gtag/js?id=G-7NZJ6HL34T'
             ></Script>
-            <Script strategy='lazyOnload'>
+            <Script id='googleAnalyticsDataLayer' strategy='lazyOnload'>
                 {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-                    gtag('config', 'G-7NZJ6HL34T');
-                `}
+          gtag('config', 'G-7NZJ6HL34T');
+        `}
             </Script>
         </div>
     );

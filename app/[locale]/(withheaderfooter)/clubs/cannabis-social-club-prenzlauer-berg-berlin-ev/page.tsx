@@ -1,6 +1,6 @@
 import ClubContent from '../club-content';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { getClubMetadata } from '@/app/[locale]/clubs/getClubMetadata';
+import { getClubMetadata } from '@/app/helpers/getClubMetadata';
 
 export const generateMetadata = async () => {
     return await getClubMetadata(

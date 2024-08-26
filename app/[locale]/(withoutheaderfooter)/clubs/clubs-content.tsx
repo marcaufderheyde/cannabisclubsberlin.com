@@ -1,18 +1,19 @@
 'use client';
 import dynamic from 'next/dynamic';
-import { SetStateAction, useState } from 'react';
-import ClubsList from './club-list';
-import Navbar from '@/app/ui/Navigation/navbar';
-import MapListViewSwitcher from '@/app/Components/MapListViewSwitcher';
-import { Club } from '@/app/helpers/clubsListContent';
-import MobileClubList from '@/app/Components/MobileClubList';
-import MapListFilterSwitcher from '@/app/Components/MapListFilterSwitcher';
-const OpenStreetMap = dynamic(() => import('@/app/Components/OpenStreetMap'), {
-    ssr: false,
-});
+import { useState } from 'react';
+import Navbar from '@/app/components/Navbar/Navbar';
+import MapListFilterSwitcher from '@/app/components/MapListFilterSwitcher/MapListFilterSwitcher';
+
+const OpenStreetMap = dynamic(
+    () => import('@/app/components/OpenStreetMap/OpenStreetMap'),
+    {
+        ssr: false,
+    }
+);
 
 export default function ClubsContent() {
     const [showHRFilter, setShowHRFilter] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
 
     return (
         <div>
@@ -22,21 +23,25 @@ export default function ClubsContent() {
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={true}
+                        isDarkMode={isDarkMode}
+                        setIsDarkMode={setIsDarkMode}
                     />
                     <MapListFilterSwitcher
                         showHRFilter={showHRFilter}
                         setShowHRFilter={setShowHRFilter}
-                    />{' '}
+                    />
                 </div>
                 <div className='lg:hidden flex'>
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={false}
+                        isDarkMode={isDarkMode}
+                        setIsDarkMode={setIsDarkMode}
                     />
                     <MapListFilterSwitcher
                         showHRFilter={showHRFilter}
                         setShowHRFilter={setShowHRFilter}
-                    />{' '}
+                    />
                 </div>
             </div>
         </div>

@@ -28,6 +28,10 @@ body {
 }
 
 :root {
+
+  /* Defines global UI sizes
+    - Navbar, content width, docs heights... etc
+  */
   --layout-width: 1080px;
   --layout-x-padding: 1rem;
   --footer-height: 150px;
@@ -35,6 +39,10 @@ body {
   --navbar-height-mobile: 80px;
   --doc-height: 100%;
   --vh: 1vh;
+
+  /* Defines Our Colour Palette  */
+  
+
 }
 
 #__next, /* for Next.js */

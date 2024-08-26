@@ -2,7 +2,7 @@
 
 echo "*****Running pre push build******"
 
-cmd="npm run build"
+cmd="npm run prepush"
 
 #!/bin/bash
 

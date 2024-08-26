@@ -34,7 +34,6 @@ export default function SwipeableClubCard({
         x: startPosition.x,
     });
     const localActive = useLocale();
-    const t = useTranslations('ClubsPage');
 
     const [transformDuration, setTranformDuration] = useState(0.2);
     const [scale, setScale] = useState(startScale);
@@ -134,9 +133,7 @@ export default function SwipeableClubCard({
                             {club.name}
                         </h1>
                         <div className="mx-2 flex flex-wrap justify-center">
-                            {t(
-                                `offerings_tags.slug_to_tags_indices.${club.slug}`
-                            )
+                            {club.offerings
                                 .toString()
                                 ?.split(',')
                                 .map((offering: string) => (

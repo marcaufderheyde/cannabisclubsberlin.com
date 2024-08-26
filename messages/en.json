@@ -6,6 +6,9 @@
         "about_title": "About",
         "about_description": "CannabisClubsBerlin.com offers insights and reviews on Berlin's cannabis clubs, culture, regulations, and purchase options.",
         "about_keywords": "Cannabis clubs Berlin, Berlin cannabis culture, Cannabis club reviews Berlin, Berlin cannabis regulations, Where to buy cannabis in Berlin, Cannabis membership Berlin, Cannabis user guide Berlin, Legal cannabis Berlin, Cannabis community Berlin, Join cannabis clubs Berlin, Cannabis laws in Berlin, Berlin cannabis clubs guide, Cannabis clubs information Berlin, Educate on cannabis Berlin, Cannabis clubs access Berlin",
+        "reviews_title": "Reviews",
+        "reviews_description": "Discover comprehensive reviews of cannabis social clubs in Berlin, focusing on the quality of services, harm reduction efforts, and member experiences. CannabisClubsBerlin.com offers in-depth, verified reviews to help users choose the best club for their needs.",
+        "reviews_keywords": "cannabis social club reviews, Berlin cannabis clubs, harm reduction services, verified reviews, cannabis club member experiences, cannabis club services, CCB reviews, cannabis culture Berlin",
         "contact_title": "Contact",
         "contact_description": "Please feel free to contact us through the channels listed below. cannabisclubsberlin@protonmail.me",
         "contact_keywords": "Contact Cannabis Clubs Berlin, Cannabis club support Berlin, Email Cannabis Clubs Berlin, Reach out to Cannabis Clubs Berlin, Cannabis Clubs Berlin contact info, Cannabis Clubs Berlin email, Contact information Cannabis Clubs Berlin, Get in touch Cannabis Clubs Berlin, Cannabis club inquiries Berlin, Cannabis Clubs Berlin communication, Cannabis club help Berlin, Customer service Cannabis Clubs Berlin, Cannabis Clubs Berlin assistance, Cannabis club contact details Berlin, Cannabis Clubs Berlin customer support",
@@ -36,7 +39,21 @@
         "headline_description_short": "This is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city.",
         "headline_subdescription": "Want to find out more? Let's get you started on the laws on Cannabis in Berlin, and in Germany!",
         "local_laws_button": "Laws (CanG)",
-        "discover_button": "Discover"
+        "discover_button": "Discover",
+        "our_history_title": "Our History",
+        "our_history_one": "CannabisClubsBerlin.com was founded by three young Berliners deeply involved in the city's cannabis scene. As legalization loomed, they identified the need for quality, accessible information on emerging cannabis social clubs, with a particular focus on the harm reduction services these clubs would offer. And so, CannabisClubsBerlin.com was born, with the aim of providing thorough, on-the-ground reviews of clubs in Berlin.",
+        "our_history_two": "For now, the focus remains solely on Berlin to ensure that the reviews are as qualitative and detailed as possible, involving direct contact with club owners and visits to the locations. Once the clubs are fully operational, CannabisClubsBerlin.com will feature in-depth reviews on each club's offerings and services.",
+        "our_history_three": "In the future, users will be able to post verified reviews through a unique CCB club identifier. To learn more about the upcoming review system, click the button below!",
+        "reviews_button": "Reviews"
+    },
+    "ReviewsPage": {
+        "headline": "Reviews",
+        "headline_description_short": "At CannabisClubsBerlin.com, our mission is to publish high-quality reviews that provide in-depth information about the services offered by all cannabis social clubs in Berlin. Our focus is particularly on harm reduction services, ensuring that users have the knowledge and support they need to consume cannabis safely and responsibly.",
+        "ccb_reviews_title": "CCB Reviews",
+        "ccb_reviews": "CCB Reviews are meticulously crafted to offer comprehensive insights into each cannabis social club in Berlin. We take into account several key considerations when evaluating clubs, including the support offered by staff members, their expertise in cannabis consumption, and their ability to advise new users effectively. We also examine the range of services provided, with a particular focus on how these services cater to harm reduction and differ from those offered by other clubs. Our reviews aim to be as detailed and objective as possible, highlighting what makes each club unique while providing honest assessments of the overall experience. Whether it’s the atmosphere, the quality of products, or the availability of educational resources, our reviews are designed to help users make informed decisions.",
+        "ccb_verified_reviews_title": "CCB Verified Reviews",
+        "ccb_verified_reviews": "Our future user review system, CCB Verified Reviews, will enable club members to publish verified reviews of their cannabis social clubs. This system will utilize a unique CCB club barcode that members can scan to confirm their membership. Once verified, members will be able to post a review on our site, ensuring that only genuine members contribute feedback. This process will maintain the integrity of the reviews while providing clubs with more legitimate, credible reviews online. New users will benefit from reading authentic experiences shared by actual members, allowing them to make better-informed choices when selecting a club. Want to learn more? Contact us below!",
+        "contact_button": "Contact"
     },
     "LawPage": {
         "headline": "Laws (CanG)",
@@ -75,15 +92,15 @@
         "headline_description": "CannabisClubsBerlin.com is your premier source for insights into cannabis clubs in Berlin, offering comprehensive reviews and information to guide the Berlin population through the myriad of cannabis options available in the city. Our mission is to educate and inform users about the vibrant cannabis culture in Berlin and to navigate the local regulations regarding cannabis use and club memberships.",
         "operator_title": "Operator",
         "operator_one": "CannabisClubsBerlin.com",
-        "operator_two": "Eisenacher Str. 77",
-        "operator_three": "10823, Berlin, Germany",
+        "operator_two": "Rombsweg 1 C",
+        "operator_three": "14165, Berlin, Germany",
         "contact_title": "Contact",
         "contact_one": "Email: cannabisclubsberlin@proton.me",
         "contact_two": "Phone: +4917681414156",
         "responsibility_title": "Responsible for Content According to § 55 Abs. 2 RStV:",
-        "responsibility_one": "Marc Auf der Heyde",
-        "responsibility_two": "Eisenacher Str. 77",
-        "responsibility_three": "10823, Berlin, Germany",
+        "responsibility_one": "Marc Auf der Heyde, Webentwicklungen",
+        "responsibility_two": "Rombsweg 1 C",
+        "responsibility_three": "14165, Berlin, Germany",
         "disclaimer": "The information provided on CannabisClubsBerlin.com aims to support, but not replace, the direct relationship between visitors and cannabis clubs or legal advisors."
     },
     "TermsOfUsePage": {
@@ -108,6 +125,7 @@
         "law_title": "Law",
         "contact_title": "Contact",
         "about_title": "About",
+        "reviews_title": "Reviews",
         "harm_reduction_title": "Harm Reduction"
     },
     "Footer": {
@@ -127,6 +145,7 @@
         "headline": "Cannabis Clubs in Berlin",
         "headline_description": "Here you will find an up to date list of all the cannabis clubs available in Berlin. Each club will include further information about each club, as well as some pictures of their locations and their products.",
         "headline_subdescription": "Know a club we haven't listed here? Please contact us now so that we can add it to our listings!",
+        "reviews_title": "Reviews",
         "price_title": "Prices",
         "location_title": "Location & opening times",
         "description_title": "Description",
@@ -134,9 +153,92 @@
         "harm_reduction_title": "Harm Reduction Services",
         "visit_website_title": "Visit Their Website",
         "clubs_menu_show_map": "Map",
-        "clubs_menu_show_list": "Club List",
+        "clubs_menu_show_list": "List",
+        "clubs_menu_show_hr_clubs": "Harm Reduction Clubs",
+        "clubs_menu_show_all_clubs": "All Clubs",
         "clubs_menu_back_button": "Back to Map",
         "map_disclaimer": "Not all clubs are shown on the map currently, given the information available. Please use the club list to see all available clubs! Please note the locations listed on the map below are taken from the imprint of the clubs found so far, and might not reflect the actual location of the club in the future.",
+        "offerings_tags": {
+            "tags_list": {
+                "0": "Legal Advice",
+                "1": "Events",
+                "2": "Quality Assurance",
+                "3": "Medical Marijuana",
+                "4": "Scientific Studies",
+                "5": "Offerings TBC",
+                "6": "Socialising",
+                "7": "Member Cannabis Distribution",
+                "8": "Equipment Share",
+                "9": "Cuttings",
+                "10": "Workshops",
+                "11": "Seeds",
+                "12": "Support Group",
+                "13": "Harm Reduction",
+                "14": "Safe Consumption",
+                "15": "Diverse Selection",
+                "16": "Cannabis Advice",
+                "17": "Community Cultivation",
+                "18": "Themed Evenings",
+                "19": "Sustainable Practices",
+                "20": "High-Quality Strains",
+                "21": "Safe Cannabis Access"
+            },
+            "slug_to_tags_indices": {
+                "csc-high-ground-berlin-ev": "Community Cultivation, Quality Assurance, Scientific Studies, Safe Consumption",
+                "green-social-club-ev": "Community Cultivation, Equipment Share, Medical Marijuana, Cannabis Advice, Themed Evenings, Legal Advice",
+                "aero-cannabis-club-ev": "Community Cultivation, Cannabis Advice",
+                "green-leaf-society-ev": "Community Cultivation",
+                "420-club-berlin": "Offerings TBC",
+                "bastardo-csc-berlin": "Community Cultivation, Seeds, Cuttings",
+                "csc-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "1000-berlin-15-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabis-social-club-koepenick": "Community Cultivation, Member Cannabis Distribution, Socialising, Workshops, Events, Cuttings",
+                "csc-high-on-earth-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "csc-home-of-hemp-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabis-social-club-prenzlauer-berg-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabis-social-club-meridiem-brandenburgo-et-berolina-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabis-club-lammbock-e-v": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannamo-cannabis-club-ev": "Offerings TBC",
+                "high-society-cannabis-club-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "hype-and-dope-cannabis-club-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "koala-cannabis-social-club-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "we-love-weed-wlw--cannabis-social-club-berlin-kreuzberg-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "anbaufreunde-berlin-social-club-e-v": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabis-club-lammbock-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "high-circle": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "csc-berlinhigh-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "just-plants-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "berliner-cannabis-hilfe-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "spliffers-berlin-ig": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "helmuts-social-club": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "captain-weedy-csc-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "csc-visionre-berlin": "Community Cultivation, Member Cannabis Distribution, Socialising, Cuttings, Workshops, Diverse Selection, Events, Support Group, Harm Reduction",
+                "csc-kreuzkoelln": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabis-social-club-weeden-030-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "white-lake-weed": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "csc-doobies-berlin": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabis-social-club-spandau": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "hanf-im-glueck-csc-berlin": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cscd--dachverband-deutscher-cannabis-social-clubs": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "elevated-society-csc-berlin": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "cannabliss-csc": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "monkeyz-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "berlin-blatt-und-bluete-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "realita-ev-csc": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "bunte-bluete-cannabis-club-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "420-bearz": "Community Cultivation, Member Cannabis Distribution, Socialising, High-Quality Strains",
+                "csc-gruenvereint-ev": "Community Cultivation, Member Cannabis Distribution, Socialising, Workshops, Sustainable Practices",
+                "budz-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising, Safe Cannabis Access",
+                "ambrosia-csc-ev": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
+                "handcut-flowers": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "nicetime-ev": "Community Cultivation, Member Cannabis Distribution, Socialising, Workshops, High-Quality Strains",
+                "klub425-csc-berlin": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "best-social-club-berlin": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "grashaus": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "green-hub-wedding": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "weed-bros": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices"
+            }
+        },
         "csc-high-ground-berlin-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
             "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
@@ -144,7 +246,8 @@
             "meta_description": "High Ground, a Berlin Cannabis Social Club, aims to provide members with quality cannabis post-legalization.",
             "meta_keywords": "High Ground Berlin, Cannabis Social Club Berlin, registered cannabis club, community cannabis cultivation, cannabis quality assurance, youth protection cannabis, cannabis harm reduction, safer cannabis consumption methods, cannabis club membership, cannabis legalization education, cannabis club funding, cannabis cultivation preparation, scientific cannabis studies",
             "offerings": "Community cultivation, Quality assurance, scientific studies, safe consumption.",
-            "harm_reduction": "This club aims to promote safer consumption methods of consuming cannabis than smoking."
+            "harm_reduction": "This club aims to promote safer consumption methods of consuming cannabis than smoking.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "green-social-club-ev": {
             "prices": "10 EUR monthly membership fee.",
@@ -153,7 +256,8 @@
             "meta_description": "Green Social Club Berlin supports members with high-quality, cost-price cannabis and responsible use.",
             "meta_keywords": "Green Social Club Berlin, community cannabis cultivation, cost-price cannabis, responsible cannabis use, medical cannabis support, addiction prevention, legal advice cannabis, device sharing, cannabis educational evenings, legal aid cannabis consumption, harm reduction cannabis, cannabis consultation services, safe cannabis consumption methods",
             "offerings": "Community cultivation, Shared use of equipment, Medical cannabis, Theme evenings, Cannabis & advice, Help with legal issues",
-            "harm_reduction": "This club offers cannabis consultation to help users find the safest method of consumption, as well as educating users on the potential risks of cannabis usage."
+            "harm_reduction": "This club offers cannabis consultation to help users find the safest method of consumption, as well as educating users on the potential risks of cannabis usage.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "aero-cannabis-club-ev": {
             "prices": "12.50 EUR monthly membership fee.",
@@ -162,7 +266,8 @@
             "meta_description": "Aero Cannabis Berlin e.V. advocates for legalization and uses sustainable aeroponic methods for high-quality cannabis.",
             "meta_keywords": "Aero Cannabis Berlin, cannabis legalization, sustainable cannabis cultivation, aeroponic cannabis methods, high-quality pesticide-free cannabis, cannabis education, environmental cannabis production, organic cannabis membership, addiction prevention strategies",
             "offerings": "Community cultivation, Cannabis & advice",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "green-leaf-society-ev": {
             "prices": "12.50 EUR monthly membership fee.",
@@ -171,7 +276,8 @@
             "meta_description": "Green Leaf Society e.V. advocates for cannabis legalization and safe, legal operations in Germany with a focus on quality and purity.",
             "meta_keywords": "cannabis legalization club, safe cannabis operations Germany, German cannabis laws, cannabis quality control, legal cannabis distribution, Indica and Sativa offerings, responsible cannabis cultivation, cannabis community efforts, high-quality cannabis products",
             "offerings": "Community cultivation",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "420-club-berlin": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -180,7 +286,8 @@
             "meta_description": "420 Club Berlin Cannabis Social Club Berlin",
             "meta_keywords": "cannabis legalization club, safe cannabis operations Germany, German cannabis laws, cannabis quality control, legal cannabis distribution, Indica and Sativa offerings, responsible cannabis cultivation, cannabis community efforts, high-quality cannabis products",
             "offerings": "The offerings of this cannabis club will be shown here once they are available.",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "bastardo-csc-berlin": {
             "prices": "5 EUR monthly membership fee and a one time 10 EUR sign up fee.",
@@ -189,7 +296,8 @@
             "meta_description": "Bastardo CSC promotes an open, responsible community focused on legal, diverse, and high-quality cannabis enjoyment.",
             "meta_keywords": "Bastardo Cannabis Social Club, responsible cannabis community, cannabis culture, legal cannabis sharing, cannabis diversity, variety of cannabis strains, cannabis cultivation quality, cannabis innovation, cannabis education, community building, societal change cannabis",
             "offerings": "Community cultivation and transfer of propagation material (seeds and cuttings)",
-            "harm_reduction": "Passing on Storz & Bickel vaporisers to members at a preferential price."
+            "harm_reduction": "Passing on Storz & Bickel vaporisers to members at a preferential price.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "csc-berlin-ev": {
             "prices": "12 EUR yearly membership fee, 10 EUR monthly membership fee, estimated 4-8 EUR per gram. ",
@@ -198,7 +306,8 @@
             "meta_description": "Cannabis Social Club Berlin e.V. fosters a community for cannabis enthusiasts, pushing for legalization and cooperative cultivation.",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "The Cannabis Social Club Berlin prioritizes responsible cannabis consumption and up-to-date, scientifically grounded youth and consumer protection, free from ideology. Access for individuals under 18 is restricted, requiring guardian consent and collaboration with youth and addiction support services. The club actively engages in prevention and education, collaborating with addiction prevention specialists and youth services. In 2023, they appointed a dedicated prevention officer to develop a tailored prevention concept. For inquiries on addiction and prevention, they offer a contact point."
+            "harm_reduction": "The Cannabis Social Club Berlin prioritizes responsible cannabis consumption and up-to-date, scientifically grounded youth and consumer protection, free from ideology. Access for individuals under 18 is restricted, requiring guardian consent and collaboration with youth and addiction support services. The club actively engages in prevention and education, collaborating with addiction prevention specialists and youth services. In 2023, they appointed a dedicated prevention officer to develop a tailored prevention concept. For inquiries on addiction and prevention, they offer a contact point.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "1000-berlin-15-ev": {
             "prices": "50 EUR signup fee, 30 EUR monthly membership fee.",
@@ -207,7 +316,8 @@
             "meta_description": "1000 Berlin 15 CSC supports cannabis users focusing on youth protection, addiction prevention, and safe consumption.",
             "meta_keywords": "1000 Berlin 15 Cannabis Social Club, cannabis consumer support, youth protection cannabis, addiction prevention cannabis, health safety cannabis, safe cannabis consumption, communal cannabis cultivation, member-driven cannabis strains, soil-based cultivation, hydroponic cannabis methods, cannabis genetics sourcing, support center for addiction issues, cannabis social freedom",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabis-social-club-koepenick": {
             "prices": "20 EUR signup fee. Two monthly tiers: Normal Membership, which is €5 per month and Membership Plus which is €15 per month, and includes a variety of workshops on self-cultivation and other events.",
@@ -216,7 +326,8 @@
             "meta_description": "Cannabis Social Club Köpenick in Berlin focuses on community cultivation, responsible use, and offers extensive workshops.",
             "meta_keywords": "Cannabis Social Club Köpenick, Berlin cannabis club, collective cannabis cultivation, responsible cannabis consumption, cannabis workshops, medical cannabis users support, cannabis events Berlin, community bonding cannabis, youth protection cannabis, addiction prevention cannabis, legal cannabis operations, living soil workshops",
             "offerings": "Workshops and Events on self-cultivation and the production and dispensing of 'Living Soil', Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "Addiction Prevention Training: A member of their board is pre-registered for a training program in addiction prevention at the 'Fachstelle für Suchtprävention im Land Berlin'. The training is expected to start around the beginning of May, pending guidelines from the Federal Ministry of Health."
+            "harm_reduction": "Addiction Prevention Training: A member of their board is pre-registered for a training program in addiction prevention at the 'Fachstelle für Suchtprävention im Land Berlin'. The training is expected to start around the beginning of May, pending guidelines from the Federal Ministry of Health.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "csc-high-on-earth-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -225,7 +336,8 @@
             "meta_description": "CSC High on Earth e.V. Cannabis Social Club Berlin",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "csc-home-of-hemp-berlin-ev": {
             "prices": "Offers a free membership tier, 10EUR per month and 20EUR per month tier. Each tier offers different benefits to its members. Also offered at a discount are yearly memberships.",
@@ -234,16 +346,18 @@
             "meta_description": "CSC Home of Hemp in Berlin promotes a responsible cannabis culture with a focus on education, community, and legalization.",
             "meta_keywords": "CSC Home of Hemp Berlin, responsible cannabis culture, cannabis community platform, cannabis cultivation exchange, societal engagement cannabis, cannabis legalization advocacy, cannabis consumption education, community building events, GMP standards cannabis, GDP standards cannabis, tiered membership benefits, annual membership discounts",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabis-social-club-prenzlauer-berg-berlin-ev": {
-            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Cannabis Social Club Prenzlauer Berg Berlin e.V.",
-            "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "prices": "Membership options include a monthly fee of €12 for individuals, with an additional registration fee of €95. Corporate membership is available at €24 per month with a registration fee of €95. Membership must be maintained for at least three months.",
+            "location": "The location and opening times for the Cannabis Social Club Prenzlauer Berg Berlin e.V. will be provided once available. A central distribution point in Berlin is planned for easy access by all members.",
+            "description": "The Cannabis Social Club Prenzlauer Berg Berlin e.V. is committed to fostering a responsible and informed cannabis culture within a supportive community. Located in the heart of Berlin's Prenzlauer Berg district, the club emphasizes the collective cultivation and distribution of high-quality cannabis products under legal conditions. The club aims to promote awareness about the positive aspects of cannabis while ensuring a safe environment for its members. Through regular meetings, workshops, and events, the club offers members the opportunity to exchange knowledge, test new strains, and engage in cannabis-related activities. The club also offers comprehensive prevention programs, including workshops and individual consultations, to support members in making informed decisions about cannabis consumption.",
+            "meta_description": "The Cannabis Social Club Prenzlauer Berg Berlin e.V. promotes a responsible cannabis culture through community engagement and informed consumption.",
+            "meta_keywords": "Cannabis Social Club Prenzlauer Berg, responsible cannabis consumption, cannabis community Berlin, cannabis prevention programs, high-quality cannabis distribution, Berlin cannabis club, collective cannabis cultivation, cannabis education workshops",
+            "offerings": "Community cultivation, Distribution of cannabis for members, Workshops, Prevention programs, Socialising",
+            "harm_reduction": "The club offers a comprehensive prevention program focused on educating members about the risks of cannabis consumption and supporting them in making informed decisions. The program includes individual consultations, workshops on risk minimization, and events that promote safe and responsible use.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabis-social-club-meridiem-brandenburgo-et-berolina-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -252,7 +366,8 @@
             "meta_description": "Cannabis Social Club meridiem Brandenburgo et Berolina e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabis-club-lammbock-e-v": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -261,7 +376,8 @@
             "meta_description": "Cannabis-Club Lammbock e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannamo-cannabis-club-ev": {
             "prices": "The annual membership fee is €1.20, there is no admission fee.",
@@ -270,7 +386,8 @@
             "meta_description": "Cannamo Cannabis Club e.V. supplies high-quality cannabis, focusing on health and reducing black market risks.",
             "meta_keywords": "Cannamo Cannabis Club, high-quality cannabis, pharmaceutical cannabis research, medical cannabis expertise, nonprofit cannabis club, reduce black market risks, clean cannabis products, membership benefits, community cultivation, cannabis distribution",
             "offerings": "Offerings Information coming soon...",
-            "harm_reduction": "Harm Reduction Information coming soon..."
+            "harm_reduction": "Harm Reduction Information coming soon...",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "high-society-cannabis-club-ev": {
             "prices": "One time sign-up fee of 10EUR and a monthly fee of 8EUR.",
@@ -279,7 +396,8 @@
             "meta_description": "HSCC e.V. Berlin focuses on cannabis cultivation and education for legalization, offering high-quality, natural products.",
             "meta_keywords": "HSCC e.V. Berlin, cannabis cultivation, cannabis legalization education, natural cannabis products, medical cannabis, quality cannabis assurance, community club life, cannabis social events, youth protection, scientific outreach, responsible cannabis consumption",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "hype-and-dope-cannabis-club-berlin-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -288,7 +406,8 @@
             "meta_description": "Hype and Dope, Cannabis Club Berlin e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "koala-cannabis-social-club-berlin-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -297,7 +416,8 @@
             "meta_description": "Koala Cannabis Social Club Berlin e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "we-love-weed-wlw--cannabis-social-club-berlin-kreuzberg-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -306,7 +426,8 @@
             "meta_description": "We Love Weed, a Berlin-Kreuzberg 36 CSC, aims to improve cannabis image and offers quality, locally-grown weed.",
             "meta_keywords": "We Love Weed Berlin, Kreuzberg cannabis club, quality cannabis, local cannabis cultivation, reasonable cannabis prices, responsible cannabis consumption, legal cannabis alternative, community involvement cannabis, cannabis political discussions, cannabis pilot projects Berlin",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "anbaufreunde-berlin-social-club-e-v": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -315,16 +436,18 @@
             "meta_description": "Anbaufreunde Berlin Social Club e. V.",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabis-club-lammbock-ev": {
-            "prices": "30 EUR signup fee, 2 EUR monthly membership fee.",
-            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
-            "description": "Cannabis Club Lammbock e.V. offers advice on safe and responsible cannabis use, aiming to support informed decisions. Prices for cannabis and related products are not specified but will be below street value with guaranteed quality. The club organizes events to build community and share information. Currently seeking suitable locations in South-East Berlin, membership involves a one-time fee of €30 and a monthly fee of €2. For more details, interested individuals can contact the club through their website or follow them on Instagram for updates and activities.",
-            "meta_description": "Cannabis Club Lammbock e.V. provides advice for safe, responsible cannabis use and supports informed choices, hosting community events.",
-            "meta_keywords": "safe cannabis advice, responsible cannabis use, quality cannabis below street price, community strengthening events, Southeast Berlin cannabis club, monthly cannabis membership, cannabis cultivation community, direct cannabis counseling",
-            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "The club offers advice on safe and responsible cannabis use, aiming to support informed decisions through direct consultation for it members."
+            "prices": "Membership options include a monthly fee of €12 for individuals and €24 for legal entities, with an additional €95 sign-up fee. Membership benefits include up to 50g of cannabis per month, participation in community events, and voting rights in strain selection.",
+            "location": "Located in Alt-Köpenick, Berlin. Specific opening hours and exact location details will be provided upon membership confirmation.",
+            "description": "Cannabis-Club Lammbock e.V. is committed to providing high-quality cannabis to its members while promoting a responsible and legal cannabis culture. The club is a community-driven organization that values transparency and collective decision-making. Members can contribute ideas, participate in events, and engage in the cultivation and distribution of cannabis as soon as legalization permits. The club also places a strong emphasis on harm reduction and prevention, offering educational resources and workshops.",
+            "meta_description": "Cannabis-Club Lammbock e.V. in Berlin offers a community-focused platform for high-quality cannabis and responsible use.",
+            "meta_keywords": "Cannabis-Club Lammbock, Berlin cannabis club, legal cannabis, responsible cannabis culture, community-driven cannabis, high-quality cannabis, harm reduction, cannabis workshops.",
+            "offerings": "Community cultivation, distribution of cannabis for members, socializing, and events.",
+            "harm_reduction": "The club provides comprehensive prevention services, including workshops, seminars, and individual consultations to educate members about the risks of cannabis use and promote safe consumption practices.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "high-circle": {
             "prices": "Monthly membership fee of 28-35EUR and a one-time fee of 1-28EUR.",
@@ -333,7 +456,8 @@
             "meta_description": "High Circle is a Brandenburg CSC focused on creating legal cannabis communities to counteract the black market.",
             "meta_keywords": "High Circle Brandenburg, legal cannabis communities, CanG law compliance, responsible cannabis consumption, high-quality cannabis alternatives, consumer protection cannabis, youth protection cannabis, membership fees cannabis club, cannabis socializing events",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "The club offers advice on safe and responsible cannabis use, aiming to support informed decisions through direct consultation for it members."
+            "harm_reduction": "The club offers advice on safe and responsible cannabis use, aiming to support informed decisions through direct consultation for it members.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "csc-berlinhigh-ev": {
             "prices": "Either monthly 225EUR or yearly 2400EUR, which comes to 4.50EUR and 4.00EUR per gram, respectively. One-time sign up fee of 20EUR.",
@@ -342,7 +466,8 @@
             "meta_description": "CSC BerlinHigh is a vibrant Berlin community focused on responsible cannabis use and promoting positive cannabis culture.",
             "meta_keywords": "CSC BerlinHigh, responsible cannabis consumption, positive cannabis culture, high-quality cannabis strains, sustainable cannabis cultivation, cannabis membership rates, cannabis hygiene standards, cannabis quality control, cannabis privacy protection, cannabis data anonymization",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "just-plants-ev": {
             "prices": "Four different tiers, 90EUR (10 gram), 120EUR (15 gram), 210EUR (30 gram), 300EUR (50 gram) per month.",
@@ -351,7 +476,8 @@
             "meta_description": "JUST PLANTS DEUTSCHLAND e.V. unites cannabis clubs in cities like Berlin, focusing on transparent, community cultivation.",
             "meta_keywords": "JUST PLANTS DEUTSCHLAND, cannabis social clubs, Berlin cannabis clubs, Dresden cannabis clubs, community cannabis cultivation, medical-grade cannabis cultivation, sustainable cannabis, fair-priced cannabis varieties, addiction prevention programs, safe consumption education, partner club support, public health education cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "The club is committed to harm reduction, directing all surplus funds towards addiction prevention and education in collaboration with local counseling services, the Ministry of Education, and specialized agencies. They have an in-house psychologist, Karl Wegner, who is instrumental in developing effective addiction prevention strategies and is available for consultations and guidance. This approach emphasizes their dedication to responsible cannabis use and public health education."
+            "harm_reduction": "The club is committed to harm reduction, directing all surplus funds towards addiction prevention and education in collaboration with local counseling services, the Ministry of Education, and specialized agencies. They have an in-house psychologist, Karl Wegner, who is instrumental in developing effective addiction prevention strategies and is available for consultations and guidance. This approach emphasizes their dedication to responsible cannabis use and public health education.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "berliner-cannabis-hilfe-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -360,7 +486,8 @@
             "meta_description": "Berliner Cannabis Hilfe e.V. emerged from a support group, focusing on normalizing medical cannabis use.",
             "meta_keywords": "Berliner Cannabis Hilfe, medical cannabis advocacy, cannabis patient support, cannabis education, regional networking, patient self-help cannabis, INDICA project, cannabis consumer experiences, cannabis medical treatment, public cannabis events, Hanfparade participation",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, it is directly involved in harm reduction relating to cannabis usage."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, it is directly involved in harm reduction relating to cannabis usage.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "spliffers-berlin-ig": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -369,7 +496,8 @@
             "meta_description": "Spliffers Social Clubs in Berlin offer a unique environment combining relaxation, aesthetics, and quality for cannabis enthusiasts.",
             "meta_keywords": "Spliffers Social Clubs Berlin, cannabis relaxation environment, cannabis quality, cannabis enthusiast community, cannabis workshops, cannabis seminars, community networking, harm reduction cannabis, youth protection cannabis education, high-standard cannabis products, independent cannabis testing",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services. However, they do list their dedication to support users with responsible consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "helmuts-social-club": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -378,7 +506,8 @@
             "meta_description": "Helmuts Social Club in Berlin is a small, community-focused cannabis club emphasizing quality, authenticity, and organic growth.",
             "meta_keywords": "Helmuts Social Club Berlin, community-focused cannabis club, quality cannabis production, natural cannabis cultivation, home cannabis cultivation information, physical club space, organic growth cannabis club, cannabis passion and care, cannabis socializing, harm reduction cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "captain-weedy-csc-berlin-ev": {
             "prices": "Three different tiers with different benefits, 4.20EUR per quarter (16.80EUR annually), 420EUR annually, and 4200EUR annually.",
@@ -387,7 +516,8 @@
             "meta_description": "Captain Weedy's Social Club is dedicated to reviving and spreading cultural appreciation and historical knowledge of cannabis.",
             "meta_keywords": "Captain Weedy's Social Club, cultural appreciation of cannabis, historical knowledge of cannabis, cannabis exchange spaces, cannabis learning journeys, cannabis festivals, global cannabis communities, nonprofit cannabis activities, community engagement cannabis, cannabis legal advocacy, expanding cannabis locations, online presence cannabis, cannabis sponsorship challenges, cannabis culture shaping",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "csc-visionre-berlin": {
             "prices": "The CSCV is financed by a monthly membership fee of €10. The cannabis prices are adjusted to the cultivation costs and the THC content. The price range will be approximately 2€-10€/g.",
@@ -396,7 +526,8 @@
             "meta_description": "CSCV in Berlin focuses on cultivating diverse cannabis strains with unique cannabinoid and terpene profiles at cost.",
             "meta_keywords": "CSCV Berlin, diverse cannabis strains, cannabinoid profiles, terpene profiles, cost-price cannabis, cannabis genetics exchange, political advocacy for growers, diverse cannabis market, gardening skills in cannabis, phenohunts, cannabis breeding, cannabis workshops, cultural cannabis events, international cannabis network, cannabis research center funding",
             "offerings": "Community cultivation, distribution of cannabis for members, access to cuttings, workshops, socialising, diverse selection, events, support group & harm reduction",
-            "harm_reduction": "CSCV offers the following harm reduction services: Among other things, there will be a prevention officer with an open ear, a support group for cannabis users, as well as a diverse range of strains of different strengths."
+            "harm_reduction": "CSCV offers the following harm reduction services: Among other things, there will be a prevention officer with an open ear, a support group for cannabis users, as well as a diverse range of strains of different strengths.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "csc-kreuzkoelln": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -405,7 +536,8 @@
             "meta_description": "CSC Kreuzkölln, Cannabis Social Club Berlin",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabis-social-club-weeden-030-berlin-ev": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -414,7 +546,8 @@
             "meta_description": "Cannabis Social Club Weeden 030 Berlin e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "white-lake-weed": {
             "prices": "10EUR per month (no cannabis given at this tier), 15EUR per month (7EUR per gram).",
@@ -423,7 +556,8 @@
             "meta_description": "White Lake Weed in Berlin Weißensee uses scientific expertise and passion to ensure consistently high-quality cannabis.",
             "meta_keywords": "White Lake Weed Berlin, cannabis social club Weißensee, high-quality cannabis, scientific cannabis cultivation, crop steering, LED grow lights, reverse osmosis water, integrated pest management, expanding cannabis strain selection, controlled cannabis supply, harm reduction cannabis, addiction and prevention counseling, public education cannabis effects",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "The harm reduction services offered by White Lake Weed in Berlin focus on educating the community about the effects of cannabis use through addiction and prevention counseling. Key services include educating the public on both short-term effects like euphoria and long-term risks such as dependency and cognitive impairments; early detection and intervention to identify and support at-risk individuals; efforts to reduce consumption via behavioral changes and awareness campaigns; and health promotion to enhance overall well-being by offering alternatives to cannabis use. The program also emphasizes protecting minors with school-based early prevention, engaging parents, and promoting healthy alternatives. Legal aspects are addressed by clarifying the legality of cannabis cultivation for personal use by adults while prohibiting sale, trade, and use by minors. These comprehensive services aim to mitigate the adverse effects associated with cannabis use while prioritizing community health and legal awareness. Once the licence has been obtained, a youth protection concept is introduced to make members over the age of 21 aware of the importance of their role model function towards younger people. The aim is to raise awareness of appropriate behaviour in public as well as in the private and family environment."
+            "harm_reduction": "The harm reduction services offered by White Lake Weed in Berlin focus on educating the community about the effects of cannabis use through addiction and prevention counseling. Key services include educating the public on both short-term effects like euphoria and long-term risks such as dependency and cognitive impairments; early detection and intervention to identify and support at-risk individuals; efforts to reduce consumption via behavioral changes and awareness campaigns; and health promotion to enhance overall well-being by offering alternatives to cannabis use. The program also emphasizes protecting minors with school-based early prevention, engaging parents, and promoting healthy alternatives. Legal aspects are addressed by clarifying the legality of cannabis cultivation for personal use by adults while prohibiting sale, trade, and use by minors. These comprehensive services aim to mitigate the adverse effects associated with cannabis use while prioritizing community health and legal awareness. Once the licence has been obtained, a youth protection concept is introduced to make members over the age of 21 aware of the importance of their role model function towards younger people. The aim is to raise awareness of appropriate behaviour in public as well as in the private and family environment.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "csc-doobies-berlin": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -432,7 +566,8 @@
             "meta_description": "Doobie's is led by a seasoned team ensuring high-quality cannabis production, transparency, and member education.",
             "meta_keywords": "Doobie's cannabis club, experienced cannabis production team, high-quality cannabis, transparency in cannabis production, member education cannabis, understanding cannabis origin, diverse cannabis products, cannabis community cultivation, cannabis distribution, cannabis socializing",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabis-social-club-spandau": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -441,7 +576,8 @@
             "meta_description": "Cannabis Social Club Spandau fosters a community for cannabis enthusiasts interested in alternative meditation.",
             "meta_keywords": "Cannabis Social Club Spandau, cannabis community, alternative meditation, cannabis farm, controlled distribution, youth protection, professional operation, research collaboration, operational efficiency, legal cultivation",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "hanf-im-glueck-csc-berlin": {
             "prices": "Membership fees from 49EUR sign-up fee.",
@@ -450,7 +586,8 @@
             "meta_description": "Hanf im Glück CSC promotes a vibrant cannabis community, focusing on transparency, quality, and responsible consumption.",
             "meta_keywords": "Hanf im Glück Cannabis Social Club, cannabis community, transparency, quality control, responsible consumption, sustainable cultivation, education, harm reduction, workshops, seminars, legal consumption",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cscd--dachverband-deutscher-cannabis-social-clubs": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -459,7 +596,8 @@
             "meta_description": "CSCD – Dachverband deutscher Cannabis Social Clubs",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "elevated-society-csc-berlin": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -468,7 +606,8 @@
             "meta_description": "Elevated Society CSC Berlin",
             "meta_keywords": "Cannabis Social Club Berlin, cannabis community, cannabis legalization, cooperative cannabis cultivation, social activities cannabis, responsible cannabis consumption, youth protection cannabis, legal cannabis clubs, quality standard cannabis cultivation, cost-price cannabis, cannabis consumer protection, addiction prevention cannabis",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "cannabliss-csc": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
@@ -477,7 +616,8 @@
             "meta_description": "Cannabliss Social Club in Berlin focuses on community support, sustainable, chemical-free cultivation, and fostering genuine member connections.",
             "meta_keywords": "Cannabliss Social Club, Berlin, community support, sustainable cultivation, chemical-free, genuine connections, cannabis club, socializing, harm reduction, home cultivation, organic cannabis, top strains",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "The harm reduction services described incorporate several preventative and supportive strategies to create a safer environment. By restricting participation to individuals over the age of 21, the approach aims to shield younger, potentially more vulnerable people from exposure. Additionally, a 'know your members' policy is implemented to ensure that all participants are mentally stable and well-informed about what they are consuming, which helps mitigate risks associated with substance misuse. Support services are also an integral part of this framework, with a social worker available to provide counseling and monitor consumption levels. This professional can also identify any signs of concerning behavior, enabling early intervention and ongoing harm reduction efforts."
+            "harm_reduction": "The harm reduction services described incorporate several preventative and supportive strategies to create a safer environment. By restricting participation to individuals over the age of 21, the approach aims to shield younger, potentially more vulnerable people from exposure. Additionally, a 'know your members' policy is implemented to ensure that all participants are mentally stable and well-informed about what they are consuming, which helps mitigate risks associated with substance misuse. Support services are also an integral part of this framework, with a social worker available to provide counseling and monitor consumption levels. This professional can also identify any signs of concerning behavior, enabling early intervention and ongoing harm reduction efforts.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "monkeyz-berlin-ev": {
             "prices": "Four tiers, 5g per month for 10EUR per gram, 10g per month for 9.50EUR per gram, 25g per month for 9EUR per gram, 50g per month for 8EUR per gram.",
@@ -486,16 +626,148 @@
             "meta_description": "Monkeyz CSC in Berlin offers exclusive Cali Weed varieties, ensuring privacy and data protection for members in the new era of legal cannabis.",
             "meta_keywords": "Monkeyz CSC, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         },
         "berlin-blatt-und-bluete-ev": {
+            "prices": "Membership tiers range from 20 EUR/month for 2 grams of cannabis up to 250 EUR/month for 50 grams. No additional fees.",
+            "location": "Cannabis is cultivated in Brandenburg and distributed in Berlin-Kreuzberg. Specific opening times will be shared soon.",
+            "description": "Berlin Blatt und Blüte e.V. is a community-driven cannabis social club in Berlin, legally cultivating cannabis in Berlin and Brandenburg. The club prioritizes sustainability, transparency, and the production of high-quality cannabis. Members can choose from various membership levels based on their cannabis needs, participate in cultivation activities, and engage in a supportive community.",
+            "meta_description": "Berlin Blatt und Blüte e.V. is a cannabis social club focused on sustainable cultivation and high-quality cannabis in Berlin.",
+            "meta_keywords": "Berlin Blatt und Blüte e.V., cannabis social club Berlin, sustainable cannabis cultivation, high-quality cannabis, community-driven cannabis, cannabis cultivation Berlin, cannabis distribution Berlin",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Events",
+            "harm_reduction": "The club emphasizes educating members on responsible cannabis use and offers information to minimize risks associated with consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "realita-ev-csc": {
+            "prices": "The membership includes a one-time registration fee of 39.99 EUR and a monthly fee of 9.99 EUR, which includes 2 grams of cannabis.",
+            "location": "Realita e.V. is based in the southwest of Berlin, in Steglitz-Zehlendorf. Detailed location and opening times will be shared upon membership approval.",
+            "description": "Realita e.V. CSC, founded on April 27, 2024, is a cannabis social club in Berlin focused on providing a high-quality, legal alternative to the illicit market. The club emphasizes responsible cannabis use and community-driven cultivation, ensuring transparency and safety for its members. Realita supports the partial legalization of cannabis in Germany and aims to foster a safe and informed cannabis culture.",
+            "meta_description": "Realita e.V. CSC is a cannabis social club in Berlin promoting legal, high-quality cannabis and responsible consumption.",
+            "meta_keywords": "Realita e.V. CSC, cannabis social club Berlin, legal cannabis, responsible consumption, community cultivation, Steglitz-Zehlendorf",
+            "offerings": "Community cultivation, Cannabis distribution for members, Socializing",
+            "harm_reduction": "This club emphasizes responsible use and provides education to minimize the risks associated with cannabis consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "bunte-bluete-cannabis-club-berlin-ev": {
+            "prices": "Membership fee is 50 EUR per month, which includes a credit towards cannabis purchases. The price per gram starts at 7-8 EUR.",
+            "location": "The cannabis distribution center will be located in central Berlin. Specific details will be provided upon membership approval.",
+            "description": "Bunte Blüte Cannabis Club Berlin e.V. is a cannabis social club focused on offering high-quality, THC-rich cannabis through a transparent, community-driven model. The club, which is currently navigating the complexities of Berlin's legalization process, emphasizes sustainability and premium production standards. Members benefit from a variety of cannabis strains, seeds, and cuttings, with an emphasis on responsible use and community involvement.",
+            "meta_description": "Bunte Blüte Cannabis Club Berlin e.V. offers high-quality cannabis in a transparent and community-driven environment in Berlin.",
+            "meta_keywords": "Bunte Blüte Cannabis Club Berlin, cannabis social club, high-quality cannabis, community-driven cannabis, cannabis distribution Berlin, sustainable cannabis, THC-rich cannabis",
+            "offerings": "Community cultivation, Cannabis distribution, Seeds and cuttings, Socializing",
+            "harm_reduction": "The club focuses on responsible use, with efforts to educate members on safe consumption practices and minimize risks.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "420-bearz": {
+            "prices": "Membership options include 'Small Bear' at 75 EUR/month (5g included), 'Big Bear' at 130 EUR/month (15g included), and 'Mighty Bear' at 176 EUR/month (25g included). Additional grams are priced at 7 EUR each.",
+            "location": "The club's cannabis distribution center is located in southern Berlin, between Lichterfelde and Lichtenrade. Specific opening times will be provided upon membership.",
+            "description": "420 Bearz is a cannabis social club in Berlin, offering high-quality, THC-rich cannabis strains produced with precision and care. The club emphasizes professional cultivation methods, including the use of organic fertilizers and computer-controlled environments. Members can choose from various strains, all cultivated to ensure maximum potency and flavor. The club also prioritizes community and member engagement through its tiered membership system.",
+            "meta_description": "420 Bearz is a Berlin cannabis club offering high-quality, professionally cultivated cannabis strains with a focus on community and engagement.",
+            "meta_keywords": "420 Bearz, Berlin cannabis club, high-quality cannabis, THC-rich strains, community cultivation, organic cannabis, professional cannabis cultivation, cannabis distribution Berlin",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, High-Quality Strains",
+            "harm_reduction": "The club provides education on responsible cannabis use and offers support to members to minimize the risks associated with consumption.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "csc-gruenvereint-ev": {
+            "prices": "Membership fees start at 30 EUR per month, depending on the selected membership level. Prices for cannabis are adjusted according to cultivation costs.",
+            "location": "The club is based in Berlin, Germany. Detailed location information will be provided upon membership approval.",
+            "description": "CSC Grünvereint e.V. is a Berlin-based cannabis cultivation association focused on sustainable and community-driven cannabis production. The club operates under the principles of transparency and responsibility, providing members with access to high-quality cannabis while promoting education and harm reduction. Grünvereint emphasizes environmental sustainability in its cultivation practices, ensuring that all products are free from harmful chemicals.",
+            "meta_description": "CSC Grünvereint e.V. is a cannabis club in Berlin focused on sustainable, community-driven cannabis cultivation and harm reduction.",
+            "meta_keywords": "CSC Grünvereint e.V., Berlin cannabis club, sustainable cannabis cultivation, community-driven cannabis, high-quality cannabis, environmental sustainability, harm reduction",
+            "offerings": "Community cultivation, Cannabis distribution for members, Education, Environmental sustainability",
+            "harm_reduction": "The club is committed to harm reduction by educating members on safe cannabis consumption and minimizing the risks associated with cannabis use.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "budz-berlin-ev": {
+            "prices": "Membership fees start at 25 EUR per month, with additional tiers offering discounts and exclusive benefits. Prices for cannabis are adjusted according to cultivation costs.",
+            "location": "Budz Berlin e.V. operates in Berlin with cultivation taking place in Solingen. Detailed distribution information will be shared with members.",
+            "description": "Budz Berlin e.V. is a cannabis social club dedicated to providing high-quality, safe cannabis to its members through controlled and secure cultivation. The club emphasizes transparency, community, and the protection of minors. Budz operates under strict guidelines to ensure that only adults have access to cannabis, and offers a range of membership options to support its mission of creating a friendly and safe cannabis community.",
+            "meta_description": "Budz Berlin e.V. is a cannabis club in Berlin focused on providing safe, high-quality cannabis through secure cultivation and community involvement.",
+            "meta_keywords": "Budz Berlin e.V., cannabis social club Berlin, safe cannabis, controlled cultivation, community cannabis, cannabis distribution Berlin, cannabis membership tiers",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Safe cannabis access",
+            "harm_reduction": "The club is committed to protecting minors and offers education on safe cannabis use, ensuring that all members are informed and responsible consumers.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "ambrosia-csc-ev": {
+            "prices": "Monthly membership starts at 25 EUR. The price per gram ranges between 4 EUR and 8 EUR, based on cultivation costs.",
+            "location": "Ambrosia CSC e.V. operates in Berlin, with indoor cultivation in the eastern part of the city and outdoor growth in Brandenburg.",
+            "description": "Ambrosia CSC e.V. is a Berlin-based cannabis social club committed to sustainable and professional cannabis cultivation. The club uses state-of-the-art technology, including energy-saving LED systems and professional substrates, to produce high-quality cannabis. Members are encouraged to participate in the cultivation process, which is managed by experienced horticulturists. Ambrosia CSC is dedicated to promoting a community-oriented environment, where cannabis enthusiasts can share knowledge and enjoy a range of high-quality strains.",
+            "meta_description": "Ambrosia CSC e.V. is a Berlin cannabis club focused on sustainable cultivation and community involvement, offering high-quality strains.",
+            "meta_keywords": "Ambrosia CSC e.V., Berlin cannabis club, sustainable cultivation, community cannabis, high-quality strains, LED technology, cannabis horticulture",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Sustainable practices",
+            "harm_reduction": "The club focuses on educating its members about the potential risks of cannabis use, particularly for younger people, and emphasizes safe consumption practices.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "handcut-flowers": {
             "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
             "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
             "description": "A description of this cannabis club will be shown here once it is available.",
-            "meta_description": "Berlin Blatt und Blüte e.V.",
-            "meta_keywords": "Berlin Blatt und Blüte e.V., Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
+            "meta_description": "Handcut Flowers",
+            "meta_keywords": "Handcut Flowers, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
             "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
-            "harm_reduction": "This club has currently not listed any specific harm reduction services."
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "nicetime-ev": {
+            "prices": "Membership starts at 10 EUR per month. Cannabis prices are adjusted according to cultivation costs and member preferences.",
+            "location": "NiceTime e.V. is based in Berlin, with specific distribution locations provided upon membership approval.",
+            "description": "NiceTime e.V. is a community-focused cannabis social club in Berlin, committed to sustainable and responsible cannabis cultivation. The club offers members a diverse selection of high-quality strains, grown using organic and eco-friendly methods. NiceTime promotes a supportive, non-discriminatory environment, where members can engage in educational workshops and community activities that emphasize the importance of sustainable and legal cannabis use.",
+            "meta_description": "NiceTime e.V. is a Berlin cannabis club focused on sustainable, responsible cultivation and a supportive community environment.",
+            "meta_keywords": "NiceTime e.V., Berlin cannabis club, sustainable cannabis, responsible cultivation, organic cannabis, community-focused cannabis, educational workshops, high-quality strains",
+            "offerings": "Community cultivation, Cannabis distribution, Educational workshops, Socializing, High-quality strains",
+            "harm_reduction": "The club provides education on safe cannabis use and emphasizes harm reduction through its sustainable practices and community engagement.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "klub425-csc-berlin": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description": "A description of this cannabis club will be shown here once it is available.",
+            "meta_description": "Klub425 CSC Berlin",
+            "meta_keywords": "Klub425 CSC Berlin, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
+            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "best-social-club-berlin": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description": "A description of this cannabis club will be shown here once it is available.",
+            "meta_description": "BEST Social Club Berlin",
+            "meta_keywords": "BEST Social Club Berlin, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
+            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "grashaus": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description": "A description of this cannabis club will be shown here once it is available.",
+            "meta_description": "Grashaus",
+            "meta_keywords": "Grashaus, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
+            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "green-hub-wedding": {
+            "prices": "Information on membership fees as well as cannabis prices will be shown here once it is available.",
+            "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
+            "description": "A description of this cannabis club will be shown here once it is available.",
+            "meta_description": "Green Hub Wedding",
+            "meta_keywords": "Green Hub Wedding, Berlin, Cali Weed, exclusive strains, high-quality cannabis, legalization, privacy, data protection, cannabis club, flower selection",
+            "offerings": "Community cultivation, Distribution of cannabis for members, Socialising",
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "weed-bros": {
+            "prices": "Membership starts at 10 EUR per month, with the first three months free for the first 150 members. Prices for cannabis are set based on cultivation costs.",
+            "location": "WEED BROS. is located in Berlin Friedrichshain. The exact location will be provided upon membership approval.",
+            "description": "WEED BROS. is a cannabis social club in Berlin Friedrichshain focused on community-driven, sustainable, and organic cannabis cultivation. The club offers a welcoming environment where members can participate in high-quality cannabis production and enjoy a supportive, familial atmosphere. WEED BROS. emphasizes transparency and member involvement in all aspects of the cultivation process.",
+            "meta_description": "WEED BROS. is a cannabis club in Berlin Friedrichshain focusing on sustainable, community-driven cultivation and member involvement.",
+            "meta_keywords": "WEED BROS., Berlin cannabis club, sustainable cultivation, community-driven cannabis, organic cannabis, Friedrichshain cannabis club, member involvement",
+            "offerings": "Community cultivation, Cannabis distribution, Socializing, Sustainable practices",
+            "harm_reduction": "The club educates members on safe and responsible cannabis use, promoting harm reduction through sustainable and organic practices.",
+            "reviews": "CCB currently does not have a verified review available for this club."
         }
     }
 }

@@ -12,15 +12,46 @@
 html, body {
   margin: 0;
   overflow-x: hidden;
+  overscroll-behavior-y: contain;
+}
+
+body {
+  height: 100%;
+}
+
+.dynamic-height {
+  height: calc(100% - var(--navbar-height));
+}
+
+.dynamic-desktop-maps-list-right-offset {
+  right: 600px;
 }
 
 :root {
+
+  /* Defines global UI sizes
+    - Navbar, content width, docs heights... etc
+  */
   --layout-width: 1080px;
   --layout-x-padding: 1rem;
   --footer-height: 150px;
-  --navbar-height: 120px;
+  --navbar-height: 100px;
+  --navbar-height-mobile: 80px;
+  --doc-height: 100%;
+  --vh: 1vh;
+
+  /* Defines Our Colour Palette  */
+  
+
 }
 
+#__next, /* for Next.js */
+.main-container {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+}
 /* #section_footer {
   width: 100%;
   background: #B6CF54;

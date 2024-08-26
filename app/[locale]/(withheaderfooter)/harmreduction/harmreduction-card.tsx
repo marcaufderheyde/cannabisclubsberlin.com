@@ -1,4 +1,4 @@
-import ActionButton from '@/app/ui/Home/actionbutton';
+import ActionButton from '@/app/components/ActionButton/ActionButton';
 
 export default function HarmReductionCard({
     title,

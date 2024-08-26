@@ -6,7 +6,7 @@ import { TouchDetails } from './Swipeable';
 import { Position } from './SwipeableDeck';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function SwipeableClubCard({
     club,
@@ -34,6 +34,7 @@ export default function SwipeableClubCard({
         x: startPosition.x,
     });
     const localActive = useLocale();
+    const t = useTranslations('ClubsPage');
 
     const [transformDuration, setTranformDuration] = useState(0.2);
     const [scale, setScale] = useState(startScale);
@@ -133,7 +134,9 @@ export default function SwipeableClubCard({
                             {club.name}
                         </h1>
                         <div className="mx-2 flex flex-wrap justify-center">
-                            {club.offerings
+                            {t(
+                                `offerings_tags.slug_to_tags_indices.${club.slug}`
+                            )
                                 .toString()
                                 ?.split(',')
                                 .map((offering: string) => (

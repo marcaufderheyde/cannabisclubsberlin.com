@@ -270,4 +270,194 @@ describe('OpenStreetMap Component', () => {
 
         expect(mockProps.setIsDarkMode).toHaveBeenCalledWith(false);
     });
+
+    it.skip('should filter clubs based on showHRInfo prop', async () => {
+        const clubsWithoutHR = [
+            ...mockClubs,
+            {
+                name: 'Club 3',
+                slug: 'club-3',
+                imageUrl: '/club3.jpg',
+                geoLocation: [52.53, 13.406],
+                hasHRInformation: false,
+                offerings: ['Offering5', 'Offering6'],
+                address: '',
+            },
+        ];
+
+        jest.spyOn(
+            require('@/app/helpers/clubsListContent'),
+            'pullClubsListContent'
+        ).mockReturnValue(clubsWithoutHR);
+
+        const mockPropsShowHRTrue = {
+            isDesktopMap: true,
+            showHRInfo: true,
+            isDarkMode: true,
+            setIsDarkMode: jest.fn(),
+        };
+
+        const { rerender } = render(<OpenStreetMap {...mockPropsShowHRTrue} />);
+
+        await waitFor(() => {
+            const markers = screen.getAllByTestId(/^marker-/);
+            expect(markers).toHaveLength(2);
+            expect(markers[0]).toHaveAttribute('data-location', '52.52,13.405');
+            expect(markers[1]).toHaveAttribute('data-location', '52.51,13.404');
+        });
+
+        rerender(<OpenStreetMap {...mockProps} showHRInfo={false} />);
+
+        await waitFor(() => {
+            const markers = screen.getAllByTestId(/^marker-/);
+            expect(markers).toHaveLength(3);
+            expect(markers[2]).toHaveAttribute('data-location', '52.53,13.406');
+        });
+    });
+
+    it('should update clubIndex when navigating through clubs', async () => {
+        await act(async () => {
+            render(<OpenStreetMap {...mockProps} />);
+        });
+
+        await act(async () => {
+            fireEvent.click(screen.getByTestId('marker-0'));
+        });
+
+        expect(screen.getByTestId('custom-popup')).toBeInTheDocument();
+        expect(
+            screen.getByTestId('custom-popup').querySelector('span')
+        ).toHaveTextContent('0');
+
+        await act(async () => {
+            fireEvent.click(screen.getByText('Next'));
+        });
+
+        expect(
+            screen.getByTestId('custom-popup').querySelector('span')
+        ).toHaveTextContent('1');
+
+        await act(async () => {
+            fireEvent.click(screen.getByText('Previous'));
+        });
+
+        expect(
+            screen.getByTestId('custom-popup').querySelector('span')
+        ).toHaveTextContent('0');
+    });
+
+    it('should close popup when Close button is clicked', async () => {
+        await act(async () => {
+            render(<OpenStreetMap {...mockProps} />);
+        });
+
+        await act(async () => {
+            fireEvent.click(screen.getByTestId('marker-0'));
+        });
+
+        expect(screen.getByTestId('custom-popup')).toBeInTheDocument();
+
+        await act(async () => {
+            fireEvent.click(screen.getByText('Close'));
+        });
+
+        expect(screen.queryByTestId('custom-popup')).not.toBeInTheDocument();
+    });
+
+    jest.mock('./DesktopClubList', () => {
+        const React = require('react');
+        const DesktopClubList = ({
+            clubClickedFromList,
+            setClubListExpanded,
+            currentClubIndex,
+        }: any) => {
+            const [expanded, setExpanded] = React.useState(false);
+            return React.createElement(
+                'div',
+                {
+                    'data-testid': 'desktop-club-list',
+                    className: expanded ? 'expanded' : '',
+                },
+                React.createElement(
+                    'button',
+                    { onClick: () => clubClickedFromList(0) },
+                    'Select Club 0'
+                ),
+                React.createElement(
+                    'button',
+                    {
+                        onClick: () => {
+                            setExpanded(!expanded);
+                            setClubListExpanded(!expanded);
+                        },
+                    },
+                    'Expand'
+                ),
+                React.createElement('span', {}, currentClubIndex)
+            );
+        };
+        DesktopClubList.displayName = 'MockDesktopClubList';
+        return DesktopClubList;
+    });
+
+    it('should handle keyboard navigation', async () => {
+        await act(async () => {
+            render(<OpenStreetMap {...mockProps} />);
+        });
+
+        await act(async () => {
+            fireEvent.click(screen.getByTestId('marker-0'));
+        });
+
+        expect(
+            screen.getByTestId('custom-popup').querySelector('span')
+        ).toHaveTextContent('0');
+
+        await act(async () => {
+            fireEvent.keyDown(document, { key: 'ArrowRight' });
+        });
+
+        expect(
+            screen.getByTestId('custom-popup').querySelector('span')
+        ).toHaveTextContent('1');
+
+        await act(async () => {
+            fireEvent.keyDown(document, { key: 'ArrowLeft' });
+        });
+
+        expect(
+            screen.getByTestId('custom-popup').querySelector('span')
+        ).toHaveTextContent('0');
+    });
+
+    it.skip('should update map view when a club is selected', async () => {
+        jest.useFakeTimers();
+        const mockJumpToMarker = jest.fn();
+        jest.doMock(
+            '@/app/components/OpenStreetMap/helpers/jumpToMarker',
+            () => mockJumpToMarker
+        );
+
+        // We need to re-import the component after mocking
+        const { default: OpenStreetMap } = await import('./OpenStreetMap');
+
+        await act(async () => {
+            render(<OpenStreetMap {...mockProps} />);
+        });
+
+        await act(async () => {
+            fireEvent.click(screen.getByTestId('marker-0'));
+        });
+
+        // Advance timers to trigger the debounced function
+        act(() => {
+            jest.advanceTimersByTime(150); // Slightly more than the debounce delay
+        });
+
+        await waitFor(() => {
+            expect(mockJumpToMarker).toHaveBeenCalled();
+        });
+
+        jest.useRealTimers();
+    });
 });

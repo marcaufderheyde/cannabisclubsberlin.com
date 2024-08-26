@@ -93,6 +93,25 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
     const clubs = clubsRef.current;
     const selectedClub = clubIndexExists && clubs[clubIndex!];
 
+    const [filteredClubs, setFilteredClubs] = useState<Club[]>([]);
+    const [isFiltering, setIsFiltering] = useState(false);
+
+    useEffect(() => {
+        const newFilteredClubs = props.showHRInfo
+            ? clubs.filter((club) => club.hasHRInformation)
+            : clubs;
+        setFilteredClubs(newFilteredClubs);
+        setIsFiltering(true);
+        setClubIndex(null);
+
+        // Reset filtering state after a short delay
+        const timer = setTimeout(() => {
+            setIsFiltering(false);
+        }, 300);
+
+        return () => clearTimeout(timer);
+    }, [props.showHRInfo, clubs]);
+
     // const MotionSwipableDeck = withMotion(SwipeableDeck);
 
     clubs.forEach((club) => {
@@ -112,10 +131,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
             club.hasHRInformation = true;
         }
     });
-
-    const filteredClubs = props.showHRInfo
-        ? clubs.filter((club) => club.hasHRInformation)
-        : clubs;
 
     const zoom = 13;
 
@@ -232,7 +247,7 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                 mode="sync"
                 onExitComplete={() => console.log('Exit animation complete')}
             >
-                {selectedClub && clubIndexExists && (
+                {selectedClub && clubIndexExists && !isFiltering && (
                     <motion.div
                         key="swipeable-deck"
                         initial={{ '--deck-opacity': 0 } as any}
@@ -242,21 +257,13 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
                             duration: 0.2,
                             ease: 'easeOut',
                         }}
-                        onAnimationStart={() =>
-                            console.log('Animation started')
-                        }
-                        onAnimationComplete={() =>
-                            console.log('Animation completed')
-                        }
                     >
                         <SwipeableDeck
                             style={{ opacity: 'var(--deck-opacity)' }}
-                            items={clubs}
+                            items={filteredClubs}
                             Card={SwipeableClubCard}
                             currentIndex={clubIndex!}
                             onDownSwipeClose={() => setClubIndex(null)}
-                            // change "true" to setClubIndex(null) whenever animations are figured out
-                            // onUpSwipeClose={() => true}
                             onRightSwipe={() => setPreviousClub()}
                             onLeftSwipe={() => setNextClub()}
                         />

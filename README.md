@@ -1,9 +1,6 @@
 [![deployment](https://github.com/marcaufderheyde/cannabisclubsberlin.com/actions/workflows/nextjs.yml/badge.svg?branch=main)](https://github.com/marcaufderheyde/cannabisclubsberlin.com/actions/workflows/nextjs.yml)
-
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 # The CCB Project

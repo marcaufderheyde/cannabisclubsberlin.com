@@ -210,9 +210,6 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
         };
     }, [map]);
 
-    console.log(filteredClubs);
-    console.log(clubIndex);
-
     return (
         <div>
             {props.isDesktopMap && (

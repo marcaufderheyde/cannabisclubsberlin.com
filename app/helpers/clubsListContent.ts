@@ -14,6 +14,7 @@ export type Club = {
     slug: string;
     geoLocation: number[];
     address: string;
+    reviews: string;
 };
 
 export function generateSlug(name: string): string {

@@ -24,6 +24,10 @@ export default function Navbar({ isOnMap = false }: Props) {
             name: t('harm_reduction_title'),
             href: `/${localActive}/harmreduction`,
         },
+        {
+            name: t('reviews_title'),
+            href: `/${localActive}/reviews`,
+        },
         { name: t('law_title'), href: `/${localActive}/law` },
         { name: t('contact_title'), href: `/${localActive}/contact` },
         { name: t('about_title'), href: `/${localActive}/about` },
@@ -37,7 +41,7 @@ export default function Navbar({ isOnMap = false }: Props) {
 
     return (
         <div
-            role='banner'
+            role="banner"
             className={
                 fontColor +
                 ' absolute top-0 left-0 ' +
@@ -52,11 +56,11 @@ export default function Navbar({ isOnMap = false }: Props) {
                 }
             >
                 <Logo />
-                <div className='hidden lg:flex lg:flex-row items-center w-full justify-between gap-6'>
+                <div className="hidden lg:flex lg:flex-row items-center w-full justify-between gap-2">
                     <Links links={links} />
                     <TranslationSwitch />
                 </div>
-                <div className='flex flex-row items-center w-full justify-end lg:hidden'>
+                <div className="flex flex-row items-center w-full justify-end lg:hidden">
                     <MobileNav links={links} />
                 </div>
             </div>

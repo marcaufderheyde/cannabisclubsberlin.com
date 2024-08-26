@@ -6,6 +6,9 @@
         "about_title": "Über uns",
         "about_description": "CannabisClubsBerlin.com bietet Einblicke und Bewertungen zu Berlins Cannabisclubs, Kultur, Vorschriften und Kaufoptionen.",
         "about_keywords": "Cannabis Clubs Berlin, Berlin Cannabis Kultur, Cannabis Club Bewertungen Berlin, Berlin Cannabis Vorschriften, Wo kann man Cannabis in Berlin kaufen, Cannabis Mitgliedschaft Berlin, Cannabis Gebrauchsanweisung Berlin, Legales Cannabis Berlin, Cannabis Community Berlin, Cannabis Clubs beitreten Berlin, Cannabis Gesetze in Berlin, Berlin Cannabis Clubs Ratgeber, Cannabis Clubs Informationen Berlin, Informieren über Cannabis Berlin, Cannabis Clubs Zugang Berlin",
+        "reviews_title": "Bewertungen",
+        "reviews_description": "Entdecken Sie umfassende Bewertungen von Cannabis Social Clubs in Berlin mit Fokus auf die Qualität der Dienstleistungen, Schadensminderungsmaßnahmen und Mitgliedserfahrungen. CannabisClubsBerlin.com bietet detaillierte, verifizierte Bewertungen, um Nutzern bei der Auswahl des besten Clubs für ihre Bedürfnisse zu helfen.",
+        "reviews_keywords": "Cannabis Social Club Bewertungen, Berlin Cannabis Clubs, Schadensminderungsdienste, verifizierte Bewertungen, Erfahrungen von Clubmitgliedern, Cannabis Club Dienstleistungen, CCB Bewertungen, Cannabis Kultur Berlin",
         "contact_title": "Kontakt",
         "contact_description": "Bitte zögere nicht, uns über die unten aufgeführten Kanäle zu kontaktieren. cannabisclubsberlin@protonmail.me",
         "contact_keywords": "Kontakt Cannabis Clubs Berlin, Cannabis Club Support Berlin, E-Mail Cannabis Clubs Berlin, Cannabis Clubs Berlin Kontaktinfo, Cannabis Clubs Berlin E-Mail, Kontaktinformationen Cannabis Clubs Berlin, Kontaktaufnahme Cannabis Clubs Berlin, Cannabis Club Anfragen Berlin, Cannabis Clubs Berlin Kommunikation, Cannabis Club Hilfe Berlin, Kundenservice Cannabis Clubs Berlin, Cannabis Clubs Berlin Hilfe, Cannabis Club Kontaktdetails Berlin, Cannabis Clubs Berlin Kundenbetreuung",
@@ -35,7 +38,21 @@
         "headline_description": "CannabisClubsBerlin.com ist deine erste Anlaufstelle für Einblicke in die Cannabis-Clubs in Berlin und bietet umfassende Bewertungen und Informationen, um dich durch die Vielzahl der in der Stadt verfügbaren Cannabis-Optionen zu führen. Unser Ziel ist es, dich über die lebendige Cannabis-Kultur in Berlin aufzuklären und bei der Navigation durch die lokalen Vorschriften bezüglich des Cannabis-Konsums und der Clubmitgliedschaften zu unterstützen. Auf dieser Seite findest du Informationen über Cannabis in Berlin, wie alles funktioniert, wo du es kaufen kannst und wie du anfangen kannst! Die auf CannabisClubsBerlin.com bereitgestellten Informationen sollen die direkte Beziehung zwischen Besuchern und Cannabis-Clubs oder Rechtsberatern unterstützen, jedoch nicht ersetzen.",
         "headline_description_short": "Dies ist deine erste Anlaufstelle für Einblicke in Cannabis-Clubs in Berlin. Hier findest du umfassende Bewertungen und Infos, die dir helfen, dich durch die vielen Cannabis-Optionen in der Stadt zu navigieren.",
         "headline_subdescription": "Möchtest du mehr erfahren? Lassen uns beginnen, indem wir dir die verschiedenen Cannabis-Clubs zeigen, die es in Berlin jetzt schon gibt!",
-        "discover_button": "Entdecken"
+        "discover_button": "Entdecken",
+        "our_history_title": "Unsere Geschichte",
+        "our_history_one": "CannabisClubsBerlin.com wurde von drei jungen Berlinern gegründet, die tief in der Cannabisszene der Stadt verwurzelt sind. Als die Legalisierung näher rückte, erkannten sie den Bedarf an qualitativ hochwertigen und zugänglichen Informationen über aufkommende Cannabis Social Clubs, insbesondere mit Fokus auf die angebotenen Schadensminderungsdienste. So entstand CannabisClubsBerlin.com mit dem Ziel, fundierte und detaillierte Bewertungen von Clubs in Berlin zu liefern.",
+        "our_history_two": "Vorerst konzentriert sich das Portal ausschließlich auf Berlin, um sicherzustellen, dass die Bewertungen so qualitativ und detailliert wie möglich sind, wobei direkter Kontakt zu den Clubbesitzern und Besuche vor Ort stattfinden. Sobald die Clubs vollständig in Betrieb sind, wird CannabisClubsBerlin.com umfassende Bewertungen zu den Angeboten und Dienstleistungen der Clubs veröffentlichen.",
+        "our_history_three": "In Zukunft wird es den Nutzern ermöglicht, verifizierte Bewertungen über ein einzigartiges CCB-Club-Identifikationssystem zu posten. Um mehr über das kommende Bewertungssystem zu erfahren, klicke auf den untenstehenden Button!",
+        "reviews_button": "Bewertungen"
+    },
+    "ReviewsPage": {
+        "headline": "Bewertungen",
+        "headline_description_short": "Bei CannabisClubsBerlin.com ist es unsere Mission, qualitativ hochwertige Bewertungen zu veröffentlichen, die detaillierte Informationen über die angebotenen Dienstleistungen aller Cannabis Social Clubs in Berlin liefern. Unser besonderes Augenmerk liegt auf Schadensminderungsdiensten, um sicherzustellen, dass die Nutzer das Wissen und die Unterstützung erhalten, die sie für einen sicheren und verantwortungsvollen Cannabiskonsum benötigen.",
+        "ccb_reviews_title": "CCB Bewertungen",
+        "ccb_reviews": "Die CCB Bewertungen werden sorgfältig erstellt, um umfassende Einblicke in jeden Cannabis Social Club in Berlin zu bieten. Wir berücksichtigen dabei mehrere wichtige Aspekte bei der Bewertung von Clubs, darunter die Unterstützung, die vom Personal angeboten wird, deren Fachwissen im Bereich des Cannabiskonsums und ihre Fähigkeit, neue Nutzer effektiv zu beraten. Wir untersuchen auch die Bandbreite der angebotenen Dienstleistungen, wobei wir besonders darauf achten, wie diese Dienstleistungen zur Schadensminderung beitragen und sich von denen anderer Clubs unterscheiden. Unsere Bewertungen sollen so detailliert und objektiv wie möglich sein, indem sie hervorheben, was jeden Club einzigartig macht, und ehrliche Einschätzungen des Gesamterlebnisses bieten. Ob es sich um die Atmosphäre, die Qualität der Produkte oder die Verfügbarkeit von Bildungsressourcen handelt, unsere Bewertungen sollen den Nutzern helfen, fundierte Entscheidungen zu treffen.",
+        "ccb_verified_reviews_title": "CCB verifizierte Bewertungen",
+        "ccb_verified_reviews": "Unser zukünftiges Nutzerbewertungssystem, CCB Verifizierte Bewertungen, wird es Clubmitgliedern ermöglichen, verifizierte Bewertungen ihrer Cannabis Social Clubs zu veröffentlichen. Dieses System wird einen einzigartigen CCB-Club-Barcode verwenden, den Mitglieder scannen können, um ihre Mitgliedschaft zu bestätigen. Nach der Verifizierung können Mitglieder eine Bewertung auf unserer Website abgeben, wodurch sichergestellt wird, dass nur echte Mitglieder Feedback abgeben. Dieser Prozess wird die Integrität der Bewertungen wahren und den Clubs gleichzeitig mehr legitime und glaubwürdige Bewertungen online bieten. Neue Nutzer profitieren davon, authentische Erfahrungen zu lesen, die von tatsächlichen Mitgliedern geteilt werden, und können so fundiertere Entscheidungen bei der Auswahl eines Clubs treffen. Willst du mehr wissen? Gerne Kontakt aufnehmen!",
+        "contact_button": "Kontakt"
     },
     "LawPage": {
         "headline": "Gesetze (CanG)",
@@ -107,6 +124,7 @@
         "law_title": "Gesetz",
         "contact_title": "Kontakt",
         "about_title": "Über uns",
+        "reviews_title": "Bewertungen",
         "harm_reduction_title": "Schadensminderung"
     },
     "Footer": {
@@ -126,6 +144,7 @@
         "headline": "Cannabis Clubs in Berlin",
         "headline_description": "Hier findest du eine aktuelle Liste aller in Berlin verfügbaren Cannabis-Clubs. Zu jedem Club gibt es weitere Informationen, sowie einige Bilder ihrer Standorte und ihrer Produkte.",
         "headline_subdescription": "Kennst du einen Club, den wir hier nicht aufgeführt haben? Bitte kontaktiere uns jetzt, damit wir ihn zu unseren Einträgen hinzufügen können!",
+        "reviews_title": "Bewertungen",
         "price_title": "Preise",
         "location_title": "Standort & Öffnungszeiten",
         "description_title": "Beschreibung",
@@ -223,7 +242,8 @@
             "meta_description": "High Ground, ein Berliner Cannabis Social Club, bietet Mitgliedern nach der Legalisierung Qualitätscannabis.",
             "meta_keywords": "High Ground Berlin, Cannabis Social Club Berlin, eingetragener Cannabisverein, gemeinschaftlicher Cannabisanbau, Qualitätssicherung bei Cannabis, Jugendschutz bei Cannabis, Schadensminderung Cannabis, sicherere Cannabiskonsummethoden, Mitgliedschaft im Cannabisclub, Bildung zur Cannabislegalisierung, Finanzierung von Cannabisclubs, Vorbereitung auf Cannabisanbau, wissenschaftliche Cannabisstudien",
             "offerings": "Gemeinschaftlicher Anbau, Qualitätssicherung, Wissenschaftliche Studien, Sicherer Konsum.",
-            "harm_reduction": "Dieser Club will sicherere Methoden des Cannabiskonsums als das Rauchen fördern. "
+            "harm_reduction": "Dieser Club will sicherere Methoden des Cannabiskonsums als das Rauchen fördern. ",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "green-social-club-ev": {
             "prices": "10 EUR monatlicher Mitgliedsbeitrag.",
@@ -232,7 +252,8 @@
             "meta_description": "Der Green Social Club Berlin unterstützt Mitglieder mit hochwertigem Cannabis zu Selbstkosten und verantwortungsvoller Nutzung.",
             "meta_keywords": "Green Social Club Berlin, gemeinschaftlicher Cannabisanbau, Cannabis zu Selbstkosten, verantwortungsvoller Cannabiskonsum, Unterstützung medizinisches Cannabis, Suchtprävention, rechtliche Beratung Cannabis, Geräteteilung, Bildungsabende Cannabis, Hilfe Rechtsfragen Cannabis, Schadensminderung Cannabis, Cannabisberatung, sichere Cannabiskonsummethoden",
             "offerings": "Gemeinschaftlicher Anbau, Gemeinsame Gerätenutzung, Medizinisches Cannabis, Themenabende, Cannabis & Beratung, Hilfe bei Rechtsfragen",
-            "harm_reduction": "Dieser Club bietet Cannabisberatung an, um den Konsumenten zu helfen, die sicherste Methode des Konsums zu finden, und um sie über die möglichen Risiken des Cannabiskonsums aufzuklären."
+            "harm_reduction": "Dieser Club bietet Cannabisberatung an, um den Konsumenten zu helfen, die sicherste Methode des Konsums zu finden, und um sie über die möglichen Risiken des Cannabiskonsums aufzuklären.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "aero-cannabis-club-ev": {
             "prices": "12.50 EUR monatlicher Mitgliedsbeitrag.",
@@ -241,7 +262,8 @@
             "meta_description": "Aero Cannabis Berlin e.V. fördert die Legalisierung und nutzt nachhaltige aeroponische Methoden für qualitatives Cannabis.",
             "meta_keywords": "Aero Cannabis Berlin, Cannabis Legalisierung, nachhaltiger Cannabisanbau, aeroponische Cannabis Methoden, qualitativ hochwertiges pestizidfreies Cannabis, Cannabis Aufklärung, umweltfreundliche Cannabisproduktion, Bio-Cannabis Mitgliedschaft, Suchtpräventionsmaßnahmen",
             "offerings": "Gemeinschaftlicher Anbau, Cannabis & Beratung",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "green-leaf-society-ev": {
             "prices": "12.50 EUR monatlicher Mitgliedsbeitrag.",
@@ -250,7 +272,8 @@
             "meta_description": "Green Leaf Society e.V. setzt sich für die Legalisierung von Cannabis ein und garantiert sicheren, legalen Betrieb in Deutschland mit Fokus auf Qualität.",
             "meta_keywords": "Cannabislegalisierung Club, sicherer Cannabisbetrieb Deutschland, deutsche Cannabisgesetze, Cannabis Qualitätskontrolle, legale Cannabisverteilung, Indica und Sativa Angebot, verantwortungsvoller Cannabisanbau, Cannabisgemeinschaft Bemühungen, hochwertige Cannabisprodukte",
             "offerings": "Gemeinschaftlicher Anbau",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "420-club-berlin": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -259,7 +282,8 @@
             "meta_description": "420 Club Berlin Cannabis Social Club Berlin",
             "meta_keywords": "Cannabislegalisierung Club, sicherer Cannabisbetrieb Deutschland, deutsche Cannabisgesetze, Cannabis Qualitätskontrolle, legale Cannabisverteilung, Indica und Sativa Angebot, verantwortungsvoller Cannabisanbau, Cannabisgemeinschaft Bemühungen, hochwertige Cannabisprodukte",
             "offerings": "Die Angebote dieses Cannabisclubs werden hier veröffentlicht sobald sie verfügbar sind.",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "bastardo-csc-berlin": {
             "prices": "5 EUR monatlicher Mitgliedsbeitrag und eine einmalige Anmeldegebühr von 10 EUR.",
@@ -268,7 +292,8 @@
             "meta_description": "Bastardo CSC fördert eine offene, verantwortungsbewusste Gemeinschaft für legalen und vielfältigen Cannabiskonsum.",
             "meta_keywords": "Bastardo Cannabis Social Club, verantwortungsbewusste Cannabisgemeinschaft, Cannabiskultur, legales Cannabisteilen, Cannabisvielfalt, Sortenvielfalt Cannabis, Qualität im Cannabisanbau, Cannabisinnovation, Cannabisausbildung, Gemeinschaftsaufbau, gesellschaftlicher Wandel Cannabis",
             "offerings": "Gemeinschaftlicher Anbau und Weitergabe von Vermehrungsmaterial (Samen und Stecklinge).",
-            "harm_reduction": "Weitergabe von Storz & Bickel Vaporizern zum Vorzugspreis an Mitglieder."
+            "harm_reduction": "Weitergabe von Storz & Bickel Vaporizern zum Vorzugspreis an Mitglieder.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-berlin-ev": {
             "prices": "12 EUR jährlicher Mitgliedsbeitrag, 10 EUR monatlicher Mitgliedsbeitrag, geschätzte 4-8 EUR pro Gramm.",
@@ -277,7 +302,8 @@
             "meta_description": "Cannabis Social Club Berlin e.V. schafft eine Gemeinschaft für Cannabis-Enthusiasten und fördert die Legalisierung und gemeinschaftlichen Anbau.",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Der Cannabis Social Club Berlin legt Wert auf einen verantwortungsvollen Cannabiskonsum und einen zeitgemäßen, wissenschaftlich fundierten und ideologiefreien Jugend- und Verbraucherschutz. Der Zugang für Personen unter 18 Jahren ist eingeschränkt und bedarf der Zustimmung der Erziehungsberechtigten sowie der Zusammenarbeit mit Jugend- und Suchthilfeeinrichtungen. Der Club engagiert sich aktiv in der Prävention und Aufklärung und arbeitet mit Fachleuten der Suchtprävention und Jugendhilfe zusammen. Im Jahr 2023 wurde ein eigener Präventionsbeauftragter eingestellt, der ein maßgeschneidertes Präventionskonzept entwickelt. Für Anfragen zum Thema Sucht und Prävention gibt es eine Anlaufstelle."
+            "harm_reduction": "Der Cannabis Social Club Berlin legt Wert auf einen verantwortungsvollen Cannabiskonsum und einen zeitgemäßen, wissenschaftlich fundierten und ideologiefreien Jugend- und Verbraucherschutz. Der Zugang für Personen unter 18 Jahren ist eingeschränkt und bedarf der Zustimmung der Erziehungsberechtigten sowie der Zusammenarbeit mit Jugend- und Suchthilfeeinrichtungen. Der Club engagiert sich aktiv in der Prävention und Aufklärung und arbeitet mit Fachleuten der Suchtprävention und Jugendhilfe zusammen. Im Jahr 2023 wurde ein eigener Präventionsbeauftragter eingestellt, der ein maßgeschneidertes Präventionskonzept entwickelt. Für Anfragen zum Thema Sucht und Prävention gibt es eine Anlaufstelle.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "1000-berlin-15-ev": {
             "prices": "50 EUR Anmeldegebühr, 30 EUR monatlicher Mitgliedsbeitrag.",
@@ -286,7 +312,8 @@
             "meta_description": "1000 Berlin 15 CSC unterstützt Cannabiskonsumenten mit Fokus auf Jugendschutz, Suchtprävention und sicheren Konsum.",
             "meta_keywords": "1000 Berlin 15 Cannabis Social Club, Unterstützung Cannabiskonsumenten, Jugendschutz Cannabis, Suchtprävention Cannabis, gesundheitliche Sicherheit Cannabis, sicherer Cannabiskonsum, gemeinschaftlicher Cannabisanbau, mitgliederbestimmte Cannabissorten, erdgebundene Anbaumethoden, hydroponische Cannabismethoden, Cannabisgenetik Beschaffung, Unterstützungszentrum Suchtprobleme, soziale Freiheit Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabis-social-club-koepenick": {
             "prices": "20 EUR Anmeldegebühr. Zwei monatliche Stufen: Die normale Mitgliedschaft, die 5 € pro Monat kostet, und die Mitgliedschaft Plus, die 15 € pro Monat kostet und eine Vielzahl von Workshops zur Selbstkultivierung und andere Veranstaltungen beinhaltet.",
@@ -295,7 +322,8 @@
             "meta_description": "Cannabis Social Club Köpenick konzentriert sich auf Gemeinschaftsanbau, verantwortungsvollen Konsum und bietet umfangreiche Workshops.",
             "meta_keywords": "Cannabis Social Club Köpenick, Berliner Cannabisclub, gemeinschaftlicher Cannabisanbau, verantwortungsvoller Cannabiskonsum, Cannabis Workshops, Unterstützung medizinischer Cannabiskonsumenten, Cannabis Veranstaltungen Berlin, Gemeinschaftszusammenhalt Cannabis, Jugendschutz Cannabis, Suchtprävention Cannabis, legale Cannabisbetriebe, Living Soil Workshops",
             "offerings": "Workshops und Veranstaltungen zum Selbstanbau und zur Herstellung und Abgabe von 'Living Soil', Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Ein Vorstandsmitglied ist bereits für eine Ausbildung zur Suchtprävention bei der „Fachstelle für Suchtprävention im Land Berlin“ vorgemerkt. Die Ausbildung soll Anfang Mai beginnen, abhängig von den Richtlinien des Bundesgesundheitsministeriums."
+            "harm_reduction": "Ein Vorstandsmitglied ist bereits für eine Ausbildung zur Suchtprävention bei der „Fachstelle für Suchtprävention im Land Berlin“ vorgemerkt. Die Ausbildung soll Anfang Mai beginnen, abhängig von den Richtlinien des Bundesgesundheitsministeriums.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-high-on-earth-ev": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -304,7 +332,8 @@
             "meta_description": "CSC High on Earth e.V. Cannabis Social Club Berlin",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-home-of-hemp-berlin-ev": {
             "prices": "Bietet eine kostenlose Mitgliedschaftsstufe, eine 10EUR pro Monat und eine 20EUR pro Monat Stufe. Jede Stufe bietet unterschiedliche Vorteile für seine Mitglieder. Auch Jahresmitgliedschaften werden zu einem ermäßigten Preis angeboten.",
@@ -313,7 +342,8 @@
             "meta_description": "CSC Home of Hemp in Berlin fördert eine verantwortungsbewusste Cannabiskultur mit Schwerpunkt auf Aufklärung, Gemeinschaft und Legalisierung.",
             "meta_keywords": "CSC Home of Hemp Berlin, verantwortungsbewusste Cannabiskultur, Plattform für Cannabisgemeinschaft, Austausch über Cannabisanbau, gesellschaftliches Engagement Cannabis, Advocacy für Cannabislegalisierung, Aufklärung über Cannabiskonsum, Gemeinschaftsveranstaltungen, GMP-Standards Cannabis, GDP-Standards Cannabis, gestaffelte Mitgliedervorteile, Ermäßigungen auf Jahresmitgliedschaften",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabis-social-club-prenzlauer-berg-berlin-ev": {
             "prices": "Mitgliedschaftsoptionen umfassen eine monatliche Gebühr von 12 € für Einzelpersonen, mit einer zusätzlichen Anmeldegebühr von 95 €. Für juristische Personen beträgt die Mitgliedschaft 24 € pro Monat mit einer Anmeldegebühr von 95 €. Die Mitgliedschaft muss mindestens drei Monate bestehen bleiben.",
@@ -322,7 +352,8 @@
             "meta_description": "Der Cannabis Social Club Prenzlauer Berg Berlin e.V. fördert eine verantwortungsvolle Cannabiskultur durch gemeinschaftliches Engagement und informierten Konsum.",
             "meta_keywords": "Cannabis Social Club Prenzlauer Berg, verantwortungsbewusster Cannabiskonsum, Cannabis-Gemeinschaft Berlin, Cannabis-Präventionsprogramme, hochwertige Cannabis-Abgabe, Berliner Cannabis-Club, kollektiver Cannabisanbau, Cannabis-Bildungsworkshops",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Workshops, Präventionsprogramme, Socialising",
-            "harm_reduction": "Der Club bietet ein umfassendes Präventionsprogramm, das darauf abzielt, die Mitglieder über die Risiken des Cannabiskonsums aufzuklären und sie dabei zu unterstützen, informierte Entscheidungen zu treffen. Das Programm umfasst individuelle Beratungen, Workshops zur Risikominimierung und Veranstaltungen, die sicheren und verantwortungsvollen Konsum fördern."
+            "harm_reduction": "Der Club bietet ein umfassendes Präventionsprogramm, das darauf abzielt, die Mitglieder über die Risiken des Cannabiskonsums aufzuklären und sie dabei zu unterstützen, informierte Entscheidungen zu treffen. Das Programm umfasst individuelle Beratungen, Workshops zur Risikominimierung und Veranstaltungen, die sicheren und verantwortungsvollen Konsum fördern.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabis-social-club-meridiem-brandenburgo-et-berolina-ev": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -331,7 +362,8 @@
             "meta_description": "Cannabis Social Club meridiem Brandenburgo et Berolina e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabis-club-lammbock-e-v": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -340,7 +372,8 @@
             "meta_description": "Cannabis-Club Lammbock e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannamo-cannabis-club-ev": {
             "prices": "Der Mitgliedsbeitrag pro Jahr beträgt 1,20 €, es gibt keine Aufnahmegebühr.",
@@ -349,7 +382,8 @@
             "meta_description": "Cannamo Cannabis Club e.V. versorgt Mitglieder mit hochwertigem Cannabis, konzentriert auf Gesundheit und Senkung von Schwarzmarktrisiken.",
             "meta_keywords": "Cannamo Cannabis Club, hochwertiges Cannabis, pharmazeutische Cannabisforschung, medizinische Cannabisexpertise, gemeinnütziger Cannabisclub, Risiken des Schwarzmarkts reduzieren, saubere Cannabisprodukte, Mitgliedervorteile, Gemeinschaftsanbau, Cannabisverteilung",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "high-society-cannabis-club-ev": {
             "prices": "Einmalige Anmeldegebühr von 10EUR und eine monatliche Gebühr von 8EUR.",
@@ -358,7 +392,8 @@
             "meta_description": "HSCC e.V. Berlin fokussiert sich auf Cannabisanbau und Aufklärung zur Legalisierung, bietet natürliche, hochwertige Produkte.",
             "meta_keywords": "HSCC e.V. Berlin, Cannabisanbau, Aufklärung Cannabislegalisierung, natürliche Cannabisprodukte, medizinisches Cannabis, Qualitätssicherung Cannabis, Clubleben Gemeinschaft, Cannabis Gesellschaftsveranstaltungen, Jugendschutz, wissenschaftliche Outreach-Aktivitäten, verantwortungsvoller Cannabiskonsum",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "hype-and-dope-cannabis-club-berlin-ev": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -367,7 +402,8 @@
             "meta_description": "Hype and Dope, Cannabis Club Berlin e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "koala-cannabis-social-club-berlin-ev": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -376,7 +412,8 @@
             "meta_description": "Koala Cannabis Social Club Berlin e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "we-love-weed-wlw--cannabis-social-club-berlin-kreuzberg-ev": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -385,7 +422,8 @@
             "meta_description": "We Love Weed, ein CSC in Berlin-Kreuzberg 36, will das Cannabis-Image verbessern und bietet qualitatives, lokal angebautes Weed.",
             "meta_keywords": "We Love Weed Berlin, Kreuzberg Cannabisclub, Qualitäts-Cannabis, lokaler Cannabisanbau, vernünftige Cannabispreise, verantwortungsvoller Cannabiskonsum, legale Cannabisalternative, Gemeinschaftsbeteiligung Cannabis, Cannabis politische Diskussionen, Cannabis Pilotprojekte Berlin",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "anbaufreunde-berlin-social-club-e-v": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -394,7 +432,8 @@
             "meta_description": "Anbaufreunde Berlin Social Club e. V.",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabis-club-lammbock-ev": {
             "prices": "Mitgliedschaftsoptionen beinhalten eine monatliche Gebühr von 12 € für Einzelpersonen und 24 € für juristische Personen, zusätzlich zu einer Aufnahmegebühr von 95 €. Mitgliedschaftsvorteile umfassen bis zu 50 g Cannabis pro Monat, Teilnahme an Gemeinschaftsveranstaltungen und Mitbestimmungsrecht bei der Sortenwahl.",
@@ -403,7 +442,8 @@
             "meta_description": "Der Cannabis-Club Lammbock e.V. in Berlin bietet eine gemeinschaftsorientierte Plattform für hochwertiges Cannabis und verantwortungsbewusste Nutzung.",
             "meta_keywords": "Cannabis-Club Lammbock, Berliner Cannabis-Club, legales Cannabis, verantwortungsbewusste Cannabiskultur, gemeinschaftsorientiertes Cannabis, hochwertiges Cannabis, Schadensminderung, Cannabis-Workshops.",
             "offerings": "Gemeinschaftlicher Anbau, Verteilung von Cannabis an Mitglieder, soziale Aktivitäten und Veranstaltungen.",
-            "harm_reduction": "Der Club bietet umfassende Präventionsangebote, darunter Workshops, Seminare und individuelle Beratungen, um die Mitglieder über die Risiken des Cannabiskonsums aufzuklären und einen sicheren Konsum zu fördern."
+            "harm_reduction": "Der Club bietet umfassende Präventionsangebote, darunter Workshops, Seminare und individuelle Beratungen, um die Mitglieder über die Risiken des Cannabiskonsums aufzuklären und einen sicheren Konsum zu fördern.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "high-circle": {
             "prices": "Monatlicher Mitgliedsbeitrag von 28-35EUR und einmaliger Beitrag von 1-28EUR.",
@@ -412,7 +452,8 @@
             "meta_description": "High Circle ist ein Cannabis Social Club in Brandenburg, der legale Cannabisgemeinschaften fördert, um dem Schwarzmarkt entgegenzuwirken.",
             "meta_keywords": "High Circle Brandenburg, legale Cannabisgemeinschaften, Einhaltung CanG-Gesetz, verantwortungsvoller Cannabiskonsum, hochwertige Cannabisalternativen, Verbraucherschutz Cannabis, Jugendschutz Cannabis, Mitgliedsbeiträge Cannabisclub, Cannabis Gesellschaftsveranstaltungen",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Der Club bietet Ratschläge für einen sicheren und verantwortungsvollen Cannabiskonsum und möchte seine Mitglieder durch direkte Beratung bei ihren Entscheidungen unterstützen."
+            "harm_reduction": "Der Club bietet Ratschläge für einen sicheren und verantwortungsvollen Cannabiskonsum und möchte seine Mitglieder durch direkte Beratung bei ihren Entscheidungen unterstützen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-berlinhigh-ev": {
             "prices": "Entweder monatlich 225EUR oder jährlich 2400EUR, was 4,50EUR bzw. 4,00EUR pro Gramm entspricht. Einmalige Anmeldegebühr von 20EUR.",
@@ -421,7 +462,8 @@
             "meta_description": "CSC BerlinHigh ist eine lebhafte Gemeinschaft in Berlin, die sich auf verantwortungsvollen Cannabiskonsum und positive Kultur konzentriert.",
             "meta_keywords": "CSC BerlinHigh, verantwortungsvoller Cannabiskonsum, positive Cannabiskultur, hochwertige Cannabissorten, nachhaltiger Cannabisanbau, Cannabismitgliedschaftsoptionen, Hygienestandards Cannabis, Qualitätskontrolle Cannabis, Datenschutz Cannabis, anonymisierte Cannabisdaten",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "just-plants-ev": {
             "prices": "Vier verschiedene Stufen, 90EUR (10 Gramm), 120EUR (15 Gramm), 210EUR (30 Gramm), 300EUR (50 Gramm) pro Monat.",
@@ -430,7 +472,8 @@
             "meta_description": "JUST PLANTS DEUTSCHLAND e.V. vereint Cannabis-Clubs in Städten wie Berlin, fokussiert auf gemeinschaftlichen Anbau.",
             "meta_keywords": "JUST PLANTS DEUTSCHLAND, Cannabis-Social-Clubs, Cannabisclubs Berlin, Cannabisclubs Dresden, gemeinschaftlicher Cannabisanbau, medizinischer Cannabisanbau, nachhaltiges Cannabis, fairer Preis Cannabissorten, Suchtpräventionsprogramme, Aufklärung sichere Konsumpraktiken, Unterstützung Partnerclubs, öffentliche Gesundheitserziehung Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Der Club hat sich der Schadensminderung verschrieben und stellt alle überschüssigen Mittel für die Suchtprävention und -aufklärung in Zusammenarbeit mit örtlichen Beratungsstellen, dem Bildungsministerium und spezialisierten Einrichtungen zur Verfügung. Der hauseigene Psychologe Karl Wegner ist maßgeblich an der Entwicklung wirksamer Strategien zur Suchtprävention beteiligt und steht für Konsultationen und Beratung zur Verfügung. Dieser Ansatz unterstreicht ihr Engagement für einen verantwortungsvollen Cannabiskonsum und die öffentliche Gesundheitserziehung."
+            "harm_reduction": "Der Club hat sich der Schadensminderung verschrieben und stellt alle überschüssigen Mittel für die Suchtprävention und -aufklärung in Zusammenarbeit mit örtlichen Beratungsstellen, dem Bildungsministerium und spezialisierten Einrichtungen zur Verfügung. Der hauseigene Psychologe Karl Wegner ist maßgeblich an der Entwicklung wirksamer Strategien zur Suchtprävention beteiligt und steht für Konsultationen und Beratung zur Verfügung. Dieser Ansatz unterstreicht ihr Engagement für einen verantwortungsvollen Cannabiskonsum und die öffentliche Gesundheitserziehung.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "berliner-cannabis-hilfe-ev": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -439,7 +482,8 @@
             "meta_description": "Berliner Cannabis Hilfe e.V. entstand aus einer Selbsthilfegruppe und fokussiert sich auf die Normalisierung medizinischen Cannabiskonsums.",
             "meta_keywords": "Berliner Cannabis Hilfe, medizinische Cannabislobbyarbeit, Unterstützung Cannabispatienten, Cannabis Aufklärung, regionale Vernetzung, Selbsthilfe Cannabispatienten, INDICA Projekt, Erfahrungen Cannabiskonsumenten, medizinische Cannabisbehandlung, öffentliche Cannabisveranstaltungen, Teilnahme Hanfparade",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie ist jedoch direkt an der Schadensminderung im Zusammenhang mit dem Cannabiskonsum beteiligt."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie ist jedoch direkt an der Schadensminderung im Zusammenhang mit dem Cannabiskonsum beteiligt.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "spliffers-berlin-ig": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -448,7 +492,8 @@
             "meta_description": "Spliffers Social Clubs in Berlin schaffen eine einzigartige Umgebung, die Entspannung, Ästhetik und Qualität für Cannabis-Enthusiasten vereint.",
             "meta_keywords": "Spliffers Social Clubs Berlin, Cannabis Entspannungsumgebung, Cannabisqualität, Cannabis-Enthusiasten Gemeinschaft, Cannabis Workshops, Cannabis Seminare, Gemeinschaftsvernetzung, Schadensminimierung Cannabis, Jugendschutz Cannabis Aufklärung, hochwertige Cannabisprodukte, unabhängige Cannabis Tests",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "helmuts-social-club": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -457,7 +502,8 @@
             "meta_description": "Helmuts Social Club in Berlin ist ein kleiner, gemeinschaftsorientierter Cannabisclub, der Qualität, Authentizität und organisches Wachstum betont.",
             "meta_keywords": "Helmuts Social Club Berlin, gemeinschaftsorientierter Cannabisclub, Qualitäts-Cannabisproduktion, natürlicher Cannabisanbau, Informationen Heimanbau Cannabis, physischer Clubraum, organisches Wachstum Cannabisclub, Cannabis mit Sorgfalt und Leidenschaft, Cannabis Geselligkeit, Schadensminderung Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "captain-weedy-csc-berlin-ev": {
             "prices": "Drei verschiedene Stufen mit unterschiedlichen Leistungen, 4,20EUR pro Quartal (16,80EUR jährlich), 420EUR jährlich und 4200EUR jährlich.",
@@ -466,7 +512,8 @@
             "meta_description": "Captain Weedy's Social Club widmet sich der Wiederbelebung der kulturellen Wertschätzung und des historischen Wissens über Cannabis.",
             "meta_keywords": "Captain Weedy's Social Club, kulturelle Wertschätzung von Cannabis, historisches Wissen über Cannabis, Austauschräume für Cannabis, Lernreisen über Cannabis, Cannabisfestivals, globale Cannabisgemeinschaften, gemeinnützige Cannabisaktivitäten, Gemeinschaftsengagement Cannabis, rechtliche Cannabisvertretung, Ausweitung der Cannabisstandorte, Online-Präsenz Cannabis, Herausforderungen bei Cannabis-Sponsoring, Gestaltung der Cannabiskultur",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "CSCV bietet die folgenden Dienste zur Schadensminderung an: Unter anderem, wird es einen Präventionsbeauftragter mit offenem Ohr geben, eine Support Group für Cannabis Nutzer, wie auch ein vielfältiges Angebot unterschiedlich starker Sorten."
+            "harm_reduction": "CSCV bietet die folgenden Dienste zur Schadensminderung an: Unter anderem, wird es einen Präventionsbeauftragter mit offenem Ohr geben, eine Support Group für Cannabis Nutzer, wie auch ein vielfältiges Angebot unterschiedlich starker Sorten.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-visionre-berlin": {
             "prices": "Der CSCV finanziert sich über einen monatlichen Mitgliedsbeitrag von 10€. Die Cannabispreise werden an die Anbaukosten und den THC Gehalt angepasst. Die Preisspanne wird ungefähr 2€-10€/g betragen.",
@@ -475,7 +522,8 @@
             "meta_description": "CSCV in Berlin konzentriert sich auf den Anbau vielfältiger Cannabissorten mit einzigartigen Cannabinoid- und Terpenprofilen zum Selbstkostenpreis.",
             "meta_keywords": "CSCV Berlin, vielfältige Cannabissorten, Cannabinoidprofile, Terpenprofile, Cannabis zum Selbstkostenpreis, Austausch von Cannabisgenetik, politische Vertretung für Anbauer, vielfältiger Cannabismarkt, gärtnerische Fähigkeiten bei Cannabis, Phenohunting, Cannabiszüchtung, Cannabisworkshops, kulturelle Cannabisevents, internationales Cannabisnetzwerk, Finanzierung Forschungs- und Schulungszentrum Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Zugang zu Stecklingen, Workshops, Socialising, Vielfältige Auswahl, Events,Support Group & Harm Reduction",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet. Sie geben jedoch an, dass sie sich bemühen, die Nutzer bei einem verantwortungsvollen Konsum zu unterstützen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-kreuzkoelln": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -484,7 +532,8 @@
             "meta_description": "CSC Kreuzkölln, Cannabis Social Club Berlin",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabis-social-club-weeden-030-berlin-ev": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -493,7 +542,8 @@
             "meta_description": "Cannabis Social Club Weeden 030 Berlin e.V.",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "white-lake-weed": {
             "prices": "10 EUR pro Monat (bei dieser Stufe wird kein Cannabis abgegeben), 15 EUR pro Monat (7 EUR pro Gramm).",
@@ -502,7 +552,8 @@
             "meta_description": "White Lake Weed in Berlin Weißensee kombiniert wissenschaftliches Fachwissen und Leidenschaft für hochwertiges Cannabis.",
             "meta_keywords": "White Lake Weed Berlin, Cannabis Social Club Weißensee, hochwertiges Cannabis, wissenschaftlicher Cannabisanbau, Crop-Steering, spezielle LED-Lampen, Umkehrosmose-Wasser, integrierte Schädlingsbekämpfung, erweiterte Cannabissortenauswahl, kontrollierte Cannabisversorgung, Schadensminderung Cannabis, Sucht- und Präventionsberatung, öffentliche Aufklärung Cannabiseffekte",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Die von White Lake Weed in Berlin angebotenen Dienste zur Schadensminimierung konzentrieren sich auf die Aufklärung der Gemeinschaft über die Auswirkungen des Cannabiskonsums durch Sucht- und Präventionsberatung. Zu den wichtigsten Dienstleistungen gehören die Aufklärung der Öffentlichkeit sowohl über kurzfristige Effekte wie Euphorie als auch über langfristige Risiken wie Abhängigkeit und kognitive Beeinträchtigungen; Früherkennung und Intervention zur Identifizierung und Unterstützung von Risikopersonen; Bemühungen zur Reduzierung des Konsums durch Verhaltensänderungen und Sensibilisierungskampagnen sowie Gesundheitsförderung zur Verbesserung des allgemeinen Wohlbefindens durch das Angebot von Alternativen zum Cannabiskonsum. Ein weiterer Schwerpunkt des Programms ist der Schutz von Minderjährigen durch frühzeitige Prävention in Schulen, die Einbeziehung der Eltern und die Förderung gesunder Alternativen. Rechtliche Aspekte werden behandelt, indem die Legalität des Cannabisanbaus für den Eigenbedarf von Erwachsenen geklärt wird, während Verkauf, Handel und Konsum durch Minderjährige verboten werden. Diese umfassenden Dienste zielen darauf ab, die mit dem Cannabiskonsum verbundenen negativen Auswirkungen zu mildern, wobei die Gesundheit der Gemeinschaft und das Rechtsbewusstsein im Vordergrund stehen. Nach Erhalt der Lizenz wird ein Jugendschutzkonzept eingeführt, das Mitgliedern über 21 Jahren die Bedeutung ihrer Vorbildfunktion gegenüber jüngeren Menschen verdeutlicht. Ziel ist es, das Bewusstsein für angemessenes Verhalten in der Öffentlichkeit sowie im privaten und familiären Umfeld zu schärfen."
+            "harm_reduction": "Die von White Lake Weed in Berlin angebotenen Dienste zur Schadensminimierung konzentrieren sich auf die Aufklärung der Gemeinschaft über die Auswirkungen des Cannabiskonsums durch Sucht- und Präventionsberatung. Zu den wichtigsten Dienstleistungen gehören die Aufklärung der Öffentlichkeit sowohl über kurzfristige Effekte wie Euphorie als auch über langfristige Risiken wie Abhängigkeit und kognitive Beeinträchtigungen; Früherkennung und Intervention zur Identifizierung und Unterstützung von Risikopersonen; Bemühungen zur Reduzierung des Konsums durch Verhaltensänderungen und Sensibilisierungskampagnen sowie Gesundheitsförderung zur Verbesserung des allgemeinen Wohlbefindens durch das Angebot von Alternativen zum Cannabiskonsum. Ein weiterer Schwerpunkt des Programms ist der Schutz von Minderjährigen durch frühzeitige Prävention in Schulen, die Einbeziehung der Eltern und die Förderung gesunder Alternativen. Rechtliche Aspekte werden behandelt, indem die Legalität des Cannabisanbaus für den Eigenbedarf von Erwachsenen geklärt wird, während Verkauf, Handel und Konsum durch Minderjährige verboten werden. Diese umfassenden Dienste zielen darauf ab, die mit dem Cannabiskonsum verbundenen negativen Auswirkungen zu mildern, wobei die Gesundheit der Gemeinschaft und das Rechtsbewusstsein im Vordergrund stehen. Nach Erhalt der Lizenz wird ein Jugendschutzkonzept eingeführt, das Mitgliedern über 21 Jahren die Bedeutung ihrer Vorbildfunktion gegenüber jüngeren Menschen verdeutlicht. Ziel ist es, das Bewusstsein für angemessenes Verhalten in der Öffentlichkeit sowie im privaten und familiären Umfeld zu schärfen.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-doobies-berlin": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -511,7 +562,8 @@
             "meta_description": "Doobie's wird von einem erfahrenen Team geleitet, das hochwertige Cannabisproduktion, Transparenz und Mitgliederbildung gewährleistet.",
             "meta_keywords": "Doobie's Cannabisclub, erfahrenes Cannabisproduktionsteam, hochwertiges Cannabis, Transparenz in der Cannabisproduktion, Mitgliederbildung Cannabis, Verständnis für Cannabis Herkunft, vielfältige Cannabisprodukte, gemeinschaftlicher Cannabisanbau, Cannabisausgabe für Mitglieder, Cannabis Geselligkeit",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabis-social-club-spandau": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -520,7 +572,8 @@
             "meta_description": "Der Cannabis Social Club Spandau fördert eine Gemeinschaft für Cannabiskonsumenten mit Interesse an alternativer Meditation.",
             "meta_keywords": "Cannabis Social Club Spandau, Cannabisgemeinschaft, alternative Meditation, Cannabisfarm, kontrollierte Verteilung, Jugendschutz, professioneller Betrieb, Forschungskooperation, betriebliche Effizienz, legale Anbaupraktiken",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "hanf-im-glueck-csc-berlin": {
             "prices": "Mitgliedsbeiträge ab 49EUR Anmeldegebühr.",
@@ -529,7 +582,8 @@
             "meta_description": "Hanf im Glück CSC fördert eine lebendige Cannabisgemeinschaft, betont Transparenz, Qualität und verantwortungsvollen Konsum.",
             "meta_keywords": "Hanf im Glück Cannabis Social Club, Cannabisgemeinschaft, Transparenz, Qualitätskontrolle, verantwortungsvoller Konsum, nachhaltiger Anbau, Bildung, Schadensminderung, Workshops, Seminare, legaler Konsum",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cscd--dachverband-deutscher-cannabis-social-clubs": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -538,7 +592,8 @@
             "meta_description": "CSCD – Dachverband deutscher Cannabis Social Clubs",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "elevated-society-csc-berlin": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -547,7 +602,8 @@
             "meta_description": "Elevated Society CSC Berlin",
             "meta_keywords": "Cannabis Social Club Berlin, Cannabisgemeinschaft, Cannabislegalisierung, Genossenschaftsanbau Cannabis, soziale Aktivitäten Cannabis, verantwortungsvoller Cannabiskonsum, Jugendschutz Cannabis, legale Cannabis-Social-Clubs, Qualitätsstandards Cannabisanbau, Cannabis zum Selbstkostenpreis, Cannabis Verbraucherschutz, Suchtprävention Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "cannabliss-csc": {
             "prices": "Informationen zu den Mitgliedsbeiträgen und den Preisen für Cannabis werden hier veröffentlicht, sobald sie verfügbar sind.",
@@ -556,7 +612,8 @@
             "meta_description": "Der Cannabliss Social Club in Berlin fördert Gemeinschaft, nachhaltigen, chemiefreien Anbau und echte Mitgliederbeziehungen.",
             "meta_keywords": "Cannabliss Social Club, Berlin, Gemeinschaftsunterstützung, nachhaltiger Anbau, chemiefrei, echte Beziehungen, Cannabisclub, soziales Miteinander, Schadensminderung, Heimanbau, Bio-Cannabis, Top-Sorten",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Die beschriebenen Dienste zur Schadensminimierung umfassen mehrere präventive und unterstützende Strategien, um ein sichereres Umfeld zu schaffen. Durch die Beschränkung der Teilnahme auf Personen über 21 Jahre sollen jüngere, potenziell anfälligere Menschen vor einer Gefährdung geschützt werden. Darüber hinaus wird eine 'know your members'-Richtlinie eingeführt, um sicherzustellen, dass alle Teilnehmer psychisch stabil sind und gut darüber informiert sind, was sie konsumieren, was dazu beiträgt, die mit dem Drogenmissbrauch verbundenen Risiken zu mindern. Unterstützungsdienste sind ebenfalls ein integraler Bestandteil dieses Rahmens, wobei ein Sozialarbeiter zur Verfügung steht, der Beratung anbietet und die Konsummenge überwacht. Diese Fachkraft kann auch alle Anzeichen für ein auffälliges Verhalten erkennen, was ein frühzeitiges Eingreifen und laufende Bemühungen zur Schadensminderung ermöglicht."
+            "harm_reduction": "Die beschriebenen Dienste zur Schadensminimierung umfassen mehrere präventive und unterstützende Strategien, um ein sichereres Umfeld zu schaffen. Durch die Beschränkung der Teilnahme auf Personen über 21 Jahre sollen jüngere, potenziell anfälligere Menschen vor einer Gefährdung geschützt werden. Darüber hinaus wird eine 'know your members'-Richtlinie eingeführt, um sicherzustellen, dass alle Teilnehmer psychisch stabil sind und gut darüber informiert sind, was sie konsumieren, was dazu beiträgt, die mit dem Drogenmissbrauch verbundenen Risiken zu mindern. Unterstützungsdienste sind ebenfalls ein integraler Bestandteil dieses Rahmens, wobei ein Sozialarbeiter zur Verfügung steht, der Beratung anbietet und die Konsummenge überwacht. Diese Fachkraft kann auch alle Anzeichen für ein auffälliges Verhalten erkennen, was ein frühzeitiges Eingreifen und laufende Bemühungen zur Schadensminderung ermöglicht.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "monkeyz-berlin-ev": {
             "prices": "Vier Stufen: 5 g pro Monat für 10 EUR pro Gramm, 10 g pro Monat für 9,50 EUR pro Gramm, 25 g pro Monat für 9 EUR pro Gramm, 50 g pro Monat für 8 EUR pro Gramm.",
@@ -565,7 +622,8 @@
             "meta_description": "Monkeyz CSC in Berlin bietet exklusive Cali-Weed-Sorten, gewährleistet Datenschutz für Mitglieder in der neuen Ära von legalem Cannabis.",
             "meta_keywords": "Monkeyz CSC, Berlin, Cali Weed, exklusive Sorten, hochwertiges Cannabis, Legalisierung, Datenschutz, Datenschutz, Cannabisclub, Blütenselektion",
             "offerings": "Gemeinschaftlicher Anbau, Ausgabe von Cannabis für Mitglieder, Socialising",
-            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine speziellen Dienste zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "berlin-blatt-und-bluete-ev": {
             "prices": "Mitgliedsstufen reichen von 20 EUR/Monat für 2 Gramm Cannabis bis zu 250 EUR/Monat für 50 Gramm. Keine zusätzlichen Gebühren.",
@@ -574,7 +632,8 @@
             "meta_description": "Berlin Blatt und Blüte e.V. ist ein Cannabis Social Club, der sich auf nachhaltigen Anbau und hochwertiges Cannabis in Berlin konzentriert.",
             "meta_keywords": "Berlin Blatt und Blüte e.V., Cannabis Social Club Berlin, nachhaltiger Cannabisanbau, hochwertiges Cannabis, gemeinschaftsorientierter Cannabisanbau, Cannabisanbau Berlin, Cannabisverteilung Berlin",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Soziales Miteinander, Veranstaltungen",
-            "harm_reduction": "Der Club legt großen Wert darauf, die Mitglieder über verantwortungsvollen Cannabiskonsum aufzuklären und bietet Informationen zur Risikominimierung an."
+            "harm_reduction": "Der Club legt großen Wert darauf, die Mitglieder über verantwortungsvollen Cannabiskonsum aufzuklären und bietet Informationen zur Risikominimierung an.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "realita-ev-csc": {
             "prices": "Die Mitgliedschaft umfasst eine einmalige Anmeldegebühr von 39,99 EUR und eine monatliche Gebühr von 9,99 EUR, die 2 Gramm Cannabis beinhaltet.",
@@ -583,7 +642,8 @@
             "meta_description": "Realita e.V. CSC ist ein Cannabis Social Club in Berlin, der legales, hochwertiges Cannabis und verantwortungsvollen Konsum fördert.",
             "meta_keywords": "Realita e.V. CSC, Cannabis Social Club Berlin, legales Cannabis, verantwortungsvoller Konsum, gemeinschaftlicher Anbau, Steglitz-Zehlendorf",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung für Mitglieder, Soziales Miteinander",
-            "harm_reduction": "Dieser Club legt großen Wert auf verantwortungsvollen Konsum und bietet Aufklärung zur Minimierung der Risiken des Cannabiskonsums."
+            "harm_reduction": "Dieser Club legt großen Wert auf verantwortungsvollen Konsum und bietet Aufklärung zur Minimierung der Risiken des Cannabiskonsums.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "bunte-bluete-cannabis-club-berlin-ev": {
             "prices": "Der Mitgliedsbeitrag beträgt 50 EUR pro Monat, was ein Guthaben für Cannabiskäufe beinhaltet. Der Preis pro Gramm beginnt bei 7-8 EUR.",
@@ -592,7 +652,8 @@
             "meta_description": "Der Bunte Blüte Cannabis Club Berlin e.V. bietet hochwertiges Cannabis in einer transparenten und gemeinschaftsorientierten Umgebung in Berlin an.",
             "meta_keywords": "Bunte Blüte Cannabis Club Berlin, Cannabis Social Club, hochwertiges Cannabis, gemeinschaftsorientierter Cannabisanbau, Cannabisverteilung Berlin, nachhaltiges Cannabis, THC-reiches Cannabis",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Samen und Stecklinge, Soziales Miteinander",
-            "harm_reduction": "Der Club konzentriert sich auf verantwortungsvollen Konsum und bemüht sich, die Mitglieder über sichere Konsumpraktiken aufzuklären und Risiken zu minimieren."
+            "harm_reduction": "Der Club konzentriert sich auf verantwortungsvollen Konsum und bemüht sich, die Mitglieder über sichere Konsumpraktiken aufzuklären und Risiken zu minimieren.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "420-bearz": {
             "prices": "Mitgliedschaftsoptionen umfassen 'Kleiner Bär' für 75 EUR/Monat (5g enthalten), 'Großer Bär' für 130 EUR/Monat (15g enthalten) und 'Mächtiger Bär' für 176 EUR/Monat (25g enthalten). Zusätzliche Gramm kosten jeweils 7 EUR.",
@@ -601,7 +662,8 @@
             "meta_description": "420 Bearz ist ein Berliner Cannabisclub, der hochwertige, professionell angebaute Cannabissorten mit Schwerpunkt auf Gemeinschaft und Engagement anbietet.",
             "meta_keywords": "420 Bearz, Berliner Cannabisclub, hochwertiges Cannabis, THC-reiche Sorten, gemeinschaftlicher Anbau, biologisches Cannabis, professioneller Cannabisanbau, Cannabisverteilung Berlin",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Soziales Miteinander, Hoch-THC-Sorten",
-            "harm_reduction": "Der Club bietet Aufklärung über verantwortungsvollen Cannabiskonsum und unterstützt die Mitglieder, um die Risiken des Konsums zu minimieren."
+            "harm_reduction": "Der Club bietet Aufklärung über verantwortungsvollen Cannabiskonsum und unterstützt die Mitglieder, um die Risiken des Konsums zu minimieren.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "csc-gruenvereint-ev": {
             "prices": "Die Mitgliedsbeiträge beginnen bei 30 EUR pro Monat, abhängig von der gewählten Mitgliedsstufe. Die Preise für Cannabis werden an die Anbaukosten angepasst.",
@@ -610,7 +672,8 @@
             "meta_description": "Der CSC Grünvereint e.V. ist ein Cannabisclub in Berlin, der sich auf nachhaltigen, gemeinschaftsorientierten Cannabisanbau und Schadensminderung konzentriert.",
             "meta_keywords": "CSC Grünvereint e.V., Berliner Cannabisclub, nachhaltiger Cannabisanbau, gemeinschaftsorientierter Cannabisanbau, hochwertiges Cannabis, ökologische Nachhaltigkeit, Schadensminderung",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung für Mitglieder, Bildung, Ökologische Nachhaltigkeit",
-            "harm_reduction": "Der Club setzt sich für Schadensminderung ein, indem er seine Mitglieder über sicheren Cannabiskonsum aufklärt und die Risiken des Cannabiskonsums minimiert."
+            "harm_reduction": "Der Club setzt sich für Schadensminderung ein, indem er seine Mitglieder über sicheren Cannabiskonsum aufklärt und die Risiken des Cannabiskonsums minimiert.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "budz-berlin-ev": {
             "prices": "Die Mitgliedsbeiträge beginnen bei 25 EUR pro Monat, mit weiteren Stufen, die Rabatte und exklusive Vorteile bieten. Die Preise für Cannabis werden an die Anbaukosten angepasst.",
@@ -619,7 +682,8 @@
             "meta_description": "Budz Berlin e.V. ist ein Cannabisclub in Berlin, der sich auf die Bereitstellung von sicherem, hochwertigem Cannabis durch sicheren Anbau und Gemeinschaftsbeteiligung konzentriert.",
             "meta_keywords": "Budz Berlin e.V., Cannabis Social Club Berlin, sicheres Cannabis, kontrollierter Anbau, Gemeinschafts-Cannabis, Cannabisverteilung Berlin, Cannabis-Mitgliedschaftsstufen",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Soziales Miteinander, Sicherer Zugang zu Cannabis",
-            "harm_reduction": "Der Club engagiert sich für den Schutz von Minderjährigen und bietet Aufklärung über sicheren Cannabiskonsum, um sicherzustellen, dass alle Mitglieder informiert und verantwortungsbewusst sind."
+            "harm_reduction": "Der Club engagiert sich für den Schutz von Minderjährigen und bietet Aufklärung über sicheren Cannabiskonsum, um sicherzustellen, dass alle Mitglieder informiert und verantwortungsbewusst sind.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "ambrosia-csc-ev": {
             "prices": "Der monatliche Mitgliedsbeitrag beginnt bei 25 EUR. Der Preis pro Gramm liegt zwischen 4 EUR und 8 EUR, abhängig von den Anbaukosten.",
@@ -628,7 +692,8 @@
             "meta_description": "Ambrosia CSC e.V. ist ein Berliner Cannabisclub, der sich auf nachhaltigen Anbau und Gemeinschaftsbeteiligung konzentriert und hochwertige Sorten anbietet.",
             "meta_keywords": "Ambrosia CSC e.V., Berliner Cannabisclub, nachhaltiger Anbau, Gemeinschafts-Cannabis, hochwertige Sorten, LED-Technologie, Cannabis-Gartenbau",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Soziales Miteinander, Nachhaltige Praktiken",
-            "harm_reduction": "Der Club konzentriert sich darauf, seine Mitglieder über die potenziellen Risiken des Cannabiskonsums, insbesondere für jüngere Menschen, aufzuklären und legt Wert auf sichere Konsumpraktiken."
+            "harm_reduction": "Der Club konzentriert sich darauf, seine Mitglieder über die potenziellen Risiken des Cannabiskonsums, insbesondere für jüngere Menschen, aufzuklären und legt Wert auf sichere Konsumpraktiken.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "handcut-flowers": {
             "prices": "Informationen zu Mitgliedsbeiträgen sowie Cannabispreisen werden hier angezeigt, sobald sie verfügbar sind.",
@@ -637,7 +702,8 @@
             "meta_description": "Handcut Flowers",
             "meta_keywords": "Handcut Flowers, Berlin, Cali Weed, exklusive Sorten, hochwertiges Cannabis, Legalisierung, Privatsphäre, Datenschutz, Cannabisclub, Blumenauswahl",
             "offerings": "Gemeinschaftlicher Anbau, Verteilung von Cannabis an Mitglieder, Geselligkeit",
-            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "nicetime-ev": {
             "prices": "Die Mitgliedschaft beginnt bei 10 EUR pro Monat. Die Preise für Cannabis werden an die Anbaukosten und die Vorlieben der Mitglieder angepasst.",
@@ -646,7 +712,8 @@
             "meta_description": "NiceTime e.V. ist ein Berliner Cannabisclub, der sich auf nachhaltigen, verantwortungsvollen Anbau und eine unterstützende Gemeinschaft konzentriert.",
             "meta_keywords": "NiceTime e.V., Berliner Cannabisclub, nachhaltiges Cannabis, verantwortungsvoller Anbau, biologisches Cannabis, gemeinschaftsorientierter Cannabisclub, Bildungsworkshops, hochwertige Sorten",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Bildungsworkshops, Soziales Miteinander, Hochwertige Sorten",
-            "harm_reduction": "Der Club bietet Aufklärung über sicheren Cannabiskonsum und legt Wert auf Schadensminderung durch seine nachhaltigen Praktiken und gemeinschaftliches Engagement."
+            "harm_reduction": "Der Club bietet Aufklärung über sicheren Cannabiskonsum und legt Wert auf Schadensminderung durch seine nachhaltigen Praktiken und gemeinschaftliches Engagement.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "klub425-csc-berlin": {
             "prices": "Informationen zu Mitgliedsbeiträgen sowie Cannabispreisen werden hier angezeigt, sobald sie verfügbar sind.",
@@ -655,7 +722,8 @@
             "meta_description": "Klub425 CSC Berlin",
             "meta_keywords": "Klub425 CSC Berlin, Berlin, Cali Weed, exklusive Sorten, hochwertiges Cannabis, Legalisierung, Privatsphäre, Datenschutz, Cannabisclub, Blumenauswahl",
             "offerings": "Gemeinschaftlicher Anbau, Verteilung von Cannabis an Mitglieder, Geselligkeit",
-            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "best-social-club-berlin": {
             "prices": "Informationen zu Mitgliedsbeiträgen sowie Cannabispreisen werden hier angezeigt, sobald sie verfügbar sind.",
@@ -664,7 +732,8 @@
             "meta_description": "BEST Social Club Berlin",
             "meta_keywords": "BEST Social Club Berlin, Berlin, Cali Weed, exklusive Sorten, hochwertiges Cannabis, Legalisierung, Privatsphäre, Datenschutz, Cannabisclub, Blumenauswahl",
             "offerings": "Gemeinschaftlicher Anbau, Verteilung von Cannabis an Mitglieder, Geselligkeit",
-            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "grashaus": {
             "prices": "Informationen zu Mitgliedsbeiträgen sowie Cannabispreisen werden hier angezeigt, sobald sie verfügbar sind.",
@@ -673,7 +742,8 @@
             "meta_description": "Grashaus",
             "meta_keywords": "Grashaus, Berlin, Cali Weed, exklusive Sorten, hochwertiges Cannabis, Legalisierung, Privatsphäre, Datenschutz, Cannabisclub, Blumenauswahl",
             "offerings": "Gemeinschaftlicher Anbau, Verteilung von Cannabis an Mitglieder, Geselligkeit",
-            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "green-hub-wedding": {
             "prices": "Informationen zu Mitgliedsbeiträgen sowie Cannabispreisen werden hier angezeigt, sobald sie verfügbar sind.",
@@ -682,7 +752,8 @@
             "meta_description": "Green Hub Wedding",
             "meta_keywords": "Green Hub Wedding, Berlin, Cali Weed, exklusive Sorten, hochwertiges Cannabis, Legalisierung, Privatsphäre, Datenschutz, Cannabisclub, Blumenauswahl",
             "offerings": "Gemeinschaftlicher Anbau, Verteilung von Cannabis an Mitglieder, Geselligkeit",
-            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet."
+            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "weed-bros": {
             "prices": "Die Mitgliedschaft beginnt bei 10 EUR pro Monat, die ersten drei Monate sind für die ersten 150 Mitglieder kostenlos. Die Preise für Cannabis richten sich nach den Anbaukosten.",
@@ -691,7 +762,8 @@
             "meta_description": "WEED BROS. ist ein Cannabisclub in Berlin Friedrichshain, der sich auf nachhaltigen, gemeinschaftsorientierten Anbau und die Einbindung der Mitglieder konzentriert.",
             "meta_keywords": "WEED BROS., Berliner Cannabisclub, nachhaltiger Anbau, gemeinschaftsorientierter Cannabis, biologischer Cannabisanbau, Cannabisclub Friedrichshain, Mitgliederbeteiligung",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Soziales Miteinander, Nachhaltige Praktiken",
-            "harm_reduction": "Der Club schult die Mitglieder im sicheren und verantwortungsvollen Cannabiskonsum und fördert die Schadensminderung durch nachhaltige und biologische Praktiken."
+            "harm_reduction": "Der Club schult die Mitglieder im sicheren und verantwortungsvollen Cannabiskonsum und fördert die Schadensminderung durch nachhaltige und biologische Praktiken.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         }
     }
 }

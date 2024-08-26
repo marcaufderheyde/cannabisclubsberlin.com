@@ -72,7 +72,7 @@ describe('Swipeable', () => {
         const { getByText } = renderComponent();
         const element = getByText('Swipe Me!');
 
-        simulateSwipe(element, [0, 0], [0, 100]);
+        simulateSwipe(element, [0, 0], [0, 79]);
 
         expect(onDownSwipe).toHaveBeenCalledTimes(1);
     });
@@ -101,7 +101,7 @@ describe('Swipeable', () => {
         const element = getByText('Swipe Me!');
 
         // Simulate a swipe down past the boundary
-        simulateSwipe(element, [0, 0], [0, 200]);
+        simulateSwipe(element, [0, 0], [0, 80]);
 
         expect(onDownSwipeClose).toHaveBeenCalledTimes(1);
     });

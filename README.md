@@ -173,6 +173,10 @@ To maintain consistency across the project, we follow these coding conventions:
 
 -   Follow .gitmessage found in the root directory.
 
+## Code Reviews
+
+Across code reviews in the codebase emojis from the [Code Review Emoji Guide](https://github.com/erikthedeveloper/code-review-emoji-guide) are used.
+
 ## Contributing
 
 We welcome contributions! Please follow the coding conventions outlined above, and ensure that all tests pass before submitting a pull request.

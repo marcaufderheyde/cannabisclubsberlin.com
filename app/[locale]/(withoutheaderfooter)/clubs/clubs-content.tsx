@@ -13,13 +13,13 @@ const OpenStreetMap = dynamic(
 
 export default function ClubsContent() {
     const [showHRFilter, setShowHRFilter] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     return (
         <div>
             <Navbar isOnMap={true} />
             <div>
-                <div className='hidden lg:flex'>
+                <div className="hidden lg:flex">
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={true}
@@ -31,7 +31,7 @@ export default function ClubsContent() {
                         setShowHRFilter={setShowHRFilter}
                     />
                 </div>
-                <div className='lg:hidden flex'>
+                <div className="lg:hidden flex">
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={false}

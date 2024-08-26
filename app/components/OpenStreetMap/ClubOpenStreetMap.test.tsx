@@ -51,6 +51,7 @@ describe('ClubOpenStreetMap Component', () => {
         slug: '',
         address: '',
         geoLocation: [52.51664, 13.40828],
+        reviews: '',
     };
 
     beforeEach(() => {

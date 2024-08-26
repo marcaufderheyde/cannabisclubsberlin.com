@@ -38,6 +38,7 @@ describe('SwipeableClubCard', () => {
         clubPageUrl: '',
         geoLocation: [],
         address: '',
+        reviews: '',
     };
 
     const mockStartPosition = { x: 0, y: 0 };

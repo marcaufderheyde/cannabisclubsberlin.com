@@ -15,7 +15,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Friedrichstraße 133, 10117 Berlin, Germany",
         geoLocation: [52.51664, 13.40828],
-    },
+   reviews: "",},
     {
         key: 'club2',
         name: 'Green Social Club e.V.',
@@ -30,7 +30,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Bessemerstraße 82, 12103 Berlin, Germany",
         geoLocation: [52.461281, 13.36428],
-    },
+   reviews: "",},
     {
         key: 'club3',
         name: 'Aero Cannabis Club e.V.',
@@ -45,7 +45,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Grunewaldstraße 43, 10823 Berlin, Germany",
         geoLocation: [52.5022, 13.31933],
-    },
+   reviews: "",},
     {
         key: 'club4',
         name: 'Green Leaf Society e.V.',
@@ -60,7 +60,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alt-Kaulsdorf 21, 12621 Berlin, Germany",
         geoLocation: [52.52528, 13.5213],
-    },
+   reviews: "",},
     {
         key: 'club5',
         name: '420 Club Berlin',
@@ -75,7 +75,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club6',
         name: 'Bastardo e.V.',
@@ -90,7 +90,7 @@ export const clubs: Club[] = [
         slug: 'bastardo-csc-berlin',
         address: "Frankfurter Allee 69, 10247 Berlin, Germany",
         geoLocation: [52.47016, 13.42675],
-    },
+   reviews: "",},
     {
         key: 'club7',
         name: 'CSC Berlin e.V.',
@@ -105,7 +105,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Südkreuz, 10829 Berlin, Germany",
         geoLocation: [52.43732, 13.50043],
-    },
+   reviews: "",},
     {
         key: 'club8',
         name: '1000 Berlin 15 e.V.',
@@ -120,7 +120,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club9',
         name: 'Cannabis Social Club Köpenick',
@@ -135,7 +135,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Mahlsdorf, 12623 Berlin, Germany",
         geoLocation: [52.44849, 13.59861],
-    },
+   reviews: "",},
     {
         key: 'club10',
         name: 'CSC High on Earth e.V.',
@@ -150,7 +150,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Wilhelmstraße 75, 10117 Berlin, Germany",
         geoLocation: [52.4481, 13.37515],
-    },
+   reviews: "",},
     {
         key: 'club11',
         name: 'CSC Home of Hemp Berlin e.V.',
@@ -165,7 +165,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Torstraße 109, 10119 Berlin, Germany",
         geoLocation: [52.525391, 13.398906],
-    },
+   reviews: "",},
     {
         key: 'club12',
         name: 'Cannabis Social Club Prenzlauer Berg Berlin e.V.',
@@ -180,7 +180,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.517037, 13.38886],
-    },
+   reviews: "",},
     {
         key: 'club13',
         name: 'Cannabis Social Club meridiem Brandenburgo et Berolina e.V.',
@@ -195,7 +195,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club14',
         name: 'Cannabis-Club Lammbock e. V.',
@@ -210,7 +210,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club15',
         name: 'Cannamo Cannabis Club e.V.',
@@ -225,7 +225,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Lichtenberg, 10367 Berlin, Germany",
         geoLocation: [52.513421, 13.455344],
-    },
+   reviews: "",},
     {
         key: 'club16',
         name: 'High Society Cannabis Club e.V.',
@@ -240,7 +240,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club17',
         name: 'Hype and Dope, Cannabis Club Berlin e.V.',
@@ -255,7 +255,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club18',
         name: 'Koala Cannabis Social Club Berlin e.V.',
@@ -271,7 +271,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Schönhauser Allee 36, 10435 Berlin, Germany",
         geoLocation: [52.52437, 13.41053],
-    },
+   reviews: "",},
     {
         key: 'club19',
         name: 'We Love Weed (WLW) – Cannabis Social Club Berlin Kreuzberg e.V.',
@@ -286,7 +286,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Kreuzbergstraße 62, 10965 Berlin, Germany",
         geoLocation: [52.49529, 13.419286],
-    },
+   reviews: "",},
     {
         key: 'club20',
         name: 'Anbaufreunde Berlin Social Club e. V.',
@@ -301,7 +301,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club21',
         name: 'Cannabis Club Lammbock e.V.',
@@ -316,7 +316,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Köpenick, 12555 Berlin, Germany",
         geoLocation: [52.447605, 13.570429],
-    },
+   reviews: "",},
     {
         key: 'club22',
         name: 'High Circle',
@@ -331,7 +331,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Nauen, 14641 Berlin, Germany",
         geoLocation: [52.565246, 13.041101],
-    },
+   reviews: "",},
     {
         key: 'club23',
         name: 'CSC-BerlinHigh e.V.',
@@ -346,7 +346,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Nordendstraße 52, 13156 Berlin, Germany",
         geoLocation: [52.580206, 13.343588],
-    },
+   reviews: "",},
     {
         key: 'club24',
         name: 'Just Plants e.V.',
@@ -361,7 +361,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.517037, 13.38886],
-    },
+   reviews: "",},
     {
         key: 'club25',
         name: 'Berliner Cannabis Hilfe e.V.',
@@ -376,7 +376,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Prenzlauer Promenade 41, 13089 Berlin, Germany",
         geoLocation: [52.544346, 13.420564],
-    },
+   reviews: "",},
     {
         key: 'club26',
         name: 'Spliffers Berlin i.G.',
@@ -391,7 +391,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Meppen, 49716 Berlin, Germany",
         geoLocation: [52.516444, 7.726124],
-    },
+   reviews: "",},
     {
         key: 'club27',
         name: 'Helmuts Social Club',
@@ -406,7 +406,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.517037, 13.38886],
-    },
+   reviews: "",},
     {
         key: 'club28',
         name: 'Captain Weedy CSC Berlin e.V.',
@@ -421,7 +421,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Pankow, 13156 Berlin, Germany",
         geoLocation: [52.588188, 13.430868],
-    },
+   reviews: "",},
     {
         key: 'club29',
         name: 'CSC VISIONÆRE BERLIN',
@@ -436,7 +436,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.517037, 13.38886],
-    },
+   reviews: "",},
     {
         key: 'club30',
         name: 'CSC Kreuzkölln',
@@ -451,7 +451,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.517037, 13.38886],
-    },
+   reviews: "",},
     {
         key: 'club31',
         name: 'Cannabis Social Club Weeden 030 Berlin e.V.',
@@ -466,7 +466,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.517037, 13.38886],
-    },
+   reviews: "",},
     {
         key: 'club32',
         name: 'White Lake Weed',
@@ -481,7 +481,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Weißensee, 13086 Berlin, Germany",
         geoLocation: [52.554619, 13.463002],
-    },
+   reviews: "",},
     {
         key: 'club33',
         name: "CSC Doobie's Berlin",
@@ -496,7 +496,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Mitte, 10178 Berlin, Germany",
         geoLocation: [52.531753, 13.387843],
-    },
+   reviews: "",},
     {
         key: 'club34',
         name: 'Cannabis Social Club Spandau',
@@ -511,7 +511,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Spandau, 13581 Berlin, Germany",
         geoLocation: [52.535788, 13.197792],
-    },
+   reviews: "",},
     {
         key: 'club35',
         name: 'Hanf im Glück CSC Berlin',
@@ -526,7 +526,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club36',
         name: 'CSCD – Dachverband deutscher Cannabis Social Clubs',
@@ -541,7 +541,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Lichtenberg, 10365 Berlin, Germany",
         geoLocation: [52.468412, 13.4344449],
-    },
+   reviews: "",},
     {
         key: 'club37',
         name: 'Elevated Society CSC Berlin',
@@ -556,7 +556,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Alexanderplatz, 10178 Berlin, Germany",
         geoLocation: [52.5170365, 13.3888599],
-    },
+   reviews: "",},
     {
         key: 'club38',
         name: 'Cannabliss CSC',
@@ -571,7 +571,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Friedrichshain, 10249 Berlin, Germany",
         geoLocation: [52.488419, 13.461284],
-    },
+   reviews: "",},
     {
         key: 'club39',
         name: 'Monkeyz Berlin e.V.',
@@ -586,7 +586,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Schöneberg, 10785 Berlin, Germany",
         geoLocation: [52.501072, 13.358058],
-    },
+   reviews: "",},
     {
         key: 'club40',
         name: 'Berlin Blatt und Blüte e.V.',
@@ -601,7 +601,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "Möckernstraße 102, 10963 Berlin, Germany",
         geoLocation: [52.492805, 13.418272],
-    },
+   reviews: "",},
     {
         key: 'club41',
         name: 'Realita e.V. CSC',
@@ -616,7 +616,7 @@ export const clubs: Club[] = [
         slug: '',
         address: "12203, Berlin, Germany",
         geoLocation: [52.451780, 13.306564],
-    },
+   reviews: "",},
     {
         key: 'club42',
         name: 'Bunte Blüte Cannabis Club Berlin e.V.',
@@ -631,7 +631,7 @@ hasHRInformation: true,
         slug: '',
         address: "Pappelallee, 10437 Berlin, Deutschland",
         geoLocation: [52.542697, 13.412476],
-    },
+   reviews: "",},
     {
         key: 'club43',
         name: '420 Bearz',
@@ -646,7 +646,7 @@ hasHRInformation: true,
         slug: '',
         address: "Bessemerstraße 82, 12103, Berlin",
         geoLocation: [52.460290, 13.365937],
-    },
+   reviews: "",},
     {
         key: 'club44',
         name: 'CSC Grünvereint e.V.',
@@ -661,7 +661,7 @@ hasHRInformation: true,
         slug: '',
         address: "Puschkinstraße 44, 16321, Bernau bei Berlin",
         geoLocation: [52.624835, 13.429380],
-    },
+   reviews: "",},
     {
         key: 'club45',
         name: 'Budz Berlin e.V.',
@@ -676,7 +676,7 @@ hasHRInformation: true,
         slug: '',
         address: "Berlin, Deutschland",
         geoLocation: [52.520008, 13.404954],
-    },
+   reviews: "",},
     {
         key: 'club46',
         name: 'Ambrosia CSC e.V.',
@@ -691,7 +691,7 @@ hasHRInformation: true,
         slug: '',
         address: "Kinzigstrasse 32 10247 Berlin",
         geoLocation: [52.510673, 13.463344],
-    },
+   reviews: "",},
     {
         key: 'club47',
         name: 'Handcut Flowers',
@@ -706,7 +706,7 @@ hasHRInformation: true,
         slug: '',
         address: "Schoenhauser Allee 54 10437 Berlin",
         geoLocation: [52.539656, 13.414191],
-    },
+   reviews: "",},
     {
         key: 'club48',
         name: 'NiceTime e.V.',
@@ -721,7 +721,7 @@ hasHRInformation: true,
         slug: '',
         address: "Josef-Orlopp-Straße 5 10367 Berlin",
         geoLocation: [52.520627, 13.472639],
-    },
+   reviews: "",},
     {
         key: 'club49',
         name: 'Klub425 CSC Berlin',
@@ -736,7 +736,7 @@ hasHRInformation: true,
         slug: '',
         address: "Holzmarktstraße 25, 10243, Berlin",
         geoLocation: [52.511868, 13.429282],
-    },
+   reviews: "",},
     {
         key: 'club50',
         name: 'BEST Social Club Berlin',
@@ -751,7 +751,7 @@ hasHRInformation: true,
         slug: '',
         address: "Prenzlauer Allee, 13089, Berlin",
         geoLocation: [52.545050, 13.423448],
-    },
+   reviews: "",},
     {
         key: 'club51',
         name: 'Grashaus',
@@ -766,7 +766,7 @@ hasHRInformation: true,
         slug: '',
         address: "Jägerstr. 28-31, 10117 Berlin",
         geoLocation: [52.512517, 13.390362],
-    },
+   reviews: "",},
     {
         key: 'club52',
         name: 'Green Hub Wedding',
@@ -781,7 +781,7 @@ hasHRInformation: true,
         slug: '',
         address: "13351 Berlin",
         geoLocation: [52.549050, 13.342447],
-    },
+   reviews: "",},
     {
         key: 'club53',
         name: 'WEED BROS.',
@@ -796,5 +796,6 @@ hasHRInformation: true,
         slug: '',
         address: "10409 Berlin",
         geoLocation: [52.545583, 13.436233],
+        reviews: "",
     }
 ];

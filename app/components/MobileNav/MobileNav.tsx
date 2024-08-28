@@ -11,8 +11,16 @@ export default function MobileNav({ links }: { links: Array<LinkInfo> }) {
         <HamburgerButton showOverlay={() => setShowOverlay(true)} />
     );
     const overlayNav = (
-        <OverlayNav closeOverlay={() => setShowOverlay(false)} links={links} />
+        <OverlayNav
+            showOverlay={showOverlay}
+            closeOverlay={() => setShowOverlay(false)}
+            links={links}
+        />
     );
 
-    return <div>{showOverlay ? overlayNav : hamburgerButton}</div>;
+    return (
+        <div>
+            {overlayNav} {hamburgerButton}
+        </div>
+    );
 }

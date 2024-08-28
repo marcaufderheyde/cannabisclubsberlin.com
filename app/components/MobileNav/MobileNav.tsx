@@ -20,7 +20,8 @@ export default function MobileNav({ links }: { links: Array<LinkInfo> }) {
 
     return (
         <div>
-            {overlayNav} {hamburgerButton}
+            {hamburgerButton}
+            {overlayNav}
         </div>
     );
 }

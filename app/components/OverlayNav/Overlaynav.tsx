@@ -22,7 +22,7 @@ export default function OverlayNav({
     const prevPathnameRef = usePrevious(pathname);
     const [shouldClose, setShouldClose] = useState(false);
 
-    usePreventScrolling();
+    usePreventScrolling(showOverlay);
 
     useEffect(() => {
         const prevPathname = prevPathnameRef as string;

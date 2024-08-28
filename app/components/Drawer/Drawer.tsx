@@ -69,7 +69,7 @@ const Drawer: FunctionComponent<DrawerProps> = (
                             ...drawerContainerTransitionStyles[state],
                         }}
                         className={
-                            'fixed z-50 min-w-full min-h-full  top-0 left-0'
+                            'fixed z-50 min-w-full min-h-full top-0 left-0'
                         }
                     >
                         <div

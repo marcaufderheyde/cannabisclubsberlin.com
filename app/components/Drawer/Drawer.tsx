@@ -6,9 +6,11 @@ import Swipeable from '../OpenStreetMap/Swipeable';
 import { Transition, TransitionStatus } from 'react-transition-group';
 
 type DrawerProps = {
+    readonly children: React.ReactElement;
     readonly className?: string;
     readonly isOpen: boolean;
     readonly onClose: () => void;
+    readonly closeButtonColor?: string;
 };
 
 type Position = {
@@ -77,7 +79,7 @@ const Drawer: FunctionComponent<DrawerProps> = (
                                 e.stopPropagation();
                             }}
                             className={
-                                'fixed min-h-full bg-white min-w-[80%] top-0 left-0 drop-shadow-lg ' +
+                                'fixed min-h-full bg-transparent min-w-[80%] top-0 left-0 drop-shadow-lg ' +
                                 props.className
                             }
                         >
@@ -85,7 +87,9 @@ const Drawer: FunctionComponent<DrawerProps> = (
                                 onClick={props.onClose}
                                 className='absolute top-[2em] right-[2em] z-[2]'
                             >
-                                <Close color={'#828282'} />
+                                <Close
+                                    color={props.closeButtonColor ?? 'grey'}
+                                />
                             </div>
                             {props.children}
                         </div>

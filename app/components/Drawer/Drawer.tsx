@@ -22,6 +22,7 @@ const Drawer: FunctionComponent<DrawerProps> = (
     props: PropsWithChildren<DrawerProps>
 ) => {
     const transformDuration: number = 300;
+    const backgroundDelay: number = 100;
     const drawerContainerRef = useRef(null);
     const drawerContainerDefaultTransitionStyle: React.CSSProperties = {
         transform: `translateX(-100%)`,
@@ -36,6 +37,38 @@ const Drawer: FunctionComponent<DrawerProps> = (
         },
         entered: {
             transform: `translateX(0)`,
+        },
+        exiting: {
+            transform: `translateX(-100%)`,
+            transition: `transform ${transformDuration}ms ease ${transformDuration + backgroundDelay}ms`,
+        },
+        exited: {
+            transform: `translateX(-100%)`,
+            transition: `transform ${transformDuration}ms ease ${transformDuration + backgroundDelay}ms`,
+        },
+        unmounted: {
+            transform: `translateX(-100%)`,
+            transition: `transform ${transformDuration}ms ease ${transformDuration + backgroundDelay}ms `,
+        },
+    };
+
+    const drawerRef = useRef(null);
+    const drawerDelay: number = 400;
+    const drawerDefaultTransitionStyle: React.CSSProperties = {
+        transform: `translateX(-100%)`,
+        transition: `transform ${transformDuration}ms ease `,
+    };
+    const drawerTransitionStyles: Record<
+        TransitionStatus,
+        React.CSSProperties
+    > = {
+        entering: {
+            transform: `translateX(0%)`,
+            transition: `transform ${transformDuration}ms ease ${drawerDelay}ms`,
+        },
+        entered: {
+            transform: `translateX(0%)`,
+            transition: `transform ${transformDuration}ms ease ${drawerDelay}ms`,
         },
         exiting: {
             transform: `translateX(-100%)`,
@@ -57,7 +90,7 @@ const Drawer: FunctionComponent<DrawerProps> = (
             <Transition
                 nodeRef={drawerContainerRef}
                 in={props.isOpen}
-                timeout={transformDuration}
+                timeout={transformDuration * 3}
                 unmountOnExit={true}
             >
                 {(state) => (
@@ -71,28 +104,45 @@ const Drawer: FunctionComponent<DrawerProps> = (
                             ...drawerContainerTransitionStyles[state],
                         }}
                         className={
-                            'fixed z-50 min-w-full min-h-full top-0 left-0'
+                            'fixed z-50 min-w-full min-h-full top-0 left-0 bg-[#B6CF54]'
                         }
                     >
-                        <div
-                            onClick={(e) => {
-                                e.stopPropagation();
-                            }}
-                            className={
-                                'fixed min-h-full bg-transparent min-w-[80%] top-0 left-0 drop-shadow-lg ' +
-                                props.className
-                            }
+                        <Transition
+                            nodeRef={drawerRef}
+                            timeout={transformDuration}
+                            in={props.isOpen}
+                            unmountOnExit={true}
+                            appear={true}
                         >
-                            <div
-                                onClick={props.onClose}
-                                className='absolute top-[2em] right-[2em] z-[2]'
-                            >
-                                <Close
-                                    color={props.closeButtonColor ?? 'grey'}
-                                />
-                            </div>
-                            {props.children}
-                        </div>
+                            {(state) => (
+                                <div
+                                    ref={drawerRef}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                    }}
+                                    style={{
+                                        ...drawerDefaultTransitionStyle,
+                                        ...drawerTransitionStyles[state],
+                                    }}
+                                    className={
+                                        'fixed min-h-full bg-transparent min-w-[80%] top-0 left-0 drop-shadow-lg ' +
+                                        props.className
+                                    }
+                                >
+                                    <div
+                                        onClick={props.onClose}
+                                        className='absolute top-[2em] right-[2em] z-[2]'
+                                    >
+                                        <Close
+                                            color={
+                                                props.closeButtonColor ?? 'grey'
+                                            }
+                                        />
+                                    </div>
+                                    {props.children}
+                                </div>
+                            )}
+                        </Transition>
                     </div>
                 )}
             </Transition>

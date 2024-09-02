@@ -7,6 +7,7 @@ import { LinkInfo } from '@/app/components/Navbar/Links';
 import usePrevious from '@/app/components/OverlayNav/helpers/usePrevious';
 import usePreventScrolling from '@/app/components/OverlayNav/helpers/usePreventScrolling';
 import Drawer from '../Drawer/Drawer';
+import isPathNameHome from '@/app/helpers/isPathnameHome';
 
 export default function OverlayNav({
     closeOverlay,
@@ -20,6 +21,7 @@ export default function OverlayNav({
     const pathname = usePathname();
     const prevPathnameRef = usePrevious(pathname);
     const [shouldClose, setShouldClose] = useState(false);
+    const isHomePage = isPathNameHome(pathname);
 
     usePreventScrolling(showOverlay);
 
@@ -81,7 +83,12 @@ export default function OverlayNav({
                             key={'mobile_' + link.name}
                             href={link.href}
                             onClick={(e) => handleClick(e, link.href as string)}
-                            className='min-w-full py-2 text-white'
+                            className={
+                                (link.href.toString().includes(pathname) &&
+                                !isHomePage
+                                    ? `text-[#B6CF54] `
+                                    : `text-white `) + ' min-w-full py-2 '
+                            }
                         >
                             {link.name as string}
                         </Link>

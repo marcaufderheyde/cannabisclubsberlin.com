@@ -25,7 +25,7 @@ const Drawer: FunctionComponent<DrawerProps> = (
     const backgroundDelay: number = 100;
     const drawerContainerRef = useRef(null);
     const drawerContainerDefaultTransitionStyle: React.CSSProperties = {
-        transform: `translateX(-100%)`,
+        transform: `translateX(100%)`,
         transition: `transform ${transformDuration}ms ease`,
     };
     const drawerContainerTransitionStyles: Record<
@@ -39,15 +39,15 @@ const Drawer: FunctionComponent<DrawerProps> = (
             transform: `translateX(0)`,
         },
         exiting: {
-            transform: `translateX(-100%)`,
+            transform: `translateX(100%)`,
             transition: `transform ${transformDuration}ms ease ${transformDuration + backgroundDelay}ms`,
         },
         exited: {
-            transform: `translateX(-100%)`,
+            transform: `translateX(100%)`,
             transition: `transform ${transformDuration}ms ease ${transformDuration + backgroundDelay}ms`,
         },
         unmounted: {
-            transform: `translateX(-100%)`,
+            transform: `translateX(100%)`,
             transition: `transform ${transformDuration}ms ease ${transformDuration + backgroundDelay}ms `,
         },
     };
@@ -55,7 +55,7 @@ const Drawer: FunctionComponent<DrawerProps> = (
     const drawerRef = useRef(null);
     const drawerDelay: number = 400;
     const drawerDefaultTransitionStyle: React.CSSProperties = {
-        transform: `translateX(-100%)`,
+        transform: `translateX(100vw)`,
         transition: `transform ${transformDuration}ms ease `,
     };
     const drawerTransitionStyles: Record<
@@ -63,27 +63,27 @@ const Drawer: FunctionComponent<DrawerProps> = (
         React.CSSProperties
     > = {
         entering: {
-            transform: `translateX(0%)`,
+            transform: `translateX(calc(100vw - 100%))`,
             transition: `transform ${transformDuration}ms ease ${drawerDelay}ms`,
         },
         entered: {
-            transform: `translateX(0%)`,
+            transform: `translateX(calc(100vw - 100%))`,
             transition: `transform ${transformDuration}ms ease ${drawerDelay}ms`,
         },
         exiting: {
-            transform: `translateX(-100%)`,
+            transform: `translateX(100vw)`,
         },
         exited: {
-            transform: `translateX(-100%)`,
+            transform: `translateX(100vw)`,
         },
         unmounted: {
-            transform: `translateX(-100%)`,
+            transform: `translateX(100vw)`,
         },
     };
 
     return (
         <Swipeable
-            onLeftSwipe={() => {
+            onRightSwipe={() => {
                 props.onClose();
             }}
         >

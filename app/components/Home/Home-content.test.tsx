@@ -9,7 +9,7 @@ jest.mock('next-intl', () => ({
     useLocale: jest.fn(),
 }));
 
-jest.mock('@/app/components/Home/headline', () => {
+jest.mock('@/app/components/Home/Headline', () => {
     const React = require('react');
     return {
         __esModule: true,

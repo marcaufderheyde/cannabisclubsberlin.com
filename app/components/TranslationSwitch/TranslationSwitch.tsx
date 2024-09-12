@@ -101,23 +101,24 @@ export default function LocalSwitcher() {
     );
 
     return (
-        <div className='flex'>
+        <div className="flex w-full">
             {/* Desktop */}
-            <div className='sm:visible invisible relative top-0'>
+            <div className="lg:visible invisible relative top-0 right-0">
                 {dropdownTrigger}
                 {showDropdownContent && dropDownContent}
             </div>
-            {/* Mobile: can replace invisible with hidden and flex*/}
-            <div className='sm:invisible visible relative'>
-                <p className='sr-only'>change language</p>
+
+            {/* Mobile and Tablet: Positioned at the bottom left */}
+            <div className="lg:invisible visible absolute bottom-5 left-5">
+                <p className="sr-only">change language</p>
                 <select
                     defaultValue={localeActive}
-                    className='py-2 rounded-lg'
+                    className="py-2 w-full rounded-lg"
                     onChange={changeLocaleMobile}
                     disabled={isPending}
                 >
-                    <option value='en'>🇬🇧 English</option>
-                    <option value='de'>🇩🇪 Deutsch</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="de">🇩🇪 Deutsch</option>
                 </select>
             </div>
         </div>

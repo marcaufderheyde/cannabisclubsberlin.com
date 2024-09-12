@@ -101,7 +101,7 @@ export default function LocalSwitcher() {
     );
 
     return (
-        <div className="flex w-full">
+        <div className="flex">
             {/* Desktop */}
             <div className="lg:visible invisible relative top-0 right-0">
                 {dropdownTrigger}

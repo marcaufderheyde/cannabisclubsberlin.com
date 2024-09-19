@@ -15,8 +15,11 @@ const scrollKeys: Set<String> = new Set([
     'ArrowDown',
 ]);
 
-export default function usePreventScrolling() {
+export default function usePreventScrolling(shouldPreventScroll: boolean) {
     useEffect(() => {
+
+        if (!shouldPreventScroll) return;
+
         const preventDefault = (e: Event) => e.preventDefault();
         const preventDefaultOnScrollKeys = (e: KeyboardEvent) => {
             if (scrollKeys.has(e.key)) e.preventDefault();
@@ -84,5 +87,5 @@ export default function usePreventScrolling() {
         preventScroll();
 
         return () => enableScroll();
-    }, []);
+    }, [shouldPreventScroll]);
 }

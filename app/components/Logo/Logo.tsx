@@ -10,7 +10,7 @@ export default function Logo({ onClick }: { onClick?: Function }) {
 
     const handleClick: Function = onClick
         ? () => {
-              if (home == pathname) onClick();
+              onClick();
           }
         : () => {};
 

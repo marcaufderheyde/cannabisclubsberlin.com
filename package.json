@@ -1,6 +1,6 @@
 {
     "name": "cannabisclubsberlin",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -21,13 +21,14 @@
         "leaflet": "^1.9.4",
         "leaflet-defaulticon-compatibility": "^0.1.2",
         "lucide-react": "^0.435.0",
-        "next": "^14.2.5",
+        "next": "^14.2.12",
         "next-intl": "^3.10.0",
         "prettier": "^3.2.5",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-hooks": "^1.0.1",
         "react-leaflet": "^4.2.1",
+        "react-transition-group": "^4.4.5",
         "testing-library": "^0.0.2",
         "unixify": "^1.0.0"
     },
@@ -43,6 +44,7 @@
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
+        "@types/react-transition-group": "^4.4.11",
         "autoprefixer": "^10.0.1",
         "babel-jest": "^29.7.0",
         "eslint": "^8",

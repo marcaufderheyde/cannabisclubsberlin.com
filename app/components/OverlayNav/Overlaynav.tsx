@@ -73,28 +73,32 @@ export default function OverlayNav({
             isOpen={showOverlay}
             closeButtonColor='white'
         >
-            <div className='p-3 bg-gray-700 h-[100vh]'>
-                <div className='flex flex-row justify-between items-center text-[#B6CF54]'>
-                    <Logo onClick={closeOverlay} />
+            <div className='flex flex-col p-3 justify-between bg-gray-700 h-full absolute w-full'>
+                <div>
+                    <div className='flex flex-row justify-between items-center text-[#B6CF54]'>
+                        <Logo onClick={closeOverlay} />
+                    </div>
+                    <div className='flex flex-col justify-start items-start my-10 font-bold text-[1.6rem] text-[rgba(130,130,130,0.6)]'>
+                        {links.map((link: LinkInfo) => (
+                            <Link
+                                key={'mobile_' + link.name}
+                                href={link.href}
+                                onClick={(e) =>
+                                    handleClick(e, link.href as string)
+                                }
+                                className={
+                                    (link.href.toString().includes(pathname) &&
+                                    !isHomePage
+                                        ? `text-[#B6CF54] `
+                                        : `text-white `) + ' min-w-full py-2 '
+                                }
+                            >
+                                {link.name as string}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
-                <div className='flex flex-col justify-start items-start my-10 font-bold text-[1.6rem] text-[rgba(130,130,130,0.6)]'>
-                    {links.map((link: LinkInfo) => (
-                        <Link
-                            key={'mobile_' + link.name}
-                            href={link.href}
-                            onClick={(e) => handleClick(e, link.href as string)}
-                            className={
-                                (link.href.toString().includes(pathname) &&
-                                !isHomePage
-                                    ? `text-[#B6CF54] `
-                                    : `text-white `) + ' min-w-full py-2 '
-                            }
-                        >
-                            {link.name as string}
-                        </Link>
-                    ))}
-                </div>
-                <div className='flex flex-row justify-end items-center text-[#828282]'>
+                <div className='flex flex-col items-start justify-end h-[auto] text-[#828282]'>
                     <LocalSwitcher />
                 </div>
             </div>

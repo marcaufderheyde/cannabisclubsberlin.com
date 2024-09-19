@@ -6,6 +6,42 @@ import { usePathname } from 'next/navigation';
 import { LinkInfo } from '@/app/components/Navbar/Links';
 import usePrevious from '@/app/components/OverlayNav/helpers/usePrevious';
 
+jest.mock('@/app/components/Drawer/Drawer', () => ({
+    __esModule: true,
+    default: ({
+        children,
+        isOpen,
+        onClose,
+        className,
+    }: {
+        children: React.ReactElement;
+        isOpen: boolean;
+        onClose: () => void;
+        className?: string;
+    }) => {
+        const React = require('react');
+
+        if (!isOpen) {
+            return null;
+        }
+
+        return React.createElement(
+            'div',
+            { 'data-testid': 'mocked-drawer', className: className },
+            React.createElement(
+                'div',
+                { 'data-testid': 'close-button', onClick: onClose },
+                'Close'
+            ),
+            React.createElement(
+                'div',
+                { 'data-testid': 'mocked-drawer-content' },
+                children
+            )
+        );
+    },
+}));
+
 jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),
 }));
@@ -24,20 +60,6 @@ jest.mock('@/app/components/Logo/Logo', () => ({
             onClick: (e: React.MouseEvent) => {
                 e.stopPropagation();
                 onClick();
-            },
-        });
-    },
-}));
-
-jest.mock('@/app/components/Close/Close', () => ({
-    __esModule: true,
-    default: function MockClose({ color }: { color: string }) {
-        const React = require('react');
-        return React.createElement('div', {
-            'data-testid': 'close-svg',
-            style: { color },
-            onClick: (e: React.MouseEvent) => {
-                e.stopPropagation();
             },
         });
     },
@@ -64,14 +86,19 @@ describe('OverlayNav Component', () => {
             { name: 'Link 1', href: '/link1' },
             { name: 'Link 2', href: '/link2' },
         ];
-        const mockCloseOverlay = jest.fn();
+        let mockShowOverlay = true;
+        const mockCloseOverlay = jest.fn(() => (mockShowOverlay = false));
 
         render(
-            <OverlayNav closeOverlay={mockCloseOverlay} links={mockLinks} />
+            <OverlayNav
+                showOverlay={mockShowOverlay}
+                closeOverlay={mockCloseOverlay}
+                links={mockLinks}
+            />
         );
 
         expect(screen.getByTestId('logo')).toBeInTheDocument();
-        expect(screen.getByTestId('close-svg')).toBeInTheDocument();
+        expect(screen.getByTestId('close-button')).toBeInTheDocument();
         expect(screen.getByTestId('translation-switch')).toBeInTheDocument();
 
         mockLinks.forEach((link) => {
@@ -80,8 +107,15 @@ describe('OverlayNav Component', () => {
     });
 
     it('calls closeOverlay when the close button is clicked', () => {
+        let mockShowOverlay = true;
         const mockCloseOverlay = jest.fn();
-        render(<OverlayNav closeOverlay={mockCloseOverlay} links={[]} />);
+        render(
+            <OverlayNav
+                showOverlay={mockShowOverlay}
+                closeOverlay={mockCloseOverlay}
+                links={[]}
+            />
+        );
 
         act(() => {
             fireEvent.click(screen.getByTestId('close-button'));
@@ -91,11 +125,16 @@ describe('OverlayNav Component', () => {
     });
 
     it('calls closeOverlay when a link to a different path is clicked', () => {
-        const mockCloseOverlay = jest.fn();
+        let mockShowOverlay = true;
+        const mockCloseOverlay = jest.fn(() => (mockShowOverlay = false));
         const mockLinks: LinkInfo[] = [{ name: 'Link 1', href: '/link1' }];
 
         render(
-            <OverlayNav closeOverlay={mockCloseOverlay} links={mockLinks} />
+            <OverlayNav
+                showOverlay={mockShowOverlay}
+                closeOverlay={mockCloseOverlay}
+                links={mockLinks}
+            />
         );
 
         act(() => {
@@ -108,13 +147,18 @@ describe('OverlayNav Component', () => {
     it('does not call closeOverlay when clicking a link that points to the current path', () => {
         (usePrevious as jest.Mock).mockReturnValue('/current-path');
 
-        const mockCloseOverlay = jest.fn();
+        let mockShowOverlay = true;
+        const mockCloseOverlay = jest.fn(() => (mockShowOverlay = false));
         const mockLinks: LinkInfo[] = [
             { name: 'Current Path', href: '/current-path' },
         ];
 
         render(
-            <OverlayNav closeOverlay={mockCloseOverlay} links={mockLinks} />
+            <OverlayNav
+                showOverlay={mockShowOverlay}
+                closeOverlay={mockCloseOverlay}
+                links={mockLinks}
+            />
         );
 
         act(() => {
@@ -125,16 +169,27 @@ describe('OverlayNav Component', () => {
     });
 
     it('triggers closeOverlay when the pathname changes', () => {
-        const mockCloseOverlay = jest.fn();
+        let mockShowOverlay = true;
+        const mockCloseOverlay = jest.fn(() => (mockShowOverlay = false));
         (usePathname as jest.Mock).mockReturnValueOnce('/current-path');
 
         const { rerender } = render(
-            <OverlayNav closeOverlay={mockCloseOverlay} links={[]} />
+            <OverlayNav
+                showOverlay={mockShowOverlay}
+                closeOverlay={mockCloseOverlay}
+                links={[]}
+            />
         );
 
         (usePathname as jest.Mock).mockReturnValueOnce('/new-path');
 
-        rerender(<OverlayNav closeOverlay={mockCloseOverlay} links={[]} />);
+        rerender(
+            <OverlayNav
+                showOverlay={mockShowOverlay}
+                closeOverlay={mockCloseOverlay}
+                links={[]}
+            />
+        );
 
         expect(mockCloseOverlay).toHaveBeenCalledTimes(2);
     });

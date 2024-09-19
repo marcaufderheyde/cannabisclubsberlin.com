@@ -9,7 +9,7 @@ jest.mock('next/navigation', () => ({
     usePathname: jest.fn(),
 }));
 
-jest.mock('@/app/Helpers/isPathnameHome', () => jest.fn());
+jest.mock('@/app/helpers/isPathnameHome', () => jest.fn());
 
 describe('Links Component', () => {
     const mockLinks = [

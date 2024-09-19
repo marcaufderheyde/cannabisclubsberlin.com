@@ -15,7 +15,7 @@ describe('usePreventScrolling', () => {
     });
 
     it('should add the correct event listeners on mount', () => {
-        renderHook(() => usePreventScrolling());
+        renderHook(() => usePreventScrolling(true));
 
         expect(addEventListenerSpy).toHaveBeenCalledWith(
             'DOMMouseScroll',
@@ -44,7 +44,7 @@ describe('usePreventScrolling', () => {
     });
 
     it('should remove the correct event listeners on unmount', () => {
-        const { unmount } = renderHook(() => usePreventScrolling());
+        const { unmount } = renderHook(() => usePreventScrolling(true));
 
         unmount();
 
@@ -74,7 +74,7 @@ describe('usePreventScrolling', () => {
     });
 
     it('should prevent default action for scroll keys', () => {
-        renderHook(() => usePreventScrolling());
+        renderHook(() => usePreventScrolling(true));
 
         const keyEvent = new KeyboardEvent('keydown', { key: 'ArrowDown' });
         const preventDefaultSpy = jest.spyOn(keyEvent, 'preventDefault');
@@ -85,7 +85,7 @@ describe('usePreventScrolling', () => {
     });
 
     it('should not prevent default action for non-scroll keys', () => {
-        renderHook(() => usePreventScrolling());
+        renderHook(() => usePreventScrolling(true));
 
         const keyEvent = new KeyboardEvent('keydown', { key: 'a' });
         const preventDefaultSpy = jest.spyOn(keyEvent, 'preventDefault');

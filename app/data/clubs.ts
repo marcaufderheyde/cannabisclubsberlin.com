@@ -58,8 +58,8 @@ export const clubs: Club[] = [
         imageUrl: '/club4.png',
         clubPageUrl: 'https://greenleafsociety.de/',
         slug: '',
-        address: "Alt-Kaulsdorf 21, 12621 Berlin, Germany",
-        geoLocation: [52.52528, 13.5213],
+        address: "Kosmonauten 26 in 12681 Berlin, Germany",
+        geoLocation: [52.525280, 13.521300],
    reviews: "",},
     {
         key: 'club5',

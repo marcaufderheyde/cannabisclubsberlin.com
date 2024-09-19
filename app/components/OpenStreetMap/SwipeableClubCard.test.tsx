@@ -12,6 +12,10 @@ jest.mock('next/navigation', () => ({
 // Mock the next-intl module
 jest.mock('next-intl', () => ({
     useLocale: jest.fn(() => 'en'),
+    useTranslations:
+        (): any =>
+        (key: string): string =>
+            key.toUpperCase(),
 }));
 
 jest.mock('next/image', () => {

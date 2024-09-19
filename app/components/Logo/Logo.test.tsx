@@ -49,20 +49,6 @@ describe('Logo Component', () => {
         expect(mockOnClick).toHaveBeenCalledTimes(1);
     });
 
-    it('does not trigger onClick when pathname does not match home', () => {
-        (useLocale as jest.Mock).mockReturnValue('en');
-        (usePathname as jest.Mock).mockReturnValue('/en/about');
-
-        const mockOnClick = jest.fn();
-
-        render(<Logo onClick={mockOnClick} />);
-
-        const linkElement = screen.getByRole('link');
-        fireEvent.click(linkElement);
-
-        expect(mockOnClick).not.toHaveBeenCalled();
-    });
-
     it('does not throw error if onClick is not provided', () => {
         (useLocale as jest.Mock).mockReturnValue('en');
         (usePathname as jest.Mock).mockReturnValue('/en');

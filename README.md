@@ -175,7 +175,8 @@ To maintain consistency across the project, we follow these coding conventions:
 
 ## Code Reviews
 
-Across code reviews in the codebase emojis from the [Code Review Emoji Guide](https://github.com/erikthedeveloper/code-review-emoji-guide) are used.
+-   Across code reviews in the codebase emojis from the [Code Review Emoji Guide](https://github.com/erikthedeveloper/code-review-emoji-guide) are used.
+-   Code reviews require at least one approval in order to be merged.
 
 ## Contributing
 

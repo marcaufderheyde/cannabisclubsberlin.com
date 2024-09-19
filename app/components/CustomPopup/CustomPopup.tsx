@@ -41,19 +41,27 @@ export default function CustomPopup({
     const localActive = useLocale();
 
     return (
-        <div className="w-[400px] bg-white flex flex-col h-full">
-            <div className="grid grid-rows-[1fr_6fr] grid-cols-[1fr_5fr_1fr] justify-items-center items-center my-2">
-                <Image
-                    src={club.imageUrl}
-                    alt={`${club.name} Club Picture`}
-                    height={180}
-                    width={300}
-                    layout="raw"
+        <div className='w-[400px] bg-white flex flex-col h-full'>
+            <div className='grid grid-rows-[1fr_6fr] grid-cols-[1fr_5fr_1fr] justify-items-center items-center my-2'>
+                <a
+                    href={`/${localActive}/clubs/${club.slug}`}
                     className={
-                        styles.mapCardImage +
-                        ' col-start-2 col-end-3 row-start-1 row-end-3 h-[180px]'
+                        styles.mapCardLink +
+                        ' col-start-2 col-end-3 row-start-1 row-end-3'
                     }
-                />
+                >
+                    <Image
+                        src={club.imageUrl}
+                        alt={`${club.name} Club Picture`}
+                        height={180}
+                        width={300}
+                        layout='raw'
+                        className={
+                            styles.mapCardImage +
+                            ' col-start-2 col-end-3 row-start-1 row-end-3 h-[180px]'
+                        }
+                    />
+                </a>
                 <button
                     className={
                         styles.closeButton +
@@ -64,7 +72,7 @@ export default function CustomPopup({
                     <Close color={'#828282'} />
                 </button>
             </div>
-            <div className="flex flex-col items-center align-middle text-center mx-3">
+            <div className='flex flex-col items-center align-middle text-center mx-3'>
                 <a
                     href={`/${localActive}/clubs/${club.slug}`}
                     className={styles.mapCardLink}
@@ -73,20 +81,20 @@ export default function CustomPopup({
                 </a>
                 <br />
             </div>
-            <div className="flex flex-row gap-2 flex-wrap mx-3">
+            <div className='flex flex-row gap-2 flex-wrap mx-3'>
                 {club.offerings
                     ?.toString()
                     .split(',')
                     .map((offering) => (
                         <div
                             key={offering}
-                            className="bg-lime-500 text-white rounded-xl py-1 px-2 self-center overflow-ellipsis"
+                            className='bg-lime-500 text-white rounded-xl py-1 px-2 self-center overflow-ellipsis'
                         >
                             {offering}
                         </div>
                     ))}
             </div>
-            <div className="h-[100%] grid grid-cols-1 grid-rows-[1fr_auto_1fr] justify-items-center">
+            <div className='h-[100%] grid grid-cols-1 grid-rows-[1fr_auto_1fr] justify-items-center'>
                 <div
                     className={
                         'row-start-4 row-end-4 inline-flex py-2 px-4 md:py-3'
@@ -100,7 +108,7 @@ export default function CustomPopup({
                         triangleColor={'white'}
                         onClickFunction={() => switchPreviousClub()}
                     />
-                    <div className="bg-lime-500 flex text-white text-base p-2 w-[60px] justify-center">
+                    <div className='bg-lime-500 flex text-white text-base p-2 w-[60px] justify-center'>
                         <div>
                             {
                                 (((clubIndex + 1) as unknown as string) +

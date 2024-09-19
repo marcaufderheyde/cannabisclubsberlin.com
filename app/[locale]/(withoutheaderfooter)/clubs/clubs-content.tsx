@@ -19,7 +19,7 @@ export default function ClubsContent() {
         <div>
             <Navbar isOnMap={true} />
             <div>
-                <div className='hidden lg:flex'>
+                <div className="hidden lg:flex">
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={true}
@@ -31,7 +31,7 @@ export default function ClubsContent() {
                         setShowHRFilter={setShowHRFilter}
                     />
                 </div>
-                <div className='lg:hidden flex'>
+                <div className="lg:hidden flex">
                     <OpenStreetMap
                         showHRInfo={showHRFilter}
                         isDesktopMap={false}

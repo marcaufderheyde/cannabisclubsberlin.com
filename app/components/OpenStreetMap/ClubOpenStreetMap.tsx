@@ -39,8 +39,8 @@ export default function ClubOpenStreetMap({ club }: ClubProps) {
             style={{ height: '400px', width: '100%' }}
         >
             <TileLayer
-                //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                url="https://api.maptiler.com/maps/darkmatter/{z}/{x}/{y}.png?key=KFzeqoMZOcvot9qqW4I8"
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                //url="https://api.maptiler.com/maps/darkmatter/{z}/{x}/{y}.png?key=KFzeqoMZOcvot9qqW4I8"
 
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />

@@ -3,7 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { getClubMetadata } from '@/app/helpers/getClubMetadata';
 
 export const generateMetadata = async () => {
-    return await getClubMetadata('nicetime-ev');
+    return await getClubMetadata('ntc-greenberlin-ev');
 };
 
 export default function Clubs({

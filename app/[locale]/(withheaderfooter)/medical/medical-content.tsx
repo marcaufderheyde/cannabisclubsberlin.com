@@ -38,7 +38,7 @@ export default function MedicalContent() {
                 <li>{t('table_of_contents_item8')}</li>
             </ul>
 
-            {/* Section: Eligibility */}
+            {/* Sections (Eligibility, How to Get, Costs, etc.) */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('eligibility_heading')}
@@ -48,7 +48,6 @@ export default function MedicalContent() {
                 {t('eligibility_text')}
             </p>
 
-            {/* Section: How to Get a Prescription */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('how_to_get_heading')}
@@ -58,17 +57,6 @@ export default function MedicalContent() {
                 {t('how_to_get_text')}
             </p>
 
-            {/* Section: Forms and Dosages */}
-            <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-                    {t('forms_dosages_heading')}
-                </h2>
-            </GradientText>
-            <p className="text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
-                {t('forms_dosages_text')}
-            </p>
-
-            {/* Section: Costs and Insurance */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('costs_insurance_heading')}
@@ -78,34 +66,13 @@ export default function MedicalContent() {
                 {t('costs_insurance_text')}
             </p>
 
-            {/* Section: Pharmacies and Supply */}
-            <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-                    {t('pharmacies_supply_heading')}
-                </h2>
-            </GradientText>
-            <p className="text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
-                {t('pharmacies_supply_text')}
-            </p>
-
-            {/* Section: Legal Considerations */}
-            <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-                    {t('legal_considerations_heading')}
-                </h2>
-            </GradientText>
-            <p className="text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
-                {t('legal_considerations_text')}
-            </p>
-
-            {/* Section: FAQ */}
+            {/* FAQ */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('faq_heading')}
                 </h2>
             </GradientText>
 
-            {/* FAQ Items */}
             <div className="flex flex-col gap-8">
                 <div>
                     <h3 className="text-[1rem] md:text-[1.5rem] font-bold text-[#575757]">
@@ -124,25 +91,72 @@ export default function MedicalContent() {
                         {t('faq_a2')}
                     </p>
                 </div>
-
-                <div>
-                    <h3 className="text-[1rem] md:text-[1.5rem] font-bold text-[#575757]">
-                        {t('faq_q3')}
-                    </h3>
-                    <p className="text-[1rem] my-2 md:text-[1.5rem] text-[#575757]">
-                        {t('faq_a3')}
-                    </p>
-                </div>
-
-                <div>
-                    <h3 className="text-[1rem] md:text-[1.5rem] font-bold text-[#575757]">
-                        {t('faq_q4')}
-                    </h3>
-                    <p className="text-[1rem] my-2 md:text-[1.5rem] text-[#575757]">
-                        {t('faq_a4')}
-                    </p>
-                </div>
             </div>
+
+            {/* Sources & References Section */}
+            <GradientText>
+                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                    {t('sources_heading')}
+                </h2>
+            </GradientText>
+
+            <ul className="list-disc ml-6 text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
+                <li>
+                    <a
+                        href="https://www.bfarm.de/DE/Bundesopiumstelle/Cannabis/_node.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                    >
+                        German Federal Institute for Drugs and Medical Devices
+                        (BfArM) - Medical Cannabis Regulations
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.g-ba.de/themen/arzneimittel/verordnungsfaehigkeit/medizinisches-cannabis/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                    >
+                        Federal Joint Committee (G-BA) - Prescription Process
+                        for Medical Cannabis
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.kbv.de/html/1150_59784.php"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                    >
+                        National Association of Statutory Health Insurance
+                        Physicians - Insurance Coverage for Cannabis
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.bundesgesundheitsministerium.de/themen/medizin-und-forschung/cannabis-als-medizin.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                    >
+                        German Federal Ministry of Health - Overview of Cannabis
+                        as Medicine
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.ekah.admin.ch/en/topics/cannabis.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                    >
+                        Swiss Ethics Committee on Cannabis Use (for European
+                        comparisons)
+                    </a>
+                </li>
+            </ul>
         </div>
     );
 }

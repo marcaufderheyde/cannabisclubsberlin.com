@@ -182,7 +182,8 @@
         "faq_a3": "Gesetzlich sind bis zu 100 g Blüten pro 30 Tage möglich, was sehr hoch ist. Meist liegen Rezepte deutlich darunter. Eine höhere Menge erfordert eine besondere Begründung.",
 
         "faq_q4": "Was, wenn die Kasse meinen Antrag ablehnt?",
-        "faq_a4": "Du kannst Widerspruch einlegen und weitere Unterlagen einreichen. Manche Ablehnungen werden bei genauerer Prüfung aufgehoben. Wenn es gar nicht klappt, kannst du die Kosten auch selbst tragen, sofern du finanziell dazu in der Lage bist."
+        "faq_a4": "Du kannst Widerspruch einlegen und weitere Unterlagen einreichen. Manche Ablehnungen werden bei genauerer Prüfung aufgehoben. Wenn es gar nicht klappt, kannst du die Kosten auch selbst tragen, sofern du finanziell dazu in der Lage bist.",
+        "sources_heading": "Quellen & Referenzen"
     },
     "Navbar": {
         "clubs_title": "Vereine",
@@ -191,7 +192,7 @@
         "about_title": "Über uns",
         "reviews_title": "Bewertungen",
         "harm_reduction_title": "Schadensminderung",
-        "medical_title": "Medizinisches Cannabis"
+        "medical_title": "Med. Cannabis"
     },
     "Footer": {
         "imprint": "Impressum",

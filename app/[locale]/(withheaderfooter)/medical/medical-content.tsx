@@ -38,7 +38,7 @@ export default function MedicalContent() {
                 <li>{t('table_of_contents_item8')}</li>
             </ul>
 
-            {/* Sections (Eligibility, How to Get, Costs, etc.) */}
+            {/* Eligibility Section */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('eligibility_heading')}
@@ -48,6 +48,7 @@ export default function MedicalContent() {
                 {t('eligibility_text')}
             </p>
 
+            {/* Prescription Process Section */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('how_to_get_heading')}
@@ -57,6 +58,17 @@ export default function MedicalContent() {
                 {t('how_to_get_text')}
             </p>
 
+            {/* Forms and Dosages Section */}
+            <GradientText>
+                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                    {t('forms_dosages_heading')}
+                </h2>
+            </GradientText>
+            <p className="text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
+                {t('forms_dosages_text')}
+            </p>
+
+            {/* Costs and Insurance Section */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('costs_insurance_heading')}
@@ -66,13 +78,42 @@ export default function MedicalContent() {
                 {t('costs_insurance_text')}
             </p>
 
-            {/* FAQ */}
+            {/* Pharmacies and Supply Section */}
+            <GradientText>
+                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                    {t('pharmacies_supply_heading')}
+                </h2>
+            </GradientText>
+            <p className="text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
+                {t('pharmacies_supply_text')}
+            </p>
+
+            {/* Legal Considerations Section */}
+            <GradientText>
+                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                    {t('legal_considerations_heading')}
+                </h2>
+            </GradientText>
+            <p className="text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
+                {t('legal_considerations_text')}
+            </p>
+
+            {/* Cannabisgesetz (CannaG) Updates Section */}
+            <GradientText>
+                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                    {t('cannag_heading')}
+                </h2>
+            </GradientText>
+            <p className="text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
+                {t('cannag_text')}
+            </p>
+
+            {/* FAQ Section */}
             <GradientText>
                 <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
                     {t('faq_heading')}
                 </h2>
             </GradientText>
-
             <div className="flex flex-col gap-8">
                 <div>
                     <h3 className="text-[1rem] md:text-[1.5rem] font-bold text-[#575757]">
@@ -82,13 +123,28 @@ export default function MedicalContent() {
                         {t('faq_a1')}
                     </p>
                 </div>
-
                 <div>
                     <h3 className="text-[1rem] md:text-[1.5rem] font-bold text-[#575757]">
                         {t('faq_q2')}
                     </h3>
                     <p className="text-[1rem] my-2 md:text-[1.5rem] text-[#575757]">
                         {t('faq_a2')}
+                    </p>
+                </div>
+                <div>
+                    <h3 className="text-[1rem] md:text-[1.5rem] font-bold text-[#575757]">
+                        {t('faq_q3')}
+                    </h3>
+                    <p className="text-[1rem] my-2 md:text-[1.5rem] text-[#575757]">
+                        {t('faq_a3')}
+                    </p>
+                </div>
+                <div>
+                    <h3 className="text-[1rem] md:text-[1.5rem] font-bold text-[#575757]">
+                        {t('faq_q4')}
+                    </h3>
+                    <p className="text-[1rem] my-2 md:text-[1.5rem] text-[#575757]">
+                        {t('faq_a4')}
                     </p>
                 </div>
             </div>
@@ -99,7 +155,6 @@ export default function MedicalContent() {
                     {t('sources_heading')}
                 </h2>
             </GradientText>
-
             <ul className="list-disc ml-6 text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
                 <li>
                     <a

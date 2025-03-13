@@ -139,50 +139,40 @@
     },
     "MedicalPage": {
         "headline": "Medizinisches Cannabis in Deutschland: Dein kompletter Leitfaden",
-
         "intro_heading": "Einführung",
-        "intro_text": "Medizinisches Cannabis ist in Deutschland seit 2017 für schwer kranke Patientinnen und Patienten legal. Ärztinnen und Ärzte können Cannabisblüten, Extrakte oder andere cannabishaltige Arzneimittel verordnen, wenn es keine ausreichende Alternativtherapie gibt. Dieser Guide erklärt dir, wer in Frage kommt, wie du ein Rezept bekommen kannst, wie viel das kostet und was du rechtlich beachten musst.",
-
+        "intro_text": "Medizinisches Cannabis ist in Deutschland seit 2017 für schwer kranke Patientinnen und Patienten legal. Ärztinnen und Ärzte können Cannabisblüten, Extrakte oder andere cannabishaltige Arzneimittel verordnen, wenn es keine ausreichende Alternativtherapie gibt. Dieser Guide erklärt dir, wer in Frage kommt, wie du ein Rezept bekommst, welche Darreichungsformen und Dosierungen möglich sind, welche Kosten und Krankenkassenregelungen gelten, wie die Apothekenversorgung funktioniert, was du rechtlich beachten musst und welche Neuerungen das Cannabisgesetz (CannaG) mit sich bringt.",
         "table_of_contents_title": "Inhaltsverzeichnis",
         "table_of_contents_item1": "1. Wer kommt dafür in Frage?",
         "table_of_contents_item2": "2. Wie bekommst du ein Rezept?",
         "table_of_contents_item3": "3. Formen und Dosierung",
-        "table_of_contents_item4": "4. Kosten und Krankenkasse",
+        "table_of_contents_item4": "4. Kosten und Krankenkassenübernahme",
         "table_of_contents_item5": "5. Apotheken und Versorgung",
         "table_of_contents_item6": "6. Rechtliche Hinweise",
-        "table_of_contents_item7": "7. Häufige Fragen (FAQ)",
-        "table_of_contents_item8": "8. Weitere Ressourcen",
-
+        "table_of_contents_item7": "7. Cannabisgesetz (CannaG) Updates",
+        "table_of_contents_item8": "8. Häufige Fragen (FAQ)",
         "eligibility_heading": "Wer bekommt ein Cannabis-Rezept?",
-        "eligibility_text": "Cannabis kann dir verschrieben werden, wenn du an einer ernsthaften Erkrankung leidest, die deine Lebensqualität stark einschränkt. Häufige Beispiele sind chronische Schmerzen, Multiple Sklerose oder schwere Übelkeit bei Chemotherapie. Du solltest bereits gängige Therapien ausprobiert haben, die nicht ausreichend geholfen haben. Deine Ärztin oder dein Arzt wird prüfen, ob Cannabis in deinem Fall sinnvoll ist.",
-
+        "eligibility_text": "Cannabis kann dir verschrieben werden, wenn du an einer ernsthaften, chronischen Erkrankung leidest, die deine Lebensqualität stark einschränkt. Typische Beispiele sind chronische Schmerzen, Multiple Sklerose, bestimmte Epilepsien, starke Übelkeit bei Chemotherapie oder Appetitlosigkeit. Du solltest bereits gängige Therapien ausprobiert haben, die nicht ausreichend geholfen haben. Deine Ärztin oder dein Arzt entscheidet im Einzelfall, ob Cannabis als Therapie sinnvoll ist.",
         "how_to_get_heading": "Wie du ein Rezept bekommst",
-        "how_to_get_text": "Sprich mit einer Ärztin oder einem Arzt, der offen für Cannabis als Medizin ist und deine Unterlagen sichtet. Stellt sie oder er fest, dass du in Frage kommst, kann ein Antrag bei deiner Krankenkasse eingereicht werden (bei vielen Ärztinnen und Ärzten ist keine Vorab-Genehmigung mehr nötig). Anschließend wird das Rezept auf einem BtM- oder E-Rezept-Formular ausgestellt, das du in der Apotheke einlösen kannst. Regelmäßige Kontrolltermine helfen, die Therapie zu überwachen und gegebenenfalls anzupassen.",
-
+        "how_to_get_text": "Sprich mit einer Ärztin oder einem Arzt, der offen für Cannabis als Medizin ist. Sie oder er prüft deine Krankengeschichte und stellt fest, ob du in Frage kommst. Ist dies der Fall, wird ein Antrag bei deiner Krankenkasse gestellt – viele Ärzte können inzwischen direkt verschreiben, ohne auf eine Vorabgenehmigung zu warten. Nach Genehmigung wird das Rezept auf einem normalen Formular ausgestellt, das du in der Apotheke einlösen kannst.",
         "forms_dosages_heading": "Formen und Dosierung",
-        "forms_dosages_text": "Medizinisches Cannabis gibt es als getrocknete Blüten, Extrakte (Öle), Kapseln oder Fertigarzneimittel wie Sativex. Die Dosierung ist individuell: Viele beginnen mit 0,1–0,2 g Blüten pro Inhalation und steigern langsam. Bei Ölen misst man THC/CBD in Milligramm pro Milliliter. Immer nach ärztlicher Anweisung vorgehen und die niedrigste wirksame Dosis anstreben.",
-
+        "forms_dosages_text": "Medizinisches Cannabis ist in Deutschland als getrocknete Blüten, standardisierte Extrakte (Öle), Kapseln oder als Fertigarzneimittel wie Sativex erhältlich. Für die Inhalation wird das Verdampfen (statt Rauchen) empfohlen, um schädliche Verbrennungsprodukte zu vermeiden. Die Dosierung ist individuell: Viele beginnen mit 0,1–0,2 g pro Inhalation und steigern langsam. Orale Präparate werden in Milligramm THC/CBD dosiert. Befolge immer die Anweisungen deines Arztes.",
         "costs_insurance_heading": "Kosten und Krankenkassenübernahme",
-        "costs_insurance_text": "Ein Gramm Cannabisblüten kostet dich selbst bezahlt oft über 20 €, was schnell teuer wird. Gesetzliche Kassen übernehmen die Kosten, wenn eine schwere Erkrankung vorliegt und andere Therapien versagt haben. Private Versicherungen entscheiden je nach Tarif. Wird es übernommen, zahlst du nur die übliche Zuzahlung (z.B. 5–10 €). Bei Ablehnung kannst du Widerspruch einlegen oder notfalls selbst zahlen.",
-
+        "costs_insurance_text": "Selbst gezahltes Cannabis kostet oft über 20 € pro Gramm. Gesetzliche Krankenkassen übernehmen die Kosten, wenn eine schwere Erkrankung vorliegt und andere Therapien nicht wirken – meist zahlst du nur die übliche Zuzahlung. Bei privaten Versicherungen richtet sich die Kostenübernahme nach dem Tarif. Wird es nicht übernommen, musst du die Kosten selbst tragen.",
         "pharmacies_supply_heading": "Apotheken und Versorgung",
-        "pharmacies_supply_text": "Du kannst medizinisches Cannabis nur in Apotheken bekommen. Falls eine Sorte nicht lagernd ist, kann die Apotheke sie bestellen. Deutschland bezieht Cannabis sowohl aus einheimischem Anbau als auch aus Importen. Du erhältst ein genau etikettiertes Produkt mit Angaben zu THC/CBD. Manchmal kommt es zu Engpässen, aber meist sind verschiedene Sorten lieferbar. Bewahre dein Cannabis sicher auf und gib es nicht an andere weiter.",
-
-        "legal_considerations_heading": "Rechtliches",
-        "legal_considerations_text": "Mit Rezept darfst du Cannabis besitzen und konsumieren, musst aber bei Polizeikontrollen dein Rezept oder die Apothekenverpackung vorzeigen können. Autofahren ist heikel, weil Deutschland strikte THC-Grenzwerte hat. Eigener Anbau ist verboten, und du darfst dein Cannabis nicht aus Freizeitquellen beziehen. Bei Reisen ins Ausland benötigst du oft zusätzliche Dokumente und musst die Gesetze im Zielland beachten.",
-
+        "pharmacies_supply_text": "Medizinisches Cannabis erhältst du ausschließlich in Apotheken. Viele Apotheken bestellen die gewünschten Produkte bei Bedarf und bieten teilweise auch Versanddienste an. Du bekommst dein Cannabis in einer neutralen Verpackung mit Angaben zu Sorte, THC-/CBD-Gehalt, Verfallsdatum und Anwendungshinweisen. Es ist wichtig, dass du stets ein Apothekenprodukt erhältst, um eine gleichbleibende Qualität sicherzustellen.",
+        "legal_considerations_heading": "Rechtliche Hinweise",
+        "legal_considerations_text": "Mit einem gültigen Rezept darfst du Cannabis besitzen und konsumieren – beachte jedoch die strikten Vorschriften, insbesondere im Straßenverkehr (THC-Grenzwert: 3,5 ng/ml). Eigenanbau als medizinisches Produkt ist nicht zulässig, und nur Apothekenprodukte werden von Krankenkassen erstattet. Beim Reisen benötigst du oft zusätzliche Dokumente wie ein Schengen-Zertifikat.",
+        "cannag_heading": "Cannabisgesetz (CannaG) Updates",
+        "cannag_text": "Mit der Reform vom 1. April 2024 wurden zwei separate Regelungen geschaffen: das Medizinal-Cannabisgesetz (MedCanG) für medizinische Zwecke und das Konsumcannabisgesetz (KCanG) für den Freizeitgebrauch. Medizinisches Cannabis wird weiterhin über Ärzte und Apotheken bezogen – das spezielle BtM-Rezept entfällt. Für Erwachsene gilt nun, dass sie bis zu 25 g Cannabis besitzen und bis zu 3 Pflanzen anbauen dürfen. Außerdem können Cannabis-Clubs gegründet werden, die pro Mitglied monatlich bis zu 50 g abgeben. Patienten sollten weiterhin den medizinischen Versorgungsweg nutzen, da nur so eine standardisierte Qualität und Kostenerstattung gewährleistet ist.",
         "faq_heading": "Häufige Fragen (FAQ)",
         "faq_q1": "Kann jede Ärztin oder jeder Arzt Cannabis verschreiben?",
-        "faq_a1": "Ja, grundsätzlich schon (außer Zahn- oder Tierärzte). Manche haben aber mehr Erfahrung damit als andere. Wenn dein Hausarzt skeptisch ist, kannst du es bei Schmerztherapeuten, Neurologen oder spezialisierten Cannabis-Kliniken probieren.",
-
+        "faq_a1": "Ja, grundsätzlich kann jeder approbierte Arzt (außer Zahn- und Tierärzte) medizinisches Cannabis verschreiben. Einige Ärzte haben jedoch mehr Erfahrung damit als andere. Hausärzte, Schmerztherapeuten oder spezialisierte Cannabis-Kliniken sind oft die besten Ansprechpartner.",
         "faq_q2": "Brauche ich immer eine Genehmigung der Krankenkasse?",
-        "faq_a2": "Viele Ärztinnen und Ärzte dürfen mittlerweile direkt verschreiben. Einige Krankenkassen verlangen trotzdem einen Antrag, besonders wenn die Lage unklar ist. Frage am besten bei deiner Kasse und deinem Arzt nach.",
-
-        "faq_q3": "Wie viel Gramm kann verschrieben werden?",
-        "faq_a3": "Gesetzlich sind bis zu 100 g Blüten pro 30 Tage möglich, was sehr hoch ist. Meist liegen Rezepte deutlich darunter. Eine höhere Menge erfordert eine besondere Begründung.",
-
-        "faq_q4": "Was, wenn die Kasse meinen Antrag ablehnt?",
-        "faq_a4": "Du kannst Widerspruch einlegen und weitere Unterlagen einreichen. Manche Ablehnungen werden bei genauerer Prüfung aufgehoben. Wenn es gar nicht klappt, kannst du die Kosten auch selbst tragen, sofern du finanziell dazu in der Lage bist.",
+        "faq_a2": "Bei gesetzlich Versicherten ist oft eine Vorabgenehmigung erforderlich – allerdings können viele Ärzte mittlerweile direkt verschreiben. Informiere dich bei deiner Krankenkasse und deinem Arzt, wie der Prozess in deinem Fall abläuft.",
+        "faq_q3": "Wie viel Gramm Cannabis kann verschrieben werden?",
+        "faq_a3": "Gesetzlich können bis zu 100 g Cannabisblüten pro 30 Tage verordnet werden, wobei die meisten Verschreibungen deutlich darunter liegen. Höhere Mengen erfordern eine besondere medizinische Begründung.",
+        "faq_q4": "Was, wenn die Krankenkasse meinen Antrag ablehnt?",
+        "faq_a4": "Du kannst Widerspruch einlegen und zusätzliche Unterlagen einreichen. Viele anfängliche Ablehnungen werden bei genauerer Prüfung aufgehoben. Alternativ kannst du auch in Erwägung ziehen, die Kosten selbst zu tragen, sofern das medizinisch notwendig ist.",
         "sources_heading": "Quellen & Referenzen"
     },
     "Navbar": {

@@ -13,7 +13,7 @@ export default function MedicalContent() {
             {/* Page Header */}
             <PageHeader text={t('headline')} className="scale-100" />
 
-            {/* Intro Section */}
+            {/* Introduction Section */}
             <h2 className="text-xl md:text-3xl lg:text-4xl text-[#575757] font-medium">
                 {t('intro_heading')}
             </h2>
@@ -209,6 +209,27 @@ export default function MedicalContent() {
                     >
                         Swiss Ethics Committee on Cannabis Use (for European
                         comparisons)
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://flowzz.com/cannabis-auf-rezept"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                    >
+                        Flowzz – Cannabis auf Rezept (2024)
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://flowzz.com/ratgeber/cannabis-rezept"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 underline"
+                    >
+                        Flowzz Magazin – Medizinisches Cannabis: So leicht kann
+                        es gehen
                     </a>
                 </li>
             </ul>

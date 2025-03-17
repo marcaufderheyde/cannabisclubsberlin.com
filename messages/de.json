@@ -22,7 +22,10 @@
         "harm_reduction_description": "Die Schadensminimierung bei Cannabis hält Nutzen und Risiken in einem ausgewogenen Verhältnis, betont den sicheren Konsum und unterstützt die öffentliche Gesundheit.",
         "harm_reduction_keywords": "Cannabis-Schadensminderung, therapeutische Wirkungen von Cannabis, Cannabis-Schmerzlinderung, Cannabis gegen Angst, Minderung von Cannabis-Risiken, Cannabis-Abhängigkeitsrisiken, kognitive Wirkungen von Cannabis, Cannabis und psychische Gesundheit, Aufklärung über Cannabis-Konsum, Mäßigung beim Cannabis-Konsum, Unterstützung der Cannabis-Forschung, öffentliche Gesundheit und Cannabis, Cannabis-Vorteile, Cannabis-Ratgeber, ausführlicher Cannabis-Ratgeber, Cannabis-Sicherheitspraktiken, Drug-Checking Berlin, anonyme Drogentests, kostenlose Substanztests Berlin, Beratung zu psychoaktiven Substanzen Berlin, Schadensminderungskampagnen Berlin, sicherer Cannabis-Konsum Berlin, Drogensicherheit Berlin",
         "terms_of_use_title": "Nutzungsbedingungen",
-        "imprint_title": "Impressum"
+        "imprint_title": "Impressum",
+        "medical_title": "So bekommst du ein Rezept für medizinisches Cannabis in Deutschland",
+        "medical_description": "Ein umfassender Ratgeber über geeignete Krankheiten, Verschreibungsschritte, Kosten, Darreichungsformen und rechtliche Aspekte von medizinischem Cannabis in Deutschland.",
+        "medical_keywords": "medizinisches Cannabis Deutschland, Cannabis-Rezept, wie bekommt man medizinisches Marihuana, deutsches Gesundheitssystem, Cannabis-Kosten, Krankenkassenübernahme"
     },
     "IndexPage": {
         "title": "Willkommen bei CCB (Cannabis Clubs Berlin)!"
@@ -43,7 +46,9 @@
         "our_history_one": "CannabisClubsBerlin.com wurde von drei jungen Berlinern gegründet, die tief in der Cannabisszene der Stadt verwurzelt sind. Als die Legalisierung näher rückte, erkannten sie den Bedarf an qualitativ hochwertigen und zugänglichen Informationen über aufkommende Cannabis Social Clubs, insbesondere mit Fokus auf die angebotenen Schadensminderungsdienste. So entstand CannabisClubsBerlin.com mit dem Ziel, fundierte und detaillierte Bewertungen von Clubs in Berlin zu liefern.",
         "our_history_two": "Vorerst konzentriert sich das Portal ausschließlich auf Berlin, um sicherzustellen, dass die Bewertungen so qualitativ und detailliert wie möglich sind, wobei direkter Kontakt zu den Clubbesitzern und Besuche vor Ort stattfinden. Sobald die Clubs vollständig in Betrieb sind, wird CannabisClubsBerlin.com umfassende Bewertungen zu den Angeboten und Dienstleistungen der Clubs veröffentlichen.",
         "our_history_three": "In Zukunft wird es den Nutzern ermöglicht, verifizierte Bewertungen über ein einzigartiges CCB-Club-Identifikationssystem zu posten. Um mehr über das kommende Bewertungssystem zu erfahren, klicke auf den untenstehenden Button!",
-        "reviews_button": "Bewertungen"
+        "reviews_button": "Bewertungen",
+        "faq_lead": "Falls du noch Fragen zu cannabisclubsberlin.com hast, schau dir gerne unsere häufig gestellten Fragen an oder melde dich, wenn du Kontakt aufnehmen möchtest!",
+        "faq_button": "Zu den FAQs"
     },
     "ReviewsPage": {
         "headline": "Bewertungen",
@@ -74,8 +79,21 @@
     },
     "ContactPage": {
         "headline": "Kontakt",
-        "headline_description": "Bitte zögere nicht, uns über die unten aufgeführten Kanäle zu kontaktieren.",
-        "headline_subdescription": "cannabisclubsberlin@protonmail.me"
+        "headline_description": "Fühl dich frei, uns über die unten aufgeführten Kanäle zu kontaktieren.",
+        "headline_subdescription": "cannabisclubsberlin@protonmail.me",
+
+        "faq_headline": "Häufig gestellte Fragen",
+        "faq_q1": "Wo ist euer Club?",
+        "faq_a1": "CannabisClubsBerlin.com ist kein eingetragener Cannabis Social Club, sondern eine Übersicht über registrierte Social Clubs in Berlin. Die auf CannabisClubsBerlin.com aufgeführten Informationen sind öffentlich zugänglich und werden hier gesammelt, damit du eine fundierte Entscheidung treffen kannst, welchem Club du beitreten möchtest.",
+
+        "faq_q2": "Kann ich bei euch Weed kaufen?",
+        "faq_a2": "Wie gesagt, CannabisClubsBerlin.com ist kein eingetragener Cannabis Social Club. Wir verkaufen kein Cannabis und können es dir nicht direkt zur Verfügung stellen.",
+
+        "faq_q3": "Gibt es Mitgliedsbeiträge?",
+        "faq_a3": "Jeder Club kann eigene Mitgliedsbeiträge oder monatliche Beiträge haben. Für genauere Infos schau bitte bei den einzelnen Clubs nach.",
+
+        "faq_q4": "Wie kann ich meine Mitgliedschaftsvoraussetzungen überprüfen?",
+        "faq_a4": "Jeder Club hat eigene Richtlinien. Bitte kontaktiere die Clubs direkt oder informiere dich in den von uns bereitgestellten Informationen, ob du ihre Anforderungen erfüllst."
     },
     "HarmReductionPage": {
         "headline": "Schadensminderung",
@@ -119,13 +137,53 @@
         "term_six": "Diese Nutzungsbedingungen unterliegen den Gesetzen von Deutschland. Streitigkeiten im Zusammenhang mit diesen Bedingungen unterliegen der ausschließlichen Zuständigkeit der Gerichte Deutschlands.",
         "disclaimer": "Durch die Nutzung von CannabisClubsBerlin.com erklärst du dich mit diesen Nutzungsbedingungen einverstanden. Wenn du mit einem dieser Bedingungen nicht einverstanden bist, ist dir die Nutzung oder der Zugriff auf diese Website untersagt."
     },
+    "MedicalPage": {
+        "headline": "Medizinisches Cannabis in Deutschland – Dein kompletter Ratgeber",
+        "intro_heading": "Einführung",
+        "intro_text": "Medizinisches Cannabis ist in Deutschland seit 2017 f\u00fcr schwerkranke Patientinnen und Patienten legal. Im April 2024 trat das neue Cannabisgesetz (CannaG) in Kraft, das medizinisches Cannabis als normales verschreibungspflichtiges Medikament einstuft und den administrativen Aufwand reduziert. Dieser Guide erkl\u00e4rt dir, wer in Frage kommt, wie du ein Rezept bekommst, welche Darreichungsformen und Dosierungen m\u00f6glich sind, welche Kosten und Regelungen bei der Krankenkasse gelten, wie die Apothekenversorgung funktioniert, was du rechtlich beachten musst und welche Neuerungen das CannaG mit sich bringt.",
+        "table_of_contents_title": "Inhaltsverzeichnis",
+        "table_of_contents_item1": "1. Wer kommt daf\u00fcr in Frage?",
+        "table_of_contents_item2": "2. Wie bekommst du ein Rezept?",
+        "table_of_contents_item3": "3. Formen und Dosierung",
+        "table_of_contents_item4": "4. Kosten und Krankenkassen\u00fcbernahme",
+        "table_of_contents_item5": "5. Apotheken und Versorgung",
+        "table_of_contents_item6": "6. Rechtliche Hinweise",
+        "table_of_contents_item7": "7. Cannabisgesetz (CannaG) Updates",
+        "table_of_contents_item8": "8. H\u00e4ufige Fragen (FAQ)",
+        "eligibility_heading": "Wer bekommt ein Cannabis-Rezept?",
+        "eligibility_text": "Cannabis kann dir verschrieben werden, wenn du an einer ernsthaften, chronischen Erkrankung leidest, die deine Lebensqualit\u00e4t stark einschr\u00e4nkt und wenn g\u00e4ngige Therapien entweder nicht wirken oder nicht vertragen werden. Typische Indikationen sind chronische Schmerzen, Multiple Sklerose, bestimmte Epilepsien, starke Chemotherapie-\u00dcbelkeit und Appetitlosigkeit. Dein Arzt entscheidet im Einzelfall, ob Cannabis f\u00fcr dich sinnvoll ist.",
+        "how_to_get_heading": "Wie du ein Rezept bekommst",
+        "how_to_get_text": "Sprich mit einer \u00c4rztin oder einem Arzt, der offen f\u00fcr Cannabis als Medizin ist. Er pr\u00fcft deine Krankengeschichte und entscheidet, ob Cannabis bei dir helfen k\u00f6nnte. Falls ja, wird entweder direkt ein Rezept ausgestellt oder, falls erforderlich, ein Antrag zur Kosten\u00fcbernahme bei deiner Krankenkasse gestellt. Seit 2023 k\u00f6nnen bestimmte Fach\u00e4rzte Cannabis auch ohne vorherige Genehmigung verschreiben, was den Prozess vereinfacht.",
+        "forms_dosages_heading": "Formen und Dosierung",
+        "forms_dosages_text": "Medizinisches Cannabis erh\u00e4ltst du in verschiedenen Formen: als getrocknete Cannabisbl\u00fcten (zur Inhalation per Vaporizer oder als Tee), als standardisierte Cannabisextrakte (\u00d6le) oder in Fertigarzneimitteln wie Dronabinol und Nabiximols (Sativex\u00ae). Das Verdampfen der Bl\u00fcten wird empfohlen, da so sch\u00e4dliche Verbrennungsprodukte vermieden werden. Die Dosierung wird individuell abgestimmt \u2013 meist beginnt man mit sehr kleinen Mengen (z.B. 0,1\u20130,2 g pro Inhalation) und steigert diese langsam, bis die Wirkung optimal ist.",
+        "costs_insurance_heading": "Kosten und Krankenkassen\u00fcbernahme",
+        "costs_insurance_text": "Selbst gezahltes Cannabis kostet in Apotheken aktuell etwa 4 bis 15 \u20ac pro Gramm, je nach Sorte und Qualität. Gesetzliche Kassen \u00fcbernehmen die Kosten, wenn die medizinischen Voraussetzungen erf\u00fcllt sind, sodass du meist nur die Zuzahlung (5\u201310 \u20ac) leistest. Bei privaten Versicherungen h\u00e4ngt es vom Tarif ab. Wird die Kosten\u00fcbernahme abgelehnt, kannst du Widerspruch einlegen oder, falls du es dir leisten kannst, ein Privatrezept nutzen.",
+        "pharmacies_supply_heading": "Apotheken und Versorgung",
+        "pharmacies_supply_text": "Medizinisches Cannabis erh\u00e4ltst du ausschlie\u00dflich in Apotheken. Viele Apotheken haben sich auf Cannabis spezialisiert und bieten auch Online-Bestellungen oder Versanddienste an. Dein Cannabis kommt in einer neutralen Verpackung, die alle wichtigen Informationen wie Sorte, THC-/CBD-Gehalt und Verfallsdatum enth\u00e4lt. Es ist wichtig, dass du ein Produkt von einer vertrauensw\u00fcrdigen Apotheke beziehst, da nur so eine konstante Qualität und Dosierung sichergestellt werden kann.",
+        "legal_considerations_heading": "Rechtliche Hinweise",
+        "legal_considerations_text": "Mit einem g\u00fcltigen Rezept darfst du Cannabis besitzen und nutzen. Beachte jedoch, dass strenge Regeln gelten \u2013 etwa beim Autofahren: Dein THC-Spiegel muss unter 3,5 ng/ml liegen, damit du fahrt\u00fchrig bleibst. Du darfst dein verschriebenes Cannabis nicht weitergeben oder verkaufen, und es ist ausschlie\u00dflich in Apotheken \u00fcber die Krankenkasse erstattungsf\u00e4hig. Trage bei Bedarf stets einen Nachweis (z.B. dein Rezept oder einen Patientenausweis) mit dir.",
+        "cannag_heading": "Cannabisgesetz (CannaG) Updates",
+        "cannag_text": "Mit der Reform vom 1. April 2024 wurde das neue Cannabisgesetz (CannaG) eingef\u00fchrt. Es unterscheidet klar zwischen medizinischem und freizeitlichem Cannabis. F\u00fcr Patientinnen und Patienten bedeutet das: Medizinisches Cannabis wird weiterhin \u00fcber den Arzt und die Apotheke bezogen. Das alte BtM-Rezept entf\u00e4llt und es k\u00f6nnen nun standardisierte Rezepte (auch E-Rezepte) genutzt werden. Gleichzeitig wurde f\u00fcr Erwachsene der freizeitliche Umgang erleichtert: Bis zu 25 g Besitz, 3 Pflanzen im Eigenanbau und die M\u00f6glichkeit, sich in Cannabis-Clubs zu organisieren, in denen pro Mitglied monatlich bis zu 50 g abgegeben werden k\u00f6nnen. Diese freizeitlichen Regelungen gelten aber nur f\u00fcr den privaten Konsum und nicht f\u00fcr medizinische Anwendungen. Als Patient solltest du weiterhin den offiziellen, medizinalen Weg gehen.",
+        "faq_heading": "H\u00e4ufige Fragen (FAQ)",
+        "faq_q1": "Kann jede \u00c4rztin oder jeder Arzt Cannabis verschreiben?",
+        "faq_a1": "Ja, jede approbierte \u00c4rztin bzw. jeder Arzt (au\u00dfer Zahn- und Tier\u00e4rzten) kann Cannabis verschreiben. Einige sind erfahrener als andere. Oft sind Haus\u00e4rzte, Schmerztherapeuten oder spezialisierte Cannabis-Kliniken die besten Ansprechpartner.",
+        "faq_q2": "Brauche ich immer eine Genehmigung der Krankenkasse?",
+        "faq_a2": "Bei gesetzlich Versicherten ist in vielen F\u00e4llen eine Vorabgenehmigung notwendig. Seit 2023 k\u00f6nnen aber bestimmte \u00c4rzte direkt verschreiben. Informiere dich am besten bei deinem Arzt und deiner Krankenkasse.",
+        "faq_q3": "Wie viel Gramm Cannabis kann verschrieben werden?",
+        "faq_a3": "Gesetzlich k\u00f6nnen bis zu 100 g Cannabisbl\u00fcten pro 30 Tage verschrieben werden, wobei die meisten Verordnungen deutlich darunter liegen. H\u00f6here Mengen erfordern eine besondere medizinische Begründung.",
+        "faq_q4": "Was mache ich, wenn die Krankenkasse meinen Antrag ablehnt?",
+        "faq_a4": "Du kannst Widerspruch einlegen und weitere Unterlagen einreichen. Viele anf\u00e4ngliche Ablehnungen werden bei genauerer Pr\u00fcfung aufgehoben. Falls das nicht klappt, besteht die Option, Cannabis auf Privatrezept zu beziehen.",
+        "sources_heading": "Quellen & Referenzen",
+        "sourcesList": "German Federal Institute for Drugs and Medical Devices (BfArM) - Medical Cannabis Regulations | Federal Joint Committee (G-BA) - Prescription Process for Medical Cannabis | National Association of Statutory Health Insurance Physicians - Insurance Coverage for Cannabis | German Federal Ministry of Health - Overview of Cannabis as Medicine | Swiss Ethics Committee on Cannabis Use (for European comparisons) | Flowzz – Cannabis auf Rezept (2024) | Flowzz Magazin – Medizinisches Cannabis: So leicht kann es gehen | AOK – Cannabis auf Rezept | Cannamedical – Kosten\u00fcbernahme f\u00fcr Cannabis | KBV \u2013 Genehmigungsvorbehalt entf\u00e4llt f\u00fcr bestimmte \u00c4rzte | KV BaW\u00fc \u2013 Seit 1. April 2024 kein BtM-Rezept mehr f\u00fcr Cannabis | BfArM \u2013 Begleiterhebung | Barmer \u2013 Cannabis auf Rezept: Wann ist das m\u00f6glich?"
+    },
     "Navbar": {
         "clubs_title": "Vereine",
         "law_title": "Gesetz",
         "contact_title": "Kontakt",
         "about_title": "Über uns",
         "reviews_title": "Bewertungen",
-        "harm_reduction_title": "Schadensminderung"
+        "harm_reduction_title": "Schadensminderung",
+        "medical_title": "Med. Cannabis"
     },
     "Footer": {
         "imprint": "Impressum",

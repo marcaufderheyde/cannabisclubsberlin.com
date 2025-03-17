@@ -25,6 +25,10 @@ export default function Navbar({ isOnMap = false }: Props) {
             href: `/${localActive}/harmreduction`,
         },
         {
+            name: t('medical_title'),
+            href: `/${localActive}/medical`,
+        },
+        {
             name: t('reviews_title'),
             href: `/${localActive}/reviews`,
         },

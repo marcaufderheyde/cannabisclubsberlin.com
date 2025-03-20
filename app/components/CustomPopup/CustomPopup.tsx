@@ -51,11 +51,17 @@ export default function CustomPopup({
     };
 
     return (
-        <div className='w-[400px] bg-white flex flex-col h-full'>
+        <div
+            className='w-full max-w-[400px] bg-white flex flex-col h-full max-h-[90vh] text-sm sm:text-base gap-4'
+            style={{
+                minWidth: '280px',
+                ...props.style,
+            }}
+        >
             {/* Top Image and Background */}
-            <div style={cardTopStyle}>
+            <div style={cardTopStyle} className='relative min-h-[130px] h-auto'>
                 {/* Colour background*/}
-                <div className='row-start-1 row-end-4 col-start-1 col-end-3 bg-gradient-to-r from-[#55834E] to-[#ABD4A4] min-h-[180px]' />
+                <div className='row-start-1 row-end-4 col-start-1 col-end-3 bg-gradient-to-r from-[#55834E] to-[#ABD4A4] min-h-[120px] h-[15vh] max-h-[180px]' />
 
                 {/* Left Column */}
                 <div className='row-start-1 row-end-5 col-start-1 col-end-2 grid grid-cols-[2fr_8fr] grid-rows-subgrid justify-items-center'>
@@ -63,7 +69,7 @@ export default function CustomPopup({
                     <button
                         className={
                             styles.closeButton +
-                            ' col-start-1 col-end-1 row-start-1 row-end-2'
+                            ' col-start-1 col-end-1 row-start-1 row-end-2 z-10'
                         }
                         onClick={onClose}
                     >
@@ -73,7 +79,7 @@ export default function CustomPopup({
                     {/* Image Container */}
                     <div
                         className={
-                            'w-[180px] h-[120px] bg-[#ffff] row-start-3 row-end-5 col-start-1 col-end-3 self-center shadow-xl'
+                            'w-[120px] h-[85px] sm:w-[180px] sm:h-[120px] bg-[#ffff] row-start-3 row-end-5 col-start-1 col-end-3 self-center shadow-xl'
                         }
                     >
                         <Image
@@ -84,7 +90,7 @@ export default function CustomPopup({
                             layout='raw'
                             className={
                                 styles.mapCardImage +
-                                ' col-start-2 col-end-3 row-start-1 row-end-3 h-[120px]'
+                                ' col-start-2 col-end-3 row-start-1 row-end-3 h-[85px] sm:h-[120px] w-full object-cover'
                             }
                         />
                     </div>
@@ -94,17 +100,17 @@ export default function CustomPopup({
                 <div></div>
 
                 {/* Harm Reduction Tag */}
-                <div className='row-start-3 row-end-5 col-start-2 col-end-3 justify-self-center self-center translate-y-[50%] mr-5 relative'>
+                <div className='row-start-3 row-end-5 col-start-2 col-end-3 justify-self-center self-center translate-y-[50%] mr-2 sm:mr-5 relative'>
                     {club.hasHRInformation && (
                         <>
-                            <div className='bg-white text-[#686868] text-sm font-bold py-3 px-3 rounded-full shadow-lg'>
+                            <div className='bg-white text-[#686868] text-xs sm:text-sm font-bold py-1 px-2 sm:py-3 sm:px-3 rounded-full shadow-lg'>
                                 Harm Reduction
                             </div>
                             {/* Green circle with white checkmark */}
-                            <div className='absolute -bottom-3 -right-1 bg-[#B6CF54] w-6 h-6 rounded-full flex items-center justify-center shadow-md'>
+                            <div className='absolute -bottom-3 -right-1 bg-[#B6CF54] w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center shadow-md'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
-                                    className='h-4 w-4 text-white'
+                                    className='h-3 w-3 sm:h-4 sm:w-4 text-white'
                                     viewBox='0 0 20 20'
                                     fill='currentColor'
                                 >
@@ -120,38 +126,44 @@ export default function CustomPopup({
                 </div>
             </div>
 
-            {/* Title Tag, location, webstie, tags */}
-            <div className={'flex flex-col mx-7 h-full overflow-hidden'}>
+            {/* Title Tag, location, website, tags */}
+            <div
+                className={'flex flex-col mx-3 sm:mx-7 flex-grow overflow-auto'}
+            >
                 <div className='flex flex-col gap-1'>
                     {/* Title */}
                     <a
                         href={`/${localActive}/clubs/${club.slug}`}
                         className={styles.mapCardLink}
                     >
-                        <h3 className={styles.mapCardTitle + ' '}>
+                        <h3
+                            className={
+                                styles.mapCardTitle + ' text-base sm:text-lg'
+                            }
+                        >
                             {club.name}
                         </h3>
                     </a>
                     {/* Location */}
-                    <h4 className='text-[#686868] font-medium text-sm'>
+                    <h4 className='text-[#686868] font-medium text-xs sm:text-sm'>
                         {club.address}
                     </h4>
                     {/* Website */}
                     <a
-                        className='text-[#454545] hover:text-[#2c2c2c] font-light text-sm mb-3'
+                        className='text-[#454545] hover:text-[#2c2c2c] font-light text-xs sm:text-sm mb-1 sm:mb-3'
                         href={club.clubPageUrl}
                     >
                         Website
                     </a>
                     {/* Tags */}
-                    <div className='flex flex-row gap-2 flex-wrap'>
+                    <div className='flex flex-row gap-1 sm:gap-2 flex-wrap'>
                         {club.offerings
                             ?.toString()
                             .split(',')
                             .map((offering) => (
                                 <div
                                     key={offering}
-                                    className='bg-[#ABD4A4] text-white text-sm rounded-xl py-1 px-2 self-center overflow-ellipsis shadow-md'
+                                    className='bg-[#ABD4A4] text-white text-xs sm:text-sm rounded-xl py-1 px-2 self-center overflow-ellipsis shadow-md'
                                 >
                                     {offering}
                                 </div>
@@ -160,19 +172,19 @@ export default function CustomPopup({
                 </div>
 
                 {/* divider */}
-                <div className='w-full my-4 border-t border-gray-300'></div>
+                <div className='w-full my-2 sm:my-4 border-t border-gray-300'></div>
 
                 {/* description */}
-                <div className='min-h-[200px] max-h-[200px] overflow-y-auto pr-1'>
-                    <p className='line-clamp-[9] font-light text-sm'>
+                <div className='min-h-[100px] h-[100%] max-h-[500px] overflow-y-auto pr-1'>
+                    <p className='line-clamp-[8] sm:line-clamp-[9] font-light text-xs sm:text-sm'>
                         {club.description}
                     </p>
                 </div>
 
                 {/* Action Button */}
-                <div className='flex justify-end my-6'>
+                <div className='flex justify-end my-3 sm:my-6'>
                     <button
-                        className='bg-[#ABD4A4] hover:bg-[#4A7445] text-white font-medium py-2 px-6 transition duration-300'
+                        className='bg-[#ABD4A4] hover:bg-[#4A7445] text-white font-medium py-1.5 px-4 sm:py-2 sm:px-6 text-sm transition duration-300'
                         onClick={() =>
                             window.open(
                                 `/${localActive}/clubs/${club.slug}`,

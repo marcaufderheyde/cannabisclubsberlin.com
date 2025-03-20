@@ -52,7 +52,7 @@ export default function CustomPopup({
 
     return (
         <div
-            className='w-full max-w-[400px] bg-white flex flex-col h-full max-h-[90vh] text-sm sm:text-base gap-4'
+            className='w-full max-w-[400px] bg-white flex flex-col h-full text-sm sm:text-base gap-4'
             style={{
                 minWidth: '280px',
                 ...props.style,
@@ -186,10 +186,7 @@ export default function CustomPopup({
                     <button
                         className='bg-[#ABD4A4] hover:bg-[#4A7445] text-white font-medium py-1.5 px-4 sm:py-2 sm:px-6 text-sm transition duration-300'
                         onClick={() =>
-                            window.open(
-                                `/${localActive}/clubs/${club.slug}`,
-                                '_blank'
-                            )
+                            window.open(`/${localActive}/clubs/${club.slug}`)
                         }
                     >
                         View Club

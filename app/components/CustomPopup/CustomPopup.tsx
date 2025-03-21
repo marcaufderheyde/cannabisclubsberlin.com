@@ -128,7 +128,9 @@ export default function CustomPopup({
 
             {/* Title Tag, location, website, tags */}
             <div
-                className={'flex flex-col mx-3 sm:mx-7 flex-grow overflow-auto'}
+                className={
+                    'flex flex-col mx-3 sm:mx-7 flex-grow overflow-auto mt-8'
+                }
             >
                 <div className='flex flex-col gap-1'>
                     {/* Title */}

@@ -42,7 +42,6 @@ export default function MedicalContent() {
             {/* Eligibility Section */}
             <GradientText>
                 <h2 id="table_of_contents_item1" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('eligibility_heading')}
                 </h2>
             </GradientText>
@@ -53,7 +52,6 @@ export default function MedicalContent() {
             {/* Prescription Process Section */}
             <GradientText>
                 <h2 id="table_of_contents_item2" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('how_to_get_heading')}
                 </h2>
             </GradientText>
@@ -64,7 +62,6 @@ export default function MedicalContent() {
             {/* Forms and Dosages Section */}
             <GradientText>
                 <h2 id="table_of_contents_item3" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('forms_dosages_heading')}
                 </h2>
             </GradientText>
@@ -75,7 +72,6 @@ export default function MedicalContent() {
             {/* Costs and Insurance Section */}
             <GradientText>
                 <h2 id="table_of_contents_item4" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('costs_insurance_heading')}
                 </h2>
             </GradientText>
@@ -86,7 +82,6 @@ export default function MedicalContent() {
             {/* Pharmacies and Supply Section */}
             <GradientText>
                 <h2 id="table_of_contents_item5" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('pharmacies_supply_heading')}
                 </h2>
             </GradientText>
@@ -97,7 +92,6 @@ export default function MedicalContent() {
             {/* Legal Considerations Section */}
             <GradientText>
                 <h2 id="table_of_contents_item6" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('legal_considerations_heading')}
                 </h2>
             </GradientText>
@@ -108,7 +102,6 @@ export default function MedicalContent() {
             {/* Cannabisgesetz (CannaG) Updates Section */}
             <GradientText>
                 <h2 id="table_of_contents_item7" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('cannag_heading')}
                 </h2>
             </GradientText>
@@ -119,7 +112,6 @@ export default function MedicalContent() {
             {/* FAQ Section */}
             <GradientText>
                 <h2 id="table_of_contents_item8" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
-
                     {t('faq_heading')}
                 </h2>
             </GradientText>

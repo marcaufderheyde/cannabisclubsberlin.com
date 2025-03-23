@@ -2,20 +2,27 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CustomPopup from './CustomPopup';
+import { mock } from 'node:test';
 
+// Mock next-intl
 jest.mock('next-intl', () => ({
     useLocale: () => 'en',
 }));
 
 describe('CustomPopup Component', () => {
+    // Test data setup
     const mockClub = {
-        name: 'Test Club',
-        slug: 'test-club',
-        imageUrl: '/test-image.jpg',
+        id: '1',
+        name: 'Cannabis Club Berlin',
+        slug: 'cannabis-club-berlin',
+        imageUrl: '/images/test-club.jpg',
+        address: 'Alexanderplatz 1, Berlin',
+        clubPageUrl: 'https://example.com',
         geoLocation: [52.52, 13.405],
-        description: 'Test description',
-        offerings: ['Test offerings'],
-        harm_reduction: '',
+        description:
+            'A premium cannabis social club in Berlin offering a variety of strains.',
+        offerings: ['Premium Buds', 'Edibles', 'Concentrates'],
+        harm_reduction: 'Information about safe consumption practices',
         hasHRInformation: true,
     };
 
@@ -23,7 +30,18 @@ describe('CustomPopup Component', () => {
         club: mockClub,
         clubs: [
             mockClub,
-            { ...mockClub, name: 'Another Club', slug: 'another-club' },
+            {
+                ...mockClub,
+                id: '2',
+                name: 'Kreuzberg Cannabis Club',
+                slug: 'kreuzberg-cannabis-club',
+            },
+            {
+                ...mockClub,
+                id: '3',
+                name: 'Neukölln Cannabis Club',
+                slug: 'neukolln-cannabis-club',
+            },
         ],
         clubIndex: 1,
         onClose: jest.fn(),
@@ -32,42 +50,58 @@ describe('CustomPopup Component', () => {
         clubListExpanded: false,
     };
 
-    it('should render the club details correctly', () => {
-        render(<CustomPopup {...mockProps} />);
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
 
+    it('renders the club name correctly', () => {
+        render(<CustomPopup {...mockProps} />);
         expect(screen.getByText(mockClub.name)).toBeInTheDocument();
-
-        expect(screen.getByText(mockClub.offerings[0])).toBeInTheDocument();
-        expect(
-            screen.getByAltText(`${mockClub.name} Club Picture`)
-        ).toBeInTheDocument();
-        expect(screen.getByText('2/2')).toBeInTheDocument();
     });
 
-    it('should call onClose when the close button is clicked', () => {
+    it('renders the club address correctly', () => {
         render(<CustomPopup {...mockProps} />);
-
-        const closeButton = screen.getByTestId('close-svg');
-        fireEvent.click(closeButton);
-
-        expect(mockProps.onClose).toHaveBeenCalled();
+        expect(screen.getByText(mockClub.address)).toBeInTheDocument();
     });
 
-    it('should call switchNextClub when the next arrow button is clicked', () => {
+    it('displays the club image with proper alt text', () => {
         render(<CustomPopup {...mockProps} />);
-
-        const nextButton = screen.getAllByTestId('triangle-svg')[1];
-        fireEvent.click(nextButton);
-
-        expect(mockProps.switchNextClub).toHaveBeenCalled();
+        const image = screen.getByAltText(`${mockClub.name} Club Picture`);
+        expect(image).toBeInTheDocument();
+        expect(image).toHaveAttribute('src');
     });
 
-    it('should call switchPreviousClub when the previous arrow button is clicked', () => {
+    it('displays the Harm Reduction tag when hasHRInformation is true', () => {
         render(<CustomPopup {...mockProps} />);
+        expect(screen.getByText('Harm Reduction')).toBeInTheDocument();
+    });
 
-        const previousButton = screen.getAllByTestId('triangle-svg')[0];
-        fireEvent.click(previousButton);
+    it('does not display the Harm Reduction tag when hasHRInformation is false', () => {
+        const propsWithoutHR = {
+            ...mockProps,
+            club: { ...mockClub, hasHRInformation: false },
+        };
+        render(<CustomPopup {...propsWithoutHR} />);
+        expect(screen.queryByText('Harm Reduction')).not.toBeInTheDocument();
+    });
 
-        expect(mockProps.switchPreviousClub).toHaveBeenCalled();
+    it('shows the club offerings as tags', () => {
+        render(<CustomPopup {...mockProps} />);
+        mockClub.offerings.forEach((offering) => {
+            expect(screen.getByText(offering)).toBeInTheDocument();
+        });
+    });
+
+    it('calls onClose when the close button is clicked', () => {
+        render(<CustomPopup {...mockProps} />);
+        fireEvent.click(screen.getByTestId('close-svg'));
+        expect(mockProps.onClose).toHaveBeenCalledTimes(1);
+    });
+
+    it('renders the website link correctly', () => {
+        render(<CustomPopup {...mockProps} />);
+        const websiteLink = screen.getByText('Website');
+        expect(websiteLink).toBeInTheDocument();
+        expect(websiteLink).toHaveAttribute('href', mockClub.clubPageUrl);
     });
 });

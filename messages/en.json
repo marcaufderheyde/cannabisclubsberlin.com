@@ -22,7 +22,10 @@
         "harm_reduction_description": "Harm reduction for cannabis balances benefits and risks, emphasizing safe use and supporting public health.",
         "harm_reduction_keywords": "cannabis harm reduction, therapeutic effects of cannabis, cannabis pain relief, cannabis for anxiety, mitigating cannabis risks, cannabis dependency risks, cannabis cognitive effects, cannabis and mental health, cannabis consumption education, moderation in cannabis use, cannabis research support, public health and cannabis, cannabis benefits, cannabis guide, detailed cannabis guide, cannabis safety practices, drug checking Berlin, anonymous drug testing, free substance testing Berlin, psychoactive substance advice Berlin, harm reduction campaigns Berlin, safe cannabis use Berlin, drug safety Berlin",
         "terms_of_use_title": "Terms of Use",
-        "imprint_title": "Imprint"
+        "imprint_title": "Imprint",
+        "medical_title": "How to Get a Medical Cannabis Prescription in Germany",
+        "medical_description": "A comprehensive guide on qualifying conditions, prescription steps, costs, forms, and legal considerations for obtaining medical cannabis in Germany.",
+        "medical_keywords": "medical cannabis Germany, cannabis prescription, how to get medical marijuana, German healthcare, cannabis costs, insurance coverage"
     },
     "IndexPage": {
         "title": "Welcome to CCB (Cannabis Clubs Berlin)!"
@@ -44,7 +47,9 @@
         "our_history_one": "CannabisClubsBerlin.com was founded by three young Berliners deeply involved in the city's cannabis scene. As legalization loomed, they identified the need for quality, accessible information on emerging cannabis social clubs, with a particular focus on the harm reduction services these clubs would offer. And so, CannabisClubsBerlin.com was born, with the aim of providing thorough, on-the-ground reviews of clubs in Berlin.",
         "our_history_two": "For now, the focus remains solely on Berlin to ensure that the reviews are as qualitative and detailed as possible, involving direct contact with club owners and visits to the locations. Once the clubs are fully operational, CannabisClubsBerlin.com will feature in-depth reviews on each club's offerings and services.",
         "our_history_three": "In the future, users will be able to post verified reviews through a unique CCB club identifier. To learn more about the upcoming review system, click the button below!",
-        "reviews_button": "Reviews"
+        "reviews_button": "Reviews",
+        "faq_lead": "If you have any more questions about cannabisclubsberlin.com, please don't hesitate to check out our frequently asked questions, or shoot us a message if you want to get in touch!",
+        "faq_button": "Check Out Our FAQ"
     },
     "ReviewsPage": {
         "headline": "Reviews",
@@ -73,11 +78,26 @@
         "term_seven_title": "Criminal and Administrative Offenses: ",
         "term_seven": "The law introduces specific criminal and administrative offense provisions, including the unauthorized possession, trade, and consumption of cannabis."
     },
+
     "ContactPage": {
         "headline": "Contact",
         "headline_description": "Please feel free to contact us through the channels listed below.",
-        "headline_subdescription": "cannabisclubsberlin@protonmail.me"
+        "headline_subdescription": "cannabisclubsberlin@protonmail.me",
+
+        "faq_headline": "Frequently Asked Questions",
+        "faq_q1": "Where is your club located?",
+        "faq_a1": "CannabisClubsBerlin.com is not a registered cannabis social club, but rather a listing of registered cannabis social clubs in Berlin. The information listed on CannabisClubsBerlin.com is public information and is collected in one place to help users make an informed decision of which clubs to join.",
+
+        "faq_q2": "Can I buy weed from your club?",
+        "faq_a2": "Again, CannabisClubsBerlin.com is not a registered cannabis social club. We do not sell cannabis and cannot provide it to you directly.",
+
+        "faq_q3": "Are there any membership fees?",
+        "faq_a3": "Each club may have its own membership fees or monthly contributions. For more details, please refer to the individual clubs listed on our site.",
+
+        "faq_q4": "How can I verify membership eligibility?",
+        "faq_a4": "Membership policies may vary from club to club. Please contact the clubs directly or consult the information we have compiled on their pages to see if you meet their requirements."
     },
+
     "HarmReductionPage": {
         "headline": "Harm Reduction",
         "headline_description": "Harm reduction related to cannabis usage recognizes the substance's potential benefits while also addressing the risks associated with its use. Cannabis has been celebrated for its therapeutic effects, including pain relief, reduction in anxiety, and its ability to mitigate symptoms of various medical conditions. However, harm reduction emphasizes the importance of understanding and mitigating the risks linked to cannabis consumption, such as potential dependency, impaired cognitive and motor functions, and the impact on mental health, particularly in young users. Strategies include promoting education on safe consumption practices, encouraging moderation, and supporting research into both the positive and adverse effects of cannabis use. This balanced approach aims to protect public health while acknowledging the substance's benefits.",
@@ -120,13 +140,53 @@
         "term_six": "These terms of use are governed by the laws of Germany. Any disputes related to these terms will be subject to the exclusive jurisdiction of the courts of Germany.",
         "disclaimer": "By using CannabisClubsBerlin.com, you agree to comply with these Terms of Use. If you do not agree with any of these terms, you are prohibited from using or accessing this site."
     },
+
+    "MedicalPage": {
+        "headline": "Medical Cannabis in Germany: A Complete Guide",
+        "intro_heading": "Introduction",
+        "intro_text": "Medical cannabis has been legal in Germany for seriously ill patients since 2017. In April 2024, the new Cannabis Act (CannaG) reclassified medical cannabis as a regular prescription medication, simplifying the process while retaining strict medical criteria. This guide explains eligibility, how to get a prescription, available forms and dosages, costs and insurance, pharmacy access, legal considerations, and the latest updates from CannaG.",
+        "table_of_contents_title": "Table of Contents",
+        "table_of_contents_item1": "1. Who Qualifies?",
+        "table_of_contents_item2": "2. How to Get a Prescription",
+        "table_of_contents_item3": "3. Forms and Dosages",
+        "table_of_contents_item4": "4. Costs and Insurance",
+        "table_of_contents_item5": "5. Pharmacies and Supply",
+        "table_of_contents_item6": "6. Legal Considerations",
+        "table_of_contents_item7": "7. Cannabis Act (CannaG) Updates",
+        "table_of_contents_item8": "8. Frequently Asked Questions",
+        "eligibility_heading": "Eligibility for a Cannabis Prescription",
+        "eligibility_text": "A cannabis prescription may be considered if you have a serious, chronic illness that significantly impairs your quality of life and if conventional treatments have been ineffective or are not suitable. Conditions such as chronic pain, multiple sclerosis, certain epilepsies, severe chemotherapy-induced nausea, and appetite loss are common reasons for considering cannabis therapy.",
+        "how_to_get_heading": "How to Get a Prescription",
+        "how_to_get_text": "Consult a supportive physician who will evaluate your medical history and determine whether cannabis is likely to benefit your condition. If you qualify, your doctor may submit an application to your health insurer or prescribe immediately if you fall under updated regulatory exemptions. Once approved, a standard prescription or e-prescription is issued.",
+        "forms_dosages_heading": "Forms and Dosages",
+        "forms_dosages_text": "Medical cannabis is available as dried flowers, standardized extracts (oils), capsules, or ready-made products like dronabinol and nabiximols (Sativex®). Vaporizing dried flowers is recommended over smoking to reduce harmful byproducts. Dosages are individualized – for example, patients may begin with 0.1–0.2 g per vaporization session and titrate gradually until the desired effect is reached.",
+        "costs_insurance_heading": "Costs and Insurance Coverage",
+        "costs_insurance_text": "Self-paid cannabis typically costs €4–€15 per gram, with prices varying by strain and quality. Public health insurance will cover costs for patients meeting strict criteria, with only a standard copayment required. Private insurance depends on individual policies. In cases where insurance denies coverage, you may appeal or choose a private prescription.",
+        "pharmacies_supply_heading": "Pharmacies and Supply",
+        "pharmacies_supply_text": "Medical cannabis is dispensed exclusively by licensed pharmacies. Some pharmacies specialize in cannabis products and offer online ordering or mail delivery. Your medication is provided in a secure package with detailed dosage and product information.",
+        "legal_considerations_heading": "Legal Considerations",
+        "legal_considerations_text": "With a valid prescription, possessing and using medical cannabis is legal. However, strict rules apply – for example, driving is only permitted if you are not impaired (THC must be below 3.5 ng/mL). You cannot grow or share prescription cannabis, and only pharmacy-dispensed products are covered by insurance. Always carry proof of prescription when needed.",
+        "cannag_heading": "Cannabis Act (CannaG) Updates",
+        "cannag_text": "The Cannabis Act (CannaG), effective from April 2024, distinguishes clearly between medical and recreational cannabis. For patients, the key change is that cannabis is now prescribed on a standard prescription form (including e-prescriptions) rather than a special narcotic form. Recreational users are now allowed to possess up to 25 g, grow up to 3 plants, or join licensed cannabis clubs that distribute up to 50 g per month. Medical cannabis remains regulated and must always be obtained through a doctor and pharmacy.",
+        "faq_heading": "Frequently Asked Questions",
+        "faq_q1": "Can any doctor prescribe medical cannabis?",
+        "faq_a1": "Yes, any licensed physician (except dentists and veterinarians) can prescribe it, though some are more experienced. Often, pain specialists, neurologists, or cannabis-focused clinics are the best options.",
+        "faq_q2": "Is prior insurance approval required?",
+        "faq_a2": "For public insurance, many doctors now have an exemption that allows immediate prescription without prior approval. However, some cases still require an application. Always check with your doctor and insurer.",
+        "faq_q3": "How much cannabis can be prescribed per month?",
+        "faq_a3": "Legally, up to 100 g of cannabis flowers can be prescribed over 30 days, though most prescriptions are much lower. Higher amounts require special medical justification.",
+        "faq_q4": "What if my insurance denies my application?",
+        "faq_a4": "You can appeal a denial by providing additional documentation. Many initial rejections are later overturned. If not, you may choose to pay out-of-pocket.",
+        "sources_heading": "Sources & References"
+    },
     "Navbar": {
         "clubs_title": "Clubs",
         "law_title": "Law",
         "contact_title": "Contact",
         "about_title": "About",
         "reviews_title": "Reviews",
-        "harm_reduction_title": "Harm Reduction"
+        "harm_reduction_title": "Harm Reduction",
+        "medical_title": "Medical Cannabis"
     },
     "Footer": {
         "imprint": "Imprint",

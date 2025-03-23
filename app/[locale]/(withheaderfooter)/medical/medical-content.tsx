@@ -3,6 +3,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import React from 'react';
 import PageHeader from '../../../components/PageHeader/PageHeader';
 import GradientText from '../../../components/GradientText/GradientText';
+import Link from 'next/link';
 
 export default function MedicalContent() {
     const t = useTranslations('MedicalPage');
@@ -28,19 +29,20 @@ export default function MedicalContent() {
                 </h2>
             </GradientText>
             <ul className="list-disc ml-6 text-[1rem] my-3 md:text-[1.5rem] text-[#575757]">
-                <li>{t('table_of_contents_item1')}</li>
-                <li>{t('table_of_contents_item2')}</li>
-                <li>{t('table_of_contents_item3')}</li>
-                <li>{t('table_of_contents_item4')}</li>
-                <li>{t('table_of_contents_item5')}</li>
-                <li>{t('table_of_contents_item6')}</li>
-                <li>{t('table_of_contents_item7')}</li>
-                <li>{t('table_of_contents_item8')}</li>
+                <li><Link href="#table_of_contents_item1">{t('table_of_contents_item1')}</Link></li>
+                <li><Link href="#table_of_contents_item2">{t('table_of_contents_item2')}</Link></li>
+                <li><Link href="#table_of_contents_item3">{t('table_of_contents_item3')}</Link></li>
+                <li><Link href="#table_of_contents_item4">{t('table_of_contents_item4')}</Link></li>
+                <li><Link href="#table_of_contents_item5">{t('table_of_contents_item5')}</Link></li>
+                <li><Link href="#table_of_contents_item6">{t('table_of_contents_item6')}</Link></li>
+                <li><Link href="#table_of_contents_item7">{t('table_of_contents_item7')}</Link></li>
+                <li><Link href="#table_of_contents_item8">{t('table_of_contents_item8')}</Link></li>
             </ul>
 
             {/* Eligibility Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item1" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('eligibility_heading')}
                 </h2>
             </GradientText>
@@ -50,7 +52,8 @@ export default function MedicalContent() {
 
             {/* Prescription Process Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item2" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('how_to_get_heading')}
                 </h2>
             </GradientText>
@@ -60,7 +63,8 @@ export default function MedicalContent() {
 
             {/* Forms and Dosages Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item3" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('forms_dosages_heading')}
                 </h2>
             </GradientText>
@@ -70,7 +74,8 @@ export default function MedicalContent() {
 
             {/* Costs and Insurance Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item4" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('costs_insurance_heading')}
                 </h2>
             </GradientText>
@@ -80,7 +85,8 @@ export default function MedicalContent() {
 
             {/* Pharmacies and Supply Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item5" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('pharmacies_supply_heading')}
                 </h2>
             </GradientText>
@@ -90,7 +96,8 @@ export default function MedicalContent() {
 
             {/* Legal Considerations Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item6" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('legal_considerations_heading')}
                 </h2>
             </GradientText>
@@ -100,7 +107,8 @@ export default function MedicalContent() {
 
             {/* Cannabisgesetz (CannaG) Updates Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item7" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('cannag_heading')}
                 </h2>
             </GradientText>
@@ -110,7 +118,8 @@ export default function MedicalContent() {
 
             {/* FAQ Section */}
             <GradientText>
-                <h2 className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+                <h2 id="table_of_contents_item8" className="text-[1.5rem] md:text-[2.5rem] font-medium mt-4">
+
                     {t('faq_heading')}
                 </h2>
             </GradientText>

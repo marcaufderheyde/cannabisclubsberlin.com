@@ -479,8 +479,8 @@ export const clubs: Club[] = [
         imageUrl: '/club32.jpeg',
         clubPageUrl: 'https://www.whitelakeweed.de/',
         slug: '',
-        address: "Weißensee, 13086 Berlin, Germany",
-        geoLocation: [52.554619, 13.463002],
+        address: "Graefestr. 2, 10999 Berlin, Germany",
+        geoLocation: [52.495262, 13.419264],
    reviews: "",},
     {
         key: 'club33',

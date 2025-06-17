@@ -282,7 +282,7 @@
                 "monkeyz-berlin-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "berlin-blatt-und-bluete-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "realita-ev-csc": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
-                "bunte-bluete-cannabis-club-berlin-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
+                "power-flower-cannabis-club-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "420-bearz": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Hochwertige Sorten",
                 "csc-gruenvereint-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Workshops, Nachhaltige Praktiken",
                 "budz-berlin-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Sicherer Zugang zu Cannabis",
@@ -706,14 +706,14 @@
             "harm_reduction": "Dieser Club legt großen Wert auf verantwortungsvollen Konsum und bietet Aufklärung zur Minimierung der Risiken des Cannabiskonsums.",
             "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
-        "bunte-bluete-cannabis-club-berlin-ev": {
-            "prices": "Der Mitgliedsbeitrag beträgt 50 EUR pro Monat, was ein Guthaben für Cannabiskäufe beinhaltet. Der Preis pro Gramm beginnt bei 7-8 EUR.",
-            "location": "Die Cannabis-Ausgabestelle wird im Zentrum von Berlin sein. Detaillierte Informationen werden nach Bestätigung der Mitgliedschaft mitgeteilt.",
-            "description": "Der Bunte Blüte Cannabis Club Berlin e.V. ist ein Cannabis Social Club, der sich darauf konzentriert, qualitativ hochwertiges, THC-reiches Cannabis durch ein transparentes, gemeinschaftsorientiertes Modell anzubieten. Der Club, der sich derzeit in den komplexen Legalisierungsprozess Berlins einfügt, legt Wert auf Nachhaltigkeit und erstklassige Produktionsstandards. Mitglieder profitieren von einer Vielzahl von Cannabissorten, Samen und Stecklingen, wobei der Schwerpunkt auf verantwortungsvollem Konsum und Gemeinschaftsbeteiligung liegt.",
-            "meta_description": "Der Bunte Blüte Cannabis Club Berlin e.V. bietet hochwertiges Cannabis in einer transparenten und gemeinschaftsorientierten Umgebung in Berlin an.",
-            "meta_keywords": "Bunte Blüte Cannabis Club Berlin, Cannabis Social Club, hochwertiges Cannabis, gemeinschaftsorientierter Cannabisanbau, Cannabisverteilung Berlin, nachhaltiges Cannabis, THC-reiches Cannabis",
-            "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Samen und Stecklinge, Soziales Miteinander",
-            "harm_reduction": "Der Club konzentriert sich auf verantwortungsvollen Konsum und bemüht sich, die Mitglieder über sichere Konsumpraktiken aufzuklären und Risiken zu minimieren.",
+        "power-flower-cannabis-club-ev": {
+            "prices": "Die einmalige Anmeldegebühr beträgt 25 EUR. Der monatliche Mitgliedsbeitrag liegt bei 20 EUR. Der Preis pro Gramm Cannabis beträgt 8 EUR.",
+            "location": "Die Cannabis-Ausgabe erfolgt ausschließlich persönlich vor Ort in Berlin. Die Verwaltung und Prozessverfolgung erfolgt über die Cannanas App.",
+            "description": "Der Power-Flower Cannabis Club ist eine Berliner Anbauvereinigung mit geplanter Anbaufläche in Brandenburg. Der Antrag auf Anbaulizenz befindet sich in Bearbeitung, mit der ersten legalen Ernte ab voraussichtlich August 2025. Das erfahrene Team setzt sich für sauberes, getestetes und verantwortungsvoll produziertes Cannabis ein – zu fairen Preisen und unter besten Bedingungen.",
+            "meta_description": "Der Power-Flower Cannabis Club ist eine Berliner Anbauvereinigung mit Fokus auf getestetes, verantwortungsvoll produziertes Cannabis und persönlicher Abgabe vor Ort.",
+            "meta_keywords": "Power-Flower Cannabis Club Berlin, Cannabis Social Club, Cannabis Anbauverein Berlin, legales Cannabis, sauberes Cannabis, Cannanas App, verantwortungsvoller Konsum",
+            "offerings": "Anbauverein, Cannabisabgabe vor Ort, Mitgliedsverwaltung über App, Gemeinschaftlicher Austausch",
+            "harm_reduction": "Der Club legt großen Wert auf Qualität, Transparenz und verantwortungsvollen Umgang mit Cannabis – begleitet von digitaler Prozessverfolgung und Aufklärung.",
             "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         },
         "420-bearz": {

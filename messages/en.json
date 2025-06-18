@@ -285,7 +285,7 @@
                 "monkeyz-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
                 "berlin-blatt-und-bluete-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
                 "realita-ev-csc": "Community Cultivation, Member Cannabis Distribution, Socialising",
-                "bunte-bluete-cannabis-club-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
+                "power-flower-cannabis-club-ev": "Community Cultivation, Member Cannabis Distribution, Socialising",
                 "420-bearz": "Community Cultivation, Member Cannabis Distribution, Socialising, High-Quality Strains",
                 "csc-gruenvereint-ev": "Community Cultivation, Member Cannabis Distribution, Socialising, Workshops, Sustainable Practices",
                 "budz-berlin-ev": "Community Cultivation, Member Cannabis Distribution, Socialising, Safe Cannabis Access",
@@ -610,7 +610,7 @@
             "reviews": "CCB currently does not have a verified review available for this club."
         },
         "white-lake-weed": {
-            "prices": "10EUR per month (no cannabis given at this tier), 15EUR per month (7EUR per gram).",
+            "prices": "4.20EUR per month and a one time registration fee of 42EUR.",
             "location": "Information on location and opening times for this cannabis club will be shown here once it is available.",
             "description": "White Lake Weed is a Cannabis Social Club in Berlin Weißensee that combines scientific expertise and passion to ensure consistent, high-quality cannabis for its members. The uniqueness of the club lies in the use of advanced techniques such as crop steering and special LED lamps based on the latest research. The club is also characterised by the biological background of the management, which comes from the laboratory sector and sets high standards in terms of quality and cleanliness. The club utilizes advanced techniques such as reverse osmosis water, crop steering, and LED lighting to enhance plant growth and integrated pest management to maintain quality. Initially offering a limited number of cannabis strains, the club plans to expand its selection based on member preferences. Membership is intentionally kept small initially to ensure reliable supply but may expand as the club grows.",
             "meta_description": "White Lake Weed in Berlin Weißensee uses scientific expertise and passion to ensure consistently high-quality cannabis.",
@@ -709,14 +709,14 @@
             "harm_reduction": "This club emphasizes responsible use and provides education to minimize the risks associated with cannabis consumption.",
             "reviews": "CCB currently does not have a verified review available for this club."
         },
-        "bunte-bluete-cannabis-club-berlin-ev": {
-            "prices": "Membership fee is 50 EUR per month, which includes a credit towards cannabis purchases. The price per gram starts at 7-8 EUR.",
-            "location": "The cannabis distribution center will be located in central Berlin. Specific details will be provided upon membership approval.",
-            "description": "Bunte Blüte Cannabis Club Berlin e.V. is a cannabis social club focused on offering high-quality, THC-rich cannabis through a transparent, community-driven model. The club, which is currently navigating the complexities of Berlin's legalization process, emphasizes sustainability and premium production standards. Members benefit from a variety of cannabis strains, seeds, and cuttings, with an emphasis on responsible use and community involvement.",
-            "meta_description": "Bunte Blüte Cannabis Club Berlin e.V. offers high-quality cannabis in a transparent and community-driven environment in Berlin.",
-            "meta_keywords": "Bunte Blüte Cannabis Club Berlin, cannabis social club, high-quality cannabis, community-driven cannabis, cannabis distribution Berlin, sustainable cannabis, THC-rich cannabis",
-            "offerings": "Community cultivation, Cannabis distribution, Seeds and cuttings, Socializing",
-            "harm_reduction": "The club focuses on responsible use, with efforts to educate members on safe consumption practices and minimize risks.",
+        "power-flower-cannabis-club-ev": {
+            "prices": "There is a one-time registration fee of 25 EUR. The monthly membership fee is 20 EUR. Cannabis is priced at 8 EUR per gram.",
+            "location": "Cannabis distribution takes place exclusively in person at the club's location in Berlin. Administration and process tracking are managed via the Cannanas app.",
+            "description": "Power-Flower Cannabis Club is a Berlin-based cultivation association with a planned growing area in Brandenburg. The cultivation license application is currently under review, with the first legal harvest expected by August 2025. The experienced team is committed to providing clean, lab-tested, and responsibly produced cannabis – under fair conditions and at accessible prices.",
+            "meta_description": "Power-Flower Cannabis Club is a Berlin-based cultivation association focused on clean, tested cannabis and in-person distribution.",
+            "meta_keywords": "Power-Flower Cannabis Club Berlin, cannabis social club, cultivation association Berlin, legal cannabis Germany, clean cannabis, Cannanas app, responsible consumption",
+            "offerings": "Cultivation association, On-site cannabis distribution, App-based member management, Community exchange",
+            "harm_reduction": "The club prioritizes transparency, high standards, and responsible cannabis use, supported by digital process tracking and educational efforts.",
             "reviews": "CCB currently does not have a verified review available for this club."
         },
         "420-bearz": {

@@ -4,7 +4,6 @@ import HomeContent from '../../components/Home/Home-content';
 import { generateSlug } from '@/app/helpers/clubsListContent';
 
 export default function IndexPage() {
-    console.log(generateSlug('Power-Flower Cannabis Club e.V.'));
     return (
         <>
             <Background />

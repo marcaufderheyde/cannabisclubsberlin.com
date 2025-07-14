@@ -3,8 +3,10 @@ import React, { CSSProperties, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
+import styles from './ClubCard.module.css';
 import { useRef } from 'react';
 import { Club } from './OpenStreetMap';
+import SearchBar from './SearchBarFuse';
 
 export type DesktopClubsListProps = {
     clubClickedFromList: (index: number) => void;
@@ -51,6 +53,13 @@ export default function DesktopClubList({
             className="w-[289px] bg-[#F6F6F6] flex flex-col h-full overflow-y-scroll shadow-inner"
             {...props}
         >
+            <div className={styles.clubsListSearchSection}>
+                <SearchBar 
+                    clubs={clubs} 
+                    onClubSelect={clubClickedFromList}
+                    placeholder="Search clubs by name or description..."
+                />
+            </div>
             {clubs.map((club, index) => (
                 <div
                     className={

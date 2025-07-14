@@ -223,3 +223,196 @@
     color: #666;
     margin: 0;
   }
+
+  /* Search Bar Styles */
+.searchContainer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1004;
+  width: 300px;
+  max-width: calc(100vw - 120px);
+}
+
+.searchInputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  padding-right: 40px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  color: #333 !important;
+}
+
+.searchInput:focus {
+  border-color: #4a9eff;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px rgba(74, 158, 255, 0.2);
+}
+
+.searchInput::placeholder {
+  color: #777676;
+  font-style: italic;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 12px;
+  font-size: 18px;
+  color: #666;
+  pointer-events: none;
+}
+
+.searchDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-top: 4px;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  z-index: 1005;
+}
+
+.searchResultItem {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.searchResultItem:last-child {
+  border-bottom: none;
+}
+
+.searchResultItem:hover,
+.searchResultSelected {
+  background: linear-gradient(135deg, #4a9eff 0%, #6bb6ff 100%);
+  color: white;
+}
+
+.searchResultSelected .searchResultScore {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.searchResultName {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.searchResultDescription {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.searchResultSelected .searchResultDescription {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.searchResultScore {
+  font-size: 10px;
+  color: #999;
+  font-weight: 500;
+}
+
+.searchHighlight {
+  background: rgba(255, 235, 59, 0.6);
+  padding: 1px 2px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.searchResultSelected .searchHighlight {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 650px) {
+  .searchContainer {
+    width: calc(100vw - 40px);
+    max-width: none;
+  }
+  
+  .searchInput {
+    font-size: 14px;
+    padding: 10px 14px;
+    padding-right: 36px;
+  }
+  
+  .searchIcon {
+    right: 10px;
+    font-size: 16px;
+  }
+  
+  .searchResultItem {
+    padding: 10px 12px;
+  }
+  
+  .searchResultName {
+    font-size: 13px;
+  }
+  
+  .searchResultDescription {
+    font-size: 11px;
+  }
+}
+
+.clubsListSearchSection {
+  padding: 16px;
+  border-bottom: 1px solid #e1e5e9;
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 1007;
+  flex-shrink: 0;
+}
+
+/* Override search bar styles when inside clubs list */
+.clubsListSearchSection .searchContainer {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  max-width: none;
+}
+
+.clubsListSearchSection .searchInput {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile responsiveness for clubs list */
+@media only screen and (max-width: 768px) {
+  
+  .clubsListSearchSection {
+    padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  
+  .clubsListSearchSection {
+    padding: 8px;
+  }
+}

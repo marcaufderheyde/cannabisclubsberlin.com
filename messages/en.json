@@ -296,7 +296,9 @@
                 "best-social-club-berlin": "Community Cultivation, Member Cannabis Distribution, Socialising",
                 "grashaus": "Community Cultivation, Member Cannabis Distribution, Socialising",
                 "green-hub-wedding": "Community Cultivation, Member Cannabis Distribution, Socialising",
-                "weed-bros": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices"
+                "weed-bros": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
+                "weed_club-friends": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
+                "weed-club-friends": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices"
             }
         },
         "csc-high-ground-berlin-ev": {
@@ -827,6 +829,16 @@
             "meta_keywords": "WEED BROS., Berlin cannabis club, sustainable cultivation, community-driven cannabis, organic cannabis, Friedrichshain cannabis club, member involvement",
             "offerings": "Community cultivation, Cannabis distribution, Socializing, Sustainable practices",
             "harm_reduction": "The club educates members on safe and responsible cannabis use, promoting harm reduction through sustainable and organic practices.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "weed-club-friends": {
+            "prices": "The base membership fee is €10 per month and covers all costs not directly related to cannabis cultivation. In addition, there is a flat contribution for the distributed cannabis, based on actual cultivation costs. These include equipment, electricity, rent, seeds, supplies, lab analysis, administration, and 19% VAT. As a guideline, you can expect about €10 per gram of cannabis. Distribution is exclusively to registered members of WCF e. V.",
+            "location": "WCF e. V.\nWiesenweg 1–4\n10365 Berlin\n\nOpening hours: Thu–Sat, 5–8 p.m.",
+            "description": "Weed Club Friends is a registered association with a cultivation license. Members cultivate cannabis together according to the highest safety and quality standards in Berlin and Brandenburg. As a member, you are entitled to legally receive up to 50g of cannabis per month.",
+            "meta_description": "Weed Club Friends is a Berlin-based cannabis club with a license, focused on high-quality community cultivation and transparent processes.",
+            "meta_keywords": "Weed Club Friends, Berlin cannabis club, community cultivation, legal cannabis, high-quality strains, WCF e. V., Ostkreuz",
+            "offerings": "Indoor community cultivation, Cannabis distribution to members, Member-driven strain selection, Pick-up near Ostkreuz, 21+ only with residence in Germany",
+            "harm_reduction": "This club has currently not listed any specific harm reduction services.",
             "reviews": "CCB currently does not have a verified review available for this club."
         }
     }

@@ -293,7 +293,8 @@
                 "best-social-club-berlin": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "grashaus": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "green-hub-wedding": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
-                "weed-bros": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Nachhaltige Praktiken"
+                "weed-bros": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Nachhaltige Praktiken",
+                "weed-club-friends": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Hochwertige Sorten"
             }
         },
         "csc-high-ground-berlin-ev": {
@@ -824,6 +825,16 @@
             "meta_keywords": "WEED BROS., Berliner Cannabisclub, nachhaltiger Anbau, gemeinschaftsorientierter Cannabis, biologischer Cannabisanbau, Cannabisclub Friedrichshain, Mitgliederbeteiligung",
             "offerings": "Gemeinschaftlicher Anbau, Cannabisverteilung, Soziales Miteinander, Nachhaltige Praktiken",
             "harm_reduction": "Der Club schult die Mitglieder im sicheren und verantwortungsvollen Cannabiskonsum und fördert die Schadensminderung durch nachhaltige und biologische Praktiken.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
+        },
+        "weed-club-friends": {
+            "prices": "Der Grundbeitrag im Verein kostet monatlich 10,- €. Dieser deckt alle Kosten ab, die nicht direkt mit dem Anbau von Cannabis in Verbindung stehen. Zusätzlich fällt eine Beitragspauschale für das abgegebene Cannabis an, die sich an den tatsächlichen Anbaukosten orientiert. Diese umfasst Aufwendungen für Anbauzubehör, Strom, Miete, Saatgut, Verbrauchsmaterial, Analysen, Verwaltung sowie 19 % Mehrwertsteuer. Als Richtwert gelten 10,- € pro Gramm ausgegebenem Cannabis. Die Abgabe erfolgt ausschließlich an Mitglieder des WCF e. V.",
+            "location": "WCF e. V.\nWiesenweg 1–4\n10365 Berlin\n\nÖffnungszeiten: Do–Sa, 17–20 Uhr",
+            "description": "Wir sind ein eingetragener Verein mit Anbaugenehmigung, dessen Mitglieder legal Cannabis als Anbaugemeinschaft nach höchsten Sicherheits- und Qualitätsstandards in Berlin und Brandenburg anbauen. Als Mitglied kannst du monatlich bis zu 50 g Cannabis legal erhalten.",
+            "meta_description": "Weed Club Friends ist ein Berliner Cannabisclub mit Lizenz, der auf gemeinschaftlichen Anbau in höchster Qualität und Transparenz setzt.",
+            "meta_keywords": "Weed Club Friends, Cannabisclub Berlin, Gemeinschaftsanbau, hochwertiges Cannabis, legaler Anbau, Ostkreuz, WCF e. V.",
+            "offerings": "Gemeinschaftlicher Indoor-Anbau, Cannabisverteilung an Mitglieder, Sortenauswahl durch Mitglieder, Abholung in der Nähe Ostkreuz, nur für Personen über 21 mit Wohnsitz in Deutschland",
+            "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet.",
             "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         }
     }

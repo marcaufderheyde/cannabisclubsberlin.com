@@ -810,7 +810,7 @@ hasHRInformation: true,
         imageUrl: '/club54.jpeg',
         clubPageUrl: 'https://www.weedclubfriends.de',
         slug: '',
-        address: "10409 Berlin",
+        address: "Wiesenweg 1–4, 10365 Berlin",
         geoLocation: [52.507469, 13.475006],
         reviews: "",
     }

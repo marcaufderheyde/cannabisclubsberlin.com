@@ -57,14 +57,15 @@ export default function DesktopClubList({
                 <SearchBar 
                     clubs={clubs} 
                     onClubSelect={clubClickedFromList}
-                    placeholder="Search clubs by name or description..."
+                    placeholder="Search clubs by name..."
                 />
             </div>
             {clubs.map((club, index) => (
                 <div
                     className={
                         backgroundColor(index) +
-                        ' flex flex-row justify-between items-center border-b-[1px] cursor-pointer transition ease-in-out duration-300 transform hover:bg-[rgb(87,87,87,0.1)]'
+                        ' flex flex-row justify-between items-center border-b-[1px] cursor-pointer transition ease-in-out duration-300 transform hover:bg-[rgb(87,87,87,0.1)] ' +
+                        styles.clubListItem
                     }
                     key={club.slug}
                     ref={(el) => {

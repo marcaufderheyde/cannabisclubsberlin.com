@@ -242,35 +242,35 @@
 
 .searchInput {
   width: 100%;
-  padding: 12px 16px;
-  padding-right: 40px;
+  padding: 14px 18px;
+  padding-right: 45px;
   font-size: 16px;
-  border: 2px solid #ddd;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  border: 1px solid #e1e5e9;
+  border-radius: 24px;
+  background: #ffffff;
   outline: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  color: #333 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: #2E2E2E !important;
+  font-family: Inter, sans-serif;
 }
 
 .searchInput:focus {
-  border-color: #4a9eff;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 20px rgba(74, 158, 255, 0.2);
+  border-color: #B6CF54;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(182, 207, 84, 0.15);
 }
 
 .searchInput::placeholder {
-  color: #777676;
-  font-style: italic;
+  color: #868686;
+  font-weight: 400;
 }
 
 .searchIcon {
   position: absolute;
-  right: 12px;
-  font-size: 18px;
-  color: #666;
+  right: 15px;
+  font-size: 16px;
+  color: #868686;
   pointer-events: none;
 }
 
@@ -279,22 +279,21 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(10px);
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  margin-top: 4px;
-  max-height: 250px;
+  background: #ffffff;
+  border: 1px solid #e1e5e9;
+  border-radius: 16px;
+  margin-top: 6px;
+  max-height: 280px;
   overflow-y: auto;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   z-index: 1005;
 }
 
 .searchResultItem {
-  padding: 12px 16px;
+  padding: 14px 18px;
   cursor: pointer;
   transition: all 0.2s ease;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f8f9fa;
 }
 
 .searchResultItem:last-child {
@@ -303,7 +302,7 @@
 
 .searchResultItem:hover,
 .searchResultSelected {
-  background: linear-gradient(135deg, #4a9eff 0%, #6bb6ff 100%);
+  background: linear-gradient(135deg, #B6CF54 0%, #55834E 100%);
   color: white;
 }
 
@@ -312,17 +311,22 @@
 }
 
 .searchResultName {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 4px;
-  line-height: 1.3;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  color: #2E2E2E;
+}
+
+.searchResultSelected .searchResultName {
+  color: white;
 }
 
 .searchResultDescription {
-  font-size: 12px;
-  color: #666;
-  line-height: 1.3;
-  margin-bottom: 4px;
+  font-size: 13px;
+  color: #575757;
+  line-height: 1.4;
+  margin-bottom: 6px;
 }
 
 .searchResultSelected .searchResultDescription {
@@ -330,15 +334,16 @@
 }
 
 .searchResultScore {
-  font-size: 10px;
-  color: #999;
+  font-size: 11px;
+  color: #868686;
   font-weight: 500;
 }
 
 .searchHighlight {
-  background: rgba(255, 235, 59, 0.6);
-  padding: 1px 2px;
-  border-radius: 2px;
+  background: #B6CF54;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
   font-weight: 600;
 }
 
@@ -400,6 +405,10 @@
 .clubsListSearchSection .searchInput {
   width: 100%;
   box-sizing: border-box;
+}
+
+.clubListItem {
+  scroll-margin-top: 80px; /* Adjust this value based on your search section height */
 }
 
 /* Mobile responsiveness for clubs list */

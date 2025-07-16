@@ -324,9 +324,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
                                     }}
                                 />
                             </div> */}
-                            <div className={styles.searchResultScore}>
+                            {/* <div className={styles.searchResultScore}>
                                 Match: {Math.round((1 - result.score) * 100)}%
-                            </div>
+                            </div> */}
                         </div>
                     ))}
                 </div>

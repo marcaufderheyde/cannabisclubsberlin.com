@@ -8,11 +8,11 @@ async function generate() {
     const languages = ['de', 'en']; // Define languages
     for (const lang of languages) {
         const pages = await globby([
-            // Adjusted paths to match the directory structure
-            `.next/server/app/${lang}/**/*.html`,
-            `!.next/server/app/${lang}/_not-found.html`, // Exclude specific files
-            `!.next/server/app/${lang}/index.html`,
-            `.next/server/app/${lang}/clubs/*.html`, // Include club pages
+            // Adjusted paths to match the new app directory structure
+            `.next/server/app/${lang}/(withheaderfooter)/**/page.html`,
+            `.next/server/app/${lang}/(withoutheaderfooter)/**/page.html`,
+            `!.next/server/app/${lang}/**/_not-found/page.html`, // Exclude not-found pages
+            `!.next/server/app/${lang}/**/layout.html`, // Exclude layout files
         ]);
 
         const siteUrl =
@@ -47,6 +47,9 @@ async function generate() {
         for (const page of pages) {
             const route = page
                 .replace(`.next/server/app/${lang}`, '')
+                .replace('/(withheaderfooter)', '')
+                .replace('/(withoutheaderfooter)', '')
+                .replace('/page.html', '')
                 .replace('.html', '');
 
             const pageContent = `<url>

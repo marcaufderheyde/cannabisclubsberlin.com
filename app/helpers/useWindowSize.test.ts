@@ -19,7 +19,7 @@ describe('useWindowSize Hook', () => {
         const { result } = renderHook(() => useWindowSize());
 
         expect(result.current.width).toBe(1024);
-        expect(result.current.height).toBe(1024);
+        expect(result.current.height).toBe(768);
     });
 
     it('should return the updated window size after resize', () => {
@@ -33,6 +33,6 @@ describe('useWindowSize Hook', () => {
         });
 
         expect(result.current.width).toBe(800);
-        expect(result.current.height).toBe(800);
+        expect(result.current.height).toBe(600);
     });
 });

@@ -30,6 +30,7 @@
     margin: 0; 
     padding: 0; 
     z-index: 900;
+    contain: layout size style; /* Modern CSS containment - replaces overflow management */
   }
   
   .customPopup {
@@ -224,163 +225,69 @@
     margin: 0;
   }
 
-  /* Search Bar Styles */
-.searchContainer {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1004;
-  width: 300px;
-  max-width: calc(100vw - 120px);
+/* Search Bar Styles - Minimalist Mobile Only */
+.mobileFilterSearchContainer {
+  position: relative;
+  width: 100%;
+  contain: layout style;
 }
 
-.searchInputContainer {
+.mobileFilterSearchContainer .searchInputContainer {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.searchInput {
+.mobileFilterSearchContainer .searchInput {
   width: 100%;
-  padding: 14px 18px;
-  padding-right: 45px;
-  font-size: 16px;
+  padding: 8px 12px;
+  font-size: 14px;
   border: 1px solid #e1e5e9;
-  border-radius: 24px;
+  border-radius: 8px;
   background: #ffffff;
   outline: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  color: #2E2E2E !important;
-  font-family: Inter, sans-serif;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
-.searchInput:focus {
-  border-color: #B6CF54;
-  background: #ffffff;
-  box-shadow: 0 4px 16px rgba(182, 207, 84, 0.15);
-}
-
-.searchInput::placeholder {
-  color: #868686;
-  font-weight: 400;
-}
-
-.searchIcon {
+.mobileFilterSearchContainer .searchDropdown {
   position: absolute;
-  right: 15px;
-  font-size: 16px;
-  color: #868686;
-  pointer-events: none;
-}
-
-.searchDropdown {
-  position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 0;
   right: 0;
   background: #ffffff;
   border: 1px solid #e1e5e9;
-  border-radius: 16px;
-  margin-top: 6px;
-  max-height: 280px;
+  border-radius: 12px;
+  max-height: 200px;
   overflow-y: auto;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  z-index: 1005;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
 }
 
-.searchResultItem {
-  padding: 14px 18px;
+.mobileFilterSearchContainer .searchResultItem {
+  padding: 10px 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
   border-bottom: 1px solid #f8f9fa;
 }
 
-.searchResultItem:last-child {
+.mobileFilterSearchContainer .searchResultItem:last-child {
   border-bottom: none;
 }
 
-.searchResultItem:hover,
-.searchResultSelected {
+.mobileFilterSearchContainer .searchResultItem:hover,
+.mobileFilterSearchContainer .searchResultSelected {
   background: linear-gradient(135deg, #B6CF54 0%, #55834E 100%);
   color: white;
 }
 
-.searchResultSelected .searchResultScore {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.searchResultName {
-  font-size: 15px;
+.mobileFilterSearchContainer .searchResultName {
+  font-size: 13px;
   font-weight: 600;
-  margin-bottom: 6px;
-  line-height: 1.4;
+  margin-bottom: 4px;
   color: #2E2E2E;
 }
 
-.searchResultSelected .searchResultName {
+.mobileFilterSearchContainer .searchResultSelected .searchResultName {
   color: white;
-}
-
-.searchResultDescription {
-  font-size: 13px;
-  color: #575757;
-  line-height: 1.4;
-  margin-bottom: 6px;
-}
-
-.searchResultSelected .searchResultDescription {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.searchResultScore {
-  font-size: 11px;
-  color: #868686;
-  font-weight: 500;
-}
-
-.searchHighlight {
-  background: #B6CF54;
-  color: white;
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.searchResultSelected .searchHighlight {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
-/* Responsive adjustments */
-@media only screen and (max-width: 650px) {
-  .searchContainer {
-    width: calc(100vw - 40px);
-    max-width: none;
-  }
-  
-  .searchInput {
-    font-size: 14px;
-    padding: 10px 14px;
-    padding-right: 36px;
-  }
-  
-  .searchIcon {
-    right: 10px;
-    font-size: 16px;
-  }
-  
-  .searchResultItem {
-    padding: 10px 12px;
-  }
-  
-  .searchResultName {
-    font-size: 13px;
-  }
-  
-  .searchResultDescription {
-    font-size: 11px;
-  }
 }
 
 .clubsListSearchSection {

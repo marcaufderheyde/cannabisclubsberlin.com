@@ -8,12 +8,14 @@ interface SearchBarProps {
     clubs: Club[];
     onClubSelect: (clubIndex: number) => void;
     placeholder?: string;
+    isMobile?: boolean;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ 
     clubs, 
     onClubSelect, 
-    placeholder = "Search clubs..." 
+    placeholder = "Search clubs...",
+    isMobile = false
 }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState<FuseResult<Club>[]>([]);
@@ -137,7 +139,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     };
 
     return (
-        <div className={styles.searchContainer}>
+        <div className={isMobile ? styles.mobileFilterSearchContainer : styles.searchContainer}>
             <div className={styles.searchInputContainer}>
                 <input
                     ref={searchInputRef}

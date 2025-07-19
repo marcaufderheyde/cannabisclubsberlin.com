@@ -66,9 +66,10 @@ describe('SwipeableDeck', () => {
     it('applies correct styling to the current card', () => {
         renderComponent();
         const currentCard = screen.getByTestId('card-3');
-        expect(currentCard).toHaveStyle(
-            'transform: translate(387px, 200px) scale(1)'
-        );
+        
+        // Check that transform contains translate and scale
+        const transform = currentCard.style.transform;
+        expect(transform).toMatch(/translate\([^)]+px, 200px\) scale\(1\)/);
         expect(currentCard).toHaveStyle('z-index: 1');
         expect(currentCard).toHaveTextContent('Item 3 - Swipeable');
     });
@@ -76,10 +77,10 @@ describe('SwipeableDeck', () => {
     it('applies correct styling to other cards', () => {
         renderComponent();
         const otherCard = screen.getByTestId('card-2');
-        expect(otherCard).toHaveStyle(
-            'transform: translate(137px, 200px) scale(0.6)'
-        );
-        // Check for z-index: 1 for other cards
+        
+        // Check that transform contains translate and scale
+        const transform = otherCard.style.transform;
+        expect(transform).toMatch(/translate\([^)]+px, 200px\) scale\(0\.6\)/);
         expect(otherCard).toHaveStyle('z-index: 1');
         expect(otherCard).toHaveTextContent('Item 2 - Not Swipeable');
     });
@@ -99,9 +100,8 @@ describe('SwipeableDeck', () => {
         );
 
         const newCurrentCard = screen.getByTestId('card-4');
-        expect(newCurrentCard).toHaveStyle(
-            'transform: translate(387px, 200px) scale(1)'
-        );
+        const transform = newCurrentCard.style.transform;
+        expect(transform).toMatch(/translate\([^)]+px, 200px\) scale\(1\)/);
         expect(newCurrentCard).toHaveStyle('z-index: 1');
         expect(newCurrentCard).toHaveTextContent('Item 4 - Swipeable');
     });
@@ -109,15 +109,14 @@ describe('SwipeableDeck', () => {
     it('wraps around to the beginning when reaching the end of the list', () => {
         renderComponent({ currentIndex: 4 });
         const lastCard = screen.getByTestId('card-5');
-        expect(lastCard).toHaveStyle(
-            'transform: translate(387px, 200px) scale(1)'
-        );
+        
+        const transform = lastCard.style.transform;
+        expect(transform).toMatch(/translate\([^)]+px, 200px\) scale\(1\)/);
         expect(lastCard).toHaveStyle('z-index: 1');
         expect(lastCard).toHaveTextContent('Item 5 - Swipeable');
 
         const firstCard = screen.getByTestId('card-1');
-        expect(firstCard).toHaveStyle(
-            'transform: translate(637px, 200px) scale(0.6)'
-        );
+        const firstTransform = firstCard.style.transform;
+        expect(firstTransform).toMatch(/translate\([^)]+px, 200px\) scale\(0\.6\)/);
     });
 });

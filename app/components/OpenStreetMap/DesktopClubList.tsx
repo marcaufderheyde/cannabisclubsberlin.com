@@ -1,10 +1,9 @@
-import React, { CSSProperties, useEffect } from 'react';
+import React, { CSSProperties, useEffect, useRef } from 'react';
 
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
 import styles from './ClubCard.module.css';
-import { useRef } from 'react';
 import { Club } from './OpenStreetMap';
 import SearchBar from './SearchBarFuse';
 
@@ -29,6 +28,8 @@ export default function DesktopClubList({
     const clubs = filteredClubs;
     const t = useTranslations('ClubsPage');
     const refs = useRef<(HTMLDivElement | null)[]>([]);
+    const searchSectionRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     clubs.forEach((club) => {
         club.description = t(`${club.slug}.description`);
@@ -36,8 +37,16 @@ export default function DesktopClubList({
         club.harm_reduction = t(`${club.slug}.harm_reduction`);
     });
 
+    // Update scroll margin based on search section height
     useEffect(() => {
-        if (currentClubIndex && refs.current[currentClubIndex]) {
+        if (searchSectionRef.current && containerRef.current) {
+            const searchHeight = searchSectionRef.current.offsetHeight;
+            containerRef.current.style.setProperty('--search-section-height', `${searchHeight}px`);
+        }
+    }, [clubs.length]); // Re-run when clubs change
+
+    useEffect(() => {
+        if (currentClubIndex !== null && refs.current[currentClubIndex]) {
             refs.current[currentClubIndex]!.scrollIntoView({
                 behavior: 'smooth',
             });
@@ -50,10 +59,11 @@ export default function DesktopClubList({
 
     return (
         <div
+            ref={containerRef}
             className="w-[289px] bg-[#F6F6F6] flex flex-col h-full overflow-y-scroll shadow-inner"
             {...props}
         >
-            <div className={styles.clubsListSearchSection}>
+            <div ref={searchSectionRef} className={styles.clubsListSearchSection}>
                 <SearchBar 
                     clubs={clubs} 
                     onClubSelect={clubClickedFromList}

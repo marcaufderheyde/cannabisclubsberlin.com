@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Fuse, { FuseResult, FuseResultMatch } from 'fuse.js';
 import styles from './ClubCard.module.css';
 import { Club } from './OpenStreetMap';
+import useDebounceFunction from '@/app/helpers/useDebounceFunction';
 
 interface SearchBarProps {
     clubs: Club[];
@@ -47,20 +48,32 @@ const SearchBar: React.FC<SearchBarProps> = ({
         setFuse(fuseInstance);
     }, [clubs]);
 
-    // Perform search when search term changes
+    // Debounced search function
+    const performSearch = useCallback((term: string) => {
+        if (!fuse) return;
+
+        const results = fuse.search(term).slice(0, 3); // Top 3 results
+        setSearchResults(results);
+        setIsDropdownVisible(results.length > 0);
+        setSelectedIndex(-1);
+    }, [fuse]);
+
+    // Create debounced version of search function
+    const debouncedSearch = useDebounceFunction(performSearch, 200);
+
+    // Trigger debounced search when search term changes
     useEffect(() => {
-        if (!fuse || !searchTerm.trim()) {
+        // Clear results immediately when search is empty
+        if (!searchTerm.trim()) {
             setSearchResults([]);
             setIsDropdownVisible(false);
             setSelectedIndex(-1);
             return;
         }
-
-        const results = fuse.search(searchTerm).slice(0, 3); // Top 3 results
-        setSearchResults(results);
-        setIsDropdownVisible(results.length > 0);
-        setSelectedIndex(-1);
-    }, [searchTerm, fuse]);
+        
+        // Otherwise use debounced search
+        debouncedSearch(searchTerm);
+    }, [searchTerm, debouncedSearch]);
 
     // Handle keyboard navigation
     const handleKeyDown = useCallback((event: React.KeyboardEvent<HTMLInputElement>) => {

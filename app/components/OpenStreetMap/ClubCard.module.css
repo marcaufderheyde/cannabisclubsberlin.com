@@ -225,20 +225,20 @@
     margin: 0;
   }
 
-/* Search Bar Styles - Minimalist Mobile Only */
-.mobileFilterSearchContainer {
+/* Search Bar Styles - Base for Desktop and Mobile */
+.searchContainer {
   position: relative;
   width: 100%;
   contain: layout style;
 }
 
-.mobileFilterSearchContainer .searchInputContainer {
+.searchInputContainer {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.mobileFilterSearchContainer .searchInput {
+.searchInput {
   width: 100%;
   padding: 8px 12px;
   font-size: 14px;
@@ -249,7 +249,7 @@
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
-.mobileFilterSearchContainer .searchDropdown {
+.searchDropdown {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -263,32 +263,48 @@
   z-index: 1000;
 }
 
-.mobileFilterSearchContainer .searchResultItem {
+.searchResultItem {
   padding: 10px 12px;
   cursor: pointer;
   border-bottom: 1px solid #f8f9fa;
 }
 
-.mobileFilterSearchContainer .searchResultItem:last-child {
+.searchResultItem:last-child {
   border-bottom: none;
 }
 
-.mobileFilterSearchContainer .searchResultItem:hover,
-.mobileFilterSearchContainer .searchResultSelected {
+.searchResultItem:hover,
+.searchResultSelected {
   background: linear-gradient(135deg, #B6CF54 0%, #55834E 100%);
   color: white;
 }
 
-.mobileFilterSearchContainer .searchResultName {
+.searchResultName {
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 4px;
   color: #2E2E2E;
 }
 
-.mobileFilterSearchContainer .searchResultSelected .searchResultName {
+.searchResultSelected .searchResultName {
   color: white;
 }
+
+.searchHighlight {
+  background-color: rgba(182, 207, 84, 0.3);
+  font-weight: bold;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+/* Search Bar Styles - Mobile Override (inherits base styles) */
+.mobileFilterSearchContainer {
+  position: relative;
+  width: 100%;
+  contain: layout style;
+}
+
+/* Mobile inherits all base styles from .searchContainer and its children */
 
 .clubsListSearchSection {
   padding: 16px;
@@ -315,7 +331,7 @@
 }
 
 .clubListItem {
-  scroll-margin-top: 80px; /* Adjust this value based on your search section height */
+  scroll-margin-top: var(--search-section-height, 80px); /* Dynamically calculated search section height with fallback */
 }
 
 /* Mobile responsiveness for clubs list */

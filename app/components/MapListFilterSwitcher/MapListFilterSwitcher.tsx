@@ -26,13 +26,16 @@ function MapListFilterSwitcher({
     const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 
     // Use provided clubs or fall back to original logic
-    const clubs = providedClubs || pullClubsListContent().map((club) => ({
-        ...club,
-        description: t(`${club.slug}.description`),
-        offerings: typeof club.offerings === 'string' 
-            ? club.offerings.split(', ') 
-            : [],
-    }));
+    const clubs =
+        providedClubs ||
+        pullClubsListContent().map((club) => ({
+            ...club,
+            description: t(`${club.slug}.description`),
+            offerings:
+                typeof club.offerings === 'string'
+                    ? club.offerings.split(', ')
+                    : [],
+        }));
 
     const handleClubSelect = (clubIndex: number) => {
         if (onClubSelect) {
@@ -98,7 +101,6 @@ function MapListFilterSwitcher({
             <div className="lg:hidden block">
                 <div className="absolute top-[var(--navbar-height-mobile)] left-4 right-4 z-[950] my-4">
                     <div className="flex rounded-xl shadow-xl bg-white border border-gray-200">
-                        
                         <AnimatePresence mode="wait">
                             {!isFilterExpanded ? (
                                 /* Default state - Search (2/3) + Filter Icon (1/3) */
@@ -121,7 +123,7 @@ function MapListFilterSwitcher({
                                             />
                                         </div>
                                     </div>
-                                    
+
                                     {/* Filter Icon - 1/3 width */}
                                     <div className="flex-1 border-l border-gray-200 rounded-r-xl bg-white">
                                         <button
@@ -129,9 +131,9 @@ function MapListFilterSwitcher({
                                             onClick={handleFilterToggle}
                                             className="w-full h-full flex items-center justify-center px-4 py-3 hover:bg-gray-50 transition-colors duration-200 rounded-r-xl"
                                         >
-                                            <FilterSVG 
-                                                color="#868686" 
-                                                className="w-6 h-6" 
+                                            <FilterSVG
+                                                color="#868686"
+                                                className="w-6 h-6"
                                             />
                                         </button>
                                     </div>
@@ -143,10 +145,10 @@ function MapListFilterSwitcher({
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
-                                    transition={{ 
-                                        type: "spring", 
-                                        stiffness: 300, 
-                                        damping: 30 
+                                    transition={{
+                                        type: 'spring',
+                                        stiffness: 300,
+                                        damping: 30,
                                     }}
                                     className="flex w-full relative"
                                 >
@@ -161,12 +163,14 @@ function MapListFilterSwitcher({
                                             />
                                         </div>
                                     </div>
-                                    
+
                                     {/* HR Button - 1/3 width */}
                                     <div className="flex-1 border-l border-gray-200 bg-white">
                                         <button
                                             aria-label="show hr clubs button"
-                                            onClick={() => handleFilterSelect(true)}
+                                            onClick={() =>
+                                                handleFilterSelect(true)
+                                            }
                                             className={
                                                 'w-full h-full flex items-center justify-center text-sm px-2 py-3 transition-colors duration-200 ' +
                                                 displayHRClubsButtonBackground
@@ -175,12 +179,14 @@ function MapListFilterSwitcher({
                                             Harm Reduction
                                         </button>
                                     </div>
-                                    
+
                                     {/* All Clubs Button - 1/3 width */}
                                     <div className="flex-1 border-l border-gray-200 rounded-r-xl bg-white">
                                         <button
                                             aria-label="show all clubs button"
-                                            onClick={() => handleFilterSelect(false)}
+                                            onClick={() =>
+                                                handleFilterSelect(false)
+                                            }
                                             className={
                                                 'w-full h-full flex items-center justify-center text-sm px-2 py-3 transition-colors duration-200 rounded-r-xl ' +
                                                 displayAllClubsButtonBackground
@@ -189,12 +195,12 @@ function MapListFilterSwitcher({
                                             All Clubs
                                         </button>
                                     </div>
-                                    
+
                                     {/* Close Button - Small overlay in top-right */}
                                     <button
                                         aria-label="close filter options"
                                         onClick={handleFilterToggle}
-                                        className="absolute top-1 right-1 w-6 h-6 flex items-center justify-center rounded-full bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors duration-200 z-10"
+                                        className="absolute top-1 right-1 w-6 h-6 flex items-center justify-center rounded-full bg-white shadow-sm hover:bg-gray-50 transition-colors duration-200 z-10"
                                     >
                                         <Close color="#868686" />
                                     </button>

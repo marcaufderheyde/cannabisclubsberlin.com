@@ -6,24 +6,27 @@ import SearchBarFuse from '@/app/components/OpenStreetMap/SearchBarFuse';
 import FilterSVG from '@/app/components/Svg/filter-svg';
 import Close from '@/app/components/Close/Close';
 import { pullClubsListContent } from '@/app/helpers/clubsListContent';
+import { Club } from '@/app/components/OpenStreetMap/OpenStreetMap';
 
 type Props = {
     showHRFilter: boolean;
     setShowHRFilter: Dispatch<SetStateAction<boolean>>;
     onClubSelect?: (clubIndex: number) => void;
+    clubs?: Club[];
 };
 
 function MapListFilterSwitcher({
     setShowHRFilter: setShowHRInfo,
     showHRFilter,
     onClubSelect,
+    clubs: providedClubs,
 }: Props) {
     const t = useTranslations('ClubsPage');
     const localActive = useLocale();
     const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 
-    // Get clubs data for search functionality
-    const clubs = pullClubsListContent().map((club) => ({
+    // Use provided clubs or fall back to original logic
+    const clubs = providedClubs || pullClubsListContent().map((club) => ({
         ...club,
         description: t(`${club.slug}.description`),
         offerings: typeof club.offerings === 'string' 

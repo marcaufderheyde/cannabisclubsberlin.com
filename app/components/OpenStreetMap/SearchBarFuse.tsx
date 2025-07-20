@@ -165,7 +165,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
                     placeholder={placeholder}
                     className={styles.searchInput}
                 />
-                {/* <div className={styles.searchIcon}>🔍</div> */}
             </div>
             
             {isDropdownVisible && (
@@ -189,21 +188,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
                                     }}
                                 />
                             </div>
-                            {/* <div className={styles.searchResultDescription}>
-                                <span 
-                                    dangerouslySetInnerHTML={{ 
-                                        __html: highlightMatch(
-                                            result.item.description || '', 
-                                            result.matches?.filter(m => m.key === 'description')
-                                        ) 
-                                    }}
-                                />
-                            </div> */}
-                            {/* {result.score && (
-                                <div className={styles.searchResultScore}>
-                                    Match: {Math.round((1 - result.score) * 100)}%
-                                </div>
-                            )} */}
                         </div>
                     ))}
                 </div>

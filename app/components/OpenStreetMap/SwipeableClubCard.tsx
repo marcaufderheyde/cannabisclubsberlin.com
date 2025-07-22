@@ -137,12 +137,12 @@ export default function SwipeableClubCard({
                                 .toString()
                                 ?.split(',')
                                 .map((offering: string) => (
-                                    <span
+                                    <div
                                         key={offering}
-                                        className="bg-blue-100 text-blue-800 text-xs font-medium me-2 p-0.5 inline-block overflow-hidden text-center rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                                        className='bg-[#ABD4A4] text-white text-xs sm:text-sm rounded-xl py-1 px-2 self-center overflow-ellipsis shadow-md'
                                     >
                                         {offering}
-                                    </span>
+                                    </div>
                                 ))}
                         </div>
                     </div>

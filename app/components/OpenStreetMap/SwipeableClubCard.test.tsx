@@ -159,20 +159,16 @@ describe('SwipeableClubCard', () => {
         const offerTags = screen.getAllByText(/Offer/);
         offerTags.forEach((tag) => {
             expect(tag).toHaveClass(
-                'bg-blue-100',
-                'text-blue-800',
+                'bg-[#ABD4A4]',
+                'text-white',
                 'text-xs',
-                'font-medium',
-                'me-2',
-                'p-0.5',
-                'inline-block',
-                'overflow-hidden',
-                'text-center',
-                'rounded',
-                'dark:bg-gray-700',
-                'dark:text-blue-400',
-                'border',
-                'border-blue-400'
+                'sm:text-sm',
+                'rounded-xl',
+                'py-1',
+                'px-2',
+                'self-center',
+                'overflow-ellipsis',
+                'shadow-md'
             );
         });
     });

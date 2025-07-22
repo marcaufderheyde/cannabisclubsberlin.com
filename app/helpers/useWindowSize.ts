@@ -23,7 +23,7 @@ export default function useWindowSize() {
             // Set window width/height to state
             setWindowSize({
                 width: window.outerWidth,
-                height: window.outerWidth,
+                height: window.outerHeight,
             });
         }
 

@@ -30,6 +30,7 @@
     margin: 0; 
     padding: 0; 
     z-index: 900;
+    contain: layout size style; /* Modern CSS containment - replaces overflow management */
   }
   
   .customPopup {
@@ -223,3 +224,127 @@
     color: #666;
     margin: 0;
   }
+
+/* Search Bar Styles - Base for Desktop and Mobile */
+.searchContainer {
+  position: relative;
+  width: 100%;
+  contain: layout style;
+}
+
+.searchInputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.searchDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e1e5e9;
+  border-radius: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+}
+
+.searchResultItem {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.searchResultItem:last-child {
+  border-bottom: none;
+}
+
+.searchResultItem:hover,
+.searchResultSelected {
+  background: linear-gradient(135deg, #B6CF54 0%, #55834E 100%);
+  color: white;
+}
+
+.searchResultName {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #2E2E2E;
+}
+
+.searchResultSelected .searchResultName {
+  color: white;
+}
+
+.searchHighlight {
+  background-color: rgba(182, 207, 84, 0.3);
+  font-weight: bold;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+/* Search Bar Styles - Mobile Override (inherits base styles) */
+.mobileFilterSearchContainer {
+  position: relative;
+  width: 100%;
+  contain: layout style;
+}
+
+/* Mobile inherits all base styles from .searchContainer and its children */
+
+.clubsListSearchSection {
+  padding: 16px;
+  border-bottom: 1px solid #e1e5e9;
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 1007;
+  flex-shrink: 0;
+}
+
+/* Override search bar styles when inside clubs list */
+.clubsListSearchSection .searchContainer {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  max-width: none;
+}
+
+.clubsListSearchSection .searchInput {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.clubListItem {
+  scroll-margin-top: var(--search-section-height, 80px); /* Dynamically calculated search section height with fallback */
+}
+
+/* Mobile responsiveness for clubs list */
+@media only screen and (max-width: 768px) {
+  
+  .clubsListSearchSection {
+    padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  
+  .clubsListSearchSection {
+    padding: 8px;
+  }
+}

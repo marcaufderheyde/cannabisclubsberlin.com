@@ -28,7 +28,7 @@ describe('Headline Component', () => {
         const headlineElement = screen.getByText('Welcome to Our Club');
         expect(headlineElement).toBeInTheDocument();
         expect(headlineElement).toHaveClass(
-            'font-bold text-4xl md:text-[4rem] opacity-[0.3] text-balance leading-tight'
+            'font-bold text-4xl md:text-[4rem] opacity-[1.0] text-balance leading-tight text-[#d2b48c] mix-blend-difference'
         );
     });
 

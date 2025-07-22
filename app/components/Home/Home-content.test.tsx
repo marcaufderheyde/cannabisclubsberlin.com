@@ -70,7 +70,7 @@ describe('Content Component', () => {
         );
         expect(descriptionParagraph).toBeInTheDocument();
         expect(descriptionParagraph).toHaveClass(
-            'md:text-[1.5rem] text-[#2E2E2E] md:max-w-[500px]'
+            'text-base md:text-[1.5rem] text-[#2E2E2E] lg:max-w-[500px]'
         );
     });
 

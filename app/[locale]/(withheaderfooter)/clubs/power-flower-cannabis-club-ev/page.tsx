@@ -3,7 +3,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { getClubMetadata } from '@/app/helpers/getClubMetadata';
 
 export const generateMetadata = async () => {
-    return await getClubMetadata('bunte-bluete-cannabis-club-berlin-ev');
+    return await getClubMetadata('power-flower-cannabis-club-ev');
 };
 
 export default function Clubs({

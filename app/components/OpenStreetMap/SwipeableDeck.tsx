@@ -126,7 +126,8 @@ export default function SwipeableDeck<T>({
 
     return (
         <div
-            className="overscroll-contained lg:hidden absolute bottom-0 z-[2004] w-full h-full pointer-events-[fill] overflow-clip pointer-events-none "
+            className="lg:hidden absolute bottom-0 z-[2004] inset-0 pointer-events-none overflow-hidden"
+            style={{ contain: 'layout size style' }}
             {...props}
         >
             {windowSize &&

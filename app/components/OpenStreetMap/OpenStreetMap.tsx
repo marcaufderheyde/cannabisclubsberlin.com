@@ -57,6 +57,7 @@ type OpenStreetMapProps = {
     showHRInfo: boolean;
     isDarkMode: boolean;
     setIsDarkMode: Dispatch<SetStateAction<boolean>>;
+    onExternalClubSelect?: (handler: (clubSlug: string) => void) => void;
 };
 
 const MotionSwipableDeck = withMotion(SwipeableDeck);
@@ -132,6 +133,21 @@ export default function OpenStreetMap(props: OpenStreetMapProps) {
 
         return () => clearTimeout(timer);
     }, [props.showHRInfo, clubs]);
+
+    // Handle external club selection (e.g., from search)
+    const handleExternalClubSelect = useCallback((clubSlug: string) => {
+        const clubIndex = filteredClubs.findIndex(club => club.slug === clubSlug);
+        if (clubIndex !== -1) {
+            setClubIndex(clubIndex);
+        }
+    }, [filteredClubs]);
+
+    // Expose external club selection to parent
+    useEffect(() => {
+        if (props.onExternalClubSelect) {
+            props.onExternalClubSelect(handleExternalClubSelect);
+        }
+    }, [props.onExternalClubSelect, handleExternalClubSelect]);
 
     const selectedClub = clubIndexExists && filteredClubs[clubIndex!];
 

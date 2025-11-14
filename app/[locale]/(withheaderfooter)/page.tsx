@@ -4,6 +4,10 @@ import HomeContent from '../../components/Home/Home-content';
 import { generateSlug } from '@/app/helpers/clubsListContent';
 
 export default function IndexPage() {
+    console.log(
+        'Generated Slug Example:',
+        generateSlug('Gourmet Greens Royal e.V.')
+    );
     return (
         <>
             <Background />

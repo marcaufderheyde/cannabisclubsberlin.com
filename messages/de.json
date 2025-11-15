@@ -293,7 +293,8 @@
                 "grashaus": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "green-hub-wedding": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "weed-bros": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Nachhaltige Praktiken",
-                "weed-club-friends": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Hochwertige Sorten"
+                "weed-club-friends": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Hochwertige Sorten",
+                "gourmet-greens-royal-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Hochwertige Sorten, Internationale Expertise, Digitales Buchungssystem, Schadensminderung Partnerschaft, Workshops"
             }
         },
         "csc-high-ground-berlin-ev": {
@@ -824,6 +825,16 @@
             "meta_keywords": "Weed Club Friends, Cannabisclub Berlin, Gemeinschaftsanbau, hochwertiges Cannabis, legaler Anbau, Ostkreuz, WCF e. V.",
             "offerings": "Gemeinschaftlicher Indoor-Anbau, Cannabisverteilung an Mitglieder, Sortenauswahl durch Mitglieder, Abholung in der Nähe Ostkreuz, nur für Personen über 21 mit Wohnsitz in Deutschland",
             "harm_reduction": "Dieser Club hat derzeit keine spezifischen Maßnahmen zur Schadensminderung aufgelistet.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
+        },
+        "gourmet-greens-royal-ev": {
+            "prices": "Jedes Mitglied zahlt einen monatlichen Beitrag entsprechend der gewünschten Bezugsmenge. Es gibt keine Aufnahmegebühr und keine weiteren Kosten. Die aktuellen Mitgliedschaftsmodelle sind: 20 g/Monat = 155 € mtl., 35 g/Monat = 260 € mtl., 50 g/Monat = 360 € mtl. Abweichende Bezugsmodelle sind nicht geplant. Die Mitglieder beziehen seit dem 10.10.2025 Cannabis aus dem vereinseigenen Anbau und können aus vier Sorten wählen. Der monatliche Beitrag wird ausschließlich per Überweisung auf das Vereinskonto entgegengenommen; Ausnahmen sind möglich, empfohlen wird ein Dauerauftrag. Bei Zahlungsverzug erfolgt keine Abgabe. Die Kündigungsfrist beträgt drei Monate.",
+            "location": "Abholung: Breitenbachstraße 32, 13509 Berlin-Reinickendorf\n\nAbholung: 24/7 buchbar\nAbholzeiten: Sonntag–Donnerstag 12:00–14:00 Uhr; Freitag & Samstag 17:00–20:00 Uhr\n\nKontakt: info@GourmetGreensRoyal.de",
+            "description": "Gourmet Greens Royal e. V. arbeitet mit international ausgewiesenen Cannabis-Experten aus Kalifornien, Nevada, Spanien und Deutschland zusammen. Mitglieder profitieren von diesem umfassenden Know-how und der hohen Qualität der Blüten. Seit Start der Ausgabe im Oktober 2025 erhält der Verein ausschließlich positives Feedback zu Geschmack und Qualität. Zukünftig sind Workshops mit führenden Fachleuten der Branche für Mitglieder geplant.",
+            "meta_description": "Gourmet Greens Royal e. V. ist ein aktiver Cannabis-Anbauverein in Berlin, der hochwertige Sorten mit internationaler Expertise produziert und seit Oktober 2025 erfolgreich ausgibt.",
+            "meta_keywords": "Gourmet Greens Royal, Cannabisclub Berlin, Cannabis Anbauverein, Cannabis Abgabe, hochwertige Blüten, Reinickendorf, Cannabis Sorten, Mitgliederverein",
+            "offerings": "Super Buff Cherry (13.2% THC), Permanent Marker (20.2% THC), Apples & Bananas (19.8% THC), Dante’s Inferno (21.3% THC), Voll digitale Termin- und Sortenbuchung, Tägliche Abholtermine für Mitglieder",
+            "harm_reduction": "Der Verein arbeitet mit der Stiftung SPI in Berlin-Reinickendorf zusammen, um Schadensminderung und Prävention im Cannabiskonsum zu fördern.",
             "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         }
     }

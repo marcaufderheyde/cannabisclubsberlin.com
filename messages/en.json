@@ -297,7 +297,8 @@
                 "green-hub-wedding": "Community Cultivation, Member Cannabis Distribution, Socialising",
                 "weed-bros": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
                 "weed_club-friends": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
-                "weed-club-friends": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices"
+                "weed-club-friends": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
+                "gourmet-greens-royal-ev": "Community Cultivation, Member Cannabis Distribution, High-Quality Strains, International Expertise, Digital Booking System, Harm Reduction Partnership, Workshops"
             }
         },
         "csc-high-ground-berlin-ev": {
@@ -828,6 +829,16 @@
             "meta_keywords": "Weed Club Friends, Berlin cannabis club, community cultivation, legal cannabis, high-quality strains, WCF e. V., Ostkreuz",
             "offerings": "Indoor community cultivation, Cannabis distribution to members, Member-driven strain selection, Pick-up near Ostkreuz, 21+ only with residence in Germany",
             "harm_reduction": "This club has currently not listed any specific harm reduction services.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "gourmet-greens-royal-ev": {
+            "prices": "Each member pays a monthly fee based on their chosen cannabis quantity. There is no admission fee and no additional charges. Membership models: 20 g/month = €155 per month, 35 g/month = €260 per month, 50 g/month = €360 per month. Other quantities are not planned. Since 10 October 2025, members receive cannabis from the club’s own cultivation and may choose from four strains. Monthly contributions are accepted exclusively via bank transfer; exceptions are possible, and standing orders are recommended. In case of late payment, no cannabis will be distributed. The notice period is three months.",
+            "location": "Pickup location: Breitenbachstraße 32, 13509 Berlin-Reinickendorf\n\nPickup booking: available 24/7\nPickup hours: Sunday–Thursday 12:00–14:00; Friday & Saturday 17:00–20:00\n\nContact: info@GourmetGreensRoyal.de",
+            "description": "Gourmet Greens Royal e. V. collaborates with internationally recognized cannabis cultivation experts from California, Nevada, Spain, and Germany. Members benefit from extensive industry knowledge and the resulting high product quality. Since the start of distribution in October 2025, the club has received exclusively positive feedback regarding taste and quality. Workshops with leading experts in the field are planned for the future.",
+            "meta_description": "Gourmet Greens Royal e. V. is an active cannabis cultivation association in Berlin, producing high-quality strains backed by international expertise and distributing to members since October 2025.",
+            "meta_keywords": "Gourmet Greens Royal, cannabis club Berlin, cultivation association, cannabis distribution, high-quality cannabis, Reinickendorf, cannabis strains, members-only club",
+            "offerings": "Super Buff Cherry (13.2% THC), Permanent Marker (20.2% THC), Apples & Bananas (19.8% THC), Dante’s Inferno (21.3% THC), Fully digital booking system for pickup appointments and strain selection, Daily pickup availability.",
+            "harm_reduction": "The club collaborates with Stiftung SPI in Reinickendorf to support harm reduction and prevention related to cannabis use.",
             "reviews": "CCB currently does not have a verified review available for this club."
         }
     }

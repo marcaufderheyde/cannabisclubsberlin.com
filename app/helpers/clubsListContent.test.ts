@@ -36,6 +36,45 @@ describe('ClubsListContent Module', () => {
             const slug = generateSlug(name);
             expect(slug).toBe(expectedSlug);
         });
+
+        it('should handle empty string input', () => {
+            const name = '';
+            const slug = generateSlug(name);
+            expect(slug).toBe('');
+        });
+
+        it('should handle string with only special characters', () => {
+            const name = '!@#$%^&*()';
+            const slug = generateSlug(name);
+            expect(slug).toBe('');
+        });
+
+        it('should handle German ß (eszett) correctly', () => {
+            const name = 'Straße Club Berlin';
+            const expectedSlug = 'strasse-club-berlin';
+            const slug = generateSlug(name);
+            expect(slug).toBe(expectedSlug);
+        });
+
+        it('should handle mixed umlauts and special characters', () => {
+            const name = 'Münchner Größe! & Bäckerei';
+            const expectedSlug = 'muenchner-groesse--baeckerei';
+            const slug = generateSlug(name);
+            expect(slug).toBe(expectedSlug);
+        });
+
+        it('should handle extremely long club names', () => {
+            const name = 'A'.repeat(500) + ' Cannabis Social Club Berlin e.V.';
+            const slug = generateSlug(name);
+            expect(slug.length).toBeGreaterThan(0);
+            expect(slug).toMatch(/^[a-z0-9-]+$/);
+        });
+
+        it('should handle only whitespace input', () => {
+            const name = '     ';
+            const slug = generateSlug(name);
+            expect(slug).toBe('');
+        });
     });
 
     describe('pullClubsListContent', () => {

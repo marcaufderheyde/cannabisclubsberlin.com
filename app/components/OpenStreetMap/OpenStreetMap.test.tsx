@@ -16,15 +16,13 @@ jest.mock('react-leaflet', () => {
         removeEventListener: jest.fn(),
     };
 
-    const MapContainer = ({
-        children,
-        ref,
-    }: {
-        children: React.ReactNode;
-        ref: any;
-    }) => {
+    const MapContainer = React.forwardRef(({
+        children
+    }: any, ref: any) => {
         React.useEffect(() => {
-            if (ref && ref.current) {
+            if (typeof ref === 'function') {
+                ref(mockMap);
+            } else if (ref && 'current' in ref) {
                 ref.current = mockMap;
             }
         }, [ref]);
@@ -33,7 +31,7 @@ jest.mock('react-leaflet', () => {
             { 'data-testid': 'map-container' },
             children
         );
-    };
+    });
     MapContainer.displayName = 'MockMapContainer';
 
     const TileLayer = () =>
@@ -271,8 +269,8 @@ describe('OpenStreetMap Component', () => {
         expect(mockProps.setIsDarkMode).toHaveBeenCalledWith(false);
     });
 
-    it.skip('should filter clubs based on showHRInfo prop', async () => {
-        const clubsWithoutHR = [
+    it('should filter clubs based on showHRInfo prop', async () => {
+        const clubsWithMixedHR = [
             ...mockClubs,
             {
                 name: 'Club 3',
@@ -288,7 +286,17 @@ describe('OpenStreetMap Component', () => {
         jest.spyOn(
             require('@/app/helpers/clubsListContent'),
             'pullClubsListContent'
-        ).mockReturnValue(clubsWithoutHR);
+        ).mockReturnValue(clubsWithMixedHR);
+
+        // Update translation mock to simulate "no HR info" for club-3
+        (useTranslations as jest.Mock).mockImplementation((namespace: string) => {
+            return (key: string) => {
+                if (key === 'club-3.harm_reduction') {
+                    return 'This club has currently not listed any specific harm reduction services.';
+                }
+                return key;
+            };
+        });
 
         const mockPropsShowHRTrue = {
             isDesktopMap: true,
@@ -301,12 +309,14 @@ describe('OpenStreetMap Component', () => {
 
         await waitFor(() => {
             const markers = screen.getAllByTestId(/^marker-/);
+            // club-3 should be filtered out
             expect(markers).toHaveLength(2);
             expect(markers[0]).toHaveAttribute('data-location', '52.52,13.405');
             expect(markers[1]).toHaveAttribute('data-location', '52.51,13.404');
         });
 
-        rerender(<OpenStreetMap {...mockProps} showHRInfo={false} />);
+        // Set showHRInfo to false, should show all 3
+        rerender(<OpenStreetMap {...mockPropsShowHRTrue} showHRInfo={false} />);
 
         await waitFor(() => {
             const markers = screen.getAllByTestId(/^marker-/);
@@ -430,16 +440,10 @@ describe('OpenStreetMap Component', () => {
         ).toHaveTextContent('0');
     });
 
-    it.skip('should update map view when a club is selected', async () => {
-        jest.useFakeTimers();
-        const mockJumpToMarker = jest.fn();
-        jest.doMock(
-            '@/app/components/OpenStreetMap/helpers/jumpToMarker',
-            () => mockJumpToMarker
-        );
+    it('should update map view when a club is selected', async () => {
+        const jumpToMarker = require('@/app/components/OpenStreetMap/helpers/jumpToMarker');
 
-        // We need to re-import the component after mocking
-        const { default: OpenStreetMap } = await import('./OpenStreetMap');
+        jest.useFakeTimers();
 
         await act(async () => {
             render(<OpenStreetMap {...mockProps} />);
@@ -449,13 +453,13 @@ describe('OpenStreetMap Component', () => {
             fireEvent.click(screen.getByTestId('marker-0'));
         });
 
-        // Advance timers to trigger the debounced function
-        act(() => {
-            jest.advanceTimersByTime(150); // Slightly more than the debounce delay
+        // Run all pending timers including the debounce timer
+        await act(async () => {
+            jest.runAllTimers();
         });
 
         await waitFor(() => {
-            expect(mockJumpToMarker).toHaveBeenCalled();
+            expect(jumpToMarker).toHaveBeenCalled();
         });
 
         jest.useRealTimers();

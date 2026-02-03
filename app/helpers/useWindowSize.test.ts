@@ -3,12 +3,12 @@ import useWindowSize from './useWindowSize';
 
 describe('useWindowSize Hook', () => {
     beforeEach(() => {
-        Object.defineProperty(window, 'outerWidth', {
+        Object.defineProperty(window, 'innerWidth', {
             writable: true,
             configurable: true,
             value: 1024,
         });
-        Object.defineProperty(window, 'outerHeight', {
+        Object.defineProperty(window, 'innerHeight', {
             writable: true,
             configurable: true,
             value: 768,
@@ -26,8 +26,16 @@ describe('useWindowSize Hook', () => {
         const { result } = renderHook(() => useWindowSize());
 
         act(() => {
-            window.outerWidth = 800;
-            window.outerHeight = 600;
+            Object.defineProperty(window, 'innerWidth', {
+                writable: true,
+                configurable: true,
+                value: 800,
+            });
+            Object.defineProperty(window, 'innerHeight', {
+                writable: true,
+                configurable: true,
+                value: 600,
+            });
 
             window.dispatchEvent(new Event('resize'));
         });
@@ -36,3 +44,4 @@ describe('useWindowSize Hook', () => {
         expect(result.current.height).toBe(600);
     });
 });
+

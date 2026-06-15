@@ -81,17 +81,13 @@
         "headline": "Kontakt",
         "headline_description": "Fühl dich frei, uns über die unten aufgeführten Kanäle zu kontaktieren.",
         "headline_subdescription": "cannabisclubsberlin@protonmail.me",
-
         "faq_headline": "Häufig gestellte Fragen",
         "faq_q1": "Wo ist euer Club?",
         "faq_a1": "CannabisClubsBerlin.com ist kein eingetragener Cannabis Social Club, sondern eine Übersicht über registrierte Social Clubs in Berlin. Die auf CannabisClubsBerlin.com aufgeführten Informationen sind öffentlich zugänglich und werden hier gesammelt, damit du eine fundierte Entscheidung treffen kannst, welchem Club du beitreten möchtest.",
-
         "faq_q2": "Kann ich bei euch Weed kaufen?",
         "faq_a2": "Wie gesagt, CannabisClubsBerlin.com ist kein eingetragener Cannabis Social Club. Wir verkaufen kein Cannabis und können es dir nicht direkt zur Verfügung stellen.",
-
         "faq_q3": "Gibt es Mitgliedsbeiträge?",
         "faq_a3": "Jeder Club kann eigene Mitgliedsbeiträge oder monatliche Beiträge haben. Für genauere Infos schau bitte bei den einzelnen Clubs nach.",
-
         "faq_q4": "Wie kann ich meine Mitgliedschaftsvoraussetzungen überprüfen?",
         "faq_a4": "Jeder Club hat eigene Richtlinien. Bitte kontaktiere die Clubs direkt oder informiere dich in den von uns bereitgestellten Informationen, ob du ihre Anforderungen erfüllst."
     },
@@ -294,7 +290,8 @@
                 "green-hub-wedding": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising",
                 "weed-bros": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Nachhaltige Praktiken",
                 "weed-club-friends": "Gemeinschaftlicher Anbau, Cannabisverteilung, Socialising, Hochwertige Sorten",
-                "gourmet-greens-royal-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Hochwertige Sorten, Internationale Expertise, Digitales Buchungssystem, Schadensminderung Partnerschaft, Workshops"
+                "gourmet-greens-royal-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Hochwertige Sorten, Internationale Expertise, Digitales Buchungssystem, Schadensminderung Partnerschaft, Workshops",
+                "gruener-baer-ev": "Gemeinschaftlicher Anbau, Cannabisverteilung, Hochwertige Sorten, Vielfältige Auswahl, Schadensminimierung"
             }
         },
         "csc-high-ground-berlin-ev": {
@@ -835,6 +832,16 @@
             "meta_keywords": "Gourmet Greens Royal, Cannabisclub Berlin, Cannabis Anbauverein, Cannabis Abgabe, hochwertige Blüten, Reinickendorf, Cannabis Sorten, Mitgliederverein",
             "offerings": "Super Buff Cherry (13.2% THC), Permanent Marker (20.2% THC), Apples & Bananas (19.8% THC), Dante’s Inferno (21.3% THC), Voll digitale Termin- und Sortenbuchung, Tägliche Abholtermine für Mitglieder",
             "harm_reduction": "Der Verein arbeitet mit der Stiftung SPI in Berlin-Reinickendorf zusammen, um Schadensminderung und Prävention im Cannabiskonsum zu fördern.",
+            "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
+        },
+        "gruener-baer-ev": {
+            "prices": "Die Mitglieder wählen ein monatliches Beitragsmodell (Tier) zwischen 50€ und 420€, das im Voraus zu entrichten ist. Zusätzlich fällt ein jährlicher Mitgliedsbeitrag von 20€ an. Blüten werden im Rahmen der Abgabe zu Preisen zwischen 8,50€ und 12€ pro Gramm bereitgestellt. Das System ermöglicht eine transparente und planbare Versorgung im Einklang mit den Vorgaben des KCanG.",
+            "location": "Ziegra Straße 13, 12057 Berlin\n\nÖffnungszeiten:\nMontag 16:00 - 20:00\nMittwoch 16:00 - 20:00\nFreitag 16:00 - 20:00\nSamstag 16:00 - 20:00",
+            "description": "Grüner Bär e.V. – Cannabis Social Club Berlin\n\nDer Grüner Bär e.V. wurde im April 2024 gegründet mit dem klaren Ziel, eine legale, transparente und qualitativ hochwertige Cannabisversorgung im Rahmen des Konsumcannabisgesetzes (KCanG) aufzubauen.\n\nNach erfolgreicher Vorbereitung und behördlicher Genehmigung konnte der Verein die Produktion starten und hat eine strukturierte, kontrollierte Anbauumgebung etabliert. Der Fokus liegt auf hochwertigem Indoor-Cannabis, präzise dokumentierten Prozessen und einem starken Qualitätsanspruch – von der Genetik bis zur finalen Blüte.\n\nSeit dem 22. Dezember 2024 befindet sich der Verein in der aktiven Abgabephase und versorgt seine Mitglieder regelmäßig im Rahmen der gesetzlichen Vorgaben.\n\nDer Grüner Bär e.V. steht für klare Strukturen und gesetzeskonforme Organisation, transparente Mitgliedschaftsmodelle, sorgfältig ausgewählte Genetiken und eine starke Community im Herzen Berlins. Der Verein versteht sich nicht nur als Anbauvereinigung, sondern als moderner Cannabis Social Club, der Qualität, Verantwortung und Community verbindet.",
+            "meta_description": "Grüner Bär e.V. ist ein Cannabis Social Club in Berlin mit eigener Abgabestelle, der seit Dezember 2024 hochwertiges Indoor-Cannabis an seine Mitglieder abgibt.",
+            "meta_keywords": "Grüner Bär e.V., Cannabis Social Club Berlin, Indoor Cannabis, KCanG, Anbauvereinigung Berlin, hochwertige Genetiken, Cannabisabgabe Berlin, Mitgliedschaft Cannabis Club, Neukölln Cannabis, legaler Cannabisanbau",
+            "offerings": "Aktuell sechs verschiedene Genetiken im Sortiment, Vier feste Strains und zwei rotierende Sorten für regelmäßig neue Highlights, Eine der rotierenden Genetiken ist fortlaufend als Special Offer ab 8.50€ pro Gramm verfügbar.",
+            "harm_reduction": "Der Verein verfügt über einen geschulten Präventionsbeauftragten, der Mitglieder bei Bedarf berät und an geeignete Beratungsstellen weitervermittelt. Der Zugang ist strikt auf Personen ab 21 Jahren beschränkt. Jugendschutz sowie ein verantwortungsvoller Umgang mit Cannabis stehen im Mittelpunkt der Clubphilosophie.",
             "reviews": "CCB hat bis jetzt noch keine verifizierten Bewertungen für diesen Club."
         }
     }

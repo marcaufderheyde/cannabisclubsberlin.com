@@ -78,26 +78,20 @@
         "term_seven_title": "Criminal and Administrative Offenses: ",
         "term_seven": "The law introduces specific criminal and administrative offense provisions, including the unauthorized possession, trade, and consumption of cannabis."
     },
-
     "ContactPage": {
         "headline": "Contact",
         "headline_description": "Please feel free to contact us through the channels listed below.",
         "headline_subdescription": "cannabisclubsberlin@protonmail.me",
-
         "faq_headline": "Frequently Asked Questions",
         "faq_q1": "Where is your club located?",
         "faq_a1": "CannabisClubsBerlin.com is not a registered cannabis social club, but rather a listing of registered cannabis social clubs in Berlin. The information listed on CannabisClubsBerlin.com is public information and is collected in one place to help users make an informed decision of which clubs to join.",
-
         "faq_q2": "Can I buy weed from your club?",
         "faq_a2": "Again, CannabisClubsBerlin.com is not a registered cannabis social club. We do not sell cannabis and cannot provide it to you directly.",
-
         "faq_q3": "Are there any membership fees?",
         "faq_a3": "Each club may have its own membership fees or monthly contributions. For more details, please refer to the individual clubs listed on our site.",
-
         "faq_q4": "How can I verify membership eligibility?",
         "faq_a4": "Membership policies may vary from club to club. Please contact the clubs directly or consult the information we have compiled on their pages to see if you meet their requirements."
     },
-
     "HarmReductionPage": {
         "headline": "Harm Reduction",
         "headline_description": "Harm reduction related to cannabis usage recognizes the substance's potential benefits while also addressing the risks associated with its use. Cannabis has been celebrated for its therapeutic effects, including pain relief, reduction in anxiety, and its ability to mitigate symptoms of various medical conditions. However, harm reduction emphasizes the importance of understanding and mitigating the risks linked to cannabis consumption, such as potential dependency, impaired cognitive and motor functions, and the impact on mental health, particularly in young users. Strategies include promoting education on safe consumption practices, encouraging moderation, and supporting research into both the positive and adverse effects of cannabis use. This balanced approach aims to protect public health while acknowledging the substance's benefits.",
@@ -140,7 +134,6 @@
         "term_six": "These terms of use are governed by the laws of Germany. Any disputes related to these terms will be subject to the exclusive jurisdiction of the courts of Germany.",
         "disclaimer": "By using CannabisClubsBerlin.com, you agree to comply with these Terms of Use. If you do not agree with any of these terms, you are prohibited from using or accessing this site."
     },
-
     "MedicalPage": {
         "headline": "Medical Cannabis in Germany: A Complete Guide",
         "intro_heading": "Introduction",
@@ -298,7 +291,8 @@
                 "weed-bros": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
                 "weed_club-friends": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
                 "weed-club-friends": "Community Cultivation, Member Cannabis Distribution, Socialising, Sustainable Practices",
-                "gourmet-greens-royal-ev": "Community Cultivation, Member Cannabis Distribution, High-Quality Strains, International Expertise, Digital Booking System, Harm Reduction Partnership, Workshops"
+                "gourmet-greens-royal-ev": "Community Cultivation, Member Cannabis Distribution, High-Quality Strains, International Expertise, Digital Booking System, Harm Reduction Partnership, Workshops",
+                "gruener-baer-ev": "Community Cultivation, Member Cannabis Distribution, High-Quality Strains, Diverse Selection, Harm Reduction"
             }
         },
         "csc-high-ground-berlin-ev": {
@@ -839,6 +833,16 @@
             "meta_keywords": "Gourmet Greens Royal, cannabis club Berlin, cultivation association, cannabis distribution, high-quality cannabis, Reinickendorf, cannabis strains, members-only club",
             "offerings": "Super Buff Cherry (13.2% THC), Permanent Marker (20.2% THC), Apples & Bananas (19.8% THC), Dante’s Inferno (21.3% THC), Fully digital booking system for pickup appointments and strain selection, Daily pickup availability.",
             "harm_reduction": "The club collaborates with Stiftung SPI in Reinickendorf to support harm reduction and prevention related to cannabis use.",
+            "reviews": "CCB currently does not have a verified review available for this club."
+        },
+        "gruener-baer-ev": {
+            "prices": "Members choose a monthly contribution model (tier) between €50 and €420, payable in advance. An additional annual membership fee of €20 applies. Flowers are provided at prices between €8.50 and €12 per gram. The system enables transparent and predictable supply in accordance with the KCanG regulations.",
+            "location": "Ziegra Straße 13, 12057 Berlin\n\nOpening hours:\nMonday 4:00 PM - 8:00 PM\nWednesday 4:00 PM - 8:00 PM\nFriday 4:00 PM - 8:00 PM\nSaturday 4:00 PM - 8:00 PM",
+            "description": "Grüner Bär e.V. – Cannabis Social Club Berlin\n\nGrüner Bär e.V. was founded in April 2024 with the clear goal of building a legal, transparent, and high-quality cannabis supply within the framework of the Cannabis Consumption Act (KCanG).\n\nAfter successful preparation and official approval, the club started production and established a structured, controlled cultivation environment. The focus is on high-quality indoor cannabis, precisely documented processes, and a strong commitment to quality – from genetics to the final flower.\n\nSince December 22, 2024, the club has been in the active distribution phase, regularly supplying its members in compliance with legal requirements.\n\nGrüner Bär e.V. stands for clear structures and legally compliant organization, transparent membership models, carefully selected genetics, and a strong community in the heart of Berlin. The club sees itself not just as a cultivation association, but as a modern Cannabis Social Club that combines quality, responsibility, and community.",
+            "meta_description": "Grüner Bär e.V. is a Cannabis Social Club in Berlin with its own distribution point, supplying members with high-quality indoor cannabis since December 2024.",
+            "meta_keywords": "Grüner Bär e.V., Cannabis Social Club Berlin, indoor cannabis, KCanG, cultivation association Berlin, premium genetics, cannabis distribution Berlin, cannabis club membership, Neukölln cannabis, legal cannabis cultivation",
+            "offerings": "Currently six different genetics in the range, Four fixed strains and two rotating varieties for regular new highlights, One of the rotating genetics is continuously available as a special offer from €8.50 per gram.",
+            "harm_reduction": "The club has a trained prevention officer who advises members as needed and refers them to appropriate counseling services. Access is strictly limited to persons aged 21 and over. Youth protection and responsible cannabis use are at the core of the club's philosophy.",
             "reviews": "CCB currently does not have a verified review available for this club."
         }
     }

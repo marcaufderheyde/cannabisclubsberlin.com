@@ -1,22 +1,6 @@
 import { Club } from "../helpers/clubsListContent";
 
 export const clubs: Club[] = [
-        {
-        key: 'club55',
-        name: 'Gourmet Greens Royal e.V.',
-        prices: '',
-        location: '',
-        description: '',
-        offerings: '',
-        harm_reduction: '',
-hasHRInformation: true,
-        imageUrl: '/club55.png',
-        clubPageUrl: 'https://www.gourmetgreensroyal.de/',
-        slug: '',
-        address: "Breitenbachstraße 32, 13509 Berlin-Reinickendorf",
-        geoLocation: [52.5815936, 13.3072552],
-        reviews: "",
-    },
     {
         key: 'club56',
         name: 'Grüner Bär e.V.',

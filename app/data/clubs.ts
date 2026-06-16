@@ -1,7 +1,23 @@
 import { Club } from "../helpers/clubsListContent";
 
 export const clubs: Club[] = [
-        {
+    {
+        key: 'club56',
+        name: 'Grüner Bär e.V.',
+        prices: '',
+        location: '',
+        description: '',
+        offerings: '',
+        harm_reduction: '',
+        hasHRInformation: true,
+        imageUrl: '/club56.png',
+        clubPageUrl: 'www.gruenerbaer.de',
+        slug: '',
+        address: "Ziegra Straße 13, 12057 Berlin",
+        geoLocation: [52.476474, 13.459245],
+        reviews: "",
+    },
+    {
         key: 'club55',
         name: 'Gourmet Greens Royal e.V.',
         prices: '',
@@ -9,7 +25,7 @@ export const clubs: Club[] = [
         description: '',
         offerings: '',
         harm_reduction: '',
-hasHRInformation: true,
+        hasHRInformation: true,
         imageUrl: '/club55.png',
         clubPageUrl: 'https://www.gourmetgreensroyal.de/',
         slug: '',

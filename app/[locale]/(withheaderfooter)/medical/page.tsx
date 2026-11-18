@@ -1,10 +1,15 @@
 import MedicalContent from './medical-content';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import ClubsTile from '@/public/clubs-tile.png';
-import { getTranslations } from 'next-intl/server';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) => {
+    const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations('Metadata');
     return {
         title: t('medical_title'),
@@ -13,12 +18,13 @@ export const generateMetadata = async () => {
     };
 };
 
-export default function Medical({
-    params: { locale },
+export default async function Medical({
+    params,
 }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
-    unstable_setRequestLocale(locale);
+    const { locale } = await params;
+    setRequestLocale(locale);
     return (
         <div className="flex flex-col md:flex-row w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 overflow-visible">
             <MedicalContent />

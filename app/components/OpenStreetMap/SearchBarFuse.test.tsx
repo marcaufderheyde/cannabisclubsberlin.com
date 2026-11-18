@@ -645,9 +645,20 @@ describe('SearchBarFuse Component', () => {
                 await userEvent.type(searchInput, 'club');
             });
 
+            // Wait for debounced search results before blurring
+            await waitFor(() => {
+                const dropdown = document.querySelector('.searchDropdown');
+                expect(dropdown).toBeInTheDocument();
+            });
+
             // Blur the input
             await act(async () => {
                 fireEvent.blur(searchInput);
+            });
+
+            // Wait for blur delay so dropdown hides
+            await act(async () => {
+                await new Promise(resolve => setTimeout(resolve, 250));
             });
 
             // Focus again

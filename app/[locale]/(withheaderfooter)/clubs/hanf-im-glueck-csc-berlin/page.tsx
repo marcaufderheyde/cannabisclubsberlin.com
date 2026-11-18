@@ -1,17 +1,24 @@
 import ClubContent from '../club-content';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { getClubMetadata } from '@/app/helpers/getClubMetadata';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) => {
+    const { locale } = await params;
+    setRequestLocale(locale);
     return await getClubMetadata('hanf-im-glueck-csc-berlin');
 };
 
-export default function Clubs({
-    params: { locale },
+export default async function Clubs({
+    params,
 }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
-    unstable_setRequestLocale(locale);
+    const { locale } = await params;
+    setRequestLocale(locale);
     return (
         <div className="flex flex-col md:flex-col w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 md:pl-[YourNavbarWidth]">
             <ClubContent />

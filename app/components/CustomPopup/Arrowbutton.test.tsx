@@ -43,7 +43,7 @@ describe('ArrowButton Component', () => {
 
         const triangleElement = screen.getByTestId('triangle');
         expect(triangleElement).toBeInTheDocument();
-        expect(triangleElement).toHaveStyle('color: white');
+        expect(triangleElement).toHaveStyle('color: rgb(255, 255, 255)');
     });
 
     it('applies the toggleRotate prop to the Triangle component', () => {

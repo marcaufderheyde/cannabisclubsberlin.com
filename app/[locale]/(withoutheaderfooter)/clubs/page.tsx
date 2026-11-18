@@ -1,8 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ClubsContent from './clubs-content';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) => {
+    const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations('Metadata');
     return {
         title: t('clubs_title'),
@@ -11,12 +17,13 @@ export const generateMetadata = async () => {
     };
 };
 
-export default function Clubs({
-    params: { locale },
+export default async function Clubs({
+    params,
 }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
-    unstable_setRequestLocale(locale);
+    const { locale } = await params;
+    setRequestLocale(locale);
     return (
         <div className="flex flex-col md:flex-col w-full max-w-none justify-center md:justify-between items-center h-full ">
             <ClubsContent />

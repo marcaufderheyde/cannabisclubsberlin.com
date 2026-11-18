@@ -46,6 +46,6 @@ describe('MapHamburgerButton', () => {
         render(<MapHamburgerButton showClubList={mockShowClubList} />);
         const burgerComponent = screen.getByTestId('mock-burger');
 
-        expect(burgerComponent).toHaveStyle('color: white');
+        expect(burgerComponent).toHaveStyle('color: rgb(255, 255, 255)');
     });
 });

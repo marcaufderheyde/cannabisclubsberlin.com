@@ -4,9 +4,9 @@ import DropdownContent from '@/app/components/TranslationSwitch/DropdownContent'
 import DropdownTrigger from '@/app/components/TranslationSwitch/DropdownTrigger';
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { ChangeEvent, useEffect, useRef, useState, useTransition } from 'react';
+import { ChangeEvent, Suspense, useEffect, useRef, useState, useTransition } from 'react';
 
-export default function LocalSwitcher() {
+function LocalSwitcherContent() {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
     const localeActive = useLocale();
@@ -122,5 +122,13 @@ export default function LocalSwitcher() {
                 </select>
             </div>
         </div>
+    );
+}
+
+export default function LocalSwitcher() {
+    return (
+        <Suspense fallback={null}>
+            <LocalSwitcherContent />
+        </Suspense>
     );
 }

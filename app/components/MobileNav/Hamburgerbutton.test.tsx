@@ -32,7 +32,7 @@ describe('HamburgerButton Component', () => {
 
         const burgerElement = screen.getByTestId('burger-svg');
         expect(burgerElement).toBeInTheDocument();
-        expect(burgerElement).toHaveStyle('color: white');
+        expect(burgerElement).toHaveStyle('color: rgb(255, 255, 255)');
     });
 
     it('renders Burger with the correct color when pathname is not home', () => {

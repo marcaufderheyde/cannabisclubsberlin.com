@@ -2,7 +2,7 @@
 import React from 'react';
 import { Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import { LeafletMouseEventHandlerFn } from 'leaflet';
 
 type Props = {

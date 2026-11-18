@@ -87,7 +87,6 @@ export default function CustomPopup({
                             alt={`${club.name} Club Picture`}
                             height={180}
                             width={300}
-                            layout='raw'
                             className={
                                 styles.mapCardImage +
                                 ' col-start-2 col-end-3 row-start-1 row-end-3 h-[85px] sm:h-[120px] w-full object-cover'

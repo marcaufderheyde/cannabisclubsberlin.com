@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import './globals.css';
 import { GoogleTagManager } from '@next/third-parties/google';
 
@@ -17,13 +17,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-    params: { locale },
 }: Readonly<{
     children: React.ReactNode;
-    params: { locale: string };
 }>) {
     return (
-        <html lang={locale}>
+        <html>
             <body className={inter.className}>{children}</body>
             <GoogleTagManager gtmId="GTM-PBKDVXT9" />
         </html>

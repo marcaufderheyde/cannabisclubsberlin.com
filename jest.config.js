@@ -16,6 +16,7 @@ module.exports = {
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
         '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
         '^next-intl$': '<rootDir>/__mocks__/next-intl.js',
+        '^next-intl/server$': '<rootDir>/__mocks__/next-intl-server.js',
     },
     testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],

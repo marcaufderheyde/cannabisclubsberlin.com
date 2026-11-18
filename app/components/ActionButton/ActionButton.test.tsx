@@ -45,8 +45,8 @@ describe('ActionButton Component', () => {
         expect(linkElement).toHaveAttribute('href', '/internal-link');
         expect(linkElement).not.toHaveAttribute('target');
         expect(linkElement).toHaveClass('custom-class');
-        expect(linkElement).toHaveStyle('color: white');
-        expect(linkElement).toHaveStyle('background-color: black');
+        expect(linkElement).toHaveStyle('color: rgb(255, 255, 255)');
+        expect(linkElement).toHaveStyle('background-color: rgb(0, 0, 0)');
     });
 
     it('renders an anchor tag when externalLink is true', () => {
@@ -70,8 +70,8 @@ describe('ActionButton Component', () => {
         );
         expect(anchorElement).toHaveAttribute('target', '_blank');
         expect(anchorElement).toHaveClass('custom-class');
-        expect(anchorElement).toHaveStyle('color: white');
-        expect(anchorElement).toHaveStyle('background-color: black');
+        expect(anchorElement).toHaveStyle('color: rgb(255, 255, 255)');
+        expect(anchorElement).toHaveStyle('background-color: rgb(0, 0, 0)');
     });
 
     it('renders the Triangle component with the correct color', () => {
@@ -83,6 +83,6 @@ describe('ActionButton Component', () => {
 
         const triangleElement = screen.getByTestId('triangle');
         expect(triangleElement).toBeInTheDocument();
-        expect(triangleElement).toHaveStyle('color: white');
+        expect(triangleElement).toHaveStyle('color: rgb(255, 255, 255)');
     });
 });

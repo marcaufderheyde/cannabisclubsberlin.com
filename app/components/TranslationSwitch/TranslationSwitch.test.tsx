@@ -22,7 +22,7 @@ jest.mock('@/app/components/TranslationSwitch/DropdownTrigger', () => ({
         handleClick,
         toggleCaret,
     }: {
-        dropdownRef: React.RefObject<HTMLDivElement>;
+        dropdownRef: React.RefObject<HTMLDivElement | null>;
         handleClick: () => void;
         toggleCaret: (toggle: () => void) => void;
     }) {
@@ -40,7 +40,7 @@ jest.mock('@/app/components/TranslationSwitch/DropdownContent', () => ({
         dropdownRef,
         handleClickAndChangeLanguage,
     }: {
-        dropdownRef: React.RefObject<HTMLDivElement>;
+        dropdownRef: React.RefObject<HTMLDivElement | null>;
         handleClickAndChangeLanguage: (nextLocale: string) => void;
     }) {
         const React = require('react');

@@ -63,9 +63,9 @@ describe('Footer Component', () => {
 
         // Check individual style properties
         expect(computedStyle.position).toBe('relative');
-        expect(computedStyle.padding).toBe('5vh 0px 1.5em 0px');
+        expect(computedStyle.padding).toBe('5vh 0px 1.5em');
         expect(computedStyle.textAlign).toBe('center');
         expect(computedStyle.transition).toBe('opacity 0.3s ease-in-out');
-        expect(computedStyle.color).toBe('white');
+        expect(computedStyle.color).toBe('rgb(255, 255, 255)');
     });
 });

@@ -1,19 +1,26 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ImprintContent from './terms-of-use-content';
 
-export const generateMetadata = async () => {
+export const generateMetadata = async ({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) => {
+    const { locale } = await params;
+    setRequestLocale(locale);
     const t = await getTranslations('Metadata');
     return {
         title: t('terms_of_use_title'),
     };
 };
 
-export default function TermsOfUseContent({
-    params: { locale },
+export default async function TermsOfUseContent({
+    params,
 }: {
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
-    unstable_setRequestLocale(locale);
+    const { locale } = await params;
+    setRequestLocale(locale);
     return (
         <div className="flex flex-col md:flex-row w-full justify-center md:justify-between items-center h-full overflow-auto pt-12 overflow-visible">
             <ImprintContent />

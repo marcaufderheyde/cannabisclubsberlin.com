@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { unstable_setRequestLocale } from 'next-intl/server';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
 import '@/app/globals.css';
 import Navbar from '../../components/Navbar/Navbar';
 import CookieBanner from '../../components/CookieBanner/CookieBanner';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
 import AgeVerification from '../../components/AgeVerification/AgeVerification';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
@@ -19,15 +19,16 @@ export async function generateStaticParams() {
     return ['en', 'de'].map((locale) => ({ locale }));
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
     children,
-    params: { locale },
+    params,
 }: Readonly<{
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }>) {
-    unstable_setRequestLocale(locale);
-    const messages = useMessages();
+    const { locale } = await params;
+    setRequestLocale(locale);
+    const messages = await getMessages();
     return (
         <div className='min-h-screen relative'>
             <NextIntlClientProvider messages={messages}>

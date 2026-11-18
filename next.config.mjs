@@ -1,7 +1,7 @@
 // @ts-check
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin();
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
  
 /**
  * @type {import('next').NextConfig}
@@ -9,9 +9,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     output: 'export',
     images: { unoptimized: true },
-    experimental: {
-      missingSuspenseWithCSRBailout: false,
-    },
   }
    
 export default withNextIntl(nextConfig);

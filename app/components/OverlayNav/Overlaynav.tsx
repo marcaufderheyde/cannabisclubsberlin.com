@@ -81,7 +81,7 @@ export default function OverlayNav({
                     <div className='flex flex-col justify-start items-start my-10 font-bold text-[1.6rem] text-[rgba(130,130,130,0.6)]'>
                         {links.map((link: LinkInfo) => (
                             <Link
-                                key={'mobile_' + link.name}
+                                key={'mobile_' + String(link.name)}
                                 href={link.href}
                                 onClick={(e) =>
                                     handleClick(e, link.href as string)
